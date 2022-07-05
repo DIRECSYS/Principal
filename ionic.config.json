@@ -1,0 +1,7 @@
+{
+  "name": "DIRECSYS",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
