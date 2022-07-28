@@ -1,0 +1,41 @@
+.bg{
+    background-image:url("https://media.istockphoto.com/photos/the-truck-runs-on-the-highway-with-speed-picture-id1249888857?k=20&m=1249888857&s=612x612&w=0&h=41-mwmzvm81zQbPjL9sSsMzyS6z700gUIbG9PUUXdNI=");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+}
+
+.elems{
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    width: 100% ;
+    height: 100%;
+    flex:content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.footer {
+    width: 100%;
+    height: 200px;
+    background-color: orange;
+
+}
+
+.button{
+    position: relative;
+    align-self: center;
+    display: flex;
+    margin-top: 80px;
+    padding-left: 150px;
+    padding-right: 150px;
+   
+}
