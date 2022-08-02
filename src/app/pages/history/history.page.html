@@ -2,10 +2,10 @@
   <ion-title>Historial de Pruebas</ion-title>
 </ion-toolbar>
 
-<ion-content>
-  <ion-list>
-    <ion-card>
-      <ion-item detail="false" (click)="presentAlert('1')" color="primary">
+<ion-content >
+  <ion-list class="bg-transparent">
+    <ion-card >
+      <ion-item detail="false" (click)="presentAlert('1')" color="danger" >
         <ion-icon name="close-circle"></ion-icon>
         <ion-label class="id">
           Folio 1
@@ -15,7 +15,7 @@
 
     <ion-card>
 
-      <ion-item detail="false" (click)="presentAlert('2')" color="secondary">
+      <ion-item detail="false" (click)="presentAlert('2')" color="danger">
         <ion-icon name="close-circle"> </ion-icon>
         <ion-label class="id">
           Folio 2
@@ -25,7 +25,7 @@
     </ion-card>
 
     <ion-card>
-      <ion-item detail="false" (click)="presentAlert('3')" color="tertiary">
+      <ion-item detail="false" (click)="presentAlert('3')" color="success">
         <ion-icon name="checkmark-done-circle"> </ion-icon>
         <ion-label class="id">
           Folio 3

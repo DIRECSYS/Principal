@@ -6,3 +6,23 @@
 ul{
     list-style: none;
 }
+
+
+ion-content{
+    --background: url("https://s29755.pcdn.co/wp-content/uploads/2019/08/2019_Top_Five_Class_5-Mack.jpg.optimal.jpg") center/cover no-repeat  ;
+    
+
+}
+
+.bg-transparent{
+   background: transparent;
+}
+
+ion-alert.custom-alert{
+    //background:  rgb(139, 139, 139);
+    color: black;
+}
+
+li{
+    color: black;
+}

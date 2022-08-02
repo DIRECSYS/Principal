@@ -15,7 +15,7 @@ export class HistoryPage implements OnInit {
     const alert = await this.alertController.create({
       header: `Folio : ${a}`,
       subHeader: 'Fecha : 12/08/2022',
-      message: `<ul"> 
+      message: `<ul> 
       <li>Prueba 1   = Paso</li>
       <li>Prueba 2   = No Paso</li>
       <li>Prueba 3   = No Paso</li>

@@ -21,8 +21,7 @@ const routes: Routes = [
     path: 'settings-user',
     loadChildren: () => import('./pages/settings-user/settings-user.module').then( m => m.SettingsUserPageModule)
   },
-
-
+  
 ];
 
 @NgModule({

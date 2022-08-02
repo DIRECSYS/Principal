@@ -4,7 +4,7 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #3880ff;
+  --ion-color-primary: #3171e0;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
@@ -83,12 +83,12 @@
    */
 
   body {
-    --ion-color-primary: #428cff;
+    --ion-color-primary: #3171e0;
     --ion-color-primary-rgb: 66,140,255;
     --ion-color-primary-contrast: #ffffff;
     --ion-color-primary-contrast-rgb: 255,255,255;
-    --ion-color-primary-shade: #3a7be0;
-    --ion-color-primary-tint: #5598ff;
+    --ion-color-primary-shade: #3171e0;
+    --ion-color-primary-tint: #4c8dff;
 
     --ion-color-secondary: #50c8ff;
     --ion-color-secondary-rgb: 80,200,255;
@@ -239,9 +239,27 @@
 }
 
 
-ion-alert.custom-alert {
+
+
+
+
+
+ion-alert.custom-alert{
+  .alert-head{
+    h2{
+
+      color: black;
+    }
+  }
+  li{
+    color: #000000;
+  }
+  ul{
+    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  }
+  --background:rgb(237, 237, 237);
   --backdrop-opacity: .6;
-  --background: rgba(139, 139, 139, 0.271);
-  --color: black;
-  //list-style: none
+  --border-top: 0.55pxs;
 }
