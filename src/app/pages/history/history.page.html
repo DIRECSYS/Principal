@@ -5,7 +5,7 @@
 <ion-content>
   <ion-list>
     <ion-card>
-      <ion-item detail="false" href="youtube.com" color="primary">
+      <ion-item detail="false" (click)="presentAlert('1')" color="primary">
         <ion-icon name="close-circle"></ion-icon>
         <ion-label class="id">
           Folio 1
@@ -15,7 +15,7 @@
 
     <ion-card>
 
-      <ion-item detail="false" href="google.com" color="secondary">
+      <ion-item detail="false" (click)="presentAlert('2')" color="secondary">
         <ion-icon name="close-circle"> </ion-icon>
         <ion-label class="id">
           Folio 2
@@ -25,7 +25,7 @@
     </ion-card>
 
     <ion-card>
-      <ion-item detail="false" href="https://www.ionicframework.com" color="tertiary">
+      <ion-item detail="false" (click)="presentAlert('3')" color="tertiary">
         <ion-icon name="checkmark-done-circle"> </ion-icon>
         <ion-label class="id">
           Folio 3
