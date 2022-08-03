@@ -12,15 +12,7 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import ('./components/tabs/tabs.module').then(m => m.TabsPageModule)
-  },
-  {
-    path: 'dashboard-user',
-    loadChildren: () => import('./pages/dashboard-user/dashboard-user.module').then( m => m.DashboardUserPageModule)
-  },
-  {
-    path: 'settings-user',
-    loadChildren: () => import('./pages/settings-user/settings-user.module').then( m => m.SettingsUserPageModule)
-  },
+  }
   
 ];
 
