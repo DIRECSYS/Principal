@@ -1,0 +1,61 @@
+<ion-toolbar>
+  <ion-title>¡Bienvenido Admin!</ion-title>
+  <ion-buttons slot="end" >
+    <ion-back-button defaultHref="/home" text="" color="dark" icon="arrow-redo-circle-outline"></ion-back-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-list-header lines="none">
+    <ion-label color="primary">
+      <h1>Registros del día</h1>
+    </ion-label>
+  </ion-list-header>
+</ion-toolbar>
+
+<ion-content class="content">
+  <ion-list class="card-list" >
+      <ion-item lines="none" class="list-item" *ngFor="let item_result of [1,1,1,1,1]">
+        <ion-card class="card">
+
+          <ion-card-header class="card-head">
+            <ion-card-subtitle color="primary">1819401</ion-card-subtitle>
+            <ion-card-title>Airam Alejandro Ontiveros Tristan</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content class="card-content">
+
+            <ion-list class="test-list">
+
+                <ion-item button detail>
+                  <ion-label>Resultado prueba 1</ion-label>
+                  <div class="icon-result" slot="start">
+                    <ion-icon color="danger" name="accessibility-outline" ></ion-icon>
+                  </div>
+                </ion-item>
+                <ion-item button detail>
+                  <ion-label>Resultado prueba 2</ion-label>
+                  <div class="icon-result" slot="start">
+                    <ion-icon  color="success" name="accessibility-outline" ></ion-icon>
+                  </div>
+                </ion-item>
+                <ion-item button detail>
+                  <ion-label>Resultado prueba 3</ion-label>
+                  <div class="icon-result" slot="start">
+                    <ion-icon color="success" name="accessibility-outline" ></ion-icon>
+                  </div>
+                </ion-item>
+                <ion-item button detail>
+                  <ion-label>Resultado prueba 4</ion-label>
+                  <div class="icon-result" slot="start">
+                    <ion-icon color="success" name="accessibility-outline" ></ion-icon>
+                  </div>
+                </ion-item>
+                
+            </ion-list>
+
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+  </ion-list>
+</ion-content>

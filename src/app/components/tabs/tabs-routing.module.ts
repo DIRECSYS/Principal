@@ -24,6 +24,7 @@ const routes: Routes = [
       },
       {
         path: '',
+
         loadChildren : () => import("src/app/pages//dashboard-user/dashboard-user.module").then(m=> m.DashboardUserPageModule)
       }
 
@@ -41,4 +42,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
+
 export class TabsPageRoutingModule {}

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
 import { AlertController } from '@ionic/angular';
 import { Alert } from 'selenium-webdriver';
+
 
 @Component({
   selector: 'app-history',
@@ -8,6 +10,7 @@ import { Alert } from 'selenium-webdriver';
   styleUrls: ['./history.page.scss'],
 })
 export class HistoryPage implements OnInit {
+
 
   constructor( private alertController: AlertController) { }
 
@@ -29,6 +32,7 @@ export class HistoryPage implements OnInit {
 
     await alert.present();
   }
+
 
   ngOnInit() {
   }

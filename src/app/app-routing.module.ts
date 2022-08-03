@@ -4,9 +4,11 @@ import { RegisterPage } from './pages/register/register.page';
 
 const routes: Routes = [
 
+
   {
     path: '',
     loadChildren: () => import ('./pages/login/login.module').then(m => m.LoginPageModule)
+
   },
 
   {
@@ -14,6 +16,7 @@ const routes: Routes = [
     loadChildren: () => import ('./components/tabs/tabs.module').then(m => m.TabsPageModule)
   }
   
+
 ];
 
 @NgModule({
