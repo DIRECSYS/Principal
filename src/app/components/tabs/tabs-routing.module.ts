@@ -23,7 +23,8 @@ const routes: Routes = [
         loadChildren : () => import("src/app/pages//dashboard-user/dashboard-user.module").then(m=> m.DashboardUserPageModule)
       },
       {
-        path: ' ',
+        path: '',
+
         loadChildren : () => import("src/app/pages//dashboard-user/dashboard-user.module").then(m=> m.DashboardUserPageModule)
       }
 
@@ -31,7 +32,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: ' ',
+    path: '',
     redirectTo: 'src/app/components/tabs',
     pathMatch: 'full'
   },
@@ -41,4 +42,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
+
 export class TabsPageRoutingModule {}
