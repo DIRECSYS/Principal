@@ -20,18 +20,20 @@ const routes: Routes = [
       },
       {
         path: 'dashboard',
-        loadChildren : () => import("src/app/pages//dashboard-user/dashboard-user.module").then(m=> m.DashboardUserPageModule)
+        loadChildren : () => import("src/app/pages/dashboard-user/dashboard-user.module").then(m=> m.DashboardUserPageModule)
       },
       {
-        path: ' ',
-        loadChildren : () => import("src/app/pages//dashboard-user/dashboard-user.module").then(m=> m.DashboardUserPageModule)
+        path: 'admin',
+        loadChildren : () => import("src/app/pages/admin/admin.module").then(m=> m.AdminPageModule)
+      },
+      {
+        path: '',
+        loadChildren : () => import("src/app/pages/admin/admin.module").then(m=> m.AdminPageModule)
       }
-
-
     ]
   },
   {
-    path: ' ',
+    path: '',
     redirectTo: 'src/app/components/tabs',
     pathMatch: 'full'
   },
