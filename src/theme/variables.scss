@@ -75,6 +75,11 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 
+  //app variables//
+
+  --boton-cargar: #C25E00;
+  --boton-continuar: #ffffff;
+  
   /** App colors **/
   --test-result-pass: #009160 ;
 }
@@ -239,6 +244,12 @@
 
     --ion-card-background: #1e1e1e;
   }
+}
+
+ion-checkbox.checks{
+  --border-color:#C25E00;
+  --border-color-checked:var(--boton-cargar);
+  --background-checked:	#000000;
 }
 
 

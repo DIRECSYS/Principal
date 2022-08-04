@@ -3,13 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardUserPage } from './dashboard-user.page';
 
-
 const routes: Routes = [
   {
     path: '',
     component: DashboardUserPage
   }
-
 ];
 
 @NgModule({

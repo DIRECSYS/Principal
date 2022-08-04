@@ -1,9 +1,51 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
+  <ion-content>
+      
+      <div class="formulario">
+          <br><h5>REGISTRO</h5>
+          <img src="https://cdn-icons-png.flaticon.com/512/47/47774.png" width="30px" height="30 px"><br>
+          <ion-button class="cargar" color="none">Cargar imagen</ion-button><br><br>
+          <ion-input placeholder="Nombre" class="inputs" type="text" mode="ios"></ion-input><br>
+          <ion-input placeholder="Correo electrónico" class="inputs" type="email" mode="ios"></ion-input><br>
+          <ion-input placeholder="Teléfono" class="inputs" type="numeric" mode="ios"></ion-input><br>
+          <ion-input placeholder="# de Empleado" class="inputs" type="numeric" mode="ios"></ion-input><br>       
+          
+        
+            <ion-input placeholder="Fecha de nacimiento" class="inputs" type="numeric" mode="ios"
+              value="{{ date | date: 'dd-MM-yyyy' }}"
+              id="date"
+            ></ion-input>
+            <ion-popover trigger="date" alignment="center">
+              <ng-template>
+                <ion-datetime
+                  presentation="date"
+                  [(ngModel)]="date"
+                  locale="ES"
+                ></ion-datetime>
+              </ng-template>
+            </ion-popover><br>
+          
+          <ion-input placeholder="Contraseña" class="inputs" type="password" mode="ios"></ion-input><br>
+          <ion-input placeholder="Confirmar contraseña" class="inputs" type="password" mode="ios"></ion-input>
+          
+          
+          <div class="terminos">
+            <ion-checkbox class="checks"></ion-checkbox>Acepto los términos y condiciones<br><br>
+            <ion-checkbox class="checks"></ion-checkbox>Acepto el aviso de privacidad
+          </div>
+
+      </div>
+
+    </ion-content>
   
-</ion-content>
+
+
+  <div class="fondo_abajo">
+    <ion-button class="continuar" color="none">Continuar</ion-button>
+    <ion-button class="ayuda" color="none">
+      <ion-icon slot="icon-only" name="information-circle-outline"></ion-icon>
+    </ion-button>
+  </div>
+
+
+
