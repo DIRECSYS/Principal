@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ToastController } from '@ionic/angular';
 @Component({
   selector: 'app-tabs',
   templateUrl: './tabs.page.html',
@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabsPage implements OnInit {
 
-  constructor() { }
+
+  constructor(private toastController : ToastController) { }
 
   ngOnInit() {
 
-    console.log("loaded tabs!");
   }
 
 }

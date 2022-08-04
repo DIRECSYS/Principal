@@ -23,12 +23,9 @@ const routes: Routes = [
         loadChildren : () => import("src/app/pages/dashboard-user/dashboard-user.module").then(m=> m.DashboardUserPageModule)
       },
       {
-        path: 'admin',
-        loadChildren : () => import("src/app/pages/admin/admin.module").then(m=> m.AdminPageModule)
-      },
-      {
         path: '',
-        loadChildren : () => import("src/app/pages/admin/admin.module").then(m=> m.AdminPageModule)
+
+        loadChildren : () => import("src/app/pages//dashboard-user/dashboard-user.module").then(m=> m.DashboardUserPageModule)
       }
     ]
   },
@@ -43,4 +40,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
+
 export class TabsPageRoutingModule {}

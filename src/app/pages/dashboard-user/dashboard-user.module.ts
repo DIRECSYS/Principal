@@ -8,6 +8,9 @@ import { DashboardUserPageRoutingModule } from './dashboard-user-routing.module'
 
 import { DashboardUserPage } from './dashboard-user.page';
 
+import { TestResultCComponent } from 'src/app/components/test-result-c/test-result-c.component';
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +18,6 @@ import { DashboardUserPage } from './dashboard-user.page';
     IonicModule,
     DashboardUserPageRoutingModule
   ],
-  declarations: [DashboardUserPage]
+  declarations: [DashboardUserPage, TestResultCComponent]
 })
 export class DashboardUserPageModule {}

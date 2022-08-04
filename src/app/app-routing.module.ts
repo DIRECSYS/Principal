@@ -4,9 +4,11 @@ import { RegisterPage } from './pages/register/register.page';
 
 const routes: Routes = [
 
+
   {
     path: '',
     loadChildren: () => import ('./pages/login/login.module').then(m => m.LoginPageModule)
+
   },
   {
     path: '',
