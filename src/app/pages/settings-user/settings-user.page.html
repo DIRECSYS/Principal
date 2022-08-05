@@ -14,24 +14,75 @@
     </ion-card-header>
   
     <ion-card-content class="card-content">
-
-      <ion-img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80" class="profile-image"></ion-img>
-
-      <div class="dato">
-        <ion-label>Nombre:</ion-label>
-      </div>
-      <div class="dato">
-        <ion-label>Correo:</ion-label>
-      </div>
-      <div class="dato">
-        <ion-label>Teléfono:</ion-label>
-      </div>
-      <div class="dato">
-        <ion-label>Fecha de nacimiento:</ion-label>
-      </div>
+      <ion-row>
+        <ion-col size="6" class="profile-image">
+          <ion-img class="img" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80" ></ion-img>
+        </ion-col>
+        <ion-col>
+          <div class="dato">
+            <ion-label>Nombre:</ion-label>
+            <span>Airam Ontiveros</span>
+          </div>
+          <div class="dato">
+            <ion-label>Correo:</ion-label>
+            <span>correo@correo.com</span>
+          </div>
+          <div class="dato">
+            <ion-label>Teléfono:</ion-label>
+            <span>##########</span>
+          </div>
+          <div class="dato">
+            <ion-label>Fecha de nacimiento:</ion-label>
+            <span>18/08/2000</span>
+          </div>
       
+          <div class="botones">
+            <ion-button class="botones-ind" (click)="editUserAlert()">
+              <ion-icon name="pencil" slot="start"></ion-icon>
+              Editar valores
+            </ion-button>
+            <ion-button class="botones-ind">
+              Cambiar contraseña
+            </ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
 
     </ion-card-content>
   </ion-card>
+  
+      <ion-card class="info-card ion-color-new">
+        <ion-grid>
+          <ion-row>
+            <ion-col size-lg="3" size-sm="6" size-md="4">
+              <ion-item  href="#" class="ion-activated" color="none" lines="none">
+                <ion-icon name="information-circle-outline" slot="start"></ion-icon>
+                <ion-label>Acerca de</ion-label>
+              </ion-item>
+            </ion-col>
+            <ion-col size-lg="3" size-sm="6" size-md="4">
+              <ion-item href="#" class="ion-activated" color="none" lines="none">
+                <ion-icon name="information-circle-outline" slot="start"></ion-icon>
+                <ion-label>Ver permisos</ion-label>
+              </ion-item>
+            </ion-col >
+            <ion-col size-lg="3" size-sm="6" size-md="4">
+
+              <ion-item class="ion-activated" color="none" lines="none">
+                <ion-icon name="shield-checkmark-outline" slot="start"></ion-icon>
+                <ion-label>Desarrollado por DASANA♥</ion-label>
+              </ion-item>
+            </ion-col>
+            <ion-col size-lg="3" size-sm="6" size-md="4">
+              <ion-item class="ion-activated" color="none" lines="none">
+                <ion-icon name="shield-checkmark-outline" slot="start"></ion-icon>
+                <ion-label>Versión 1.0.0</ion-label>
+              </ion-item>
+            </ion-col>
+        </ion-row>
+        </ion-grid>
+      </ion-card>
+  
+      
 
 </ion-content>

@@ -20,15 +20,13 @@ const routes: Routes = [
       },
       {
         path: 'dashboard',
-        loadChildren : () => import("src/app/pages//dashboard-user/dashboard-user.module").then(m=> m.DashboardUserPageModule)
+        loadChildren : () => import("src/app/pages/dashboard-user/dashboard-user.module").then(m=> m.DashboardUserPageModule)
       },
       {
         path: '',
 
         loadChildren : () => import("src/app/pages//dashboard-user/dashboard-user.module").then(m=> m.DashboardUserPageModule)
       }
-
-
     ]
   },
   {

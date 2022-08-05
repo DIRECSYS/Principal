@@ -14,9 +14,7 @@
     background-color: rgba(73, 73, 73, 0.3);
 }
 
-.card-head{
 
-}
 
 .card-content{
 
@@ -27,8 +25,9 @@
     margin: 0;
 }
 
-.test-list > ion-item > ion-label{
-    
+ ion-item.result-item {
+    --border-style:none;
+    --background:rgba(73, 73, 73, 0.3);
 }
 
 
