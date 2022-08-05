@@ -300,3 +300,20 @@ ion-alert.alert{
   border-radius: 10px !important;
   margin: 3px;
  }
+
+ ion-popover {
+  --width: auto;
+  --border-color: green;
+
+  label{
+    --border-style:none;
+  }
+}
+
+ion-select-option{
+  --border-style:none;
+}
+
+ion-datetime{
+  position: relative;
+}

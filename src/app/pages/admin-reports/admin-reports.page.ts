@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-reports.page.scss'],
 })
 export class AdminReportsPage implements OnInit {
-
+date:any
   constructor() { }
 
   ngOnInit() {
   }
-
+  openStart()
+  {
+      
+  }
 }
