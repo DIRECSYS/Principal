@@ -1,6 +1,6 @@
 ion-content{
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 ion-item{ 
@@ -13,11 +13,51 @@ ion-item{
 
 
 .selection-1{
-    margin-top: 5%;
+    margin-top: 2%;
     padding-left: 5%;
     padding-right: 5%;
+    max-width: 1000px;
 }
 
-// ion-datetime{
-//     position: initial;
-// }
+
+ .from-to{
+    margin-top: 10px;
+ }
+
+.filters{
+    margin: 0;
+    padding: 0;
+}
+
+.check{
+    margin-left: 10px;
+}
+
+ion-card.buttons-filters{
+    --background : none;
+    box-shadow: none;
+}
+
+ion-card.filters-card{
+    box-shadow: none;
+}
+
+ion-input.date-button {
+    //background-color: #1e1e1e;
+
+    border-radius: 10px;
+    border-color: #1e1e1e;
+    
+    width: 100%;
+    display: flex;
+        
+}
+
+ion-icon.date-icon{
+    margin-left: 20px;
+}
+
+ion-item.popup{
+    --border-style: none;
+    border-style: none;
+}
