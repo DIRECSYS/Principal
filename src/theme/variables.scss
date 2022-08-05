@@ -75,6 +75,11 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 
+  //app variables//
+
+  --boton-cargar: #C25E00;
+  --boton-continuar: #ffffff;
+  
   /** App colors **/
   --test-result-pass: #009160 ;
   
@@ -259,6 +264,12 @@
   }
 }
 
+ion-checkbox.checks{
+  --border-color:#C25E00;
+  --border-color-checked:var(--boton-cargar);
+  --background-checked:	#000000;
+}
+
 
 
 
@@ -284,6 +295,7 @@ ion-alert.custom-alert{
   --backdrop-opacity: .6;
   --border-top: 0.55pxs;
 }
+
 
 ion-alert.alert{
   --background: rgb(49, 49, 49) !important;
@@ -320,4 +332,3 @@ ion-datetime{
 ion-button.buttons2{
   --background: #ffa500;
 }
-

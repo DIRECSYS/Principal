@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.page.scss'],
 })
 export class RegisterPage implements OnInit {
-
+date:any
   constructor() { }
 
   ngOnInit() {
   }
 
+  
 }
