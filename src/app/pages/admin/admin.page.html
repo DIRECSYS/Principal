@@ -1,16 +1,8 @@
 <ion-toolbar>
-  <ion-title>¡Bienvenido Admin!</ion-title>
+  <ion-title>Registros del dia</ion-title>
   <ion-buttons slot="end" >
     <ion-back-button defaultHref="/" text="" color="dark" icon="arrow-redo-circle-outline"></ion-back-button>
   </ion-buttons>
-</ion-toolbar>
-
-<ion-toolbar>
-  <ion-list-header lines="none">
-    <ion-label color="primary">
-      <h1>Registros del día</h1>
-    </ion-label>
-  </ion-list-header>
 </ion-toolbar>
 
 <ion-content class="content">
@@ -27,25 +19,25 @@
 
             <ion-list class="test-list">
 
-                <ion-item button detail>
+                <ion-item button detail  class="result-item">
                   <ion-label>Resultado prueba 1</ion-label>
                   <div class="icon-result" slot="start">
                     <ion-icon color="danger" name="accessibility-outline" ></ion-icon>
                   </div>
                 </ion-item>
-                <ion-item button detail>
+                <ion-item button class="result-item" detail>
                   <ion-label>Resultado prueba 2</ion-label>
                   <div class="icon-result" slot="start">
                     <ion-icon  color="success" name="accessibility-outline" ></ion-icon>
                   </div>
                 </ion-item>
-                <ion-item button detail>
+                <ion-item button detail class="result-item">
                   <ion-label>Resultado prueba 3</ion-label>
                   <div class="icon-result" slot="start">
                     <ion-icon color="success" name="accessibility-outline" ></ion-icon>
                   </div>
                 </ion-item>
-                <ion-item button detail>
+                <ion-item button detail class="result-item">
                   <ion-label>Resultado prueba 4</ion-label>
                   <div class="icon-result" slot="start">
                     <ion-icon color="success" name="accessibility-outline" ></ion-icon>

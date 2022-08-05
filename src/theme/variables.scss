@@ -290,13 +290,13 @@ ion-alert.alert{
   --min-width: 80%;
  }
 
- ion-alert input{
+ ion-alert.alert input{
   border: none !important;
  }
- ion-alert button{
+ ion-alert.alert button{
   text-transform: capitalize !important;
-  color: black !important;
-  background-color: rgb(117, 117, 117) !important;
-  border-radius: 10px !important;
-  margin: 3px;
+  color: rgb(255, 255, 255) !important;
+  border:none !important;
+  
  }
+

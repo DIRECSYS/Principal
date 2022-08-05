@@ -28,8 +28,13 @@ ion-img{
 .botones{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin-top: 50px;
+    justify-content: center;
+    margin: 40px auto 20px auto ;
+    padding:  0px 100px;
+}
+
+.botones ion-button{
+    font-size: .8rem;
 }
 
 .ion-color-new {
