@@ -218,7 +218,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
   \**********************************************************************************/
 /***/ ((module) => {
 
-module.exports = "<ion-card class=\"ion-text-center\">\n  <ion-card-header>\n    Resultado : Paso\n  </ion-card-header>\n  <ion-card-subtitle>\n    Fecha : 02/08/2022\n  </ion-card-subtitle>\n  <ion-card-content>\n    <img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/2048px-Eo_circle_green_checkmark.svg.png\">\n    <div class=\"bg\">\n      <ion-button (click) ='loadDetails()' > Detalles</ion-button>\n    </div>\n  </ion-card-content>\n</ion-card>";
+module.exports = "<ion-card class=\"ion-text-center\">\n  <ion-card-header>\n    Resultado : Paso\n  </ion-card-header>\n  <ion-card-subtitle>\n    Fecha : 02/08/2022\n  </ion-card-subtitle>\n  <ion-card-content>\n    <img class=\"test-img\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/2048px-Eo_circle_green_checkmark.svg.png\">\n    <div class=\"bg\">\n      <ion-button (click) ='loadDetails()' > Detalles</ion-button>\n    </div>\n  </ion-card-content>\n</ion-card>";
 
 /***/ }),
 
@@ -228,7 +228,7 @@ module.exports = "<ion-card class=\"ion-text-center\">\n  <ion-card-header>\n   
   \**************************************************************************/
 /***/ ((module) => {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>Welcome Arturo!</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <app-test-result-c></app-test-result-c>\n\n</ion-content>\n";
+module.exports = "<ion-toolbar>\n  <ion-title>Welcome Arturo!</ion-title>\n  <ion-buttons slot=\"end\">\n   <ion-back-button defaultHref=\"/\" text=\"\" color=\"dark\" icon=\"arrow-redo-circle-outline\" onclick=\"location.href=''\"></ion-back-button>\n  </ion-buttons>\n</ion-toolbar>\n\n<ion-content>\n\n<app-test-result-c></app-test-result-c>\n\n</ion-content>";
 
 /***/ })
 

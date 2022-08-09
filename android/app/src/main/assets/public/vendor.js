@@ -39,6 +39,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "IonCol": () => (/* binding */ IonCol),
 /* harmony export */   "IonContent": () => (/* binding */ IonContent),
 /* harmony export */   "IonDatetime": () => (/* binding */ IonDatetime),
+/* harmony export */   "IonDatetimeButton": () => (/* binding */ IonDatetimeButton),
 /* harmony export */   "IonFab": () => (/* binding */ IonFab),
 /* harmony export */   "IonFabButton": () => (/* binding */ IonFabButton),
 /* harmony export */   "IonFabList": () => (/* binding */ IonFabList),
@@ -2091,7 +2092,9 @@ IonDatetime.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_2__["�
     minuteValues: "minuteValues",
     mode: "mode",
     monthValues: "monthValues",
+    multiple: "multiple",
     name: "name",
+    preferWheel: "preferWheel",
     presentation: "presentation",
     readonly: "readonly",
     showClearButton: "showClearButton",
@@ -2116,7 +2119,7 @@ IonDatetime.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_2__["�
 });
 IonDatetime = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([ProxyCmp({
   defineCustomElementFn: undefined,
-  inputs: ['cancelText', 'clearText', 'color', 'dayValues', 'disabled', 'doneText', 'firstDayOfWeek', 'hourCycle', 'hourValues', 'isDateEnabled', 'locale', 'max', 'min', 'minuteValues', 'mode', 'monthValues', 'name', 'presentation', 'readonly', 'showClearButton', 'showDefaultButtons', 'showDefaultTimeLabel', 'showDefaultTitle', 'size', 'value', 'yearValues'],
+  inputs: ['cancelText', 'clearText', 'color', 'dayValues', 'disabled', 'doneText', 'firstDayOfWeek', 'hourCycle', 'hourValues', 'isDateEnabled', 'locale', 'max', 'min', 'minuteValues', 'mode', 'monthValues', 'multiple', 'name', 'preferWheel', 'presentation', 'readonly', 'showClearButton', 'showDefaultButtons', 'showDefaultTimeLabel', 'showDefaultTitle', 'size', 'value', 'yearValues'],
   methods: ['confirm', 'reset', 'cancel']
 })], IonDatetime);
 
@@ -2127,7 +2130,69 @@ IonDatetime = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([ProxyCmp({
       selector: 'ion-datetime',
       changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_2__.ChangeDetectionStrategy.OnPush,
       template: '<ng-content></ng-content>',
-      inputs: ['cancelText', 'clearText', 'color', 'dayValues', 'disabled', 'doneText', 'firstDayOfWeek', 'hourCycle', 'hourValues', 'isDateEnabled', 'locale', 'max', 'min', 'minuteValues', 'mode', 'monthValues', 'name', 'presentation', 'readonly', 'showClearButton', 'showDefaultButtons', 'showDefaultTimeLabel', 'showDefaultTitle', 'size', 'value', 'yearValues']
+      inputs: ['cancelText', 'clearText', 'color', 'dayValues', 'disabled', 'doneText', 'firstDayOfWeek', 'hourCycle', 'hourValues', 'isDateEnabled', 'locale', 'max', 'min', 'minuteValues', 'mode', 'monthValues', 'multiple', 'name', 'preferWheel', 'presentation', 'readonly', 'showClearButton', 'showDefaultButtons', 'showDefaultTimeLabel', 'showDefaultTitle', 'size', 'value', 'yearValues']
+    }]
+  }], function () {
+    return [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_2__.ChangeDetectorRef
+    }, {
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_2__.ElementRef
+    }, {
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_2__.NgZone
+    }];
+  }, null);
+})();
+
+let IonDatetimeButton = class IonDatetimeButton {
+  constructor(c, r, z) {
+    this.z = z;
+    c.detach();
+    this.el = r.nativeElement;
+  }
+
+};
+/** @nocollapse */
+
+IonDatetimeButton.ɵfac = function IonDatetimeButton_Factory(t) {
+  return new (t || IonDatetimeButton)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_2__.ChangeDetectorRef), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_2__.ElementRef), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_2__.NgZone));
+};
+/** @nocollapse */
+
+
+IonDatetimeButton.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({
+  type: IonDatetimeButton,
+  selectors: [["ion-datetime-button"]],
+  inputs: {
+    color: "color",
+    datetime: "datetime",
+    disabled: "disabled",
+    mode: "mode"
+  },
+  ngContentSelectors: _c0,
+  decls: 1,
+  vars: 0,
+  template: function IonDatetimeButton_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵprojectionDef"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵprojection"](0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+});
+IonDatetimeButton = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([ProxyCmp({
+  defineCustomElementFn: undefined,
+  inputs: ['color', 'datetime', 'disabled', 'mode']
+})], IonDatetimeButton);
+
+(function () {
+  (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](IonDatetimeButton, [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_2__.Component,
+    args: [{
+      selector: 'ion-datetime-button',
+      changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_2__.ChangeDetectionStrategy.OnPush,
+      template: '<ng-content></ng-content>',
+      inputs: ['color', 'datetime', 'disabled', 'mode']
     }]
   }], function () {
     return [{
@@ -4011,6 +4076,7 @@ IonRange.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵ
   type: IonRange,
   selectors: [["ion-range"]],
   inputs: {
+    activeBarStart: "activeBarStart",
     color: "color",
     debounce: "debounce",
     disabled: "disabled",
@@ -4040,7 +4106,7 @@ IonRange.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵ
 });
 IonRange = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([ProxyCmp({
   defineCustomElementFn: undefined,
-  inputs: ['color', 'debounce', 'disabled', 'dualKnobs', 'max', 'min', 'mode', 'name', 'pin', 'pinFormatter', 'snaps', 'step', 'ticks', 'value']
+  inputs: ['activeBarStart', 'color', 'debounce', 'disabled', 'dualKnobs', 'max', 'min', 'mode', 'name', 'pin', 'pinFormatter', 'snaps', 'step', 'ticks', 'value']
 })], IonRange);
 
 (function () {
@@ -4050,7 +4116,7 @@ IonRange = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([ProxyCmp({
       selector: 'ion-range',
       changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_2__.ChangeDetectionStrategy.OnPush,
       template: '<ng-content></ng-content>',
-      inputs: ['color', 'debounce', 'disabled', 'dualKnobs', 'max', 'min', 'mode', 'name', 'pin', 'pinFormatter', 'snaps', 'step', 'ticks', 'value']
+      inputs: ['activeBarStart', 'color', 'debounce', 'disabled', 'dualKnobs', 'max', 'min', 'mode', 'name', 'pin', 'pinFormatter', 'snaps', 'step', 'ticks', 'value']
     }]
   }], function () {
     return [{
@@ -5469,6 +5535,7 @@ IonToggle.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵ�
     checked: "checked",
     color: "color",
     disabled: "disabled",
+    enableOnOffLabels: "enableOnOffLabels",
     mode: "mode",
     name: "name",
     value: "value"
@@ -5487,7 +5554,7 @@ IonToggle.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵ�
 });
 IonToggle = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([ProxyCmp({
   defineCustomElementFn: undefined,
-  inputs: ['checked', 'color', 'disabled', 'mode', 'name', 'value']
+  inputs: ['checked', 'color', 'disabled', 'enableOnOffLabels', 'mode', 'name', 'value']
 })], IonToggle);
 
 (function () {
@@ -5497,7 +5564,7 @@ IonToggle = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([ProxyCmp({
       selector: 'ion-toggle',
       changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_2__.ChangeDetectionStrategy.OnPush,
       template: '<ng-content></ng-content>',
-      inputs: ['checked', 'color', 'disabled', 'mode', 'name', 'value']
+      inputs: ['checked', 'color', 'disabled', 'enableOnOffLabels', 'mode', 'name', 'value']
     }]
   }], function () {
     return [{
@@ -8245,6 +8312,7 @@ IonModal.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵ
   },
   inputs: {
     animated: "animated",
+    keepContentsMounted: "keepContentsMounted",
     backdropBreakpoint: "backdropBreakpoint",
     backdropDismiss: "backdropDismiss",
     breakpoints: "breakpoints",
@@ -8253,6 +8321,7 @@ IonModal.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵ
     enterAnimation: "enterAnimation",
     event: "event",
     handle: "handle",
+    handleBehavior: "handleBehavior",
     initialBreakpoint: "initialBreakpoint",
     isOpen: "isOpen",
     keyboardClose: "keyboardClose",
@@ -8273,7 +8342,7 @@ IonModal.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵ
     }
 
     if (rf & 2) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.isCmpOpen);
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.isCmpOpen || ctx.keepContentsMounted);
     }
   },
   dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_7__.NgIf, _angular_common__WEBPACK_IMPORTED_MODULE_7__.NgTemplateOutlet],
@@ -8281,7 +8350,7 @@ IonModal.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵ
   changeDetection: 0
 });
 IonModal = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([ProxyCmp({
-  inputs: ['animated', 'backdropBreakpoint', 'backdropDismiss', 'breakpoints', 'canDismiss', 'cssClass', 'enterAnimation', 'event', 'handle', 'initialBreakpoint', 'isOpen', 'keyboardClose', 'leaveAnimation', 'mode', 'presentingElement', 'showBackdrop', 'swipeToClose', 'translucent', 'trigger'],
+  inputs: ['animated', 'keepContentsMounted', 'backdropBreakpoint', 'backdropDismiss', 'breakpoints', 'canDismiss', 'cssClass', 'enterAnimation', 'event', 'handle', 'handleBehavior', 'initialBreakpoint', 'isOpen', 'keyboardClose', 'leaveAnimation', 'mode', 'presentingElement', 'showBackdrop', 'swipeToClose', 'translucent', 'trigger'],
   methods: ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss', 'setCurrentBreakpoint', 'getCurrentBreakpoint']
 })], IonModal);
 
@@ -8291,8 +8360,10 @@ IonModal = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([ProxyCmp({
     args: [{
       selector: 'ion-modal',
       changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_2__.ChangeDetectionStrategy.OnPush,
-      template: `<div class="ion-page" *ngIf="isCmpOpen"><ng-container [ngTemplateOutlet]="template"></ng-container></div>`,
-      inputs: ['animated', 'backdropBreakpoint', 'backdropDismiss', 'breakpoints', 'canDismiss', 'cssClass', 'enterAnimation', 'event', 'handle', 'initialBreakpoint', 'isOpen', 'keyboardClose', 'leaveAnimation', 'mode', 'presentingElement', 'showBackdrop', 'swipeToClose', 'translucent', 'trigger']
+      template: `<div class="ion-page" *ngIf="isCmpOpen || keepContentsMounted">
+    <ng-container [ngTemplateOutlet]="template"></ng-container>
+  </div>`,
+      inputs: ['animated', 'keepContentsMounted', 'backdropBreakpoint', 'backdropDismiss', 'breakpoints', 'canDismiss', 'cssClass', 'enterAnimation', 'event', 'handle', 'handleBehavior', 'initialBreakpoint', 'isOpen', 'keyboardClose', 'leaveAnimation', 'mode', 'presentingElement', 'showBackdrop', 'swipeToClose', 'translucent', 'trigger']
     }]
   }], function () {
     return [{
@@ -8355,6 +8426,7 @@ IonPopover.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵ
     alignment: "alignment",
     animated: "animated",
     arrow: "arrow",
+    keepContentsMounted: "keepContentsMounted",
     backdropDismiss: "backdropDismiss",
     cssClass: "cssClass",
     dismissOnSelect: "dismissOnSelect",
@@ -8381,7 +8453,7 @@ IonPopover.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵ
     }
 
     if (rf & 2) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.isCmpOpen);
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.isCmpOpen || ctx.keepContentsMounted);
     }
   },
   dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_7__.NgIf, _angular_common__WEBPACK_IMPORTED_MODULE_7__.NgTemplateOutlet],
@@ -8389,7 +8461,7 @@ IonPopover.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵ
   changeDetection: 0
 });
 IonPopover = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([ProxyCmp({
-  inputs: ['alignment', 'animated', 'arrow', 'backdropDismiss', 'cssClass', 'dismissOnSelect', 'enterAnimation', 'event', 'isOpen', 'keyboardClose', 'leaveAnimation', 'mode', 'showBackdrop', 'translucent', 'trigger', 'triggerAction', 'reference', 'size', 'side'],
+  inputs: ['alignment', 'animated', 'arrow', 'keepContentsMounted', 'backdropDismiss', 'cssClass', 'dismissOnSelect', 'enterAnimation', 'event', 'isOpen', 'keyboardClose', 'leaveAnimation', 'mode', 'showBackdrop', 'translucent', 'trigger', 'triggerAction', 'reference', 'size', 'side'],
   methods: ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss']
 })], IonPopover);
 
@@ -8399,8 +8471,8 @@ IonPopover = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([ProxyCmp({
     args: [{
       selector: 'ion-popover',
       changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_2__.ChangeDetectionStrategy.OnPush,
-      template: `<ng-container [ngTemplateOutlet]="template" *ngIf="isCmpOpen"></ng-container>`,
-      inputs: ['alignment', 'animated', 'arrow', 'backdropDismiss', 'cssClass', 'dismissOnSelect', 'enterAnimation', 'event', 'isOpen', 'keyboardClose', 'leaveAnimation', 'mode', 'showBackdrop', 'translucent', 'trigger', 'triggerAction', 'reference', 'size', 'side']
+      template: `<ng-container [ngTemplateOutlet]="template" *ngIf="isCmpOpen || keepContentsMounted"></ng-container>`,
+      inputs: ['alignment', 'animated', 'arrow', 'keepContentsMounted', 'backdropDismiss', 'cssClass', 'dismissOnSelect', 'enterAnimation', 'event', 'isOpen', 'keyboardClose', 'leaveAnimation', 'mode', 'showBackdrop', 'translucent', 'trigger', 'triggerAction', 'reference', 'size', 'side']
     }]
   }], function () {
     return [{
@@ -16532,7 +16604,7 @@ const defineCustomElements = (win, options) => {
   if (typeof window === 'undefined') return Promise.resolve();
   return patchEsm().then(() => {
     (0,_app_globals_5b6c8f4b_js__WEBPACK_IMPORTED_MODULE_1__.g)();
-    return (0,_index_88bdeaae_js__WEBPACK_IMPORTED_MODULE_0__.b)(JSON.parse("[[\"ion-menu_3\",[[33,\"ion-menu-button\",{\"color\":[513],\"disabled\":[4],\"menu\":[1],\"autoHide\":[4,\"auto-hide\"],\"type\":[1],\"visible\":[32]},[[16,\"ionMenuChange\",\"visibilityChanged\"],[16,\"ionSplitPaneVisible\",\"visibilityChanged\"]]],[33,\"ion-menu\",{\"contentId\":[513,\"content-id\"],\"menuId\":[513,\"menu-id\"],\"type\":[1025],\"disabled\":[1028],\"side\":[513],\"swipeGesture\":[4,\"swipe-gesture\"],\"maxEdgeStart\":[2,\"max-edge-start\"],\"isPaneVisible\":[32],\"isEndSide\":[32],\"isOpen\":[64],\"isActive\":[64],\"open\":[64],\"close\":[64],\"toggle\":[64],\"setOpen\":[64]},[[16,\"ionSplitPaneVisible\",\"onSplitPaneChanged\"],[2,\"click\",\"onBackdropClick\"],[0,\"keydown\",\"onKeydown\"]]],[1,\"ion-menu-toggle\",{\"menu\":[1],\"autoHide\":[4,\"auto-hide\"],\"visible\":[32]},[[16,\"ionMenuChange\",\"visibilityChanged\"],[16,\"ionSplitPaneVisible\",\"visibilityChanged\"]]]]],[\"ion-fab_3\",[[33,\"ion-fab-button\",{\"color\":[513],\"activated\":[4],\"disabled\":[4],\"download\":[1],\"href\":[1],\"rel\":[1],\"routerDirection\":[1,\"router-direction\"],\"routerAnimation\":[16],\"target\":[1],\"show\":[4],\"translucent\":[4],\"type\":[1],\"size\":[1],\"closeIcon\":[1,\"close-icon\"]}],[1,\"ion-fab\",{\"horizontal\":[1],\"vertical\":[1],\"edge\":[4],\"activated\":[1028],\"close\":[64],\"toggle\":[64]}],[1,\"ion-fab-list\",{\"activated\":[4],\"side\":[1]}]]],[\"ion-refresher_2\",[[0,\"ion-refresher-content\",{\"pullingIcon\":[1025,\"pulling-icon\"],\"pullingText\":[1,\"pulling-text\"],\"refreshingSpinner\":[1025,\"refreshing-spinner\"],\"refreshingText\":[1,\"refreshing-text\"]}],[32,\"ion-refresher\",{\"pullMin\":[2,\"pull-min\"],\"pullMax\":[2,\"pull-max\"],\"closeDuration\":[1,\"close-duration\"],\"snapbackDuration\":[1,\"snapback-duration\"],\"pullFactor\":[2,\"pull-factor\"],\"disabled\":[4],\"nativeRefresher\":[32],\"state\":[32],\"complete\":[64],\"cancel\":[64],\"getProgress\":[64]}]]],[\"ion-back-button\",[[33,\"ion-back-button\",{\"color\":[513],\"defaultHref\":[1025,\"default-href\"],\"disabled\":[516],\"icon\":[1],\"text\":[1],\"type\":[1],\"routerAnimation\":[16]}]]],[\"ion-toast\",[[33,\"ion-toast\",{\"overlayIndex\":[2,\"overlay-index\"],\"color\":[513],\"enterAnimation\":[16],\"leaveAnimation\":[16],\"cssClass\":[1,\"css-class\"],\"duration\":[2],\"header\":[1],\"message\":[1],\"keyboardClose\":[4,\"keyboard-close\"],\"position\":[1],\"buttons\":[16],\"translucent\":[4],\"animated\":[4],\"icon\":[1],\"htmlAttributes\":[16],\"present\":[64],\"dismiss\":[64],\"onDidDismiss\":[64],\"onWillDismiss\":[64]}]]],[\"ion-card_5\",[[33,\"ion-card\",{\"color\":[513],\"button\":[4],\"type\":[1],\"disabled\":[4],\"download\":[1],\"href\":[1],\"rel\":[1],\"routerDirection\":[1,\"router-direction\"],\"routerAnimation\":[16],\"target\":[1]}],[32,\"ion-card-content\"],[33,\"ion-card-header\",{\"color\":[513],\"translucent\":[4]}],[33,\"ion-card-subtitle\",{\"color\":[513]}],[33,\"ion-card-title\",{\"color\":[513]}]]],[\"ion-item-option_3\",[[33,\"ion-item-option\",{\"color\":[513],\"disabled\":[4],\"download\":[1],\"expandable\":[4],\"href\":[1],\"rel\":[1],\"target\":[1],\"type\":[1]}],[32,\"ion-item-options\",{\"side\":[1],\"fireSwipeEvent\":[64]}],[0,\"ion-item-sliding\",{\"disabled\":[4],\"state\":[32],\"getOpenAmount\":[64],\"getSlidingRatio\":[64],\"open\":[64],\"close\":[64],\"closeOpened\":[64]}]]],[\"ion-accordion_2\",[[49,\"ion-accordion\",{\"value\":[1],\"disabled\":[4],\"readonly\":[4],\"toggleIcon\":[1,\"toggle-icon\"],\"toggleIconSlot\":[1,\"toggle-icon-slot\"],\"state\":[32],\"isNext\":[32],\"isPrevious\":[32]}],[33,\"ion-accordion-group\",{\"animated\":[4],\"multiple\":[4],\"value\":[1025],\"disabled\":[4],\"readonly\":[4],\"expand\":[1],\"requestAccordionToggle\":[64],\"getAccordions\":[64]},[[0,\"keydown\",\"onKeydown\"]]]]],[\"ion-infinite-scroll_2\",[[32,\"ion-infinite-scroll-content\",{\"loadingSpinner\":[1025,\"loading-spinner\"],\"loadingText\":[1,\"loading-text\"]}],[0,\"ion-infinite-scroll\",{\"threshold\":[1],\"disabled\":[4],\"position\":[1],\"isLoading\":[32],\"complete\":[64]}]]],[\"ion-reorder_2\",[[33,\"ion-reorder\",null,[[2,\"click\",\"onClick\"]]],[0,\"ion-reorder-group\",{\"disabled\":[4],\"state\":[32],\"complete\":[64]}]]],[\"ion-segment_2\",[[33,\"ion-segment-button\",{\"disabled\":[4],\"layout\":[1],\"type\":[1],\"value\":[1],\"checked\":[32]}],[33,\"ion-segment\",{\"color\":[513],\"disabled\":[4],\"scrollable\":[4],\"swipeGesture\":[4,\"swipe-gesture\"],\"value\":[1025],\"selectOnFocus\":[4,\"select-on-focus\"],\"activated\":[32]},[[0,\"keydown\",\"onKeyDown\"]]]]],[\"ion-tab-bar_2\",[[33,\"ion-tab-button\",{\"disabled\":[4],\"download\":[1],\"href\":[1],\"rel\":[1],\"layout\":[1025],\"selected\":[1028],\"tab\":[1],\"target\":[1]},[[8,\"ionTabBarChanged\",\"onTabBarChanged\"]]],[33,\"ion-tab-bar\",{\"color\":[513],\"selectedTab\":[1,\"selected-tab\"],\"translucent\":[4],\"keyboardVisible\":[32]}]]],[\"ion-chip\",[[33,\"ion-chip\",{\"color\":[513],\"outline\":[4],\"disabled\":[4]}]]],[\"ion-searchbar\",[[34,\"ion-searchbar\",{\"color\":[513],\"animated\":[4],\"autocomplete\":[1],\"autocorrect\":[1],\"cancelButtonIcon\":[1,\"cancel-button-icon\"],\"cancelButtonText\":[1,\"cancel-button-text\"],\"clearIcon\":[1,\"clear-icon\"],\"debounce\":[2],\"disabled\":[4],\"inputmode\":[1],\"enterkeyhint\":[1],\"placeholder\":[1],\"searchIcon\":[1,\"search-icon\"],\"showCancelButton\":[1,\"show-cancel-button\"],\"showClearButton\":[1,\"show-clear-button\"],\"spellcheck\":[4],\"type\":[1],\"value\":[1025],\"focused\":[32],\"noAnimate\":[32],\"setFocus\":[64],\"getInputElement\":[64]}]]],[\"ion-nav_2\",[[1,\"ion-nav\",{\"delegate\":[16],\"swipeGesture\":[1028,\"swipe-gesture\"],\"animated\":[4],\"animation\":[16],\"rootParams\":[16],\"root\":[1],\"push\":[64],\"insert\":[64],\"insertPages\":[64],\"pop\":[64],\"popTo\":[64],\"popToRoot\":[64],\"removeIndex\":[64],\"setRoot\":[64],\"setPages\":[64],\"setRouteId\":[64],\"getRouteId\":[64],\"getActive\":[64],\"getByIndex\":[64],\"canGoBack\":[64],\"getPrevious\":[64]}],[0,\"ion-nav-link\",{\"component\":[1],\"componentProps\":[16],\"routerDirection\":[1,\"router-direction\"],\"routerAnimation\":[16]}]]],[\"ion-slide_2\",[[0,\"ion-slide\"],[36,\"ion-slides\",{\"options\":[8],\"pager\":[4],\"scrollbar\":[4],\"update\":[64],\"updateAutoHeight\":[64],\"slideTo\":[64],\"slideNext\":[64],\"slidePrev\":[64],\"getActiveIndex\":[64],\"getPreviousIndex\":[64],\"length\":[64],\"isEnd\":[64],\"isBeginning\":[64],\"startAutoplay\":[64],\"stopAutoplay\":[64],\"lockSwipeToNext\":[64],\"lockSwipeToPrev\":[64],\"lockSwipes\":[64],\"getSwiper\":[64]}]]],[\"ion-tab_2\",[[1,\"ion-tab\",{\"active\":[1028],\"delegate\":[16],\"tab\":[1],\"component\":[1],\"setActive\":[64]}],[1,\"ion-tabs\",{\"useRouter\":[1028,\"use-router\"],\"selectedTab\":[32],\"select\":[64],\"getTab\":[64],\"getSelected\":[64],\"setRouteId\":[64],\"getRouteId\":[64]}]]],[\"ion-input\",[[34,\"ion-input\",{\"fireFocusEvents\":[4,\"fire-focus-events\"],\"color\":[513],\"accept\":[1],\"autocapitalize\":[1],\"autocomplete\":[1],\"autocorrect\":[1],\"autofocus\":[4],\"clearInput\":[4,\"clear-input\"],\"clearOnEdit\":[4,\"clear-on-edit\"],\"debounce\":[2],\"disabled\":[4],\"enterkeyhint\":[1],\"inputmode\":[1],\"max\":[8],\"maxlength\":[2],\"min\":[8],\"minlength\":[2],\"multiple\":[4],\"name\":[1],\"pattern\":[1],\"placeholder\":[1],\"readonly\":[4],\"required\":[4],\"spellcheck\":[4],\"step\":[1],\"size\":[2],\"type\":[1],\"value\":[1032],\"hasFocus\":[32],\"setFocus\":[64],\"setBlur\":[64],\"getInputElement\":[64]}]]],[\"ion-textarea\",[[34,\"ion-textarea\",{\"fireFocusEvents\":[4,\"fire-focus-events\"],\"color\":[513],\"autocapitalize\":[1],\"autofocus\":[4],\"clearOnEdit\":[1028,\"clear-on-edit\"],\"debounce\":[2],\"disabled\":[4],\"inputmode\":[1],\"enterkeyhint\":[1],\"maxlength\":[2],\"minlength\":[2],\"name\":[1],\"placeholder\":[1],\"readonly\":[4],\"required\":[4],\"spellcheck\":[4],\"cols\":[2],\"rows\":[2],\"wrap\":[1],\"autoGrow\":[4,\"auto-grow\"],\"value\":[1025],\"hasFocus\":[32],\"setFocus\":[64],\"setBlur\":[64],\"getInputElement\":[64]}]]],[\"ion-backdrop\",[[33,\"ion-backdrop\",{\"visible\":[4],\"tappable\":[4],\"stopPropagation\":[4,\"stop-propagation\"]},[[2,\"click\",\"onMouseDown\"]]]]],[\"ion-loading\",[[34,\"ion-loading\",{\"overlayIndex\":[2,\"overlay-index\"],\"keyboardClose\":[4,\"keyboard-close\"],\"enterAnimation\":[16],\"leaveAnimation\":[16],\"message\":[1],\"cssClass\":[1,\"css-class\"],\"duration\":[2],\"backdropDismiss\":[4,\"backdrop-dismiss\"],\"showBackdrop\":[4,\"show-backdrop\"],\"spinner\":[1025],\"translucent\":[4],\"animated\":[4],\"htmlAttributes\":[16],\"present\":[64],\"dismiss\":[64],\"onDidDismiss\":[64],\"onWillDismiss\":[64]}]]],[\"ion-breadcrumb_2\",[[33,\"ion-breadcrumb\",{\"collapsed\":[4],\"last\":[4],\"showCollapsedIndicator\":[4,\"show-collapsed-indicator\"],\"color\":[1],\"active\":[4],\"disabled\":[4],\"download\":[1],\"href\":[1],\"rel\":[1],\"separator\":[4],\"target\":[1],\"routerDirection\":[1,\"router-direction\"],\"routerAnimation\":[16]}],[33,\"ion-breadcrumbs\",{\"color\":[1],\"maxItems\":[2,\"max-items\"],\"itemsBeforeCollapse\":[2,\"items-before-collapse\"],\"itemsAfterCollapse\":[2,\"items-after-collapse\"],\"collapsed\":[32],\"activeChanged\":[32]},[[0,\"collapsedClick\",\"onCollapsedClick\"]]]]],[\"ion-modal\",[[33,\"ion-modal\",{\"hasController\":[4,\"has-controller\"],\"overlayIndex\":[2,\"overlay-index\"],\"delegate\":[16],\"keyboardClose\":[4,\"keyboard-close\"],\"enterAnimation\":[16],\"leaveAnimation\":[16],\"breakpoints\":[16],\"initialBreakpoint\":[2,\"initial-breakpoint\"],\"backdropBreakpoint\":[2,\"backdrop-breakpoint\"],\"handle\":[4],\"component\":[1],\"componentProps\":[16],\"cssClass\":[1,\"css-class\"],\"backdropDismiss\":[4,\"backdrop-dismiss\"],\"showBackdrop\":[4,\"show-backdrop\"],\"animated\":[4],\"swipeToClose\":[4,\"swipe-to-close\"],\"presentingElement\":[16],\"htmlAttributes\":[16],\"isOpen\":[4,\"is-open\"],\"trigger\":[1],\"canDismiss\":[4,\"can-dismiss\"],\"presented\":[32],\"present\":[64],\"dismiss\":[64],\"onDidDismiss\":[64],\"onWillDismiss\":[64],\"setCurrentBreakpoint\":[64],\"getCurrentBreakpoint\":[64]}]]],[\"ion-route_4\",[[0,\"ion-route\",{\"url\":[1],\"component\":[1],\"componentProps\":[16],\"beforeLeave\":[16],\"beforeEnter\":[16]}],[0,\"ion-route-redirect\",{\"from\":[1],\"to\":[1]}],[0,\"ion-router\",{\"root\":[1],\"useHash\":[4,\"use-hash\"],\"canTransition\":[64],\"push\":[64],\"back\":[64],\"printDebug\":[64],\"navChanged\":[64]},[[8,\"popstate\",\"onPopState\"],[4,\"ionBackButton\",\"onBackButton\"]]],[1,\"ion-router-link\",{\"color\":[513],\"href\":[1],\"rel\":[1],\"routerDirection\":[1,\"router-direction\"],\"routerAnimation\":[16],\"target\":[1]}]]],[\"ion-avatar_3\",[[33,\"ion-avatar\"],[33,\"ion-badge\",{\"color\":[513]}],[1,\"ion-thumbnail\"]]],[\"ion-col_3\",[[1,\"ion-col\",{\"offset\":[1],\"offsetXs\":[1,\"offset-xs\"],\"offsetSm\":[1,\"offset-sm\"],\"offsetMd\":[1,\"offset-md\"],\"offsetLg\":[1,\"offset-lg\"],\"offsetXl\":[1,\"offset-xl\"],\"pull\":[1],\"pullXs\":[1,\"pull-xs\"],\"pullSm\":[1,\"pull-sm\"],\"pullMd\":[1,\"pull-md\"],\"pullLg\":[1,\"pull-lg\"],\"pullXl\":[1,\"pull-xl\"],\"push\":[1],\"pushXs\":[1,\"push-xs\"],\"pushSm\":[1,\"push-sm\"],\"pushMd\":[1,\"push-md\"],\"pushLg\":[1,\"push-lg\"],\"pushXl\":[1,\"push-xl\"],\"size\":[1],\"sizeXs\":[1,\"size-xs\"],\"sizeSm\":[1,\"size-sm\"],\"sizeMd\":[1,\"size-md\"],\"sizeLg\":[1,\"size-lg\"],\"sizeXl\":[1,\"size-xl\"]},[[9,\"resize\",\"onResize\"]]],[1,\"ion-grid\",{\"fixed\":[4]}],[1,\"ion-row\"]]],[\"ion-img\",[[1,\"ion-img\",{\"alt\":[1],\"src\":[1],\"loadSrc\":[32],\"loadError\":[32]}]]],[\"ion-progress-bar\",[[33,\"ion-progress-bar\",{\"type\":[1],\"reversed\":[4],\"value\":[2],\"buffer\":[2],\"color\":[513]}]]],[\"ion-range\",[[33,\"ion-range\",{\"color\":[513],\"debounce\":[2],\"name\":[1],\"dualKnobs\":[4,\"dual-knobs\"],\"min\":[2],\"max\":[2],\"pin\":[4],\"pinFormatter\":[16],\"snaps\":[4],\"step\":[2],\"ticks\":[4],\"disabled\":[4],\"value\":[1026],\"ratioA\":[32],\"ratioB\":[32],\"pressedKnob\":[32]}]]],[\"ion-split-pane\",[[33,\"ion-split-pane\",{\"contentId\":[513,\"content-id\"],\"disabled\":[4],\"when\":[8],\"visible\":[32]}]]],[\"ion-text\",[[1,\"ion-text\",{\"color\":[513]}]]],[\"ion-toggle\",[[33,\"ion-toggle\",{\"color\":[513],\"name\":[1],\"checked\":[1028],\"disabled\":[4],\"value\":[1],\"activated\":[32]}]]],[\"ion-virtual-scroll\",[[0,\"ion-virtual-scroll\",{\"approxItemHeight\":[2,\"approx-item-height\"],\"approxHeaderHeight\":[2,\"approx-header-height\"],\"approxFooterHeight\":[2,\"approx-footer-height\"],\"headerFn\":[16],\"footerFn\":[16],\"items\":[16],\"itemHeight\":[16],\"headerHeight\":[16],\"footerHeight\":[16],\"renderItem\":[16],\"renderHeader\":[16],\"renderFooter\":[16],\"nodeRender\":[16],\"domRender\":[16],\"totalHeight\":[32],\"positionForItem\":[64],\"checkRange\":[64],\"checkEnd\":[64]},[[9,\"resize\",\"onResize\"]]]]],[\"ion-picker-column-internal\",[[33,\"ion-picker-column-internal\",{\"items\":[16],\"value\":[1032],\"color\":[513],\"numericInput\":[4,\"numeric-input\"],\"isActive\":[32],\"scrollActiveItemIntoView\":[64]}]]],[\"ion-picker-internal\",[[33,\"ion-picker-internal\"]]],[\"ion-radio_2\",[[33,\"ion-radio\",{\"color\":[513],\"name\":[1],\"disabled\":[4],\"value\":[8],\"checked\":[32],\"buttonTabindex\":[32],\"setFocus\":[64],\"setButtonTabindex\":[64]}],[0,\"ion-radio-group\",{\"allowEmptySelection\":[4,\"allow-empty-selection\"],\"name\":[1],\"value\":[1032]},[[4,\"keydown\",\"onKeydown\"]]]]],[\"ion-ripple-effect\",[[1,\"ion-ripple-effect\",{\"type\":[1],\"addRipple\":[64]}]]],[\"ion-button_2\",[[33,\"ion-button\",{\"color\":[513],\"buttonType\":[1025,\"button-type\"],\"disabled\":[516],\"expand\":[513],\"fill\":[1537],\"routerDirection\":[1,\"router-direction\"],\"routerAnimation\":[16],\"download\":[1],\"href\":[1],\"rel\":[1],\"shape\":[513],\"size\":[513],\"strong\":[4],\"target\":[1],\"type\":[1]}],[1,\"ion-icon\",{\"mode\":[1025],\"color\":[1],\"ios\":[1],\"md\":[1],\"flipRtl\":[4,\"flip-rtl\"],\"name\":[513],\"src\":[1],\"icon\":[8],\"size\":[1],\"lazy\":[4],\"sanitize\":[4],\"svgContent\":[32],\"isVisible\":[32],\"ariaLabel\":[32]}]]],[\"ion-datetime_3\",[[33,\"ion-datetime\",{\"color\":[1],\"name\":[1],\"disabled\":[4],\"readonly\":[4],\"isDateEnabled\":[16],\"min\":[1025],\"max\":[1025],\"presentation\":[1],\"cancelText\":[1,\"cancel-text\"],\"doneText\":[1,\"done-text\"],\"clearText\":[1,\"clear-text\"],\"yearValues\":[8,\"year-values\"],\"monthValues\":[8,\"month-values\"],\"dayValues\":[8,\"day-values\"],\"hourValues\":[8,\"hour-values\"],\"minuteValues\":[8,\"minute-values\"],\"locale\":[1],\"firstDayOfWeek\":[2,\"first-day-of-week\"],\"value\":[1025],\"showDefaultTitle\":[4,\"show-default-title\"],\"showDefaultButtons\":[4,\"show-default-buttons\"],\"showClearButton\":[4,\"show-clear-button\"],\"showDefaultTimeLabel\":[4,\"show-default-time-label\"],\"hourCycle\":[1,\"hour-cycle\"],\"size\":[1],\"showMonthAndYear\":[32],\"activeParts\":[32],\"workingParts\":[32],\"isPresented\":[32],\"isTimePopoverOpen\":[32],\"confirm\":[64],\"reset\":[64],\"cancel\":[64]}],[34,\"ion-picker\",{\"overlayIndex\":[2,\"overlay-index\"],\"keyboardClose\":[4,\"keyboard-close\"],\"enterAnimation\":[16],\"leaveAnimation\":[16],\"buttons\":[16],\"columns\":[16],\"cssClass\":[1,\"css-class\"],\"duration\":[2],\"showBackdrop\":[4,\"show-backdrop\"],\"backdropDismiss\":[4,\"backdrop-dismiss\"],\"animated\":[4],\"htmlAttributes\":[16],\"presented\":[32],\"present\":[64],\"dismiss\":[64],\"onDidDismiss\":[64],\"onWillDismiss\":[64],\"getColumn\":[64]}],[32,\"ion-picker-column\",{\"col\":[16]}]]],[\"ion-action-sheet\",[[34,\"ion-action-sheet\",{\"overlayIndex\":[2,\"overlay-index\"],\"keyboardClose\":[4,\"keyboard-close\"],\"enterAnimation\":[16],\"leaveAnimation\":[16],\"buttons\":[16],\"cssClass\":[1,\"css-class\"],\"backdropDismiss\":[4,\"backdrop-dismiss\"],\"header\":[1],\"subHeader\":[1,\"sub-header\"],\"translucent\":[4],\"animated\":[4],\"htmlAttributes\":[16],\"present\":[64],\"dismiss\":[64],\"onDidDismiss\":[64],\"onWillDismiss\":[64]}]]],[\"ion-alert\",[[34,\"ion-alert\",{\"overlayIndex\":[2,\"overlay-index\"],\"keyboardClose\":[4,\"keyboard-close\"],\"enterAnimation\":[16],\"leaveAnimation\":[16],\"cssClass\":[1,\"css-class\"],\"header\":[1],\"subHeader\":[1,\"sub-header\"],\"message\":[1],\"buttons\":[16],\"inputs\":[1040],\"backdropDismiss\":[4,\"backdrop-dismiss\"],\"translucent\":[4],\"animated\":[4],\"htmlAttributes\":[16],\"present\":[64],\"dismiss\":[64],\"onDidDismiss\":[64],\"onWillDismiss\":[64]},[[4,\"keydown\",\"onKeydown\"]]]]],[\"ion-popover\",[[33,\"ion-popover\",{\"hasController\":[4,\"has-controller\"],\"delegate\":[16],\"overlayIndex\":[2,\"overlay-index\"],\"enterAnimation\":[16],\"leaveAnimation\":[16],\"component\":[1],\"componentProps\":[16],\"keyboardClose\":[4,\"keyboard-close\"],\"cssClass\":[1,\"css-class\"],\"backdropDismiss\":[4,\"backdrop-dismiss\"],\"event\":[8],\"showBackdrop\":[4,\"show-backdrop\"],\"translucent\":[4],\"animated\":[4],\"htmlAttributes\":[16],\"triggerAction\":[1,\"trigger-action\"],\"trigger\":[1],\"size\":[1],\"dismissOnSelect\":[4,\"dismiss-on-select\"],\"reference\":[1],\"side\":[1],\"alignment\":[1025],\"arrow\":[4],\"isOpen\":[4,\"is-open\"],\"keyboardEvents\":[4,\"keyboard-events\"],\"presented\":[32],\"presentFromTrigger\":[64],\"present\":[64],\"dismiss\":[64],\"getParentPopover\":[64],\"onDidDismiss\":[64],\"onWillDismiss\":[64]}]]],[\"ion-checkbox\",[[33,\"ion-checkbox\",{\"color\":[513],\"name\":[1],\"checked\":[1028],\"indeterminate\":[1028],\"disabled\":[4],\"value\":[8]}]]],[\"ion-select_3\",[[33,\"ion-select\",{\"disabled\":[4],\"cancelText\":[1,\"cancel-text\"],\"okText\":[1,\"ok-text\"],\"placeholder\":[1],\"name\":[1],\"selectedText\":[1,\"selected-text\"],\"multiple\":[4],\"interface\":[1],\"interfaceOptions\":[8,\"interface-options\"],\"compareWith\":[1,\"compare-with\"],\"value\":[1032],\"isExpanded\":[32],\"open\":[64]}],[1,\"ion-select-option\",{\"disabled\":[4],\"value\":[8]}],[34,\"ion-select-popover\",{\"header\":[1],\"subHeader\":[1,\"sub-header\"],\"message\":[1],\"multiple\":[4],\"options\":[16]},[[0,\"ionChange\",\"onSelect\"]]]]],[\"ion-app_8\",[[0,\"ion-app\",{\"setFocus\":[64]}],[1,\"ion-content\",{\"color\":[513],\"fullscreen\":[4],\"forceOverscroll\":[1028,\"force-overscroll\"],\"scrollX\":[4,\"scroll-x\"],\"scrollY\":[4,\"scroll-y\"],\"scrollEvents\":[4,\"scroll-events\"],\"getScrollElement\":[64],\"scrollToTop\":[64],\"scrollToBottom\":[64],\"scrollByPoint\":[64],\"scrollToPoint\":[64]},[[8,\"appload\",\"onAppLoad\"]]],[36,\"ion-footer\",{\"collapse\":[1],\"translucent\":[4]}],[36,\"ion-header\",{\"collapse\":[1],\"translucent\":[4]}],[1,\"ion-router-outlet\",{\"mode\":[1025],\"delegate\":[16],\"animated\":[4],\"animation\":[16],\"swipeHandler\":[16],\"commit\":[64],\"setRouteId\":[64],\"getRouteId\":[64]}],[33,\"ion-title\",{\"color\":[513],\"size\":[1]}],[33,\"ion-toolbar\",{\"color\":[513]},[[0,\"ionStyle\",\"childrenStyle\"]]],[34,\"ion-buttons\",{\"collapse\":[4]}]]],[\"ion-spinner\",[[1,\"ion-spinner\",{\"color\":[513],\"duration\":[2],\"name\":[1],\"paused\":[4]}]]],[\"ion-item_8\",[[33,\"ion-item-divider\",{\"color\":[513],\"sticky\":[4]}],[32,\"ion-item-group\"],[1,\"ion-skeleton-text\",{\"animated\":[4]}],[32,\"ion-list\",{\"lines\":[1],\"inset\":[4],\"closeSlidingItems\":[64]}],[33,\"ion-list-header\",{\"color\":[513],\"lines\":[1]}],[49,\"ion-item\",{\"color\":[513],\"button\":[4],\"detail\":[4],\"detailIcon\":[1,\"detail-icon\"],\"disabled\":[4],\"download\":[1],\"fill\":[1],\"shape\":[1],\"href\":[1],\"rel\":[1],\"lines\":[1],\"counter\":[4],\"routerAnimation\":[16],\"routerDirection\":[1,\"router-direction\"],\"target\":[1],\"type\":[1],\"counterFormatter\":[16],\"multipleInputs\":[32],\"focusable\":[32],\"counterString\":[32]},[[0,\"ionChange\",\"handleIonChange\"],[0,\"ionColor\",\"labelColorChanged\"],[0,\"ionStyle\",\"itemStyle\"]]],[34,\"ion-label\",{\"color\":[513],\"position\":[1],\"noAnimate\":[32]}],[33,\"ion-note\",{\"color\":[513]}]]]]"), options);
+    return (0,_index_88bdeaae_js__WEBPACK_IMPORTED_MODULE_0__.b)(JSON.parse("[[\"ion-menu_3\",[[33,\"ion-menu-button\",{\"color\":[513],\"disabled\":[4],\"menu\":[1],\"autoHide\":[4,\"auto-hide\"],\"type\":[1],\"visible\":[32]},[[16,\"ionMenuChange\",\"visibilityChanged\"],[16,\"ionSplitPaneVisible\",\"visibilityChanged\"]]],[33,\"ion-menu\",{\"contentId\":[513,\"content-id\"],\"menuId\":[513,\"menu-id\"],\"type\":[1025],\"disabled\":[1028],\"side\":[513],\"swipeGesture\":[4,\"swipe-gesture\"],\"maxEdgeStart\":[2,\"max-edge-start\"],\"isPaneVisible\":[32],\"isEndSide\":[32],\"isOpen\":[64],\"isActive\":[64],\"open\":[64],\"close\":[64],\"toggle\":[64],\"setOpen\":[64]},[[16,\"ionSplitPaneVisible\",\"onSplitPaneChanged\"],[2,\"click\",\"onBackdropClick\"],[0,\"keydown\",\"onKeydown\"]]],[1,\"ion-menu-toggle\",{\"menu\":[1],\"autoHide\":[4,\"auto-hide\"],\"visible\":[32]},[[16,\"ionMenuChange\",\"visibilityChanged\"],[16,\"ionSplitPaneVisible\",\"visibilityChanged\"]]]]],[\"ion-fab_3\",[[33,\"ion-fab-button\",{\"color\":[513],\"activated\":[4],\"disabled\":[4],\"download\":[1],\"href\":[1],\"rel\":[1],\"routerDirection\":[1,\"router-direction\"],\"routerAnimation\":[16],\"target\":[1],\"show\":[4],\"translucent\":[4],\"type\":[1],\"size\":[1],\"closeIcon\":[1,\"close-icon\"]}],[1,\"ion-fab\",{\"horizontal\":[1],\"vertical\":[1],\"edge\":[4],\"activated\":[1028],\"close\":[64],\"toggle\":[64]}],[1,\"ion-fab-list\",{\"activated\":[4],\"side\":[1]}]]],[\"ion-refresher_2\",[[0,\"ion-refresher-content\",{\"pullingIcon\":[1025,\"pulling-icon\"],\"pullingText\":[1,\"pulling-text\"],\"refreshingSpinner\":[1025,\"refreshing-spinner\"],\"refreshingText\":[1,\"refreshing-text\"]}],[32,\"ion-refresher\",{\"pullMin\":[2,\"pull-min\"],\"pullMax\":[2,\"pull-max\"],\"closeDuration\":[1,\"close-duration\"],\"snapbackDuration\":[1,\"snapback-duration\"],\"pullFactor\":[2,\"pull-factor\"],\"disabled\":[4],\"nativeRefresher\":[32],\"state\":[32],\"complete\":[64],\"cancel\":[64],\"getProgress\":[64]}]]],[\"ion-back-button\",[[33,\"ion-back-button\",{\"color\":[513],\"defaultHref\":[1025,\"default-href\"],\"disabled\":[516],\"icon\":[1],\"text\":[1],\"type\":[1],\"routerAnimation\":[16]}]]],[\"ion-toast\",[[33,\"ion-toast\",{\"overlayIndex\":[2,\"overlay-index\"],\"color\":[513],\"enterAnimation\":[16],\"leaveAnimation\":[16],\"cssClass\":[1,\"css-class\"],\"duration\":[2],\"header\":[1],\"message\":[1],\"keyboardClose\":[4,\"keyboard-close\"],\"position\":[1],\"buttons\":[16],\"translucent\":[4],\"animated\":[4],\"icon\":[1],\"htmlAttributes\":[16],\"present\":[64],\"dismiss\":[64],\"onDidDismiss\":[64],\"onWillDismiss\":[64]}]]],[\"ion-card_5\",[[33,\"ion-card\",{\"color\":[513],\"button\":[4],\"type\":[1],\"disabled\":[4],\"download\":[1],\"href\":[1],\"rel\":[1],\"routerDirection\":[1,\"router-direction\"],\"routerAnimation\":[16],\"target\":[1]}],[32,\"ion-card-content\"],[33,\"ion-card-header\",{\"color\":[513],\"translucent\":[4]}],[33,\"ion-card-subtitle\",{\"color\":[513]}],[33,\"ion-card-title\",{\"color\":[513]}]]],[\"ion-item-option_3\",[[33,\"ion-item-option\",{\"color\":[513],\"disabled\":[4],\"download\":[1],\"expandable\":[4],\"href\":[1],\"rel\":[1],\"target\":[1],\"type\":[1]}],[32,\"ion-item-options\",{\"side\":[1],\"fireSwipeEvent\":[64]}],[0,\"ion-item-sliding\",{\"disabled\":[4],\"state\":[32],\"getOpenAmount\":[64],\"getSlidingRatio\":[64],\"open\":[64],\"close\":[64],\"closeOpened\":[64]}]]],[\"ion-accordion_2\",[[49,\"ion-accordion\",{\"value\":[1],\"disabled\":[4],\"readonly\":[4],\"toggleIcon\":[1,\"toggle-icon\"],\"toggleIconSlot\":[1,\"toggle-icon-slot\"],\"state\":[32],\"isNext\":[32],\"isPrevious\":[32]}],[33,\"ion-accordion-group\",{\"animated\":[4],\"multiple\":[4],\"value\":[1025],\"disabled\":[4],\"readonly\":[4],\"expand\":[1],\"requestAccordionToggle\":[64],\"getAccordions\":[64]},[[0,\"keydown\",\"onKeydown\"]]]]],[\"ion-breadcrumb_2\",[[33,\"ion-breadcrumb\",{\"collapsed\":[4],\"last\":[4],\"showCollapsedIndicator\":[4,\"show-collapsed-indicator\"],\"color\":[1],\"active\":[4],\"disabled\":[4],\"download\":[1],\"href\":[1],\"rel\":[1],\"separator\":[4],\"target\":[1],\"routerDirection\":[1,\"router-direction\"],\"routerAnimation\":[16]}],[33,\"ion-breadcrumbs\",{\"color\":[1],\"maxItems\":[2,\"max-items\"],\"itemsBeforeCollapse\":[2,\"items-before-collapse\"],\"itemsAfterCollapse\":[2,\"items-after-collapse\"],\"collapsed\":[32],\"activeChanged\":[32]},[[0,\"collapsedClick\",\"onCollapsedClick\"]]]]],[\"ion-infinite-scroll_2\",[[32,\"ion-infinite-scroll-content\",{\"loadingSpinner\":[1025,\"loading-spinner\"],\"loadingText\":[1,\"loading-text\"]}],[0,\"ion-infinite-scroll\",{\"threshold\":[1],\"disabled\":[4],\"position\":[1],\"isLoading\":[32],\"complete\":[64]}]]],[\"ion-reorder_2\",[[33,\"ion-reorder\",null,[[2,\"click\",\"onClick\"]]],[0,\"ion-reorder-group\",{\"disabled\":[4],\"state\":[32],\"complete\":[64]}]]],[\"ion-segment_2\",[[33,\"ion-segment-button\",{\"disabled\":[4],\"layout\":[1],\"type\":[1],\"value\":[1],\"checked\":[32]}],[33,\"ion-segment\",{\"color\":[513],\"disabled\":[4],\"scrollable\":[4],\"swipeGesture\":[4,\"swipe-gesture\"],\"value\":[1025],\"selectOnFocus\":[4,\"select-on-focus\"],\"activated\":[32]},[[0,\"keydown\",\"onKeyDown\"]]]]],[\"ion-tab-bar_2\",[[33,\"ion-tab-button\",{\"disabled\":[4],\"download\":[1],\"href\":[1],\"rel\":[1],\"layout\":[1025],\"selected\":[1028],\"tab\":[1],\"target\":[1]},[[8,\"ionTabBarChanged\",\"onTabBarChanged\"]]],[33,\"ion-tab-bar\",{\"color\":[513],\"selectedTab\":[1,\"selected-tab\"],\"translucent\":[4],\"keyboardVisible\":[32]}]]],[\"ion-chip\",[[33,\"ion-chip\",{\"color\":[513],\"outline\":[4],\"disabled\":[4]}]]],[\"ion-datetime-button\",[[33,\"ion-datetime-button\",{\"color\":[513],\"disabled\":[516],\"datetime\":[1],\"datetimePresentation\":[32],\"dateText\":[32],\"timeText\":[32],\"datetimeActive\":[32],\"selectedButton\":[32]}]]],[\"ion-searchbar\",[[34,\"ion-searchbar\",{\"color\":[513],\"animated\":[4],\"autocomplete\":[1],\"autocorrect\":[1],\"cancelButtonIcon\":[1,\"cancel-button-icon\"],\"cancelButtonText\":[1,\"cancel-button-text\"],\"clearIcon\":[1,\"clear-icon\"],\"debounce\":[2],\"disabled\":[4],\"inputmode\":[1],\"enterkeyhint\":[1],\"placeholder\":[1],\"searchIcon\":[1,\"search-icon\"],\"showCancelButton\":[1,\"show-cancel-button\"],\"showClearButton\":[1,\"show-clear-button\"],\"spellcheck\":[4],\"type\":[1],\"value\":[1025],\"focused\":[32],\"noAnimate\":[32],\"setFocus\":[64],\"getInputElement\":[64]}]]],[\"ion-toggle\",[[33,\"ion-toggle\",{\"color\":[513],\"name\":[1],\"checked\":[1028],\"disabled\":[4],\"value\":[1],\"enableOnOffLabels\":[4,\"enable-on-off-labels\"],\"activated\":[32]}]]],[\"ion-nav_2\",[[1,\"ion-nav\",{\"delegate\":[16],\"swipeGesture\":[1028,\"swipe-gesture\"],\"animated\":[4],\"animation\":[16],\"rootParams\":[16],\"root\":[1],\"push\":[64],\"insert\":[64],\"insertPages\":[64],\"pop\":[64],\"popTo\":[64],\"popToRoot\":[64],\"removeIndex\":[64],\"setRoot\":[64],\"setPages\":[64],\"setRouteId\":[64],\"getRouteId\":[64],\"getActive\":[64],\"getByIndex\":[64],\"canGoBack\":[64],\"getPrevious\":[64]}],[0,\"ion-nav-link\",{\"component\":[1],\"componentProps\":[16],\"routerDirection\":[1,\"router-direction\"],\"routerAnimation\":[16]}]]],[\"ion-input\",[[34,\"ion-input\",{\"fireFocusEvents\":[4,\"fire-focus-events\"],\"color\":[513],\"accept\":[1],\"autocapitalize\":[1],\"autocomplete\":[1],\"autocorrect\":[1],\"autofocus\":[4],\"clearInput\":[4,\"clear-input\"],\"clearOnEdit\":[4,\"clear-on-edit\"],\"debounce\":[2],\"disabled\":[4],\"enterkeyhint\":[1],\"inputmode\":[1],\"max\":[8],\"maxlength\":[2],\"min\":[8],\"minlength\":[2],\"multiple\":[4],\"name\":[1],\"pattern\":[1],\"placeholder\":[1],\"readonly\":[4],\"required\":[4],\"spellcheck\":[4],\"step\":[1],\"size\":[2],\"type\":[1],\"value\":[1032],\"hasFocus\":[32],\"setFocus\":[64],\"setBlur\":[64],\"getInputElement\":[64]}]]],[\"ion-textarea\",[[34,\"ion-textarea\",{\"fireFocusEvents\":[4,\"fire-focus-events\"],\"color\":[513],\"autocapitalize\":[1],\"autofocus\":[4],\"clearOnEdit\":[1028,\"clear-on-edit\"],\"debounce\":[2],\"disabled\":[4],\"inputmode\":[1],\"enterkeyhint\":[1],\"maxlength\":[2],\"minlength\":[2],\"name\":[1],\"placeholder\":[1],\"readonly\":[4],\"required\":[4],\"spellcheck\":[4],\"cols\":[2],\"rows\":[2],\"wrap\":[1],\"autoGrow\":[516,\"auto-grow\"],\"value\":[1025],\"hasFocus\":[32],\"setFocus\":[64],\"setBlur\":[64],\"getInputElement\":[64]}]]],[\"ion-backdrop\",[[33,\"ion-backdrop\",{\"visible\":[4],\"tappable\":[4],\"stopPropagation\":[4,\"stop-propagation\"]},[[2,\"click\",\"onMouseDown\"]]]]],[\"ion-loading\",[[34,\"ion-loading\",{\"overlayIndex\":[2,\"overlay-index\"],\"keyboardClose\":[4,\"keyboard-close\"],\"enterAnimation\":[16],\"leaveAnimation\":[16],\"message\":[1],\"cssClass\":[1,\"css-class\"],\"duration\":[2],\"backdropDismiss\":[4,\"backdrop-dismiss\"],\"showBackdrop\":[4,\"show-backdrop\"],\"spinner\":[1025],\"translucent\":[4],\"animated\":[4],\"htmlAttributes\":[16],\"present\":[64],\"dismiss\":[64],\"onDidDismiss\":[64],\"onWillDismiss\":[64]}]]],[\"ion-modal\",[[33,\"ion-modal\",{\"hasController\":[4,\"has-controller\"],\"overlayIndex\":[2,\"overlay-index\"],\"delegate\":[16],\"keyboardClose\":[4,\"keyboard-close\"],\"enterAnimation\":[16],\"leaveAnimation\":[16],\"breakpoints\":[16],\"initialBreakpoint\":[2,\"initial-breakpoint\"],\"backdropBreakpoint\":[2,\"backdrop-breakpoint\"],\"handle\":[4],\"handleBehavior\":[1,\"handle-behavior\"],\"component\":[1],\"componentProps\":[16],\"cssClass\":[1,\"css-class\"],\"backdropDismiss\":[4,\"backdrop-dismiss\"],\"showBackdrop\":[4,\"show-backdrop\"],\"animated\":[4],\"swipeToClose\":[4,\"swipe-to-close\"],\"presentingElement\":[16],\"htmlAttributes\":[16],\"isOpen\":[4,\"is-open\"],\"trigger\":[1],\"keepContentsMounted\":[4,\"keep-contents-mounted\"],\"canDismiss\":[4,\"can-dismiss\"],\"presented\":[32],\"present\":[64],\"dismiss\":[64],\"onDidDismiss\":[64],\"onWillDismiss\":[64],\"setCurrentBreakpoint\":[64],\"getCurrentBreakpoint\":[64]}]]],[\"ion-route_4\",[[0,\"ion-route\",{\"url\":[1],\"component\":[1],\"componentProps\":[16],\"beforeLeave\":[16],\"beforeEnter\":[16]}],[0,\"ion-route-redirect\",{\"from\":[1],\"to\":[1]}],[0,\"ion-router\",{\"root\":[1],\"useHash\":[4,\"use-hash\"],\"canTransition\":[64],\"push\":[64],\"back\":[64],\"printDebug\":[64],\"navChanged\":[64]},[[8,\"popstate\",\"onPopState\"],[4,\"ionBackButton\",\"onBackButton\"]]],[1,\"ion-router-link\",{\"color\":[513],\"href\":[1],\"rel\":[1],\"routerDirection\":[1,\"router-direction\"],\"routerAnimation\":[16],\"target\":[1]}]]],[\"ion-avatar_3\",[[33,\"ion-avatar\"],[33,\"ion-badge\",{\"color\":[513]}],[1,\"ion-thumbnail\"]]],[\"ion-col_3\",[[1,\"ion-col\",{\"offset\":[1],\"offsetXs\":[1,\"offset-xs\"],\"offsetSm\":[1,\"offset-sm\"],\"offsetMd\":[1,\"offset-md\"],\"offsetLg\":[1,\"offset-lg\"],\"offsetXl\":[1,\"offset-xl\"],\"pull\":[1],\"pullXs\":[1,\"pull-xs\"],\"pullSm\":[1,\"pull-sm\"],\"pullMd\":[1,\"pull-md\"],\"pullLg\":[1,\"pull-lg\"],\"pullXl\":[1,\"pull-xl\"],\"push\":[1],\"pushXs\":[1,\"push-xs\"],\"pushSm\":[1,\"push-sm\"],\"pushMd\":[1,\"push-md\"],\"pushLg\":[1,\"push-lg\"],\"pushXl\":[1,\"push-xl\"],\"size\":[1],\"sizeXs\":[1,\"size-xs\"],\"sizeSm\":[1,\"size-sm\"],\"sizeMd\":[1,\"size-md\"],\"sizeLg\":[1,\"size-lg\"],\"sizeXl\":[1,\"size-xl\"]},[[9,\"resize\",\"onResize\"]]],[1,\"ion-grid\",{\"fixed\":[4]}],[1,\"ion-row\"]]],[\"ion-slide_2\",[[0,\"ion-slide\"],[36,\"ion-slides\",{\"options\":[8],\"pager\":[4],\"scrollbar\":[4],\"update\":[64],\"updateAutoHeight\":[64],\"slideTo\":[64],\"slideNext\":[64],\"slidePrev\":[64],\"getActiveIndex\":[64],\"getPreviousIndex\":[64],\"length\":[64],\"isEnd\":[64],\"isBeginning\":[64],\"startAutoplay\":[64],\"stopAutoplay\":[64],\"lockSwipeToNext\":[64],\"lockSwipeToPrev\":[64],\"lockSwipes\":[64],\"getSwiper\":[64]}]]],[\"ion-tab_2\",[[1,\"ion-tab\",{\"active\":[1028],\"delegate\":[16],\"tab\":[1],\"component\":[1],\"setActive\":[64]}],[1,\"ion-tabs\",{\"useRouter\":[1028,\"use-router\"],\"selectedTab\":[32],\"select\":[64],\"getTab\":[64],\"getSelected\":[64],\"setRouteId\":[64],\"getRouteId\":[64]}]]],[\"ion-img\",[[1,\"ion-img\",{\"alt\":[1],\"src\":[1],\"loadSrc\":[32],\"loadError\":[32]}]]],[\"ion-progress-bar\",[[33,\"ion-progress-bar\",{\"type\":[1],\"reversed\":[4],\"value\":[2],\"buffer\":[2],\"color\":[513]}]]],[\"ion-range\",[[33,\"ion-range\",{\"color\":[513],\"debounce\":[2],\"name\":[1],\"dualKnobs\":[4,\"dual-knobs\"],\"min\":[2],\"max\":[2],\"pin\":[4],\"pinFormatter\":[16],\"snaps\":[4],\"step\":[2],\"ticks\":[4],\"activeBarStart\":[1026,\"active-bar-start\"],\"disabled\":[4],\"value\":[1026],\"ratioA\":[32],\"ratioB\":[32],\"pressedKnob\":[32]}]]],[\"ion-split-pane\",[[33,\"ion-split-pane\",{\"contentId\":[513,\"content-id\"],\"disabled\":[4],\"when\":[8],\"visible\":[32]}]]],[\"ion-text\",[[1,\"ion-text\",{\"color\":[513]}]]],[\"ion-virtual-scroll\",[[0,\"ion-virtual-scroll\",{\"approxItemHeight\":[2,\"approx-item-height\"],\"approxHeaderHeight\":[2,\"approx-header-height\"],\"approxFooterHeight\":[2,\"approx-footer-height\"],\"headerFn\":[16],\"footerFn\":[16],\"items\":[16],\"itemHeight\":[16],\"headerHeight\":[16],\"footerHeight\":[16],\"renderItem\":[16],\"renderHeader\":[16],\"renderFooter\":[16],\"nodeRender\":[16],\"domRender\":[16],\"totalHeight\":[32],\"positionForItem\":[64],\"checkRange\":[64],\"checkEnd\":[64]},[[9,\"resize\",\"onResize\"]]]]],[\"ion-picker-column-internal\",[[33,\"ion-picker-column-internal\",{\"items\":[16],\"value\":[1032],\"color\":[513],\"numericInput\":[4,\"numeric-input\"],\"isActive\":[32],\"scrollActiveItemIntoView\":[64],\"setValue\":[64]}]]],[\"ion-picker-internal\",[[33,\"ion-picker-internal\"]]],[\"ion-radio_2\",[[33,\"ion-radio\",{\"color\":[513],\"name\":[1],\"disabled\":[4],\"value\":[8],\"checked\":[32],\"buttonTabindex\":[32],\"setFocus\":[64],\"setButtonTabindex\":[64]}],[0,\"ion-radio-group\",{\"allowEmptySelection\":[4,\"allow-empty-selection\"],\"name\":[1],\"value\":[1032]},[[4,\"keydown\",\"onKeydown\"]]]]],[\"ion-ripple-effect\",[[1,\"ion-ripple-effect\",{\"type\":[1],\"addRipple\":[64]}]]],[\"ion-button_2\",[[33,\"ion-button\",{\"color\":[513],\"buttonType\":[1025,\"button-type\"],\"disabled\":[516],\"expand\":[513],\"fill\":[1537],\"routerDirection\":[1,\"router-direction\"],\"routerAnimation\":[16],\"download\":[1],\"href\":[1],\"rel\":[1],\"shape\":[513],\"size\":[513],\"strong\":[4],\"target\":[1],\"type\":[1]}],[1,\"ion-icon\",{\"mode\":[1025],\"color\":[1],\"ios\":[1],\"md\":[1],\"flipRtl\":[4,\"flip-rtl\"],\"name\":[513],\"src\":[1],\"icon\":[8],\"size\":[1],\"lazy\":[4],\"sanitize\":[4],\"svgContent\":[32],\"isVisible\":[32],\"ariaLabel\":[32]}]]],[\"ion-datetime_3\",[[33,\"ion-datetime\",{\"color\":[1],\"name\":[1],\"disabled\":[4],\"readonly\":[4],\"isDateEnabled\":[16],\"min\":[1025],\"max\":[1025],\"presentation\":[1],\"cancelText\":[1,\"cancel-text\"],\"doneText\":[1,\"done-text\"],\"clearText\":[1,\"clear-text\"],\"yearValues\":[8,\"year-values\"],\"monthValues\":[8,\"month-values\"],\"dayValues\":[8,\"day-values\"],\"hourValues\":[8,\"hour-values\"],\"minuteValues\":[8,\"minute-values\"],\"locale\":[1],\"firstDayOfWeek\":[2,\"first-day-of-week\"],\"multiple\":[4],\"value\":[1025],\"showDefaultTitle\":[4,\"show-default-title\"],\"showDefaultButtons\":[4,\"show-default-buttons\"],\"showClearButton\":[4,\"show-clear-button\"],\"showDefaultTimeLabel\":[4,\"show-default-time-label\"],\"hourCycle\":[1,\"hour-cycle\"],\"size\":[1],\"preferWheel\":[4,\"prefer-wheel\"],\"showMonthAndYear\":[32],\"activeParts\":[32],\"workingParts\":[32],\"isPresented\":[32],\"isTimePopoverOpen\":[32],\"confirm\":[64],\"reset\":[64],\"cancel\":[64]}],[34,\"ion-picker\",{\"overlayIndex\":[2,\"overlay-index\"],\"keyboardClose\":[4,\"keyboard-close\"],\"enterAnimation\":[16],\"leaveAnimation\":[16],\"buttons\":[16],\"columns\":[16],\"cssClass\":[1,\"css-class\"],\"duration\":[2],\"showBackdrop\":[4,\"show-backdrop\"],\"backdropDismiss\":[4,\"backdrop-dismiss\"],\"animated\":[4],\"htmlAttributes\":[16],\"presented\":[32],\"present\":[64],\"dismiss\":[64],\"onDidDismiss\":[64],\"onWillDismiss\":[64],\"getColumn\":[64]}],[32,\"ion-picker-column\",{\"col\":[16]}]]],[\"ion-action-sheet\",[[34,\"ion-action-sheet\",{\"overlayIndex\":[2,\"overlay-index\"],\"keyboardClose\":[4,\"keyboard-close\"],\"enterAnimation\":[16],\"leaveAnimation\":[16],\"buttons\":[16],\"cssClass\":[1,\"css-class\"],\"backdropDismiss\":[4,\"backdrop-dismiss\"],\"header\":[1],\"subHeader\":[1,\"sub-header\"],\"translucent\":[4],\"animated\":[4],\"htmlAttributes\":[16],\"present\":[64],\"dismiss\":[64],\"onDidDismiss\":[64],\"onWillDismiss\":[64]}]]],[\"ion-alert\",[[34,\"ion-alert\",{\"overlayIndex\":[2,\"overlay-index\"],\"keyboardClose\":[4,\"keyboard-close\"],\"enterAnimation\":[16],\"leaveAnimation\":[16],\"cssClass\":[1,\"css-class\"],\"header\":[1],\"subHeader\":[1,\"sub-header\"],\"message\":[1],\"buttons\":[16],\"inputs\":[1040],\"backdropDismiss\":[4,\"backdrop-dismiss\"],\"translucent\":[4],\"animated\":[4],\"htmlAttributes\":[16],\"present\":[64],\"dismiss\":[64],\"onDidDismiss\":[64],\"onWillDismiss\":[64]},[[4,\"keydown\",\"onKeydown\"]]]]],[\"ion-popover\",[[33,\"ion-popover\",{\"hasController\":[4,\"has-controller\"],\"delegate\":[16],\"overlayIndex\":[2,\"overlay-index\"],\"enterAnimation\":[16],\"leaveAnimation\":[16],\"component\":[1],\"componentProps\":[16],\"keyboardClose\":[4,\"keyboard-close\"],\"cssClass\":[1,\"css-class\"],\"backdropDismiss\":[4,\"backdrop-dismiss\"],\"event\":[8],\"showBackdrop\":[4,\"show-backdrop\"],\"translucent\":[4],\"animated\":[4],\"htmlAttributes\":[16],\"triggerAction\":[1,\"trigger-action\"],\"trigger\":[1],\"size\":[1],\"dismissOnSelect\":[4,\"dismiss-on-select\"],\"reference\":[1],\"side\":[1],\"alignment\":[1025],\"arrow\":[4],\"isOpen\":[4,\"is-open\"],\"keyboardEvents\":[4,\"keyboard-events\"],\"keepContentsMounted\":[4,\"keep-contents-mounted\"],\"presented\":[32],\"presentFromTrigger\":[64],\"present\":[64],\"dismiss\":[64],\"getParentPopover\":[64],\"onDidDismiss\":[64],\"onWillDismiss\":[64]}]]],[\"ion-checkbox\",[[33,\"ion-checkbox\",{\"color\":[513],\"name\":[1],\"checked\":[1028],\"indeterminate\":[1028],\"disabled\":[4],\"value\":[8]}]]],[\"ion-select_3\",[[33,\"ion-select\",{\"disabled\":[4],\"cancelText\":[1,\"cancel-text\"],\"okText\":[1,\"ok-text\"],\"placeholder\":[1],\"name\":[1],\"selectedText\":[1,\"selected-text\"],\"multiple\":[4],\"interface\":[1],\"interfaceOptions\":[8,\"interface-options\"],\"compareWith\":[1,\"compare-with\"],\"value\":[1032],\"isExpanded\":[32],\"open\":[64]}],[1,\"ion-select-option\",{\"disabled\":[4],\"value\":[8]}],[34,\"ion-select-popover\",{\"header\":[1],\"subHeader\":[1,\"sub-header\"],\"message\":[1],\"multiple\":[4],\"options\":[16]},[[0,\"ionChange\",\"onSelect\"]]]]],[\"ion-app_8\",[[0,\"ion-app\",{\"setFocus\":[64]}],[1,\"ion-content\",{\"color\":[513],\"fullscreen\":[4],\"forceOverscroll\":[1028,\"force-overscroll\"],\"scrollX\":[4,\"scroll-x\"],\"scrollY\":[4,\"scroll-y\"],\"scrollEvents\":[4,\"scroll-events\"],\"getScrollElement\":[64],\"scrollToTop\":[64],\"scrollToBottom\":[64],\"scrollByPoint\":[64],\"scrollToPoint\":[64]},[[8,\"appload\",\"onAppLoad\"]]],[36,\"ion-footer\",{\"collapse\":[1],\"translucent\":[4]}],[36,\"ion-header\",{\"collapse\":[1],\"translucent\":[4]}],[1,\"ion-router-outlet\",{\"mode\":[1025],\"delegate\":[16],\"animated\":[4],\"animation\":[16],\"swipeHandler\":[16],\"commit\":[64],\"setRouteId\":[64],\"getRouteId\":[64]}],[33,\"ion-title\",{\"color\":[513],\"size\":[1]}],[33,\"ion-toolbar\",{\"color\":[513]},[[0,\"ionStyle\",\"childrenStyle\"]]],[34,\"ion-buttons\",{\"collapse\":[4]}]]],[\"ion-spinner\",[[1,\"ion-spinner\",{\"color\":[513],\"duration\":[2],\"name\":[1],\"paused\":[4]}]]],[\"ion-item_8\",[[33,\"ion-item-divider\",{\"color\":[513],\"sticky\":[4]}],[32,\"ion-item-group\"],[1,\"ion-skeleton-text\",{\"animated\":[4]}],[32,\"ion-list\",{\"lines\":[1],\"inset\":[4],\"closeSlidingItems\":[64]}],[33,\"ion-list-header\",{\"color\":[513],\"lines\":[1]}],[49,\"ion-item\",{\"color\":[513],\"button\":[4],\"detail\":[4],\"detailIcon\":[1,\"detail-icon\"],\"disabled\":[4],\"download\":[1],\"fill\":[1],\"shape\":[1],\"href\":[1],\"rel\":[1],\"lines\":[1],\"counter\":[4],\"routerAnimation\":[16],\"routerDirection\":[1,\"router-direction\"],\"target\":[1],\"type\":[1],\"counterFormatter\":[16],\"multipleInputs\":[32],\"focusable\":[32],\"counterString\":[32]},[[0,\"ionChange\",\"handleIonChange\"],[0,\"ionColor\",\"labelColorChanged\"],[0,\"ionStyle\",\"itemStyle\"]]],[34,\"ion-label\",{\"color\":[513],\"position\":[1],\"noAnimate\":[32]}],[33,\"ion-note\",{\"color\":[513]}]]]]"), options);
   });
 };
 
@@ -18817,7 +18889,7 @@ function concat(...observables) {
 
 /***/ }),
 
-/***/ 1635:
+/***/ 2160:
 /*!*****************************************************************!*\
   !*** ./node_modules/rxjs/_esm2015/internal/observable/defer.js ***!
   \*****************************************************************/
@@ -19577,7 +19649,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _util_EmptyError__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../util/EmptyError */ 213);
 /* harmony import */ var _filter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./filter */ 9151);
-/* harmony import */ var _takeLast__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./takeLast */ 2160);
+/* harmony import */ var _takeLast__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./takeLast */ 7760);
 /* harmony import */ var _throwIfEmpty__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./throwIfEmpty */ 2013);
 /* harmony import */ var _defaultIfEmpty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./defaultIfEmpty */ 9701);
 /* harmony import */ var _util_identity__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/identity */ 1356);
@@ -20277,7 +20349,7 @@ class TakeSubscriber extends _Subscriber__WEBPACK_IMPORTED_MODULE_2__.Subscriber
 
 /***/ }),
 
-/***/ 2160:
+/***/ 7760:
 /*!*******************************************************************!*\
   !*** ./node_modules/rxjs/_esm2015/internal/operators/takeLast.js ***!
   \*******************************************************************/
@@ -20354,6 +20426,74 @@ class TakeLastSubscriber extends _Subscriber__WEBPACK_IMPORTED_MODULE_2__.Subscr
     }
 
     destination.complete();
+  }
+
+}
+
+/***/ }),
+
+/***/ 5050:
+/*!********************************************************************!*\
+  !*** ./node_modules/rxjs/_esm2015/internal/operators/takeWhile.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "takeWhile": () => (/* binding */ takeWhile)
+/* harmony export */ });
+/* harmony import */ var _Subscriber__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Subscriber */ 14);
+
+function takeWhile(predicate, inclusive = false) {
+  return source => source.lift(new TakeWhileOperator(predicate, inclusive));
+}
+
+class TakeWhileOperator {
+  constructor(predicate, inclusive) {
+    this.predicate = predicate;
+    this.inclusive = inclusive;
+  }
+
+  call(subscriber, source) {
+    return source.subscribe(new TakeWhileSubscriber(subscriber, this.predicate, this.inclusive));
+  }
+
+}
+
+class TakeWhileSubscriber extends _Subscriber__WEBPACK_IMPORTED_MODULE_0__.Subscriber {
+  constructor(destination, predicate, inclusive) {
+    super(destination);
+    this.predicate = predicate;
+    this.inclusive = inclusive;
+    this.index = 0;
+  }
+
+  _next(value) {
+    const destination = this.destination;
+    let result;
+
+    try {
+      result = this.predicate(value, this.index++);
+    } catch (err) {
+      destination.error(err);
+      return;
+    }
+
+    this.nextOrComplete(value, result);
+  }
+
+  nextOrComplete(value, predicateResult) {
+    const destination = this.destination;
+
+    if (Boolean(predicateResult)) {
+      destination.next(value);
+    } else {
+      if (this.inclusive) {
+        destination.next(value);
+      }
+
+      destination.complete();
+    }
   }
 
 }
@@ -21751,7 +21891,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 2560);
 /**
- * @license Angular v14.0.4
+ * @license Angular v14.1.1
  * (c) 2010-2022 Google LLC. https://angular.io/
  * License: MIT
  */
@@ -22151,7 +22291,7 @@ LocationStrategy.ɵfac = function LocationStrategy_Factory(t) {
 LocationStrategy.ɵprov = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
   token: LocationStrategy,
   factory: function () {
-    return provideLocationStrategy();
+    return (() => (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(PathLocationStrategy))();
   },
   providedIn: 'root'
 });
@@ -22161,16 +22301,10 @@ LocationStrategy.ɵprov = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Injectable,
     args: [{
       providedIn: 'root',
-      useFactory: provideLocationStrategy
+      useFactory: () => (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(PathLocationStrategy)
     }]
   }], null, null);
 })();
-
-function provideLocationStrategy() {
-  // See #23917
-  const location = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"])(DOCUMENT).location;
-  return new PathLocationStrategy((0,_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"])(PlatformLocation), location && location.origin || '');
-}
 /**
  * A predefined [DI token](guide/glossary#di-token) for the base href
  * to be used with the `PathLocationStrategy`.
@@ -22204,8 +22338,8 @@ const APP_BASE_HREF = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectionTo
  * [path](https://en.wikipedia.org/wiki/Uniform_Resource_Locator#Syntax) of the
  * browser's URL.
  *
- * If you're using `PathLocationStrategy`, you must provide a {@link APP_BASE_HREF}
- * or add a `<base href>` element to the document.
+ * If you're using `PathLocationStrategy`, you may provide a {@link APP_BASE_HREF}
+ * or add a `<base href>` element to the document to override the default.
  *
  * For instance, if you provide an `APP_BASE_HREF` of `'/my/app/'` and call
  * `location.go('/foo')`, the browser's URL will become
@@ -22234,16 +22368,7 @@ class PathLocationStrategy extends LocationStrategy {
     super();
     this._platformLocation = _platformLocation;
     this._removeListenerFns = [];
-
-    if (href == null) {
-      href = this._platformLocation.getBaseHrefFromDOM();
-    }
-
-    if (href == null) {
-      throw new Error(`No base href set. Please provide a value for the APP_BASE_HREF token or add a base element to the document.`);
-    }
-
-    this._baseHref = href;
+    this._baseHref = href ?? this._platformLocation.getBaseHrefFromDOM() ?? (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(DOCUMENT).location?.origin ?? '';
   }
   /** @nodoc */
 
@@ -22308,12 +22433,16 @@ PathLocationStrategy.ɵfac = function PathLocationStrategy_Factory(t) {
 
 PathLocationStrategy.ɵprov = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
   token: PathLocationStrategy,
-  factory: PathLocationStrategy.ɵfac
+  factory: PathLocationStrategy.ɵfac,
+  providedIn: 'root'
 });
 
 (function () {
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PathLocationStrategy, [{
-    type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Injectable
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Injectable,
+    args: [{
+      providedIn: 'root'
+    }]
   }], function () {
     return [{
       type: PlatformLocation
@@ -23323,11 +23452,11 @@ function getLocaleWeekEndRange(locale) {
   return data[_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵLocaleDataIndex"].WeekendRange];
 }
 /**
- * Retrieves a localized date-value formating string.
+ * Retrieves a localized date-value formatting string.
  *
  * @param locale A locale code for the locale format rules to use.
  * @param width The format type.
- * @returns The localized formating string.
+ * @returns The localized formatting string.
  * @see `FormatWidth`
  * @see [Internationalization (i18n) Guide](https://angular.io/guide/i18n-overview)
  *
@@ -24734,7 +24863,7 @@ function formatCurrency(value, locale, currency, currencyCode, digitsInfo) {
   const res = formatNumberToLocaleString(value, pattern, locale, NumberSymbol.CurrencyGroup, NumberSymbol.CurrencyDecimal, digitsInfo);
   return res.replace(CURRENCY_CHAR, currency) // if we have 2 time the currency character, the second one is ignored
   .replace(CURRENCY_CHAR, '') // If there is a spacing between currency character and the value and
-  // the currency character is supressed by passing an empty string, the
+  // the currency character is suppressed by passing an empty string, the
   // spacing character would remain as part of the string. Then we
   // should remove it.
   .trim();
@@ -25369,14 +25498,16 @@ NgClass.ɵdir = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵd
   inputs: {
     klass: ["class", "klass"],
     ngClass: "ngClass"
-  }
+  },
+  standalone: true
 });
 
 (function () {
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NgClass, [{
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Directive,
     args: [{
-      selector: '[ngClass]'
+      selector: '[ngClass]',
+      standalone: true
     }]
   }], function () {
     return [{
@@ -25492,7 +25623,7 @@ class NgComponentOutlet {
         if (this._moduleRef) this._moduleRef.destroy();
 
         if (ngModule) {
-          this._moduleRef = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.createNgModuleRef)(ngModule, getParentInjector(injector));
+          this._moduleRef = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.createNgModule)(ngModule, getParentInjector(injector));
         } else if (ngModuleFactory) {
           this._moduleRef = ngModuleFactory.create(getParentInjector(injector));
         } else {
@@ -25531,6 +25662,7 @@ NgComponentOutlet.ɵdir = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_
     ngComponentOutletNgModule: "ngComponentOutletNgModule",
     ngComponentOutletNgModuleFactory: "ngComponentOutletNgModuleFactory"
   },
+  standalone: true,
   features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵNgOnChangesFeature"]]
 });
 
@@ -25538,7 +25670,8 @@ NgComponentOutlet.ɵdir = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NgComponentOutlet, [{
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Directive,
     args: [{
-      selector: '[ngComponentOutlet]'
+      selector: '[ngComponentOutlet]',
+      standalone: true
     }]
   }], function () {
     return [{
@@ -25646,7 +25779,7 @@ class NgForOfContext {
  * on an element](guide/structural-directives#one-per-element).
  * If you want to iterate conditionally, for example,
  * put the `*ngIf` on a container element that wraps the `*ngFor` element.
- * For futher discussion, see
+ * For further discussion, see
  * [Structural Directives](guide/structural-directives#one-per-element).
  *
  * @usageNotes
@@ -25873,14 +26006,16 @@ NgForOf.ɵdir = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵd
     ngForOf: "ngForOf",
     ngForTrackBy: "ngForTrackBy",
     ngForTemplate: "ngForTemplate"
-  }
+  },
+  standalone: true
 });
 
 (function () {
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NgForOf, [{
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Directive,
     args: [{
-      selector: '[ngFor][ngForOf]'
+      selector: '[ngFor][ngForOf]',
+      standalone: true
     }]
   }], function () {
     return [{
@@ -26152,14 +26287,16 @@ NgIf.ɵdir = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefi
     ngIf: "ngIf",
     ngIfThen: "ngIfThen",
     ngIfElse: "ngIfElse"
-  }
+  },
+  standalone: true
 });
 
 (function () {
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NgIf, [{
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Directive,
     args: [{
-      selector: '[ngIf]'
+      selector: '[ngIf]',
+      standalone: true
     }]
   }], function () {
     return [{
@@ -26375,14 +26512,16 @@ NgSwitch.ɵdir = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
   selectors: [["", "ngSwitch", ""]],
   inputs: {
     ngSwitch: "ngSwitch"
-  }
+  },
+  standalone: true
 });
 
 (function () {
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NgSwitch, [{
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Directive,
     args: [{
-      selector: '[ngSwitch]'
+      selector: '[ngSwitch]',
+      standalone: true
     }]
   }], null, {
     ngSwitch: [{
@@ -26458,14 +26597,16 @@ NgSwitchCase.ɵdir = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["
   selectors: [["", "ngSwitchCase", ""]],
   inputs: {
     ngSwitchCase: "ngSwitchCase"
-  }
+  },
+  standalone: true
 });
 
 (function () {
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NgSwitchCase, [{
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Directive,
     args: [{
-      selector: '[ngSwitchCase]'
+      selector: '[ngSwitchCase]',
+      standalone: true
     }]
   }], function () {
     return [{
@@ -26519,14 +26660,16 @@ NgSwitchDefault.ɵfac = function NgSwitchDefault_Factory(t) {
 
 NgSwitchDefault.ɵdir = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({
   type: NgSwitchDefault,
-  selectors: [["", "ngSwitchDefault", ""]]
+  selectors: [["", "ngSwitchDefault", ""]],
+  standalone: true
 });
 
 (function () {
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NgSwitchDefault, [{
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Directive,
     args: [{
-      selector: '[ngSwitchDefault]'
+      selector: '[ngSwitchDefault]',
+      standalone: true
     }]
   }], function () {
     return [{
@@ -26638,14 +26781,16 @@ NgPlural.ɵdir = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
   selectors: [["", "ngPlural", ""]],
   inputs: {
     ngPlural: "ngPlural"
-  }
+  },
+  standalone: true
 });
 
 (function () {
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NgPlural, [{
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Directive,
     args: [{
-      selector: '[ngPlural]'
+      selector: '[ngPlural]',
+      standalone: true
     }]
   }], function () {
     return [{
@@ -26694,14 +26839,16 @@ NgPluralCase.ɵfac = function NgPluralCase_Factory(t) {
 
 NgPluralCase.ɵdir = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({
   type: NgPluralCase,
-  selectors: [["", "ngPluralCase", ""]]
+  selectors: [["", "ngPluralCase", ""]],
+  standalone: true
 });
 
 (function () {
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NgPluralCase, [{
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Directive,
     args: [{
-      selector: '[ngPluralCase]'
+      selector: '[ngPluralCase]',
+      standalone: true
     }]
   }], function () {
     return [{
@@ -26823,14 +26970,16 @@ NgStyle.ɵdir = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵd
   selectors: [["", "ngStyle", ""]],
   inputs: {
     ngStyle: "ngStyle"
-  }
+  },
+  standalone: true
 });
 
 (function () {
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NgStyle, [{
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Directive,
     args: [{
-      selector: '[ngStyle]'
+      selector: '[ngStyle]',
+      standalone: true
     }]
   }], function () {
     return [{
@@ -26944,6 +27093,7 @@ NgTemplateOutlet.ɵdir = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0
     ngTemplateOutlet: "ngTemplateOutlet",
     ngTemplateOutletInjector: "ngTemplateOutletInjector"
   },
+  standalone: true,
   features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵNgOnChangesFeature"]]
 });
 
@@ -26951,7 +27101,8 @@ NgTemplateOutlet.ɵdir = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NgTemplateOutlet, [{
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Directive,
     args: [{
-      selector: '[ngTemplateOutlet]'
+      selector: '[ngTemplateOutlet]',
+      standalone: true
     }]
   }], function () {
     return [{
@@ -27153,7 +27304,8 @@ AsyncPipe.ɵfac = function AsyncPipe_Factory(t) {
 AsyncPipe.ɵpipe = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe"]({
   name: "async",
   type: AsyncPipe,
-  pure: false
+  pure: false,
+  standalone: true
 });
 
 (function () {
@@ -27161,7 +27313,8 @@ AsyncPipe.ɵpipe = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵ
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Pipe,
     args: [{
       name: 'async',
-      pure: false
+      pure: false,
+      standalone: true
     }]
   }], function () {
     return [{
@@ -27214,14 +27367,16 @@ LowerCasePipe.ɵfac = function LowerCasePipe_Factory(t) {
 LowerCasePipe.ɵpipe = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe"]({
   name: "lowercase",
   type: LowerCasePipe,
-  pure: true
+  pure: true,
+  standalone: true
 });
 
 (function () {
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](LowerCasePipe, [{
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Pipe,
     args: [{
-      name: 'lowercase'
+      name: 'lowercase',
+      standalone: true
     }]
   }], null, null);
 })(); //
@@ -27273,14 +27428,16 @@ TitleCasePipe.ɵfac = function TitleCasePipe_Factory(t) {
 TitleCasePipe.ɵpipe = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe"]({
   name: "titlecase",
   type: TitleCasePipe,
-  pure: true
+  pure: true,
+  standalone: true
 });
 
 (function () {
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TitleCasePipe, [{
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Pipe,
     args: [{
-      name: 'titlecase'
+      name: 'titlecase',
+      standalone: true
     }]
   }], null, null);
 })();
@@ -27314,14 +27471,16 @@ UpperCasePipe.ɵfac = function UpperCasePipe_Factory(t) {
 UpperCasePipe.ɵpipe = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe"]({
   name: "uppercase",
   type: UpperCasePipe,
-  pure: true
+  pure: true,
+  standalone: true
 });
 
 (function () {
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](UpperCasePipe, [{
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Pipe,
     args: [{
-      name: 'uppercase'
+      name: 'uppercase',
+      standalone: true
     }]
   }], null, null);
 })();
@@ -27525,7 +27684,8 @@ DatePipe.ɵfac = function DatePipe_Factory(t) {
 DatePipe.ɵpipe = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe"]({
   name: "date",
   type: DatePipe,
-  pure: true
+  pure: true,
+  standalone: true
 });
 
 (function () {
@@ -27533,7 +27693,8 @@ DatePipe.ɵpipe = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵ�
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Pipe,
     args: [{
       name: 'date',
-      pure: true
+      pure: true,
+      standalone: true
     }]
   }], function () {
     return [{
@@ -27611,7 +27772,8 @@ I18nPluralPipe.ɵfac = function I18nPluralPipe_Factory(t) {
 I18nPluralPipe.ɵpipe = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe"]({
   name: "i18nPlural",
   type: I18nPluralPipe,
-  pure: true
+  pure: true,
+  standalone: true
 });
 
 (function () {
@@ -27619,7 +27781,8 @@ I18nPluralPipe.ɵpipe = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0_
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Pipe,
     args: [{
       name: 'i18nPlural',
-      pure: true
+      pure: true,
+      standalone: true
     }]
   }], function () {
     return [{
@@ -27687,7 +27850,8 @@ I18nSelectPipe.ɵfac = function I18nSelectPipe_Factory(t) {
 I18nSelectPipe.ɵpipe = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe"]({
   name: "i18nSelect",
   type: I18nSelectPipe,
-  pure: true
+  pure: true,
+  standalone: true
 });
 
 (function () {
@@ -27695,7 +27859,8 @@ I18nSelectPipe.ɵpipe = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0_
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Pipe,
     args: [{
       name: 'i18nSelect',
-      pure: true
+      pure: true,
+      standalone: true
     }]
   }], null, null);
 })();
@@ -27741,7 +27906,8 @@ JsonPipe.ɵfac = function JsonPipe_Factory(t) {
 JsonPipe.ɵpipe = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe"]({
   name: "json",
   type: JsonPipe,
-  pure: false
+  pure: false,
+  standalone: true
 });
 
 (function () {
@@ -27749,7 +27915,8 @@ JsonPipe.ɵpipe = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵ�
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Pipe,
     args: [{
       name: 'json',
-      pure: false
+      pure: false,
+      standalone: true
     }]
   }], null, null);
 })();
@@ -27834,7 +28001,8 @@ KeyValuePipe.ɵfac = function KeyValuePipe_Factory(t) {
 KeyValuePipe.ɵpipe = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe"]({
   name: "keyvalue",
   type: KeyValuePipe,
-  pure: false
+  pure: false,
+  standalone: true
 });
 
 (function () {
@@ -27842,7 +28010,8 @@ KeyValuePipe.ɵpipe = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__[
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Pipe,
     args: [{
       name: 'keyvalue',
-      pure: false
+      pure: false,
+      standalone: true
     }]
   }], function () {
     return [{
@@ -27987,14 +28156,16 @@ DecimalPipe.ɵfac = function DecimalPipe_Factory(t) {
 DecimalPipe.ɵpipe = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe"]({
   name: "number",
   type: DecimalPipe,
-  pure: true
+  pure: true,
+  standalone: true
 });
 
 (function () {
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](DecimalPipe, [{
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Pipe,
     args: [{
-      name: 'number'
+      name: 'number',
+      standalone: true
     }]
   }], function () {
     return [{
@@ -28071,14 +28242,16 @@ PercentPipe.ɵfac = function PercentPipe_Factory(t) {
 PercentPipe.ɵpipe = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe"]({
   name: "percent",
   type: PercentPipe,
-  pure: true
+  pure: true,
+  standalone: true
 });
 
 (function () {
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PercentPipe, [{
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Pipe,
     args: [{
-      name: 'percent'
+      name: 'percent',
+      standalone: true
     }]
   }], function () {
     return [{
@@ -28211,14 +28384,16 @@ CurrencyPipe.ɵfac = function CurrencyPipe_Factory(t) {
 CurrencyPipe.ɵpipe = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe"]({
   name: "currency",
   type: CurrencyPipe,
-  pure: true
+  pure: true,
+  standalone: true
 });
 
 (function () {
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CurrencyPipe, [{
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Pipe,
     args: [{
-      name: 'currency'
+      name: 'currency',
+      standalone: true
     }]
   }], function () {
     return [{
@@ -28326,7 +28501,8 @@ SlicePipe.ɵfac = function SlicePipe_Factory(t) {
 SlicePipe.ɵpipe = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe"]({
   name: "slice",
   type: SlicePipe,
-  pure: false
+  pure: false,
+  standalone: true
 });
 
 (function () {
@@ -28334,7 +28510,8 @@ SlicePipe.ɵpipe = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵ
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Pipe,
     args: [{
       name: 'slice',
-      pure: false
+      pure: false,
+      standalone: true
     }]
   }], null, null);
 })();
@@ -28368,11 +28545,6 @@ const COMMON_PIPES = [AsyncPipe, UpperCasePipe, LowerCasePipe, JsonPipe, SlicePi
  * Re-exported by `BrowserModule`, which is included automatically in the root
  * `AppModule` when you create a new app with the CLI `new` command.
  *
- * * The `providers` options configure the NgModule's injector to provide
- * localization dependencies to members.
- * * The `exports` options make the declared directives and pipes available for import
- * by other NgModules.
- *
  * @publicApi
  */
 
@@ -28384,7 +28556,7 @@ CommonModule.ɵfac = function CommonModule_Factory(t) {
 
 CommonModule.ɵmod = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
   type: CommonModule,
-  declarations: [NgClass, NgComponentOutlet, NgForOf, NgIf, NgTemplateOutlet, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault, NgPlural, NgPluralCase, AsyncPipe, UpperCasePipe, LowerCasePipe, JsonPipe, SlicePipe, DecimalPipe, PercentPipe, TitleCasePipe, CurrencyPipe, DatePipe, I18nPluralPipe, I18nSelectPipe, KeyValuePipe],
+  imports: [NgClass, NgComponentOutlet, NgForOf, NgIf, NgTemplateOutlet, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault, NgPlural, NgPluralCase, AsyncPipe, UpperCasePipe, LowerCasePipe, JsonPipe, SlicePipe, DecimalPipe, PercentPipe, TitleCasePipe, CurrencyPipe, DatePipe, I18nPluralPipe, I18nSelectPipe, KeyValuePipe],
   exports: [NgClass, NgComponentOutlet, NgForOf, NgIf, NgTemplateOutlet, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault, NgPlural, NgPluralCase, AsyncPipe, UpperCasePipe, LowerCasePipe, JsonPipe, SlicePipe, DecimalPipe, PercentPipe, TitleCasePipe, CurrencyPipe, DatePipe, I18nPluralPipe, I18nSelectPipe, KeyValuePipe]
 });
 CommonModule.ɵinj = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({});
@@ -28393,7 +28565,7 @@ CommonModule.ɵinj = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CommonModule, [{
     type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.NgModule,
     args: [{
-      declarations: [COMMON_DIRECTIVES, COMMON_PIPES],
+      imports: [COMMON_DIRECTIVES, COMMON_PIPES],
       exports: [COMMON_DIRECTIVES, COMMON_PIPES]
     }]
   }], null, null);
@@ -28459,7 +28631,7 @@ function isPlatformWorkerUi(platformId) {
  */
 
 
-const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.Version('14.0.4');
+const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.Version('14.1.1');
 /**
  * @license
  * Copyright Google LLC All Rights Reserved.
@@ -28966,7 +29138,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "visitAll": () => (/* binding */ visitAll)
 /* harmony export */ });
 /**
- * @license Angular v14.0.4
+ * @license Angular v14.1.0
  * (c) 2010-2022 Google LLC. https://angular.io/
  * License: MIT
  */
@@ -32279,7 +32451,7 @@ class ConstantPool {
         usage = variable(name).callFn([]);
       } else {
         // Just declare and use the variable directly, without a function call
-        // indirection. This saves a few bytes and avoids an unncessary call.
+        // indirection. This saves a few bytes and avoids an unnecessary call.
         definition = variable(name).set(literal);
         usage = variable(name);
       }
@@ -35584,7 +35756,6 @@ function conditionallyCreateMapObjectLiteral(keys, keepDeclared) {
 function mapToExpression(map, keepDeclared) {
   return literalMap(Object.getOwnPropertyNames(map).map(key => {
     // canonical syntax: `dirProp: publicProp`
-    // if there is no `:`, use dirProp = elProp
     const value = map[key];
     let declaredName;
     let publicName;
@@ -35596,12 +35767,9 @@ function mapToExpression(map, keepDeclared) {
       minifiedName = key;
       needsDeclaredName = publicName !== declaredName;
     } else {
-      [declaredName, publicName] = splitAtColon(key, [key, value]);
-      minifiedName = declaredName; // Only include the declared name if extracted from the key, i.e. the key contains a colon.
-      // Otherwise the declared name should be omitted even if it is different from the public name,
-      // as it may have already been minified.
-
-      needsDeclaredName = publicName !== declaredName && key.includes(':');
+      minifiedName = declaredName = key;
+      publicName = value;
+      needsDeclaredName = false;
     }
 
     return {
@@ -36899,10 +37067,12 @@ function compileNgModuleDeclarationExpression(meta) {
 function createNgModuleType({
   type: moduleType,
   declarations,
+  exports,
   imports,
-  exports
+  includeImportTypes,
+  publicDeclarationTypes
 }) {
-  return new ExpressionType(importExpr(Identifiers.NgModuleDeclaration, [new ExpressionType(moduleType.type), tupleTypeOf(declarations), tupleTypeOf(imports), tupleTypeOf(exports)]));
+  return new ExpressionType(importExpr(Identifiers.NgModuleDeclaration, [new ExpressionType(moduleType.type), publicDeclarationTypes === null ? tupleTypeOf(declarations) : tupleOfTypes(publicDeclarationTypes), includeImportTypes ? tupleTypeOf(imports) : NONE_TYPE, tupleTypeOf(exports)]));
 }
 /**
  * Generates a function call to `ɵɵsetNgModuleScope` with all necessary information so that the
@@ -36964,6 +37134,11 @@ function generateSetNgModuleScopeCall(meta) {
 function tupleTypeOf(exp) {
   const types = exp.map(ref => typeofExpr(ref.type));
   return exp.length > 0 ? expressionType(literalArr(types)) : NONE_TYPE;
+}
+
+function tupleOfTypes(types) {
+  const typeofTypes = types.map(type => typeofExpr(type));
+  return types.length > 0 ? expressionType(literalArr(typeofTypes)) : NONE_TYPE;
 }
 /**
  * @license
@@ -48487,7 +48662,7 @@ function setupRegistry() {
  *
  * @param index Instruction index of i18nStart, which initiates this context
  * @param ref Reference to a translation const that represents the content if thus context
- * @param level Nestng level defined for child contexts
+ * @param level Nesting level defined for child contexts
  * @param templateIndex Instruction index of a template which this context belongs to
  * @param meta Meta information (id, meaning, description, etc) associated with this context
  */
@@ -48631,7 +48806,7 @@ class I18nContext {
 
         if (isTemplateTag) {
           // current template's content is placed before or after
-          // parent template tag, depending on the open/close atrribute
+          // parent template tag, depending on the open/close attribute
           phs.splice(tmplIdx + (isCloseTag ? 0 : 1), 0, ...values);
         } else {
           const idx = isCloseTag ? values.length - 1 : 0;
@@ -49463,7 +49638,7 @@ const GOOG_GET_MSG = 'goog.getMsg';
  *     original_code: {
  *       'interpolation': '{{ sender }}',
  *       'startTagSpan': '<span class="receiver">',
- *       'interploation_1': '{{ receiver }}',
+ *       'interpolation_1': '{{ receiver }}',
  *       'closeTagSpan': '</span>',
  *     },
  *   },
@@ -52703,7 +52878,9 @@ class CompilerFacadeImpl {
       adjacentType: new WrappedNodeExpr(facade.type),
       bootstrap: facade.bootstrap.map(wrapReference),
       declarations: facade.declarations.map(wrapReference),
+      publicDeclarationTypes: null,
       imports: facade.imports.map(wrapReference),
+      includeImportTypes: true,
       exports: facade.exports.map(wrapReference),
       selectorScopeMode: R3SelectorScopeMode.Inline,
       containsForwardDecls: false,
@@ -53166,10 +53343,10 @@ function isOutput(value) {
 }
 
 function parseInputOutputs(values) {
-  return values.reduce((map, value) => {
-    const [field, property] = value.split(',').map(piece => piece.trim());
-    map[field] = property || field;
-    return map;
+  return values.reduce((results, value) => {
+    const [field, property] = value.split(':', 2).map(str => str.trim());
+    results[field] = property || field;
+    return results;
   }, {});
 }
 
@@ -53209,7 +53386,7 @@ function publishFacade(global) {
  */
 
 
-const VERSION = new Version('14.0.4');
+const VERSION = new Version('14.1.1');
 /**
  * @license
  * Copyright Google LLC All Rights Reserved.
@@ -55811,7 +55988,7 @@ const MINIMUM_PARTIAL_LINKER_VERSION$6 = '12.0.0';
 function compileDeclareClassMetadata(metadata) {
   const definitionMap = new DefinitionMap();
   definitionMap.set('minVersion', literal(MINIMUM_PARTIAL_LINKER_VERSION$6));
-  definitionMap.set('version', literal('14.0.4'));
+  definitionMap.set('version', literal('14.1.1'));
   definitionMap.set('ngImport', importExpr(Identifiers.core));
   definitionMap.set('type', metadata.type);
   definitionMap.set('decorators', metadata.decorators);
@@ -55952,7 +56129,7 @@ function compileDeclareDirectiveFromMetadata(meta) {
 function createDirectiveDefinitionMap(meta) {
   const definitionMap = new DefinitionMap();
   definitionMap.set('minVersion', literal(MINIMUM_PARTIAL_LINKER_VERSION$5));
-  definitionMap.set('version', literal('14.0.4')); // e.g. `type: MyDirective`
+  definitionMap.set('version', literal('14.1.1')); // e.g. `type: MyDirective`
 
   definitionMap.set('type', meta.internalType);
 
@@ -56212,7 +56389,7 @@ const MINIMUM_PARTIAL_LINKER_VERSION$4 = '12.0.0';
 function compileDeclareFactoryFunction(meta) {
   const definitionMap = new DefinitionMap();
   definitionMap.set('minVersion', literal(MINIMUM_PARTIAL_LINKER_VERSION$4));
-  definitionMap.set('version', literal('14.0.4'));
+  definitionMap.set('version', literal('14.1.1'));
   definitionMap.set('ngImport', importExpr(Identifiers.core));
   definitionMap.set('type', meta.internalType);
   definitionMap.set('deps', compileDependencies(meta.deps));
@@ -56263,7 +56440,7 @@ function compileDeclareInjectableFromMetadata(meta) {
 function createInjectableDefinitionMap(meta) {
   const definitionMap = new DefinitionMap();
   definitionMap.set('minVersion', literal(MINIMUM_PARTIAL_LINKER_VERSION$3));
-  definitionMap.set('version', literal('14.0.4'));
+  definitionMap.set('version', literal('14.1.1'));
   definitionMap.set('ngImport', importExpr(Identifiers.core));
   definitionMap.set('type', meta.internalType); // Only generate providedIn property if it has a non-null value
 
@@ -56337,7 +56514,7 @@ function compileDeclareInjectorFromMetadata(meta) {
 function createInjectorDefinitionMap(meta) {
   const definitionMap = new DefinitionMap();
   definitionMap.set('minVersion', literal(MINIMUM_PARTIAL_LINKER_VERSION$2));
-  definitionMap.set('version', literal('14.0.4'));
+  definitionMap.set('version', literal('14.1.1'));
   definitionMap.set('ngImport', importExpr(Identifiers.core));
   definitionMap.set('type', meta.internalType);
   definitionMap.set('providers', meta.providers);
@@ -56385,7 +56562,7 @@ function compileDeclareNgModuleFromMetadata(meta) {
 function createNgModuleDefinitionMap(meta) {
   const definitionMap = new DefinitionMap();
   definitionMap.set('minVersion', literal(MINIMUM_PARTIAL_LINKER_VERSION$1));
-  definitionMap.set('version', literal('14.0.4'));
+  definitionMap.set('version', literal('14.1.1'));
   definitionMap.set('ngImport', importExpr(Identifiers.core));
   definitionMap.set('type', meta.internalType); // We only generate the keys in the metadata if the arrays contain values.
   // We must wrap the arrays inside a function if any of the values are a forward reference to a
@@ -56458,7 +56635,7 @@ function compileDeclarePipeFromMetadata(meta) {
 function createPipeDefinitionMap(meta) {
   const definitionMap = new DefinitionMap();
   definitionMap.set('minVersion', literal(MINIMUM_PARTIAL_LINKER_VERSION));
-  definitionMap.set('version', literal('14.0.4'));
+  definitionMap.set('version', literal('14.1.1'));
   definitionMap.set('ngImport', importExpr(Identifiers.core)); // e.g. `type: MyPipe`
 
   definitionMap.set('type', meta.internalType);
@@ -56616,7 +56793,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ViewRef": () => (/* binding */ ViewRef),
 /* harmony export */   "asNativeElements": () => (/* binding */ asNativeElements),
 /* harmony export */   "assertPlatform": () => (/* binding */ assertPlatform),
+/* harmony export */   "createComponent": () => (/* binding */ createComponent),
 /* harmony export */   "createEnvironmentInjector": () => (/* binding */ createEnvironmentInjector),
+/* harmony export */   "createNgModule": () => (/* binding */ createNgModule),
 /* harmony export */   "createNgModuleRef": () => (/* binding */ createNgModuleRef),
 /* harmony export */   "createPlatform": () => (/* binding */ createPlatform),
 /* harmony export */   "createPlatformFactory": () => (/* binding */ createPlatformFactory),
@@ -56632,6 +56811,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "inject": () => (/* binding */ inject),
 /* harmony export */   "isDevMode": () => (/* binding */ isDevMode),
 /* harmony export */   "platformCore": () => (/* binding */ platformCore),
+/* harmony export */   "reflectComponentType": () => (/* binding */ reflectComponentType),
 /* harmony export */   "resolveForwardRef": () => (/* binding */ resolveForwardRef),
 /* harmony export */   "setTestabilityGetter": () => (/* binding */ setTestabilityGetter),
 /* harmony export */   "ɵALLOW_MULTIPLE_PLATFORMS": () => (/* binding */ ALLOW_MULTIPLE_PLATFORMS),
@@ -56715,7 +56895,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ɵpublishDefaultGlobalUtils": () => (/* binding */ publishDefaultGlobalUtils$1),
 /* harmony export */   "ɵpublishGlobalUtil": () => (/* binding */ publishGlobalUtil),
 /* harmony export */   "ɵregisterLocaleData": () => (/* binding */ registerLocaleData),
-/* harmony export */   "ɵrenderComponent": () => (/* binding */ renderComponent),
 /* harmony export */   "ɵresetCompiledComponents": () => (/* binding */ resetCompiledComponents),
 /* harmony export */   "ɵresetJitOptions": () => (/* binding */ resetJitOptions),
 /* harmony export */   "ɵresolveComponentResources": () => (/* binding */ resolveComponentResources),
@@ -56894,7 +57073,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ 8623);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ 4514);
 /**
- * @license Angular v14.0.4
+ * @license Angular v14.1.1
  * (c) 2010-2022 Google LLC. https://angular.io/
  * License: MIT
  */
@@ -57474,6 +57653,7 @@ const NG_INJECTOR_DEF = getClosureSafeProperty({
  * Injection flags for DI.
  *
  * @publicApi
+ * @deprecated use an options object for `inject` instead.
  */
 
 var InjectFlags;
@@ -58733,107 +58913,6 @@ function getNamespaceUri(namespace) {
  */
 
 /**
- * Most of the use of `document` in Angular is from within the DI system so it is possible to simply
- * inject the `DOCUMENT` token and are done.
- *
- * Ivy is special because it does not rely upon the DI and must get hold of the document some other
- * way.
- *
- * The solution is to define `getDocument()` and `setDocument()` top-level functions for ivy.
- * Wherever ivy needs the global document, it calls `getDocument()` instead.
- *
- * When running ivy outside of a browser environment, it is necessary to call `setDocument()` to
- * tell ivy what the global `document` is.
- *
- * Angular does this for us in each of the standard platforms (`Browser`, `Server`, and `WebWorker`)
- * by calling `setDocument()` when providing the `DOCUMENT` token.
- */
-
-
-let DOCUMENT = undefined;
-/**
- * Tell ivy what the `document` is for this platform.
- *
- * It is only necessary to call this if the current platform is not a browser.
- *
- * @param document The object representing the global `document` in this environment.
- */
-
-function setDocument(document) {
-  DOCUMENT = document;
-}
-/**
- * Access the object that represents the `document` for this platform.
- *
- * Ivy calls this whenever it needs to access the `document` object.
- * For example to create the renderer or to do sanitization.
- */
-
-
-function getDocument() {
-  if (DOCUMENT !== undefined) {
-    return DOCUMENT;
-  } else if (typeof document !== 'undefined') {
-    return document;
-  } // No "document" can be found. This should only happen if we are running ivy outside Angular and
-  // the current platform is not a browser. Since this is not a supported scenario at the moment
-  // this should not happen in Angular apps.
-  // Once we support running ivy outside of Angular we will need to publish `setDocument()` as a
-  // public API. Meanwhile we just return `undefined` and let the application fail.
-
-
-  return undefined;
-}
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-// TODO: cleanup once the code is merged in angular/angular
-
-
-var RendererStyleFlags3;
-
-(function (RendererStyleFlags3) {
-  RendererStyleFlags3[RendererStyleFlags3["Important"] = 1] = "Important";
-  RendererStyleFlags3[RendererStyleFlags3["DashCase"] = 2] = "DashCase";
-})(RendererStyleFlags3 || (RendererStyleFlags3 = {}));
-/** Returns whether the `renderer` is a `ProceduralRenderer3` */
-
-
-function isProceduralRenderer(renderer) {
-  return !!renderer.listen;
-}
-
-let renderer3Enabled = false;
-
-function enableRenderer3() {
-  renderer3Enabled = true;
-}
-
-const domRendererFactory3 = {
-  createRenderer: (hostElement, rendererType) => {
-    if (!renderer3Enabled) {
-      throw new Error(ngDevMode ? `Renderer3 is not supported. This problem is likely caused by some component in the hierarchy was constructed without a correct parent injector.` : 'Renderer3 disabled');
-    }
-
-    return getDocument();
-  }
-}; // Note: This hack is necessary so we don't erroneously get a circular dependency
-// failure based on types.
-
-const unusedValueExportToPlacateAjd$6 = 1;
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-/**
  * For efficiency reasons we often put several different data types (`RNode`, `LView`, `LContainer`)
  * in same location in `LView`. This is because we don't want to pre-allocate space for it
  * because the storage is sparse. This file contains utilities for dealing with such data types.
@@ -58854,6 +58933,7 @@ const unusedValueExportToPlacateAjd$6 = 1;
  * Returns `RNode`.
  * @param value wrapped value of `RNode`, `LView`, `LContainer`
  */
+
 
 function unwrapRNode(value) {
   while (Array.isArray(value)) {
@@ -58919,7 +58999,6 @@ function getNativeByTNode(tNode, lView) {
   ngDevMode && assertTNodeForLView(tNode, lView);
   ngDevMode && assertIndexInRange(lView, tNode.index);
   const node = unwrapRNode(lView[tNode.index]);
-  ngDevMode && !isProceduralRenderer(lView[RENDERER]) && assertDomNode(node);
   return node;
 }
 /**
@@ -58938,7 +59017,6 @@ function getNativeByTNodeOrNull(tNode, lView) {
   if (index !== -1) {
     ngDevMode && assertTNodeForLView(tNode, lView);
     const node = unwrapRNode(lView[index]);
-    ngDevMode && node !== null && !isProceduralRenderer(lView[RENDERER]) && assertDomNode(node);
     return node;
   }
 
@@ -60075,7 +60153,7 @@ function isFactory(obj) {
 // failure based on types.
 
 
-const unusedValueExportToPlacateAjd$5 = 1;
+const unusedValueExportToPlacateAjd$6 = 1;
 /**
  * Converts `TNodeType` into human readable text.
  * Make sure this matches with `TNodeType`
@@ -60109,7 +60187,7 @@ function toTNodeTypeAsString(tNodeType) {
 // failure based on types.
 
 
-const unusedValueExportToPlacateAjd$4 = 1;
+const unusedValueExportToPlacateAjd$5 = 1;
 /**
  * Returns `true` if the `TNode` has a directive which has `@Input()` for `class` binding.
  *
@@ -60237,7 +60315,6 @@ function assertPureTNodeType(type) {
 
 
 function setUpAttributes(renderer, native, attrs) {
-  const isProc = isProceduralRenderer(renderer);
   let i = 0;
 
   while (i < attrs.length) {
@@ -60259,7 +60336,7 @@ function setUpAttributes(renderer, native, attrs) {
       const attrName = attrs[i++];
       const attrVal = attrs[i++];
       ngDevMode && ngDevMode.rendererSetAttribute++;
-      isProc ? renderer.setAttribute(native, attrName, attrVal, namespaceURI) : native.setAttributeNS(namespaceURI, attrName, attrVal);
+      renderer.setAttribute(native, attrName, attrVal, namespaceURI);
     } else {
       // attrName is string;
       const attrName = value;
@@ -60268,11 +60345,9 @@ function setUpAttributes(renderer, native, attrs) {
       ngDevMode && ngDevMode.rendererSetAttribute++;
 
       if (isAnimationProp(attrName)) {
-        if (isProc) {
-          renderer.setProperty(native, attrName, attrVal);
-        }
+        renderer.setProperty(native, attrName, attrVal);
       } else {
-        isProc ? renderer.setAttribute(native, attrName, attrVal) : native.setAttribute(attrName, attrVal);
+        renderer.setAttribute(native, attrName, attrVal);
       }
 
       i++;
@@ -62567,7 +62642,7 @@ function injectInjectorOnly(token, flags = InjectFlags.Default) {
   if (_currentInjector === undefined) {
     throw new RuntimeError(-203
     /* RuntimeErrorCode.MISSING_INJECTION_CONTEXT */
-    , ngDevMode && `inject() must be called from an injection context (a constructor, a factory function or a field initializer)`);
+    , ngDevMode && `inject() must be called from an injection context such as a constructor, a factory function, a field initializer, or a function used with \`EnvironmentInjector#runInContext\`.`);
   } else if (_currentInjector === null) {
     return injectRootLimpMode(token, undefined, flags);
   } else {
@@ -62664,6 +62739,24 @@ Please check that 1) the type for the parameter at index ${index} is correct and
 
 
 function inject(token, flags = InjectFlags.Default) {
+  if (typeof flags !== 'number') {
+    // While TypeScript doesn't accept it without a cast, bitwise OR with false-y values in
+    // JavaScript is a no-op. We can use that for a very codesize-efficient conversion from
+    // `InjectOptions` to `InjectFlags`.
+    flags = 0
+    /* InternalInjectFlags.Default */
+    | ( // comment to force a line break in the formatter
+    flags.optional && 8
+    /* InternalInjectFlags.Optional */
+    ) | (flags.host && 1
+    /* InternalInjectFlags.Host */
+    ) | (flags.self && 2
+    /* InternalInjectFlags.Self */
+    ) | (flags.skipSelf && 4
+    /* InternalInjectFlags.SkipSelf */
+    );
+  }
+
   return ɵɵinject(token, flags);
 }
 
@@ -63110,6 +63203,66 @@ function getRegisteredNgModuleType(id) {
 
 function setAllowDuplicateNgModuleIdsForTest(allowDuplicates) {
   checkForDuplicateNgModules = !allowDuplicates;
+}
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * Most of the use of `document` in Angular is from within the DI system so it is possible to simply
+ * inject the `DOCUMENT` token and are done.
+ *
+ * Ivy is special because it does not rely upon the DI and must get hold of the document some other
+ * way.
+ *
+ * The solution is to define `getDocument()` and `setDocument()` top-level functions for ivy.
+ * Wherever ivy needs the global document, it calls `getDocument()` instead.
+ *
+ * When running ivy outside of a browser environment, it is necessary to call `setDocument()` to
+ * tell ivy what the global `document` is.
+ *
+ * Angular does this for us in each of the standard platforms (`Browser`, `Server`, and `WebWorker`)
+ * by calling `setDocument()` when providing the `DOCUMENT` token.
+ */
+
+
+let DOCUMENT = undefined;
+/**
+ * Tell ivy what the `document` is for this platform.
+ *
+ * It is only necessary to call this if the current platform is not a browser.
+ *
+ * @param document The object representing the global `document` in this environment.
+ */
+
+function setDocument(document) {
+  DOCUMENT = document;
+}
+/**
+ * Access the object that represents the `document` for this platform.
+ *
+ * Ivy calls this whenever it needs to access the `document` object.
+ * For example to create the renderer or to do sanitization.
+ */
+
+
+function getDocument() {
+  if (DOCUMENT !== undefined) {
+    return DOCUMENT;
+  } else if (typeof document !== 'undefined') {
+    return document;
+  } // No "document" can be found. This should only happen if we are running ivy outside Angular and
+  // the current platform is not a browser. Since this is not a supported scenario at the moment
+  // this should not happen in Angular apps.
+  // Once we support running ivy outside of Angular we will need to publish `setDocument()` as a
+  // public API. Meanwhile we just return `undefined` and let the application fail.
+
+
+  return undefined;
 }
 /**
  * @license
@@ -64275,6 +64428,1441 @@ function getSanitizer() {
  * found in the LICENSE file at https://angular.io/license
  */
 
+/**
+ * A multi-provider token for initialization functions that will run upon construction of an
+ * environment injector.
+ *
+ * @publicApi
+ */
+
+
+const ENVIRONMENT_INITIALIZER = new InjectionToken('ENVIRONMENT_INITIALIZER');
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * An InjectionToken that gets the current `Injector` for `createInjector()`-style injectors.
+ *
+ * Requesting this token instead of `Injector` allows `StaticInjector` to be tree-shaken from a
+ * project.
+ *
+ * @publicApi
+ */
+
+const INJECTOR = new InjectionToken('INJECTOR', // Disable tslint because this is const enum which gets inlined not top level prop access.
+// tslint:disable-next-line: no-toplevel-property-access
+-1
+/* InjectorMarkers.Injector */
+);
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+const INJECTOR_DEF_TYPES = new InjectionToken('INJECTOR_DEF_TYPES');
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+class NullInjector {
+  get(token, notFoundValue = THROW_IF_NOT_FOUND) {
+    if (notFoundValue === THROW_IF_NOT_FOUND) {
+      const error = new Error(`NullInjectorError: No provider for ${stringify(token)}!`);
+      error.name = 'NullInjectorError';
+      throw error;
+    }
+
+    return notFoundValue;
+  }
+
+}
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * Collects providers from all NgModules and standalone components, including transitively imported
+ * ones.
+ *
+ * Providers extracted via `importProvidersFrom` are only usable in an application injector or
+ * another environment injector (such as a route injector). They should not be used in component
+ * providers.
+ *
+ * More information about standalone components can be found in [this
+ * guide](guide/standalone-components).
+ *
+ * @usageNotes
+ * The results of the `importProvidersFrom` call can be used in the `bootstrapApplication` call:
+ *
+ * ```typescript
+ * await bootstrapApplication(RootComponent, {
+ *   providers: [
+ *     importProvidersFrom(NgModuleOne, NgModuleTwo)
+ *   ]
+ * });
+ * ```
+ *
+ * You can also use the `importProvidersFrom` results in the `providers` field of a route, when a
+ * standalone component is used:
+ *
+ * ```typescript
+ * export const ROUTES: Route[] = [
+ *   {
+ *     path: 'foo',
+ *     providers: [
+ *       importProvidersFrom(NgModuleOne, NgModuleTwo)
+ *     ],
+ *     component: YourStandaloneComponent
+ *   }
+ * ];
+ * ```
+ *
+ * @returns Collected providers from the specified list of types.
+ * @publicApi
+ * @developerPreview
+ */
+
+
+function importProvidersFrom(...sources) {
+  return {
+    ɵproviders: internalImportProvidersFrom(true, sources)
+  };
+}
+
+function internalImportProvidersFrom(checkForStandaloneCmp, ...sources) {
+  const providersOut = [];
+  const dedup = new Set(); // already seen types
+
+  let injectorTypesWithProviders;
+  deepForEach(sources, source => {
+    if ((typeof ngDevMode === 'undefined' || ngDevMode) && checkForStandaloneCmp) {
+      const cmpDef = getComponentDef(source);
+
+      if (cmpDef?.standalone) {
+        throw new RuntimeError(800
+        /* RuntimeErrorCode.IMPORT_PROVIDERS_FROM_STANDALONE */
+        , `Importing providers supports NgModule or ModuleWithProviders but got a standalone component "${stringifyForError(source)}"`);
+      }
+    } // Narrow `source` to access the internal type analogue for `ModuleWithProviders`.
+
+
+    const internalSource = source;
+
+    if (walkProviderTree(internalSource, providersOut, [], dedup)) {
+      injectorTypesWithProviders || (injectorTypesWithProviders = []);
+      injectorTypesWithProviders.push(internalSource);
+    }
+  }); // Collect all providers from `ModuleWithProviders` types.
+
+  if (injectorTypesWithProviders !== undefined) {
+    processInjectorTypesWithProviders(injectorTypesWithProviders, providersOut);
+  }
+
+  return providersOut;
+}
+/**
+ * Collects all providers from the list of `ModuleWithProviders` and appends them to the provided
+ * array.
+ */
+
+
+function processInjectorTypesWithProviders(typesWithProviders, providersOut) {
+  for (let i = 0; i < typesWithProviders.length; i++) {
+    const {
+      ngModule,
+      providers
+    } = typesWithProviders[i];
+    deepForEach(providers, provider => {
+      ngDevMode && validateProvider(provider, providers || EMPTY_ARRAY, ngModule);
+      providersOut.push(provider);
+    });
+  }
+}
+/**
+ * The logic visits an `InjectorType`, an `InjectorTypeWithProviders`, or a standalone
+ * `ComponentType`, and all of its transitive providers and collects providers.
+ *
+ * If an `InjectorTypeWithProviders` that declares providers besides the type is specified,
+ * the function will return "true" to indicate that the providers of the type definition need
+ * to be processed. This allows us to process providers of injector types after all imports of
+ * an injector definition are processed. (following View Engine semantics: see FW-1349)
+ */
+
+
+function walkProviderTree(container, providersOut, parents, dedup) {
+  container = resolveForwardRef(container);
+  if (!container) return false; // The actual type which had the definition. Usually `container`, but may be an unwrapped type
+  // from `InjectorTypeWithProviders`.
+
+  let defType = null;
+  let injDef = getInjectorDef(container);
+  const cmpDef = !injDef && getComponentDef(container);
+
+  if (!injDef && !cmpDef) {
+    // `container` is not an injector type or a component type. It might be:
+    //  * An `InjectorTypeWithProviders` that wraps an injector type.
+    //  * A standalone directive or pipe that got pulled in from a standalone component's
+    //    dependencies.
+    // Try to unwrap it as an `InjectorTypeWithProviders` first.
+    const ngModule = container.ngModule;
+    injDef = getInjectorDef(ngModule);
+
+    if (injDef) {
+      defType = ngModule;
+    } else {
+      // Not a component or injector type, so ignore it.
+      return false;
+    }
+  } else if (cmpDef && !cmpDef.standalone) {
+    return false;
+  } else {
+    defType = container;
+  } // Check for circular dependencies.
+
+
+  if (ngDevMode && parents.indexOf(defType) !== -1) {
+    const defName = stringify(defType);
+    const path = parents.map(stringify);
+    throwCyclicDependencyError(defName, path);
+  } // Check for multiple imports of the same module
+
+
+  const isDuplicate = dedup.has(defType);
+
+  if (cmpDef) {
+    if (isDuplicate) {
+      // This component definition has already been processed.
+      return false;
+    }
+
+    dedup.add(defType);
+
+    if (cmpDef.dependencies) {
+      const deps = typeof cmpDef.dependencies === 'function' ? cmpDef.dependencies() : cmpDef.dependencies;
+
+      for (const dep of deps) {
+        walkProviderTree(dep, providersOut, parents, dedup);
+      }
+    }
+  } else if (injDef) {
+    // First, include providers from any imports.
+    if (injDef.imports != null && !isDuplicate) {
+      // Before processing defType's imports, add it to the set of parents. This way, if it ends
+      // up deeply importing itself, this can be detected.
+      ngDevMode && parents.push(defType); // Add it to the set of dedups. This way we can detect multiple imports of the same module
+
+      dedup.add(defType);
+      let importTypesWithProviders;
+
+      try {
+        deepForEach(injDef.imports, imported => {
+          if (walkProviderTree(imported, providersOut, parents, dedup)) {
+            importTypesWithProviders || (importTypesWithProviders = []); // If the processed import is an injector type with providers, we store it in the
+            // list of import types with providers, so that we can process those afterwards.
+
+            importTypesWithProviders.push(imported);
+          }
+        });
+      } finally {
+        // Remove it from the parents set when finished.
+        ngDevMode && parents.pop();
+      } // Imports which are declared with providers (TypeWithProviders) need to be processed
+      // after all imported modules are processed. This is similar to how View Engine
+      // processes/merges module imports in the metadata resolver. See: FW-1349.
+
+
+      if (importTypesWithProviders !== undefined) {
+        processInjectorTypesWithProviders(importTypesWithProviders, providersOut);
+      }
+    }
+
+    if (!isDuplicate) {
+      // Track the InjectorType and add a provider for it.
+      // It's important that this is done after the def's imports.
+      const factory = getFactoryDef(defType) || (() => new defType()); // Append extra providers to make more info available for consumers (to retrieve an injector
+      // type), as well as internally (to calculate an injection scope correctly and eagerly
+      // instantiate a `defType` when an injector is created).
+
+
+      providersOut.push( // Provider to create `defType` using its factory.
+      {
+        provide: defType,
+        useFactory: factory,
+        deps: EMPTY_ARRAY
+      }, // Make this `defType` available to an internal logic that calculates injector scope.
+      {
+        provide: INJECTOR_DEF_TYPES,
+        useValue: defType,
+        multi: true
+      }, // Provider to eagerly instantiate `defType` via `ENVIRONMENT_INITIALIZER`.
+      {
+        provide: ENVIRONMENT_INITIALIZER,
+        useValue: () => ɵɵinject(defType),
+        multi: true
+      } //
+      );
+    } // Next, include providers listed on the definition itself.
+
+
+    const defProviders = injDef.providers;
+
+    if (defProviders != null && !isDuplicate) {
+      const injectorType = container;
+      deepForEach(defProviders, provider => {
+        ngDevMode && validateProvider(provider, defProviders, injectorType);
+        providersOut.push(provider);
+      });
+    }
+  } else {
+    // Should not happen, but just in case.
+    return false;
+  }
+
+  return defType !== container && container.providers !== undefined;
+}
+
+function validateProvider(provider, providers, containerType) {
+  if (isTypeProvider(provider) || isValueProvider(provider) || isFactoryProvider(provider) || isExistingProvider(provider)) {
+    return;
+  } // Here we expect the provider to be a `useClass` provider (by elimination).
+
+
+  const classRef = resolveForwardRef(provider && (provider.useClass || provider.provide));
+
+  if (!classRef) {
+    throwInvalidProviderError(containerType, providers, provider);
+  }
+}
+
+const USE_VALUE$1 = getClosureSafeProperty({
+  provide: String,
+  useValue: getClosureSafeProperty
+});
+
+function isValueProvider(value) {
+  return value !== null && typeof value == 'object' && USE_VALUE$1 in value;
+}
+
+function isExistingProvider(value) {
+  return !!(value && value.useExisting);
+}
+
+function isFactoryProvider(value) {
+  return !!(value && value.useFactory);
+}
+
+function isTypeProvider(value) {
+  return typeof value === 'function';
+}
+
+function isClassProvider(value) {
+  return !!value.useClass;
+}
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * An internal token whose presence in an injector indicates that the injector should treat itself
+ * as a root scoped injector when processing requests for unknown tokens which may indicate
+ * they are provided in the root scope.
+ */
+
+
+const INJECTOR_SCOPE = new InjectionToken('Set Injector scope.');
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * Marker which indicates that a value has not yet been created from the factory function.
+ */
+
+const NOT_YET = {};
+/**
+ * Marker which indicates that the factory function for a token is in the process of being called.
+ *
+ * If the injector is asked to inject a token with its value set to CIRCULAR, that indicates
+ * injection of a dependency has recursively attempted to inject the original token, and there is
+ * a circular dependency among the providers.
+ */
+
+const CIRCULAR = {};
+/**
+ * A lazily initialized NullInjector.
+ */
+
+let NULL_INJECTOR$1 = undefined;
+
+function getNullInjector() {
+  if (NULL_INJECTOR$1 === undefined) {
+    NULL_INJECTOR$1 = new NullInjector();
+  }
+
+  return NULL_INJECTOR$1;
+}
+/**
+ * An `Injector` that's part of the environment injector hierarchy, which exists outside of the
+ * component tree.
+ *
+ * @developerPreview
+ */
+
+
+class EnvironmentInjector {}
+
+class R3Injector extends EnvironmentInjector {
+  constructor(providers, parent, source, scopes) {
+    super();
+    this.parent = parent;
+    this.source = source;
+    this.scopes = scopes;
+    /**
+     * Map of tokens to records which contain the instances of those tokens.
+     * - `null` value implies that we don't have the record. Used by tree-shakable injectors
+     * to prevent further searches.
+     */
+
+    this.records = new Map();
+    /**
+     * Set of values instantiated by this injector which contain `ngOnDestroy` lifecycle hooks.
+     */
+
+    this._ngOnDestroyHooks = new Set();
+    this._onDestroyHooks = [];
+    this._destroyed = false; // Start off by creating Records for every provider.
+
+    forEachSingleProvider(providers, provider => this.processProvider(provider)); // Make sure the INJECTOR token provides this injector.
+
+    this.records.set(INJECTOR, makeRecord(undefined, this)); // And `EnvironmentInjector` if the current injector is supposed to be env-scoped.
+
+    if (scopes.has('environment')) {
+      this.records.set(EnvironmentInjector, makeRecord(undefined, this));
+    } // Detect whether this injector has the APP_ROOT_SCOPE token and thus should provide
+    // any injectable scoped to APP_ROOT_SCOPE.
+
+
+    const record = this.records.get(INJECTOR_SCOPE);
+
+    if (record != null && typeof record.value === 'string') {
+      this.scopes.add(record.value);
+    }
+
+    this.injectorDefTypes = new Set(this.get(INJECTOR_DEF_TYPES.multi, EMPTY_ARRAY, InjectFlags.Self));
+  }
+  /**
+   * Flag indicating that this injector was previously destroyed.
+   */
+
+
+  get destroyed() {
+    return this._destroyed;
+  }
+  /**
+   * Destroy the injector and release references to every instance or provider associated with it.
+   *
+   * Also calls the `OnDestroy` lifecycle hooks of every instance that was created for which a
+   * hook was found.
+   */
+
+
+  destroy() {
+    this.assertNotDestroyed(); // Set destroyed = true first, in case lifecycle hooks re-enter destroy().
+
+    this._destroyed = true;
+
+    try {
+      // Call all the lifecycle hooks.
+      for (const service of this._ngOnDestroyHooks) {
+        service.ngOnDestroy();
+      }
+
+      for (const hook of this._onDestroyHooks) {
+        hook();
+      }
+    } finally {
+      // Release all references.
+      this.records.clear();
+
+      this._ngOnDestroyHooks.clear();
+
+      this.injectorDefTypes.clear();
+      this._onDestroyHooks.length = 0;
+    }
+  }
+
+  onDestroy(callback) {
+    this._onDestroyHooks.push(callback);
+  }
+
+  runInContext(fn) {
+    this.assertNotDestroyed();
+    const previousInjector = setCurrentInjector(this);
+    const previousInjectImplementation = setInjectImplementation(undefined);
+
+    try {
+      return fn();
+    } finally {
+      setCurrentInjector(previousInjector);
+      setInjectImplementation(previousInjectImplementation);
+    }
+  }
+
+  get(token, notFoundValue = THROW_IF_NOT_FOUND, flags = InjectFlags.Default) {
+    this.assertNotDestroyed(); // Set the injection context.
+
+    const previousInjector = setCurrentInjector(this);
+    const previousInjectImplementation = setInjectImplementation(undefined);
+
+    try {
+      // Check for the SkipSelf flag.
+      if (!(flags & InjectFlags.SkipSelf)) {
+        // SkipSelf isn't set, check if the record belongs to this injector.
+        let record = this.records.get(token);
+
+        if (record === undefined) {
+          // No record, but maybe the token is scoped to this injector. Look for an injectable
+          // def with a scope matching this injector.
+          const def = couldBeInjectableType(token) && getInjectableDef(token);
+
+          if (def && this.injectableDefInScope(def)) {
+            // Found an injectable def and it's scoped to this injector. Pretend as if it was here
+            // all along.
+            record = makeRecord(injectableDefOrInjectorDefFactory(token), NOT_YET);
+          } else {
+            record = null;
+          }
+
+          this.records.set(token, record);
+        } // If a record was found, get the instance for it and return it.
+
+
+        if (record != null
+        /* NOT null || undefined */
+        ) {
+          return this.hydrate(token, record);
+        }
+      } // Select the next injector based on the Self flag - if self is set, the next injector is
+      // the NullInjector, otherwise it's the parent.
+
+
+      const nextInjector = !(flags & InjectFlags.Self) ? this.parent : getNullInjector(); // Set the notFoundValue based on the Optional flag - if optional is set and notFoundValue
+      // is undefined, the value is null, otherwise it's the notFoundValue.
+
+      notFoundValue = flags & InjectFlags.Optional && notFoundValue === THROW_IF_NOT_FOUND ? null : notFoundValue;
+      return nextInjector.get(token, notFoundValue);
+    } catch (e) {
+      if (e.name === 'NullInjectorError') {
+        const path = e[NG_TEMP_TOKEN_PATH] = e[NG_TEMP_TOKEN_PATH] || [];
+        path.unshift(stringify(token));
+
+        if (previousInjector) {
+          // We still have a parent injector, keep throwing
+          throw e;
+        } else {
+          // Format & throw the final error message when we don't have any previous injector
+          return catchInjectorError(e, token, 'R3InjectorError', this.source);
+        }
+      } else {
+        throw e;
+      }
+    } finally {
+      // Lastly, restore the previous injection context.
+      setInjectImplementation(previousInjectImplementation);
+      setCurrentInjector(previousInjector);
+    }
+  }
+  /** @internal */
+
+
+  resolveInjectorInitializers() {
+    const previousInjector = setCurrentInjector(this);
+    const previousInjectImplementation = setInjectImplementation(undefined);
+
+    try {
+      const initializers = this.get(ENVIRONMENT_INITIALIZER.multi, EMPTY_ARRAY, InjectFlags.Self);
+
+      if (ngDevMode && !Array.isArray(initializers)) {
+        throw new RuntimeError(209
+        /* RuntimeErrorCode.INVALID_MULTI_PROVIDER */
+        , 'Unexpected type of the `ENVIRONMENT_INITIALIZER` token value ' + `(expected an array, but got ${typeof initializers}). ` + 'Please check that the `ENVIRONMENT_INITIALIZER` token is configured as a ' + '`multi: true` provider.');
+      }
+
+      for (const initializer of initializers) {
+        initializer();
+      }
+    } finally {
+      setCurrentInjector(previousInjector);
+      setInjectImplementation(previousInjectImplementation);
+    }
+  }
+
+  toString() {
+    const tokens = [];
+    const records = this.records;
+
+    for (const token of records.keys()) {
+      tokens.push(stringify(token));
+    }
+
+    return `R3Injector[${tokens.join(', ')}]`;
+  }
+
+  assertNotDestroyed() {
+    if (this._destroyed) {
+      throw new RuntimeError(205
+      /* RuntimeErrorCode.INJECTOR_ALREADY_DESTROYED */
+      , ngDevMode && 'Injector has already been destroyed.');
+    }
+  }
+  /**
+   * Process a `SingleProvider` and add it.
+   */
+
+
+  processProvider(provider) {
+    // Determine the token from the provider. Either it's its own token, or has a {provide: ...}
+    // property.
+    provider = resolveForwardRef(provider);
+    let token = isTypeProvider(provider) ? provider : resolveForwardRef(provider && provider.provide); // Construct a `Record` for the provider.
+
+    const record = providerToRecord(provider);
+
+    if (!isTypeProvider(provider) && provider.multi === true) {
+      // If the provider indicates that it's a multi-provider, process it specially.
+      // First check whether it's been defined already.
+      let multiRecord = this.records.get(token);
+
+      if (multiRecord) {
+        // It has. Throw a nice error if
+        if (ngDevMode && multiRecord.multi === undefined) {
+          throwMixedMultiProviderError();
+        }
+      } else {
+        multiRecord = makeRecord(undefined, NOT_YET, true);
+
+        multiRecord.factory = () => injectArgs(multiRecord.multi);
+
+        this.records.set(token, multiRecord);
+      }
+
+      token = provider;
+      multiRecord.multi.push(provider);
+    } else {
+      const existing = this.records.get(token);
+
+      if (ngDevMode && existing && existing.multi !== undefined) {
+        throwMixedMultiProviderError();
+      }
+    }
+
+    this.records.set(token, record);
+  }
+
+  hydrate(token, record) {
+    if (ngDevMode && record.value === CIRCULAR) {
+      throwCyclicDependencyError(stringify(token));
+    } else if (record.value === NOT_YET) {
+      record.value = CIRCULAR;
+      record.value = record.factory();
+    }
+
+    if (typeof record.value === 'object' && record.value && hasOnDestroy(record.value)) {
+      this._ngOnDestroyHooks.add(record.value);
+    }
+
+    return record.value;
+  }
+
+  injectableDefInScope(def) {
+    if (!def.providedIn) {
+      return false;
+    }
+
+    const providedIn = resolveForwardRef(def.providedIn);
+
+    if (typeof providedIn === 'string') {
+      return providedIn === 'any' || this.scopes.has(providedIn);
+    } else {
+      return this.injectorDefTypes.has(providedIn);
+    }
+  }
+
+}
+
+function injectableDefOrInjectorDefFactory(token) {
+  // Most tokens will have an injectable def directly on them, which specifies a factory directly.
+  const injectableDef = getInjectableDef(token);
+  const factory = injectableDef !== null ? injectableDef.factory : getFactoryDef(token);
+
+  if (factory !== null) {
+    return factory;
+  } // InjectionTokens should have an injectable def (ɵprov) and thus should be handled above.
+  // If it's missing that, it's an error.
+
+
+  if (token instanceof InjectionToken) {
+    throw new RuntimeError(204
+    /* RuntimeErrorCode.INVALID_INJECTION_TOKEN */
+    , ngDevMode && `Token ${stringify(token)} is missing a ɵprov definition.`);
+  } // Undecorated types can sometimes be created if they have no constructor arguments.
+
+
+  if (token instanceof Function) {
+    return getUndecoratedInjectableFactory(token);
+  } // There was no way to resolve a factory for this token.
+
+
+  throw new RuntimeError(204
+  /* RuntimeErrorCode.INVALID_INJECTION_TOKEN */
+  , ngDevMode && 'unreachable');
+}
+
+function getUndecoratedInjectableFactory(token) {
+  // If the token has parameters then it has dependencies that we cannot resolve implicitly.
+  const paramLength = token.length;
+
+  if (paramLength > 0) {
+    const args = newArray(paramLength, '?');
+    throw new RuntimeError(204
+    /* RuntimeErrorCode.INVALID_INJECTION_TOKEN */
+    , ngDevMode && `Can't resolve all parameters for ${stringify(token)}: (${args.join(', ')}).`);
+  } // The constructor function appears to have no parameters.
+  // This might be because it inherits from a super-class. In which case, use an injectable
+  // def from an ancestor if there is one.
+  // Otherwise this really is a simple class with no dependencies, so return a factory that
+  // just instantiates the zero-arg constructor.
+
+
+  const inheritedInjectableDef = getInheritedInjectableDef(token);
+
+  if (inheritedInjectableDef !== null) {
+    return () => inheritedInjectableDef.factory(token);
+  } else {
+    return () => new token();
+  }
+}
+
+function providerToRecord(provider) {
+  if (isValueProvider(provider)) {
+    return makeRecord(undefined, provider.useValue);
+  } else {
+    const factory = providerToFactory(provider);
+    return makeRecord(factory, NOT_YET);
+  }
+}
+/**
+ * Converts a `SingleProvider` into a factory function.
+ *
+ * @param provider provider to convert to factory
+ */
+
+
+function providerToFactory(provider, ngModuleType, providers) {
+  let factory = undefined;
+
+  if (ngDevMode && isImportedNgModuleProviders(provider)) {
+    throwInvalidProviderError(undefined, providers, provider);
+  }
+
+  if (isTypeProvider(provider)) {
+    const unwrappedProvider = resolveForwardRef(provider);
+    return getFactoryDef(unwrappedProvider) || injectableDefOrInjectorDefFactory(unwrappedProvider);
+  } else {
+    if (isValueProvider(provider)) {
+      factory = () => resolveForwardRef(provider.useValue);
+    } else if (isFactoryProvider(provider)) {
+      factory = () => provider.useFactory(...injectArgs(provider.deps || []));
+    } else if (isExistingProvider(provider)) {
+      factory = () => ɵɵinject(resolveForwardRef(provider.useExisting));
+    } else {
+      const classRef = resolveForwardRef(provider && (provider.useClass || provider.provide));
+
+      if (ngDevMode && !classRef) {
+        throwInvalidProviderError(ngModuleType, providers, provider);
+      }
+
+      if (hasDeps(provider)) {
+        factory = () => new classRef(...injectArgs(provider.deps));
+      } else {
+        return getFactoryDef(classRef) || injectableDefOrInjectorDefFactory(classRef);
+      }
+    }
+  }
+
+  return factory;
+}
+
+function makeRecord(factory, value, multi = false) {
+  return {
+    factory: factory,
+    value: value,
+    multi: multi ? [] : undefined
+  };
+}
+
+function hasDeps(value) {
+  return !!value.deps;
+}
+
+function hasOnDestroy(value) {
+  return value !== null && typeof value === 'object' && typeof value.ngOnDestroy === 'function';
+}
+
+function couldBeInjectableType(value) {
+  return typeof value === 'function' || typeof value === 'object' && value instanceof InjectionToken;
+}
+
+function isImportedNgModuleProviders(provider) {
+  return !!provider.ɵproviders;
+}
+
+function forEachSingleProvider(providers, fn) {
+  for (const provider of providers) {
+    if (Array.isArray(provider)) {
+      forEachSingleProvider(provider, fn);
+    } else if (isImportedNgModuleProviders(provider)) {
+      forEachSingleProvider(provider.ɵproviders, fn);
+    } else {
+      fn(provider);
+    }
+  }
+}
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * Represents a component created by a `ComponentFactory`.
+ * Provides access to the component instance and related objects,
+ * and provides the means of destroying the instance.
+ *
+ * @publicApi
+ */
+
+
+class ComponentRef$1 {}
+/**
+ * Base class for a factory that can create a component dynamically.
+ * Instantiate a factory for a given type of component with `resolveComponentFactory()`.
+ * Use the resulting `ComponentFactory.create()` method to create a component of that type.
+ *
+ * @see [Dynamic Components](guide/dynamic-component-loader)
+ *
+ * @publicApi
+ *
+ * @deprecated Angular no longer requires Component factories. Please use other APIs where
+ *     Component class can be used directly.
+ */
+
+
+class ComponentFactory$1 {}
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+
+function noComponentFactoryError(component) {
+  const error = Error(`No component factory found for ${stringify(component)}. Did you add it to @NgModule.entryComponents?`);
+  error[ERROR_COMPONENT] = component;
+  return error;
+}
+
+const ERROR_COMPONENT = 'ngComponent';
+
+function getComponent$1(error) {
+  return error[ERROR_COMPONENT];
+}
+
+class _NullComponentFactoryResolver {
+  resolveComponentFactory(component) {
+    throw noComponentFactoryError(component);
+  }
+
+}
+/**
+ * A simple registry that maps `Components` to generated `ComponentFactory` classes
+ * that can be used to create instances of components.
+ * Use to obtain the factory for a given component type,
+ * then use the factory's `create()` method to create a component of that type.
+ *
+ * Note: since v13, dynamic component creation via
+ * [`ViewContainerRef.createComponent`](api/core/ViewContainerRef#createComponent)
+ * does **not** require resolving component factory: component class can be used directly.
+ *
+ * @publicApi
+ *
+ * @deprecated Angular no longer requires Component factories. Please use other APIs where
+ *     Component class can be used directly.
+ */
+
+
+class ComponentFactoryResolver$1 {}
+
+ComponentFactoryResolver$1.NULL = /* @__PURE__ */new _NullComponentFactoryResolver();
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * Creates an ElementRef from the most recent node.
+ *
+ * @returns The ElementRef instance to use
+ */
+
+function injectElementRef() {
+  return createElementRef(getCurrentTNode(), getLView());
+}
+/**
+ * Creates an ElementRef given a node.
+ *
+ * @param tNode The node for which you'd like an ElementRef
+ * @param lView The view to which the node belongs
+ * @returns The ElementRef instance to use
+ */
+
+
+function createElementRef(tNode, lView) {
+  return new ElementRef(getNativeByTNode(tNode, lView));
+}
+/**
+ * A wrapper around a native element inside of a View.
+ *
+ * An `ElementRef` is backed by a render-specific element. In the browser, this is usually a DOM
+ * element.
+ *
+ * @security Permitting direct access to the DOM can make your application more vulnerable to
+ * XSS attacks. Carefully review any use of `ElementRef` in your code. For more detail, see the
+ * [Security Guide](https://g.co/ng/security).
+ *
+ * @publicApi
+ */
+// Note: We don't expose things like `Injector`, `ViewContainer`, ... here,
+// i.e. users have to ask for what they need. With that, we can build better analysis tools
+// and could do better codegen in the future.
+
+
+class ElementRef {
+  constructor(nativeElement) {
+    this.nativeElement = nativeElement;
+  }
+
+}
+/**
+ * @internal
+ * @nocollapse
+ */
+
+
+ElementRef.__NG_ELEMENT_ID__ = injectElementRef;
+/**
+ * Unwraps `ElementRef` and return the `nativeElement`.
+ *
+ * @param value value to unwrap
+ * @returns `nativeElement` if `ElementRef` otherwise returns value as is.
+ */
+
+function unwrapElementRef(value) {
+  return value instanceof ElementRef ? value.nativeElement : value;
+}
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+
+const Renderer2Interceptor = new InjectionToken('Renderer2Interceptor');
+/**
+ * Creates and initializes a custom renderer that implements the `Renderer2` base class.
+ *
+ * @publicApi
+ */
+
+class RendererFactory2 {}
+/**
+ * Extend this base class to implement custom rendering. By default, Angular
+ * renders a template into DOM. You can use custom rendering to intercept
+ * rendering calls, or to render to something other than DOM.
+ *
+ * Create your custom renderer using `RendererFactory2`.
+ *
+ * Use a custom renderer to bypass Angular's templating and
+ * make custom UI changes that can't be expressed declaratively.
+ * For example if you need to set a property or an attribute whose name is
+ * not statically known, use the `setProperty()` or
+ * `setAttribute()` method.
+ *
+ * @publicApi
+ */
+
+
+class Renderer2 {}
+/**
+ * @internal
+ * @nocollapse
+ */
+
+
+Renderer2.__NG_ELEMENT_ID__ = () => injectRenderer2();
+/** Injects a Renderer2 for the current component. */
+
+
+function injectRenderer2() {
+  // We need the Renderer to be based on the component that it's being injected into, however since
+  // DI happens before we've entered its view, `getLView` will return the parent view instead.
+  const lView = getLView();
+  const tNode = getCurrentTNode();
+  const nodeAtIndex = getComponentLViewByIndex(tNode.index, lView);
+  return (isLView(nodeAtIndex) ? nodeAtIndex : lView)[RENDERER];
+}
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * Sanitizer is used by the views to sanitize potentially dangerous values.
+ *
+ * @publicApi
+ */
+
+
+class Sanitizer {}
+/** @nocollapse */
+
+
+Sanitizer.ɵprov = ɵɵdefineInjectable({
+  token: Sanitizer,
+  providedIn: 'root',
+  factory: () => null
+});
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * @description Represents the version of Angular
+ *
+ * @publicApi
+ */
+
+class Version {
+  constructor(full) {
+    this.full = full;
+    this.major = full.split('.')[0];
+    this.minor = full.split('.')[1];
+    this.patch = full.split('.').slice(2).join('.');
+  }
+
+}
+/**
+ * @publicApi
+ */
+
+
+const VERSION = new Version('14.1.1');
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+// This default value is when checking the hierarchy for a token.
+//
+// It means both:
+// - the token is not provided by the current injector,
+// - only the element injectors should be checked (ie do not check module injectors
+//
+//          mod1
+//         /
+//       el1   mod2
+//         \  /
+//         el2
+//
+// When requesting el2.injector.get(token), we should check in the following order and return the
+// first found value:
+// - el2.injector.get(token, default)
+// - el1.injector.get(token, NOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR) -> do not check the module
+// - mod2.injector.get(token, default)
+
+const NOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR = {};
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * Defines a schema that allows an NgModule to contain the following:
+ * - Non-Angular elements named with dash case (`-`).
+ * - Element properties named with dash case (`-`).
+ * Dash case is the naming convention for custom elements.
+ *
+ * @publicApi
+ */
+
+const CUSTOM_ELEMENTS_SCHEMA = {
+  name: 'custom-elements'
+};
+/**
+ * Defines a schema that allows any property on any element.
+ *
+ * This schema allows you to ignore the errors related to any unknown elements or properties in a
+ * template. The usage of this schema is generally discouraged because it prevents useful validation
+ * and may hide real errors in your template. Consider using the `CUSTOM_ELEMENTS_SCHEMA` instead.
+ *
+ * @publicApi
+ */
+
+const NO_ERRORS_SCHEMA = {
+  name: 'no-errors-schema'
+};
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+let shouldThrowErrorOnUnknownElement = false;
+/**
+ * Sets a strict mode for JIT-compiled components to throw an error on unknown elements,
+ * instead of just logging the error.
+ * (for AOT-compiled ones this check happens at build time).
+ */
+
+function ɵsetUnknownElementStrictMode(shouldThrow) {
+  shouldThrowErrorOnUnknownElement = shouldThrow;
+}
+/**
+ * Gets the current value of the strict mode.
+ */
+
+
+function ɵgetUnknownElementStrictMode() {
+  return shouldThrowErrorOnUnknownElement;
+}
+
+let shouldThrowErrorOnUnknownProperty = false;
+/**
+ * Sets a strict mode for JIT-compiled components to throw an error on unknown properties,
+ * instead of just logging the error.
+ * (for AOT-compiled ones this check happens at build time).
+ */
+
+function ɵsetUnknownPropertyStrictMode(shouldThrow) {
+  shouldThrowErrorOnUnknownProperty = shouldThrow;
+}
+/**
+ * Gets the current value of the strict mode.
+ */
+
+
+function ɵgetUnknownPropertyStrictMode() {
+  return shouldThrowErrorOnUnknownProperty;
+}
+/**
+ * Validates that the element is known at runtime and produces
+ * an error if it's not the case.
+ * This check is relevant for JIT-compiled components (for AOT-compiled
+ * ones this check happens at build time).
+ *
+ * The element is considered known if either:
+ * - it's a known HTML element
+ * - it's a known custom element
+ * - the element matches any directive
+ * - the element is allowed by one of the schemas
+ *
+ * @param element Element to validate
+ * @param lView An `LView` that represents a current component that is being rendered
+ * @param tagName Name of the tag to check
+ * @param schemas Array of schemas
+ * @param hasDirectives Boolean indicating that the element matches any directive
+ */
+
+
+function validateElementIsKnown(element, lView, tagName, schemas, hasDirectives) {
+  // If `schemas` is set to `null`, that's an indication that this Component was compiled in AOT
+  // mode where this check happens at compile time. In JIT mode, `schemas` is always present and
+  // defined as an array (as an empty array in case `schemas` field is not defined) and we should
+  // execute the check below.
+  if (schemas === null) return; // If the element matches any directive, it's considered as valid.
+
+  if (!hasDirectives && tagName !== null) {
+    // The element is unknown if it's an instance of HTMLUnknownElement, or it isn't registered
+    // as a custom element. Note that unknown elements with a dash in their name won't be instances
+    // of HTMLUnknownElement in browsers that support web components.
+    const isUnknown = // Note that we can't check for `typeof HTMLUnknownElement === 'function'`,
+    // because while most browsers return 'function', IE returns 'object'.
+    typeof HTMLUnknownElement !== 'undefined' && HTMLUnknownElement && element instanceof HTMLUnknownElement || typeof customElements !== 'undefined' && tagName.indexOf('-') > -1 && !customElements.get(tagName);
+
+    if (isUnknown && !matchingSchemas(schemas, tagName)) {
+      const isHostStandalone = isHostComponentStandalone(lView);
+      const templateLocation = getTemplateLocationDetails(lView);
+      const schemas = `'${isHostStandalone ? '@Component' : '@NgModule'}.schemas'`;
+      let message = `'${tagName}' is not a known element${templateLocation}:\n`;
+      message += `1. If '${tagName}' is an Angular component, then verify that it is ${isHostStandalone ? 'included in the \'@Component.imports\' of this component' : 'a part of an @NgModule where this component is declared'}.\n`;
+
+      if (tagName && tagName.indexOf('-') > -1) {
+        message += `2. If '${tagName}' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the ${schemas} of this component to suppress this message.`;
+      } else {
+        message += `2. To allow any element add 'NO_ERRORS_SCHEMA' to the ${schemas} of this component.`;
+      }
+
+      if (shouldThrowErrorOnUnknownElement) {
+        throw new RuntimeError(304
+        /* RuntimeErrorCode.UNKNOWN_ELEMENT */
+        , message);
+      } else {
+        console.error(formatRuntimeError(304
+        /* RuntimeErrorCode.UNKNOWN_ELEMENT */
+        , message));
+      }
+    }
+  }
+}
+/**
+ * Validates that the property of the element is known at runtime and returns
+ * false if it's not the case.
+ * This check is relevant for JIT-compiled components (for AOT-compiled
+ * ones this check happens at build time).
+ *
+ * The property is considered known if either:
+ * - it's a known property of the element
+ * - the element is allowed by one of the schemas
+ * - the property is used for animations
+ *
+ * @param element Element to validate
+ * @param propName Name of the property to check
+ * @param tagName Name of the tag hosting the property
+ * @param schemas Array of schemas
+ */
+
+
+function isPropertyValid(element, propName, tagName, schemas) {
+  // If `schemas` is set to `null`, that's an indication that this Component was compiled in AOT
+  // mode where this check happens at compile time. In JIT mode, `schemas` is always present and
+  // defined as an array (as an empty array in case `schemas` field is not defined) and we should
+  // execute the check below.
+  if (schemas === null) return true; // The property is considered valid if the element matches the schema, it exists on the element,
+  // or it is synthetic, and we are in a browser context (web worker nodes should be skipped).
+
+  if (matchingSchemas(schemas, tagName) || propName in element || isAnimationProp(propName)) {
+    return true;
+  } // Note: `typeof Node` returns 'function' in most browsers, but on IE it is 'object' so we
+  // need to account for both here, while being careful with `typeof null` also returning 'object'.
+
+
+  return typeof Node === 'undefined' || Node === null || !(element instanceof Node);
+}
+/**
+ * Logs or throws an error that a property is not supported on an element.
+ *
+ * @param propName Name of the invalid property
+ * @param tagName Name of the tag hosting the property
+ * @param nodeType Type of the node hosting the property
+ * @param lView An `LView` that represents a current component
+ */
+
+
+function handleUnknownPropertyError(propName, tagName, nodeType, lView) {
+  // Special-case a situation when a structural directive is applied to
+  // an `<ng-template>` element, for example: `<ng-template *ngIf="true">`.
+  // In this case the compiler generates the `ɵɵtemplate` instruction with
+  // the `null` as the tagName. The directive matching logic at runtime relies
+  // on this effect (see `isInlineTemplate`), thus using the 'ng-template' as
+  // a default value of the `tNode.value` is not feasible at this moment.
+  if (!tagName && nodeType === 4
+  /* TNodeType.Container */
+  ) {
+    tagName = 'ng-template';
+  }
+
+  const isHostStandalone = isHostComponentStandalone(lView);
+  const templateLocation = getTemplateLocationDetails(lView);
+  let message = `Can't bind to '${propName}' since it isn't a known property of '${tagName}'${templateLocation}.`;
+  const schemas = `'${isHostStandalone ? '@Component' : '@NgModule'}.schemas'`;
+  const importLocation = isHostStandalone ? 'included in the \'@Component.imports\' of this component' : 'a part of an @NgModule where this component is declared';
+
+  if (KNOWN_CONTROL_FLOW_DIRECTIVES.has(propName)) {
+    // Most likely this is a control flow directive (such as `*ngIf`) used in
+    // a template, but the directive or the `CommonModule` is not imported.
+    const correspondingImport = KNOWN_CONTROL_FLOW_DIRECTIVES.get(propName);
+    message += `\nIf the '${propName}' is an Angular control flow directive, ` + `please make sure that either the '${correspondingImport}' directive or the 'CommonModule' is ${importLocation}.`;
+  } else {
+    // May be an Angular component, which is not imported/declared?
+    message += `\n1. If '${tagName}' is an Angular component and it has the ` + `'${propName}' input, then verify that it is ${importLocation}.`; // May be a Web Component?
+
+    if (tagName && tagName.indexOf('-') > -1) {
+      message += `\n2. If '${tagName}' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' ` + `to the ${schemas} of this component to suppress this message.`;
+      message += `\n3. To allow any property add 'NO_ERRORS_SCHEMA' to ` + `the ${schemas} of this component.`;
+    } else {
+      // If it's expected, the error can be suppressed by the `NO_ERRORS_SCHEMA` schema.
+      message += `\n2. To allow any property add 'NO_ERRORS_SCHEMA' to ` + `the ${schemas} of this component.`;
+    }
+  }
+
+  reportUnknownPropertyError(message);
+}
+
+function reportUnknownPropertyError(message) {
+  if (shouldThrowErrorOnUnknownProperty) {
+    throw new RuntimeError(303
+    /* RuntimeErrorCode.UNKNOWN_BINDING */
+    , message);
+  } else {
+    console.error(formatRuntimeError(303
+    /* RuntimeErrorCode.UNKNOWN_BINDING */
+    , message));
+  }
+}
+/**
+ * WARNING: this is a **dev-mode only** function (thus should always be guarded by the `ngDevMode`)
+ * and must **not** be used in production bundles. The function makes megamorphic reads, which might
+ * be too slow for production mode and also it relies on the constructor function being available.
+ *
+ * Gets a reference to the host component def (where a current component is declared).
+ *
+ * @param lView An `LView` that represents a current component that is being rendered.
+ */
+
+
+function getDeclarationComponentDef(lView) {
+  !ngDevMode && throwError('Must never be called in production mode');
+  const declarationLView = lView[DECLARATION_COMPONENT_VIEW];
+  const context = declarationLView[CONTEXT]; // Unable to obtain a context.
+
+  if (!context) return null;
+  return context.constructor ? getComponentDef(context.constructor) : null;
+}
+/**
+ * WARNING: this is a **dev-mode only** function (thus should always be guarded by the `ngDevMode`)
+ * and must **not** be used in production bundles. The function makes megamorphic reads, which might
+ * be too slow for production mode.
+ *
+ * Checks if the current component is declared inside of a standalone component template.
+ *
+ * @param lView An `LView` that represents a current component that is being rendered.
+ */
+
+
+function isHostComponentStandalone(lView) {
+  !ngDevMode && throwError('Must never be called in production mode');
+  const componentDef = getDeclarationComponentDef(lView); // Treat host component as non-standalone if we can't obtain the def.
+
+  return !!componentDef?.standalone;
+}
+/**
+ * WARNING: this is a **dev-mode only** function (thus should always be guarded by the `ngDevMode`)
+ * and must **not** be used in production bundles. The function makes megamorphic reads, which might
+ * be too slow for production mode.
+ *
+ * Constructs a string describing the location of the host component template. The function is used
+ * in dev mode to produce error messages.
+ *
+ * @param lView An `LView` that represents a current component that is being rendered.
+ */
+
+
+function getTemplateLocationDetails(lView) {
+  !ngDevMode && throwError('Must never be called in production mode');
+  const hostComponentDef = getDeclarationComponentDef(lView);
+  const componentClassName = hostComponentDef?.type?.name;
+  return componentClassName ? ` (used in the '${componentClassName}' component template)` : '';
+}
+/**
+ * The set of known control flow directives and their corresponding imports.
+ * We use this set to produce a more precises error message with a note
+ * that the `CommonModule` should also be included.
+ */
+
+
+const KNOWN_CONTROL_FLOW_DIRECTIVES = new Map([['ngIf', 'NgIf'], ['ngFor', 'NgForOf'], ['ngSwitchCase', 'NgSwitchCase'], ['ngSwitchDefault', 'NgSwitchDefault']]);
+/**
+ * Returns true if the tag name is allowed by specified schemas.
+ * @param schemas Array of schemas
+ * @param tagName Name of the tag
+ */
+
+function matchingSchemas(schemas, tagName) {
+  if (schemas !== null) {
+    for (let i = 0; i < schemas.length; i++) {
+      const schema = schemas[i];
+
+      if (schema === NO_ERRORS_SCHEMA || schema === CUSTOM_ELEMENTS_SCHEMA && tagName && tagName.indexOf('-') > -1) {
+        return true;
+      }
+    }
+  }
+
+  return false;
+}
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
 
 const ERROR_ORIGINAL_ERROR = 'ngOriginalError';
 
@@ -64959,18 +66547,23 @@ function maybeUnwrapFn(value) {
 
 
 function assertStandaloneComponentType(type) {
+  assertComponentDef(type);
   const componentDef = getComponentDef(type);
-
-  if (!componentDef) {
-    throw new RuntimeError(906
-    /* RuntimeErrorCode.MISSING_GENERATED_DEF */
-    , `The ${stringifyForError(type)} is not an Angular component, ` + `make sure it has the \`@Component\` decorator.`);
-  }
 
   if (!componentDef.standalone) {
     throw new RuntimeError(907
     /* RuntimeErrorCode.TYPE_IS_NOT_STANDALONE */
     , `The ${stringifyForError(type)} component is not marked as standalone, ` + `but Angular expects to have a standalone component here. ` + `Please make sure the ${stringifyForError(type)} component has ` + `the \`standalone: true\` flag in the decorator.`);
+  }
+}
+/** Verifies whether a given type is a component */
+
+
+function assertComponentDef(type) {
+  if (!getComponentDef(type)) {
+    throw new RuntimeError(906
+    /* RuntimeErrorCode.MISSING_GENERATED_DEF */
+    , `The ${stringifyForError(type)} is not an Angular component, ` + `make sure it has the \`@Component\` decorator.`);
   }
 }
 /** Called when there are multiple component selectors that match a given node */
@@ -65146,6 +66739,17 @@ function ensureIcuContainerVisitorLoaded(loader) {
 // failure based on types.
 
 
+const unusedValueExportToPlacateAjd$4 = 1;
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+// Note: This hack is necessary so we don't erroneously get a circular dependency
+// failure based on types.
+
 const unusedValueExportToPlacateAjd$3 = 1;
 /**
  * @license
@@ -65234,7 +66838,7 @@ function getNearestLContainer(viewOrContainer) {
  */
 
 
-const unusedValueToPlacateAjd$2 = unusedValueExportToPlacateAjd$7 + unusedValueExportToPlacateAjd$4 + unusedValueExportToPlacateAjd$3 + unusedValueExportToPlacateAjd$6 + unusedValueExportToPlacateAjd$8;
+const unusedValueToPlacateAjd$2 = unusedValueExportToPlacateAjd$7 + unusedValueExportToPlacateAjd$5 + unusedValueExportToPlacateAjd$4 + unusedValueExportToPlacateAjd$3 + unusedValueExportToPlacateAjd$8;
 /**
  * NOTE: for performance reasons, the possible actions are inlined within the function instead of
  * being passed as an argument.
@@ -65260,7 +66864,6 @@ function applyToElementOrContainer(action, renderer, parent, lNodeToHandle, befo
     }
 
     const rNode = unwrapRNode(lNodeToHandle);
-    ngDevMode && !isProceduralRenderer(renderer) && assertDomNode(rNode);
 
     if (action === 0
     /* WalkTNodeTreeAction.Create */
@@ -65294,18 +66897,16 @@ function applyToElementOrContainer(action, renderer, parent, lNodeToHandle, befo
 function createTextNode(renderer, value) {
   ngDevMode && ngDevMode.rendererCreateTextNode++;
   ngDevMode && ngDevMode.rendererSetText++;
-  return isProceduralRenderer(renderer) ? renderer.createText(value) : renderer.createTextNode(value);
+  return renderer.createText(value);
 }
 
 function updateTextNode(renderer, rNode, value) {
   ngDevMode && ngDevMode.rendererSetText++;
-  isProceduralRenderer(renderer) ? renderer.setValue(rNode, value) : rNode.textContent = value;
+  renderer.setValue(rNode, value);
 }
 
 function createCommentNode(renderer, value) {
-  ngDevMode && ngDevMode.rendererCreateComment++; // isProceduralRenderer check is not needed because both `Renderer2` and `Renderer3` have the same
-  // method name.
-
+  ngDevMode && ngDevMode.rendererCreateComment++;
   return renderer.createComment(escapeCommentText(value));
 }
 /**
@@ -65319,13 +66920,7 @@ function createCommentNode(renderer, value) {
 
 function createElementNode(renderer, name, namespace) {
   ngDevMode && ngDevMode.rendererCreateElement++;
-
-  if (isProceduralRenderer(renderer)) {
-    return renderer.createElement(name, namespace);
-  } else {
-    const namespaceUri = namespace !== null ? getNamespaceUri(namespace) : null;
-    return namespaceUri === null ? renderer.createElement(name) : renderer.createElementNS(namespaceUri, name);
-  }
+  return renderer.createElement(name, namespace);
 }
 /**
  * Removes all DOM elements associated with a view.
@@ -65610,7 +67205,7 @@ function destroyLView(tView, lView) {
   )) {
     const renderer = lView[RENDERER];
 
-    if (isProceduralRenderer(renderer) && renderer.destroyNode) {
+    if (renderer.destroyNode) {
       applyView(tView, lView, renderer, 3
       /* WalkTNodeTreeAction.Destroy */
       , null, null);
@@ -65651,7 +67246,7 @@ function cleanUpView(tView, lView) {
 
     if (lView[TVIEW].type === 1
     /* TViewType.Component */
-    && isProceduralRenderer(lView[RENDERER])) {
+    ) {
       ngDevMode && ngDevMode.rendererDestroy++;
       lView[RENDERER].destroy();
     }
@@ -65858,33 +67453,20 @@ function getClosestRElement(tView, tNode, lView) {
   }
 }
 /**
- * Inserts a native node before another native node for a given parent using {@link Renderer3}.
- * This is a utility function that can be used when native nodes were determined - it abstracts an
- * actual renderer being used.
+ * Inserts a native node before another native node for a given parent.
+ * This is a utility function that can be used when native nodes were determined.
  */
 
 
 function nativeInsertBefore(renderer, parent, child, beforeNode, isMove) {
   ngDevMode && ngDevMode.rendererInsertBefore++;
-
-  if (isProceduralRenderer(renderer)) {
-    renderer.insertBefore(parent, child, beforeNode, isMove);
-  } else {
-    const targetParent = isTemplateNode(parent) ? parent.content : parent;
-    targetParent.insertBefore(child, beforeNode, isMove);
-  }
+  renderer.insertBefore(parent, child, beforeNode, isMove);
 }
 
 function nativeAppendChild(renderer, parent, child) {
   ngDevMode && ngDevMode.rendererAppendChild++;
   ngDevMode && assertDefined(parent, 'parent node must be defined');
-
-  if (isProceduralRenderer(renderer)) {
-    renderer.appendChild(parent, child);
-  } else {
-    const targetParent = isTemplateNode(parent) ? parent.content : parent;
-    targetParent.appendChild(child);
-  }
+  renderer.appendChild(parent, child);
 }
 
 function nativeAppendOrInsertBefore(renderer, parent, child, beforeNode, isMove) {
@@ -65898,11 +67480,7 @@ function nativeAppendOrInsertBefore(renderer, parent, child, beforeNode, isMove)
 
 
 function nativeRemoveChild(renderer, parent, child, isHostElement) {
-  if (isProceduralRenderer(renderer)) {
-    renderer.removeChild(parent, child, isHostElement);
-  } else {
-    parent.removeChild(child);
-  }
+  renderer.removeChild(parent, child, isHostElement);
 }
 /** Checks if an element is a `<template>` node. */
 
@@ -65916,7 +67494,7 @@ function isTemplateNode(node) {
 
 
 function nativeParentNode(renderer, node) {
-  return isProceduralRenderer(renderer) ? renderer.parentNode(node) : node.parentNode;
+  return renderer.parentNode(node);
 }
 /**
  * Returns a native sibling of a given native node.
@@ -65924,7 +67502,7 @@ function nativeParentNode(renderer, node) {
 
 
 function nativeNextSibling(renderer, node) {
-  return isProceduralRenderer(renderer) ? renderer.nextSibling(node) : node.nextSibling;
+  return renderer.nextSibling(node);
 }
 /**
  * Find a node in front of which `currentTNode` should be inserted.
@@ -66314,27 +67892,14 @@ function applyContainer(renderer, action, lContainer, parentRElement, beforeNode
 
 
 function applyStyling(renderer, isClassBased, rNode, prop, value) {
-  const isProcedural = isProceduralRenderer(renderer);
-
   if (isClassBased) {
     // We actually want JS true/false here because any truthy value should add the class
     if (!value) {
       ngDevMode && ngDevMode.rendererRemoveClass++;
-
-      if (isProcedural) {
-        renderer.removeClass(rNode, prop);
-      } else {
-        rNode.classList.remove(prop);
-      }
+      renderer.removeClass(rNode, prop);
     } else {
       ngDevMode && ngDevMode.rendererAddClass++;
-
-      if (isProcedural) {
-        renderer.addClass(rNode, prop);
-      } else {
-        ngDevMode && assertDefined(rNode.classList, 'HTMLElement expected');
-        rNode.classList.add(prop);
-      }
+      renderer.addClass(rNode, prop);
     }
   } else {
     let flags = prop.indexOf('-') === -1 ? undefined : RendererStyleFlags2.DashCase;
@@ -66343,12 +67908,7 @@ function applyStyling(renderer, isClassBased, rNode, prop, value) {
     /** || value === undefined */
     ) {
       ngDevMode && ngDevMode.rendererRemoveStyle++;
-
-      if (isProcedural) {
-        renderer.removeStyle(rNode, prop, flags);
-      } else {
-        rNode.style.removeProperty(prop);
-      }
+      renderer.removeStyle(rNode, prop, flags);
     } else {
       // A value is important if it ends with `!important`. The style
       // parser strips any semicolons at the end of the value.
@@ -66361,13 +67921,7 @@ function applyStyling(renderer, isClassBased, rNode, prop, value) {
       }
 
       ngDevMode && ngDevMode.rendererSetStyle++;
-
-      if (isProcedural) {
-        renderer.setStyle(rNode, prop, value, flags);
-      } else {
-        ngDevMode && assertDefined(rNode.style, 'HTMLElement expected');
-        rNode.style.setProperty(prop, value, isImportant ? 'important' : '');
-      }
+      renderer.setStyle(rNode, prop, value, flags);
     }
   }
 }
@@ -66385,13 +67939,7 @@ function applyStyling(renderer, isClassBased, rNode, prop, value) {
 
 function writeDirectStyle(renderer, element, newValue) {
   ngDevMode && assertString(newValue, '\'newValue\' should be a string');
-
-  if (isProceduralRenderer(renderer)) {
-    renderer.setAttribute(element, 'style', newValue);
-  } else {
-    element.style.cssText = newValue;
-  }
-
+  renderer.setAttribute(element, 'style', newValue);
   ngDevMode && ngDevMode.rendererSetStyle++;
 }
 /**
@@ -66409,15 +67957,11 @@ function writeDirectStyle(renderer, element, newValue) {
 function writeDirectClass(renderer, element, newValue) {
   ngDevMode && assertString(newValue, '\'newValue\' should be a string');
 
-  if (isProceduralRenderer(renderer)) {
-    if (newValue === '') {
-      // There are tests in `google3` which expect `element.getAttribute('class')` to be `null`.
-      renderer.removeAttribute(element, 'class');
-    } else {
-      renderer.setAttribute(element, 'class', newValue);
-    }
+  if (newValue === '') {
+    // There are tests in `google3` which expect `element.getAttribute('class')` to be `null`.
+    renderer.removeAttribute(element, 'class');
   } else {
-    element.className = newValue;
+    renderer.setAttribute(element, 'class', newValue);
   }
 
   ngDevMode && ngDevMode.rendererSetClassName++;
@@ -66477,7 +68021,7 @@ function classIndexOf(className, classToSearch, startingIndex) {
  */
 
 
-const unusedValueToPlacateAjd$1 = unusedValueExportToPlacateAjd$4 + unusedValueExportToPlacateAjd$3;
+const unusedValueToPlacateAjd$1 = unusedValueExportToPlacateAjd$5 + unusedValueExportToPlacateAjd$4;
 const NG_TEMPLATE_SELECTOR = 'ng-template';
 /**
  * Search the `TAttributes` to see if it contains `cssClassToMatch` (case insensitive)
@@ -67154,7 +68698,7 @@ function compileInjectable(type, meta) {
   }
 }
 
-const USE_VALUE$1 = getClosureSafeProperty({
+const USE_VALUE = getClosureSafeProperty({
   provide: String,
   useValue: getClosureSafeProperty
 });
@@ -67164,7 +68708,7 @@ function isUseClassProvider(meta) {
 }
 
 function isUseValueProvider(meta) {
-  return USE_VALUE$1 in meta;
+  return USE_VALUE in meta;
 }
 
 function isUseFactoryProvider(meta) {
@@ -67230,831 +68774,10 @@ const Injectable = makeDecorator('Injectable', undefined, undefined, undefined, 
  */
 
 /**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-/**
- * A multi-provider token for initialization functions that will run upon construction of an
- * environment injector.
- *
- * @publicApi
- */
-
-const ENVIRONMENT_INITIALIZER = new InjectionToken('ENVIRONMENT_INITIALIZER');
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-const INJECTOR_DEF_TYPES = new InjectionToken('INJECTOR_DEF_TYPES');
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-/**
- * Collects providers from all NgModules and standalone components, including transitively imported
- * ones.
- *
- * Providers extracted via `importProvidersFrom` are only usable in an application injector or
- * another environment injector (such as a route injector). They should not be used in component
- * providers.
- *
- * More information about standalone components can be found in [this
- * guide](guide/standalone-components).
- *
- * @usageNotes
- * The results of the `importProvidersFrom` call can be used in the `bootstrapApplication` call:
- *
- * ```typescript
- * await bootstrapApplication(RootComponent, {
- *   providers: [
- *     importProvidersFrom(NgModuleOne, NgModuleTwo)
- *   ]
- * });
- * ```
- *
- * You can also use the `importProvidersFrom` results in the `providers` field of a route, when a
- * standalone component is used:
- *
- * ```typescript
- * export const ROUTES: Route[] = [
- *   {
- *     path: 'foo',
- *     providers: [
- *       importProvidersFrom(NgModuleOne, NgModuleTwo)
- *     ],
- *     component: YourStandaloneComponent
- *   }
- * ];
- * ```
- *
- * @returns Collected providers from the specified list of types.
- * @publicApi
- * @developerPreview
- */
-
-function importProvidersFrom(...sources) {
-  return {
-    ɵproviders: internalImportProvidersFrom(true, sources)
-  };
-}
-
-function internalImportProvidersFrom(checkForStandaloneCmp, ...sources) {
-  const providersOut = [];
-  const dedup = new Set(); // already seen types
-
-  let injectorTypesWithProviders;
-  deepForEach(sources, source => {
-    if ((typeof ngDevMode === 'undefined' || ngDevMode) && checkForStandaloneCmp) {
-      const cmpDef = getComponentDef(source);
-
-      if (cmpDef?.standalone) {
-        throw new RuntimeError(800
-        /* RuntimeErrorCode.IMPORT_PROVIDERS_FROM_STANDALONE */
-        , `Importing providers supports NgModule or ModuleWithProviders but got a standalone component "${stringifyForError(source)}"`);
-      }
-    } // Narrow `source` to access the internal type analogue for `ModuleWithProviders`.
-
-
-    const internalSource = source;
-
-    if (walkProviderTree(internalSource, providersOut, [], dedup)) {
-      injectorTypesWithProviders || (injectorTypesWithProviders = []);
-      injectorTypesWithProviders.push(internalSource);
-    }
-  }); // Collect all providers from `ModuleWithProviders` types.
-
-  if (injectorTypesWithProviders !== undefined) {
-    processInjectorTypesWithProviders(injectorTypesWithProviders, providersOut);
-  }
-
-  return providersOut;
-}
-/**
- * Collects all providers from the list of `ModuleWithProviders` and appends them to the provided
- * array.
- */
-
-
-function processInjectorTypesWithProviders(typesWithProviders, providersOut) {
-  for (let i = 0; i < typesWithProviders.length; i++) {
-    const {
-      ngModule,
-      providers
-    } = typesWithProviders[i];
-    deepForEach(providers, provider => {
-      ngDevMode && validateProvider(provider, providers || EMPTY_ARRAY, ngModule);
-      providersOut.push(provider);
-    });
-  }
-}
-/**
- * The logic visits an `InjectorType`, an `InjectorTypeWithProviders`, or a standalone
- * `ComponentType`, and all of its transitive providers and collects providers.
- *
- * If an `InjectorTypeWithProviders` that declares providers besides the type is specified,
- * the function will return "true" to indicate that the providers of the type definition need
- * to be processed. This allows us to process providers of injector types after all imports of
- * an injector definition are processed. (following View Engine semantics: see FW-1349)
- */
-
-
-function walkProviderTree(container, providersOut, parents, dedup) {
-  container = resolveForwardRef(container);
-  if (!container) return false; // The actual type which had the definition. Usually `container`, but may be an unwrapped type
-  // from `InjectorTypeWithProviders`.
-
-  let defType = null;
-  let injDef = getInjectorDef(container);
-  const cmpDef = !injDef && getComponentDef(container);
-
-  if (!injDef && !cmpDef) {
-    // `container` is not an injector type or a component type. It might be:
-    //  * An `InjectorTypeWithProviders` that wraps an injector type.
-    //  * A standalone directive or pipe that got pulled in from a standalone component's
-    //    dependencies.
-    // Try to unwrap it as an `InjectorTypeWithProviders` first.
-    const ngModule = container.ngModule;
-    injDef = getInjectorDef(ngModule);
-
-    if (injDef) {
-      defType = ngModule;
-    } else {
-      // Not a component or injector type, so ignore it.
-      return false;
-    }
-  } else if (cmpDef && !cmpDef.standalone) {
-    return false;
-  } else {
-    defType = container;
-  } // Check for circular dependencies.
-
-
-  if (ngDevMode && parents.indexOf(defType) !== -1) {
-    const defName = stringify(defType);
-    const path = parents.map(stringify);
-    throwCyclicDependencyError(defName, path);
-  } // Check for multiple imports of the same module
-
-
-  const isDuplicate = dedup.has(defType);
-
-  if (cmpDef) {
-    if (isDuplicate) {
-      // This component definition has already been processed.
-      return false;
-    }
-
-    dedup.add(defType);
-
-    if (cmpDef.dependencies) {
-      const deps = typeof cmpDef.dependencies === 'function' ? cmpDef.dependencies() : cmpDef.dependencies;
-
-      for (const dep of deps) {
-        walkProviderTree(dep, providersOut, parents, dedup);
-      }
-    }
-  } else if (injDef) {
-    // First, include providers from any imports.
-    if (injDef.imports != null && !isDuplicate) {
-      // Before processing defType's imports, add it to the set of parents. This way, if it ends
-      // up deeply importing itself, this can be detected.
-      ngDevMode && parents.push(defType); // Add it to the set of dedups. This way we can detect multiple imports of the same module
-
-      dedup.add(defType);
-      let importTypesWithProviders;
-
-      try {
-        deepForEach(injDef.imports, imported => {
-          if (walkProviderTree(imported, providersOut, parents, dedup)) {
-            importTypesWithProviders || (importTypesWithProviders = []); // If the processed import is an injector type with providers, we store it in the
-            // list of import types with providers, so that we can process those afterwards.
-
-            importTypesWithProviders.push(imported);
-          }
-        });
-      } finally {
-        // Remove it from the parents set when finished.
-        ngDevMode && parents.pop();
-      } // Imports which are declared with providers (TypeWithProviders) need to be processed
-      // after all imported modules are processed. This is similar to how View Engine
-      // processes/merges module imports in the metadata resolver. See: FW-1349.
-
-
-      if (importTypesWithProviders !== undefined) {
-        processInjectorTypesWithProviders(importTypesWithProviders, providersOut);
-      }
-    }
-
-    if (!isDuplicate) {
-      // Track the InjectorType and add a provider for it.
-      // It's important that this is done after the def's imports.
-      const factory = getFactoryDef(defType) || (() => new defType()); // Append extra providers to make more info available for consumers (to retrieve an injector
-      // type), as well as internally (to calculate an injection scope correctly and eagerly
-      // instantiate a `defType` when an injector is created).
-
-
-      providersOut.push( // Provider to create `defType` using its factory.
-      {
-        provide: defType,
-        useFactory: factory,
-        deps: EMPTY_ARRAY
-      }, // Make this `defType` available to an internal logic that calculates injector scope.
-      {
-        provide: INJECTOR_DEF_TYPES,
-        useValue: defType,
-        multi: true
-      }, // Provider to eagerly instantiate `defType` via `ENVIRONMENT_INITIALIZER`.
-      {
-        provide: ENVIRONMENT_INITIALIZER,
-        useValue: () => ɵɵinject(defType),
-        multi: true
-      } //
-      );
-    } // Next, include providers listed on the definition itself.
-
-
-    const defProviders = injDef.providers;
-
-    if (defProviders != null && !isDuplicate) {
-      const injectorType = container;
-      deepForEach(defProviders, provider => {
-        ngDevMode && validateProvider(provider, defProviders, injectorType);
-        providersOut.push(provider);
-      });
-    }
-  } else {
-    // Should not happen, but just in case.
-    return false;
-  }
-
-  return defType !== container && container.providers !== undefined;
-}
-
-function validateProvider(provider, providers, containerType) {
-  if (isTypeProvider(provider) || isValueProvider(provider) || isFactoryProvider(provider) || isExistingProvider(provider)) {
-    return;
-  } // Here we expect the provider to be a `useClass` provider (by elimination).
-
-
-  const classRef = resolveForwardRef(provider && (provider.useClass || provider.provide));
-
-  if (!classRef) {
-    throwInvalidProviderError(containerType, providers, provider);
-  }
-}
-
-const USE_VALUE = getClosureSafeProperty({
-  provide: String,
-  useValue: getClosureSafeProperty
-});
-
-function isValueProvider(value) {
-  return value !== null && typeof value == 'object' && USE_VALUE in value;
-}
-
-function isExistingProvider(value) {
-  return !!(value && value.useExisting);
-}
-
-function isFactoryProvider(value) {
-  return !!(value && value.useFactory);
-}
-
-function isTypeProvider(value) {
-  return typeof value === 'function';
-}
-
-function isClassProvider(value) {
-  return !!value.useClass;
-}
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-/**
- * An InjectionToken that gets the current `Injector` for `createInjector()`-style injectors.
- *
- * Requesting this token instead of `Injector` allows `StaticInjector` to be tree-shaken from a
- * project.
- *
- * @publicApi
- */
-
-
-const INJECTOR = new InjectionToken('INJECTOR', // Dissable tslint because this is const enum which gets inlined not top level prop access.
-// tslint:disable-next-line: no-toplevel-property-access
--1
-/* InjectorMarkers.Injector */
-);
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-class NullInjector {
-  get(token, notFoundValue = THROW_IF_NOT_FOUND) {
-    if (notFoundValue === THROW_IF_NOT_FOUND) {
-      const error = new Error(`NullInjectorError: No provider for ${stringify(token)}!`);
-      error.name = 'NullInjectorError';
-      throw error;
-    }
-
-    return notFoundValue;
-  }
-
-}
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-/**
- * An internal token whose presence in an injector indicates that the injector should treat itself
- * as a root scoped injector when processing requests for unknown tokens which may indicate
- * they are provided in the root scope.
- */
-
-
-const INJECTOR_SCOPE = new InjectionToken('Set Injector scope.');
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-/**
- * Marker which indicates that a value has not yet been created from the factory function.
- */
-
-const NOT_YET = {};
-/**
- * Marker which indicates that the factory function for a token is in the process of being called.
- *
- * If the injector is asked to inject a token with its value set to CIRCULAR, that indicates
- * injection of a dependency has recursively attempted to inject the original token, and there is
- * a circular dependency among the providers.
- */
-
-const CIRCULAR = {};
-/**
- * A lazily initialized NullInjector.
- */
-
-let NULL_INJECTOR$1 = undefined;
-
-function getNullInjector() {
-  if (NULL_INJECTOR$1 === undefined) {
-    NULL_INJECTOR$1 = new NullInjector();
-  }
-
-  return NULL_INJECTOR$1;
-}
-/**
- * An `Injector` that's part of the environment injector hierarchy, which exists outside of the
- * component tree.
- *
- * @developerPreview
- */
-
-
-class EnvironmentInjector {}
-
-class R3Injector extends EnvironmentInjector {
-  constructor(providers, parent, source, scopes) {
-    super();
-    this.parent = parent;
-    this.source = source;
-    this.scopes = scopes;
-    /**
-     * Map of tokens to records which contain the instances of those tokens.
-     * - `null` value implies that we don't have the record. Used by tree-shakable injectors
-     * to prevent further searches.
-     */
-
-    this.records = new Map();
-    /**
-     * Set of values instantiated by this injector which contain `ngOnDestroy` lifecycle hooks.
-     */
-
-    this._ngOnDestroyHooks = new Set();
-    this._onDestroyHooks = [];
-    this._destroyed = false; // Start off by creating Records for every provider.
-
-    forEachSingleProvider(providers, provider => this.processProvider(provider)); // Make sure the INJECTOR token provides this injector.
-
-    this.records.set(INJECTOR, makeRecord(undefined, this)); // And `EnvironmentInjector` if the current injector is supposed to be env-scoped.
-
-    if (scopes.has('environment')) {
-      this.records.set(EnvironmentInjector, makeRecord(undefined, this));
-    } // Detect whether this injector has the APP_ROOT_SCOPE token and thus should provide
-    // any injectable scoped to APP_ROOT_SCOPE.
-
-
-    const record = this.records.get(INJECTOR_SCOPE);
-
-    if (record != null && typeof record.value === 'string') {
-      this.scopes.add(record.value);
-    }
-
-    this.injectorDefTypes = new Set(this.get(INJECTOR_DEF_TYPES.multi, EMPTY_ARRAY, InjectFlags.Self));
-  }
-  /**
-   * Flag indicating that this injector was previously destroyed.
-   */
-
-
-  get destroyed() {
-    return this._destroyed;
-  }
-  /**
-   * Destroy the injector and release references to every instance or provider associated with it.
-   *
-   * Also calls the `OnDestroy` lifecycle hooks of every instance that was created for which a
-   * hook was found.
-   */
-
-
-  destroy() {
-    this.assertNotDestroyed(); // Set destroyed = true first, in case lifecycle hooks re-enter destroy().
-
-    this._destroyed = true;
-
-    try {
-      // Call all the lifecycle hooks.
-      for (const service of this._ngOnDestroyHooks) {
-        service.ngOnDestroy();
-      }
-
-      for (const hook of this._onDestroyHooks) {
-        hook();
-      }
-    } finally {
-      // Release all references.
-      this.records.clear();
-
-      this._ngOnDestroyHooks.clear();
-
-      this.injectorDefTypes.clear();
-      this._onDestroyHooks.length = 0;
-    }
-  }
-
-  onDestroy(callback) {
-    this._onDestroyHooks.push(callback);
-  }
-
-  get(token, notFoundValue = THROW_IF_NOT_FOUND, flags = InjectFlags.Default) {
-    this.assertNotDestroyed(); // Set the injection context.
-
-    const previousInjector = setCurrentInjector(this);
-    const previousInjectImplementation = setInjectImplementation(undefined);
-
-    try {
-      // Check for the SkipSelf flag.
-      if (!(flags & InjectFlags.SkipSelf)) {
-        // SkipSelf isn't set, check if the record belongs to this injector.
-        let record = this.records.get(token);
-
-        if (record === undefined) {
-          // No record, but maybe the token is scoped to this injector. Look for an injectable
-          // def with a scope matching this injector.
-          const def = couldBeInjectableType(token) && getInjectableDef(token);
-
-          if (def && this.injectableDefInScope(def)) {
-            // Found an injectable def and it's scoped to this injector. Pretend as if it was here
-            // all along.
-            record = makeRecord(injectableDefOrInjectorDefFactory(token), NOT_YET);
-          } else {
-            record = null;
-          }
-
-          this.records.set(token, record);
-        } // If a record was found, get the instance for it and return it.
-
-
-        if (record != null
-        /* NOT null || undefined */
-        ) {
-          return this.hydrate(token, record);
-        }
-      } // Select the next injector based on the Self flag - if self is set, the next injector is
-      // the NullInjector, otherwise it's the parent.
-
-
-      const nextInjector = !(flags & InjectFlags.Self) ? this.parent : getNullInjector(); // Set the notFoundValue based on the Optional flag - if optional is set and notFoundValue
-      // is undefined, the value is null, otherwise it's the notFoundValue.
-
-      notFoundValue = flags & InjectFlags.Optional && notFoundValue === THROW_IF_NOT_FOUND ? null : notFoundValue;
-      return nextInjector.get(token, notFoundValue);
-    } catch (e) {
-      if (e.name === 'NullInjectorError') {
-        const path = e[NG_TEMP_TOKEN_PATH] = e[NG_TEMP_TOKEN_PATH] || [];
-        path.unshift(stringify(token));
-
-        if (previousInjector) {
-          // We still have a parent injector, keep throwing
-          throw e;
-        } else {
-          // Format & throw the final error message when we don't have any previous injector
-          return catchInjectorError(e, token, 'R3InjectorError', this.source);
-        }
-      } else {
-        throw e;
-      }
-    } finally {
-      // Lastly, restore the previous injection context.
-      setInjectImplementation(previousInjectImplementation);
-      setCurrentInjector(previousInjector);
-    }
-  }
-  /** @internal */
-
-
-  resolveInjectorInitializers() {
-    const previousInjector = setCurrentInjector(this);
-    const previousInjectImplementation = setInjectImplementation(undefined);
-
-    try {
-      const initializers = this.get(ENVIRONMENT_INITIALIZER.multi, EMPTY_ARRAY, InjectFlags.Self);
-
-      for (const initializer of initializers) {
-        initializer();
-      }
-    } finally {
-      setCurrentInjector(previousInjector);
-      setInjectImplementation(previousInjectImplementation);
-    }
-  }
-
-  toString() {
-    const tokens = [];
-    const records = this.records;
-
-    for (const token of records.keys()) {
-      tokens.push(stringify(token));
-    }
-
-    return `R3Injector[${tokens.join(', ')}]`;
-  }
-
-  assertNotDestroyed() {
-    if (this._destroyed) {
-      throw new RuntimeError(205
-      /* RuntimeErrorCode.INJECTOR_ALREADY_DESTROYED */
-      , ngDevMode && 'Injector has already been destroyed.');
-    }
-  }
-  /**
-   * Process a `SingleProvider` and add it.
-   */
-
-
-  processProvider(provider) {
-    // Determine the token from the provider. Either it's its own token, or has a {provide: ...}
-    // property.
-    provider = resolveForwardRef(provider);
-    let token = isTypeProvider(provider) ? provider : resolveForwardRef(provider && provider.provide); // Construct a `Record` for the provider.
-
-    const record = providerToRecord(provider);
-
-    if (!isTypeProvider(provider) && provider.multi === true) {
-      // If the provider indicates that it's a multi-provider, process it specially.
-      // First check whether it's been defined already.
-      let multiRecord = this.records.get(token);
-
-      if (multiRecord) {
-        // It has. Throw a nice error if
-        if (ngDevMode && multiRecord.multi === undefined) {
-          throwMixedMultiProviderError();
-        }
-      } else {
-        multiRecord = makeRecord(undefined, NOT_YET, true);
-
-        multiRecord.factory = () => injectArgs(multiRecord.multi);
-
-        this.records.set(token, multiRecord);
-      }
-
-      token = provider;
-      multiRecord.multi.push(provider);
-    } else {
-      const existing = this.records.get(token);
-
-      if (ngDevMode && existing && existing.multi !== undefined) {
-        throwMixedMultiProviderError();
-      }
-    }
-
-    this.records.set(token, record);
-  }
-
-  hydrate(token, record) {
-    if (ngDevMode && record.value === CIRCULAR) {
-      throwCyclicDependencyError(stringify(token));
-    } else if (record.value === NOT_YET) {
-      record.value = CIRCULAR;
-      record.value = record.factory();
-    }
-
-    if (typeof record.value === 'object' && record.value && hasOnDestroy(record.value)) {
-      this._ngOnDestroyHooks.add(record.value);
-    }
-
-    return record.value;
-  }
-
-  injectableDefInScope(def) {
-    if (!def.providedIn) {
-      return false;
-    }
-
-    const providedIn = resolveForwardRef(def.providedIn);
-
-    if (typeof providedIn === 'string') {
-      return providedIn === 'any' || this.scopes.has(providedIn);
-    } else {
-      return this.injectorDefTypes.has(providedIn);
-    }
-  }
-
-}
-
-function injectableDefOrInjectorDefFactory(token) {
-  // Most tokens will have an injectable def directly on them, which specifies a factory directly.
-  const injectableDef = getInjectableDef(token);
-  const factory = injectableDef !== null ? injectableDef.factory : getFactoryDef(token);
-
-  if (factory !== null) {
-    return factory;
-  } // InjectionTokens should have an injectable def (ɵprov) and thus should be handled above.
-  // If it's missing that, it's an error.
-
-
-  if (token instanceof InjectionToken) {
-    throw new RuntimeError(204
-    /* RuntimeErrorCode.INVALID_INJECTION_TOKEN */
-    , ngDevMode && `Token ${stringify(token)} is missing a ɵprov definition.`);
-  } // Undecorated types can sometimes be created if they have no constructor arguments.
-
-
-  if (token instanceof Function) {
-    return getUndecoratedInjectableFactory(token);
-  } // There was no way to resolve a factory for this token.
-
-
-  throw new RuntimeError(204
-  /* RuntimeErrorCode.INVALID_INJECTION_TOKEN */
-  , ngDevMode && 'unreachable');
-}
-
-function getUndecoratedInjectableFactory(token) {
-  // If the token has parameters then it has dependencies that we cannot resolve implicitly.
-  const paramLength = token.length;
-
-  if (paramLength > 0) {
-    const args = newArray(paramLength, '?');
-    throw new RuntimeError(204
-    /* RuntimeErrorCode.INVALID_INJECTION_TOKEN */
-    , ngDevMode && `Can't resolve all parameters for ${stringify(token)}: (${args.join(', ')}).`);
-  } // The constructor function appears to have no parameters.
-  // This might be because it inherits from a super-class. In which case, use an injectable
-  // def from an ancestor if there is one.
-  // Otherwise this really is a simple class with no dependencies, so return a factory that
-  // just instantiates the zero-arg constructor.
-
-
-  const inheritedInjectableDef = getInheritedInjectableDef(token);
-
-  if (inheritedInjectableDef !== null) {
-    return () => inheritedInjectableDef.factory(token);
-  } else {
-    return () => new token();
-  }
-}
-
-function providerToRecord(provider) {
-  if (isValueProvider(provider)) {
-    return makeRecord(undefined, provider.useValue);
-  } else {
-    const factory = providerToFactory(provider);
-    return makeRecord(factory, NOT_YET);
-  }
-}
-/**
- * Converts a `SingleProvider` into a factory function.
- *
- * @param provider provider to convert to factory
- */
-
-
-function providerToFactory(provider, ngModuleType, providers) {
-  let factory = undefined;
-
-  if (ngDevMode && isImportedNgModuleProviders(provider)) {
-    throwInvalidProviderError(undefined, providers, provider);
-  }
-
-  if (isTypeProvider(provider)) {
-    const unwrappedProvider = resolveForwardRef(provider);
-    return getFactoryDef(unwrappedProvider) || injectableDefOrInjectorDefFactory(unwrappedProvider);
-  } else {
-    if (isValueProvider(provider)) {
-      factory = () => resolveForwardRef(provider.useValue);
-    } else if (isFactoryProvider(provider)) {
-      factory = () => provider.useFactory(...injectArgs(provider.deps || []));
-    } else if (isExistingProvider(provider)) {
-      factory = () => ɵɵinject(resolveForwardRef(provider.useExisting));
-    } else {
-      const classRef = resolveForwardRef(provider && (provider.useClass || provider.provide));
-
-      if (ngDevMode && !classRef) {
-        throwInvalidProviderError(ngModuleType, providers, provider);
-      }
-
-      if (hasDeps(provider)) {
-        factory = () => new classRef(...injectArgs(provider.deps));
-      } else {
-        return getFactoryDef(classRef) || injectableDefOrInjectorDefFactory(classRef);
-      }
-    }
-  }
-
-  return factory;
-}
-
-function makeRecord(factory, value, multi = false) {
-  return {
-    factory: factory,
-    value: value,
-    multi: multi ? [] : undefined
-  };
-}
-
-function hasDeps(value) {
-  return !!value.deps;
-}
-
-function hasOnDestroy(value) {
-  return value !== null && typeof value === 'object' && typeof value.ngOnDestroy === 'function';
-}
-
-function couldBeInjectableType(value) {
-  return typeof value === 'function' || typeof value === 'object' && value instanceof InjectionToken;
-}
-
-function isImportedNgModuleProviders(provider) {
-  return !!provider.ɵproviders;
-}
-
-function forEachSingleProvider(providers, fn) {
-  for (const provider of providers) {
-    if (Array.isArray(provider)) {
-      forEachSingleProvider(provider, fn);
-    } else if (isImportedNgModuleProviders(provider)) {
-      forEachSingleProvider(provider.ɵproviders, fn);
-    } else {
-      fn(provider);
-    }
-  }
-}
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-/**
  * Create a new `Injector` which is configured using a `defType` of `InjectorType<any>`s.
  *
  * @publicApi
  */
-
 
 function createInjector(defType, parent = null, additionalProviders = null, name) {
   const injector = createInjectorWithoutInjectorInstances(defType, parent, additionalProviders, name);
@@ -69107,316 +69830,6 @@ function ɵɵinvalidFactory() {
  */
 
 /**
- * Defines a schema that allows an NgModule to contain the following:
- * - Non-Angular elements named with dash case (`-`).
- * - Element properties named with dash case (`-`).
- * Dash case is the naming convention for custom elements.
- *
- * @publicApi
- */
-
-
-const CUSTOM_ELEMENTS_SCHEMA = {
-  name: 'custom-elements'
-};
-/**
- * Defines a schema that allows any property on any element.
- *
- * This schema allows you to ignore the errors related to any unknown elements or properties in a
- * template. The usage of this schema is generally discouraged because it prevents useful validation
- * and may hide real errors in your template. Consider using the `CUSTOM_ELEMENTS_SCHEMA` instead.
- *
- * @publicApi
- */
-
-const NO_ERRORS_SCHEMA = {
-  name: 'no-errors-schema'
-};
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-let shouldThrowErrorOnUnknownElement = false;
-/**
- * Sets a strict mode for JIT-compiled components to throw an error on unknown elements,
- * instead of just logging the error.
- * (for AOT-compiled ones this check happens at build time).
- */
-
-function ɵsetUnknownElementStrictMode(shouldThrow) {
-  shouldThrowErrorOnUnknownElement = shouldThrow;
-}
-/**
- * Gets the current value of the strict mode.
- */
-
-
-function ɵgetUnknownElementStrictMode() {
-  return shouldThrowErrorOnUnknownElement;
-}
-
-let shouldThrowErrorOnUnknownProperty = false;
-/**
- * Sets a strict mode for JIT-compiled components to throw an error on unknown properties,
- * instead of just logging the error.
- * (for AOT-compiled ones this check happens at build time).
- */
-
-function ɵsetUnknownPropertyStrictMode(shouldThrow) {
-  shouldThrowErrorOnUnknownProperty = shouldThrow;
-}
-/**
- * Gets the current value of the strict mode.
- */
-
-
-function ɵgetUnknownPropertyStrictMode() {
-  return shouldThrowErrorOnUnknownProperty;
-}
-/**
- * Validates that the element is known at runtime and produces
- * an error if it's not the case.
- * This check is relevant for JIT-compiled components (for AOT-compiled
- * ones this check happens at build time).
- *
- * The element is considered known if either:
- * - it's a known HTML element
- * - it's a known custom element
- * - the element matches any directive
- * - the element is allowed by one of the schemas
- *
- * @param element Element to validate
- * @param lView An `LView` that represents a current component that is being rendered
- * @param tagName Name of the tag to check
- * @param schemas Array of schemas
- * @param hasDirectives Boolean indicating that the element matches any directive
- */
-
-
-function validateElementIsKnown(element, lView, tagName, schemas, hasDirectives) {
-  // If `schemas` is set to `null`, that's an indication that this Component was compiled in AOT
-  // mode where this check happens at compile time. In JIT mode, `schemas` is always present and
-  // defined as an array (as an empty array in case `schemas` field is not defined) and we should
-  // execute the check below.
-  if (schemas === null) return; // If the element matches any directive, it's considered as valid.
-
-  if (!hasDirectives && tagName !== null) {
-    // The element is unknown if it's an instance of HTMLUnknownElement, or it isn't registered
-    // as a custom element. Note that unknown elements with a dash in their name won't be instances
-    // of HTMLUnknownElement in browsers that support web components.
-    const isUnknown = // Note that we can't check for `typeof HTMLUnknownElement === 'function'`,
-    // because while most browsers return 'function', IE returns 'object'.
-    typeof HTMLUnknownElement !== 'undefined' && HTMLUnknownElement && element instanceof HTMLUnknownElement || typeof customElements !== 'undefined' && tagName.indexOf('-') > -1 && !customElements.get(tagName);
-
-    if (isUnknown && !matchingSchemas(schemas, tagName)) {
-      const isHostStandalone = isHostComponentStandalone(lView);
-      const templateLocation = getTemplateLocationDetails(lView);
-      const schemas = `'${isHostStandalone ? '@Component' : '@NgModule'}.schemas'`;
-      let message = `'${tagName}' is not a known element${templateLocation}:\n`;
-      message += `1. If '${tagName}' is an Angular component, then verify that it is ${isHostStandalone ? 'included in the \'@Component.imports\' of this component' : 'a part of an @NgModule where this component is declared'}.\n`;
-
-      if (tagName && tagName.indexOf('-') > -1) {
-        message += `2. If '${tagName}' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the ${schemas} of this component to suppress this message.`;
-      } else {
-        message += `2. To allow any element add 'NO_ERRORS_SCHEMA' to the ${schemas} of this component.`;
-      }
-
-      if (shouldThrowErrorOnUnknownElement) {
-        throw new RuntimeError(304
-        /* RuntimeErrorCode.UNKNOWN_ELEMENT */
-        , message);
-      } else {
-        console.error(formatRuntimeError(304
-        /* RuntimeErrorCode.UNKNOWN_ELEMENT */
-        , message));
-      }
-    }
-  }
-}
-/**
- * Validates that the property of the element is known at runtime and returns
- * false if it's not the case.
- * This check is relevant for JIT-compiled components (for AOT-compiled
- * ones this check happens at build time).
- *
- * The property is considered known if either:
- * - it's a known property of the element
- * - the element is allowed by one of the schemas
- * - the property is used for animations
- *
- * @param element Element to validate
- * @param propName Name of the property to check
- * @param tagName Name of the tag hosting the property
- * @param schemas Array of schemas
- */
-
-
-function isPropertyValid(element, propName, tagName, schemas) {
-  // If `schemas` is set to `null`, that's an indication that this Component was compiled in AOT
-  // mode where this check happens at compile time. In JIT mode, `schemas` is always present and
-  // defined as an array (as an empty array in case `schemas` field is not defined) and we should
-  // execute the check below.
-  if (schemas === null) return true; // The property is considered valid if the element matches the schema, it exists on the element,
-  // or it is synthetic, and we are in a browser context (web worker nodes should be skipped).
-
-  if (matchingSchemas(schemas, tagName) || propName in element || isAnimationProp(propName)) {
-    return true;
-  } // Note: `typeof Node` returns 'function' in most browsers, but on IE it is 'object' so we
-  // need to account for both here, while being careful with `typeof null` also returning 'object'.
-
-
-  return typeof Node === 'undefined' || Node === null || !(element instanceof Node);
-}
-/**
- * Logs or throws an error that a property is not supported on an element.
- *
- * @param propName Name of the invalid property
- * @param tagName Name of the tag hosting the property
- * @param nodeType Type of the node hosting the property
- * @param lView An `LView` that represents a current component
- */
-
-
-function handleUnknownPropertyError(propName, tagName, nodeType, lView) {
-  // Special-case a situation when a structural directive is applied to
-  // an `<ng-template>` element, for example: `<ng-template *ngIf="true">`.
-  // In this case the compiler generates the `ɵɵtemplate` instruction with
-  // the `null` as the tagName. The directive matching logic at runtime relies
-  // on this effect (see `isInlineTemplate`), thus using the 'ng-template' as
-  // a default value of the `tNode.value` is not feasible at this moment.
-  if (!tagName && nodeType === 4
-  /* TNodeType.Container */
-  ) {
-    tagName = 'ng-template';
-  }
-
-  const isHostStandalone = isHostComponentStandalone(lView);
-  const templateLocation = getTemplateLocationDetails(lView);
-  let message = `Can't bind to '${propName}' since it isn't a known property of '${tagName}'${templateLocation}.`;
-  const schemas = `'${isHostStandalone ? '@Component' : '@NgModule'}.schemas'`;
-  const importLocation = isHostStandalone ? 'included in the \'@Component.imports\' of this component' : 'a part of an @NgModule where this component is declared';
-
-  if (KNOWN_CONTROL_FLOW_DIRECTIVES.has(propName)) {
-    // Most likely this is a control flow directive (such as `*ngIf`) used in
-    // a template, but the `CommonModule` is not imported.
-    message += `\nIf the '${propName}' is an Angular control flow directive, ` + `please make sure that the 'CommonModule' is ${importLocation}.`;
-  } else {
-    // May be an Angular component, which is not imported/declared?
-    message += `\n1. If '${tagName}' is an Angular component and it has the ` + `'${propName}' input, then verify that it is ${importLocation}.`; // May be a Web Component?
-
-    if (tagName && tagName.indexOf('-') > -1) {
-      message += `\n2. If '${tagName}' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' ` + `to the ${schemas} of this component to suppress this message.`;
-      message += `\n3. To allow any property add 'NO_ERRORS_SCHEMA' to ` + `the ${schemas} of this component.`;
-    } else {
-      // If it's expected, the error can be suppressed by the `NO_ERRORS_SCHEMA` schema.
-      message += `\n2. To allow any property add 'NO_ERRORS_SCHEMA' to ` + `the ${schemas} of this component.`;
-    }
-  }
-
-  if (shouldThrowErrorOnUnknownProperty) {
-    throw new RuntimeError(303
-    /* RuntimeErrorCode.UNKNOWN_BINDING */
-    , message);
-  } else {
-    console.error(formatRuntimeError(303
-    /* RuntimeErrorCode.UNKNOWN_BINDING */
-    , message));
-  }
-}
-/**
- * WARNING: this is a **dev-mode only** function (thus should always be guarded by the `ngDevMode`)
- * and must **not** be used in production bundles. The function makes megamorphic reads, which might
- * be too slow for production mode and also it relies on the constructor function being available.
- *
- * Gets a reference to the host component def (where a current component is declared).
- *
- * @param lView An `LView` that represents a current component that is being rendered.
- */
-
-
-function getDeclarationComponentDef(lView) {
-  !ngDevMode && throwError('Must never be called in production mode');
-  const declarationLView = lView[DECLARATION_COMPONENT_VIEW];
-  const context = declarationLView[CONTEXT]; // Unable to obtain a context.
-
-  if (!context) return null;
-  return context.constructor ? getComponentDef(context.constructor) : null;
-}
-/**
- * WARNING: this is a **dev-mode only** function (thus should always be guarded by the `ngDevMode`)
- * and must **not** be used in production bundles. The function makes megamorphic reads, which might
- * be too slow for production mode.
- *
- * Checks if the current component is declared inside of a standalone component template.
- *
- * @param lView An `LView` that represents a current component that is being rendered.
- */
-
-
-function isHostComponentStandalone(lView) {
-  !ngDevMode && throwError('Must never be called in production mode');
-  const componentDef = getDeclarationComponentDef(lView); // Treat host component as non-standalone if we can't obtain the def.
-
-  return !!componentDef?.standalone;
-}
-/**
- * WARNING: this is a **dev-mode only** function (thus should always be guarded by the `ngDevMode`)
- * and must **not** be used in production bundles. The function makes megamorphic reads, which might
- * be too slow for production mode.
- *
- * Constructs a string describing the location of the host component template. The function is used
- * in dev mode to produce error messages.
- *
- * @param lView An `LView` that represents a current component that is being rendered.
- */
-
-
-function getTemplateLocationDetails(lView) {
-  !ngDevMode && throwError('Must never be called in production mode');
-  const hostComponentDef = getDeclarationComponentDef(lView);
-  const componentClassName = hostComponentDef?.type?.name;
-  return componentClassName ? ` (used in the '${componentClassName}' component template)` : '';
-}
-/**
- * The set of known control flow directives.
- * We use this set to produce a more precises error message with a note
- * that the `CommonModule` should also be included.
- */
-
-
-const KNOWN_CONTROL_FLOW_DIRECTIVES = new Set(['ngIf', 'ngFor', 'ngSwitch', 'ngSwitchCase', 'ngSwitchDefault']);
-/**
- * Returns true if the tag name is allowed by specified schemas.
- * @param schemas Array of schemas
- * @param tagName Name of the tag
- */
-
-function matchingSchemas(schemas, tagName) {
-  if (schemas !== null) {
-    for (let i = 0; i < schemas.length; i++) {
-      const schema = schemas[i];
-
-      if (schema === NO_ERRORS_SCHEMA || schema === CUSTOM_ELEMENTS_SCHEMA && tagName && tagName.indexOf('-') > -1) {
-        return true;
-      }
-    }
-  }
-
-  return false;
-}
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-/**
  * THIS FILE CONTAINS CODE WHICH SHOULD BE TREE SHAKEN AND NEVER CALLED FROM PRODUCTION CODE!!!
  */
 
@@ -70423,6 +70836,14 @@ class LContainerDebug {
 
 }
 /**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
  * A permanent marker promise which signifies that the current CD tree is
  * clean.
  */
@@ -70503,7 +70924,7 @@ function refreshChildComponents(hostLView, components) {
 
 function renderChildComponents(hostLView, components) {
   for (let i = 0; i < components.length; i++) {
-    renderComponent$1(hostLView, components[i]);
+    renderComponent(hostLView, components[i]);
   }
 }
 
@@ -71157,16 +71578,6 @@ function createViewBlueprint(bindingStartIndex, initialViewLength) {
 function createError(text, token) {
   return new Error(`Renderer: ${text} [${stringifyForError(token)}]`);
 }
-
-function assertHostNodeExists(rElement, elementOrSelector) {
-  if (!rElement) {
-    if (typeof elementOrSelector === 'string') {
-      throw createError('Host node with selector not found:', elementOrSelector);
-    } else {
-      throw createError('Host node is required:', elementOrSelector);
-    }
-  }
-}
 /**
  * Locates the host native element, used for bootstrapping existing nodes into rendering pipeline.
  *
@@ -71177,20 +71588,9 @@ function assertHostNodeExists(rElement, elementOrSelector) {
 
 
 function locateHostElement(renderer, elementOrSelector, encapsulation) {
-  if (isProceduralRenderer(renderer)) {
-    // When using native Shadow DOM, do not clear host element to allow native slot projection
-    const preserveContent = encapsulation === ViewEncapsulation$1.ShadowDom;
-    return renderer.selectRootElement(elementOrSelector, preserveContent);
-  }
-
-  let rElement = typeof elementOrSelector === 'string' ? renderer.querySelector(elementOrSelector) : elementOrSelector;
-  ngDevMode && assertHostNodeExists(rElement, elementOrSelector); // Always clear host element's content when Renderer3 is in use. For procedural renderer case we
-  // make it depend on whether ShadowDom encapsulation is used (in which case the content should be
-  // preserved to allow native slot projection). ShadowDom encapsulation requires procedural
-  // renderer, and procedural renderer case is handled above.
-
-  rElement.textContent = '';
-  return rElement;
+  // When using native Shadow DOM, do not clear host element to allow native slot projection
+  const preserveContent = encapsulation === ViewEncapsulation$1.ShadowDom;
+  return renderer.selectRootElement(elementOrSelector, preserveContent);
 }
 /**
  * Saves context for this cleanup function in LView.cleanupInstances.
@@ -71423,12 +71823,7 @@ function elementPropertyInternal(tView, tNode, lView, propName, value, renderer,
 
 
     value = sanitizer != null ? sanitizer(value, tNode.value || '', propName) : value;
-
-    if (isProceduralRenderer(renderer)) {
-      renderer.setProperty(element, propName, value);
-    } else if (!isAnimationProp(propName)) {
-      element.setProperty ? element.setProperty(propName, value) : element[propName] = value;
-    }
+    renderer.setProperty(element, propName, value);
   } else if (tNode.type & 12
   /* TNodeType.AnyContainer */
   ) {
@@ -71464,20 +71859,15 @@ function setNgReflectProperty(lView, element, type, attrName, value) {
   /* TNodeType.AnyRNode */
   ) {
     if (value == null) {
-      isProceduralRenderer(renderer) ? renderer.removeAttribute(element, attrName) : element.removeAttribute(attrName);
+      renderer.removeAttribute(element, attrName);
     } else {
-      isProceduralRenderer(renderer) ? renderer.setAttribute(element, attrName, debugValue) : element.setAttribute(attrName, debugValue);
+      renderer.setAttribute(element, attrName, debugValue);
     }
   } else {
     const textContent = escapeCommentText(`bindings=${JSON.stringify({
       [attrName]: debugValue
     }, null, 2)}`);
-
-    if (isProceduralRenderer(renderer)) {
-      renderer.setValue(element, textContent);
-    } else {
-      element.textContent = textContent;
-    }
+    renderer.setValue(element, textContent);
   }
 }
 
@@ -71513,6 +71903,7 @@ function instantiateRootComponent(tView, lView, def) {
     const directiveIndex = allocExpando(tView, lView, 1, null);
     ngDevMode && assertEqual(directiveIndex, rootTNode.directiveStart, 'Because this is a root component the allocated expando should match the TNode component.');
     configureViewWithDirective(tView, rootTNode, lView, directiveIndex, def);
+    initializeInputAndOutputAliases(tView, rootTNode);
   }
 
   const directive = getNodeInjectable(lView, tView, rootTNode.directiveStart, rootTNode);
@@ -71918,16 +72309,11 @@ function elementAttributeInternal(tNode, lView, name, value, sanitizer, namespac
 function setElementAttribute(renderer, element, namespace, tagName, name, value, sanitizer) {
   if (value == null) {
     ngDevMode && ngDevMode.rendererRemoveAttribute++;
-    isProceduralRenderer(renderer) ? renderer.removeAttribute(element, name, namespace) : element.removeAttribute(name);
+    renderer.removeAttribute(element, name, namespace);
   } else {
     ngDevMode && ngDevMode.rendererSetAttribute++;
     const strValue = sanitizer == null ? renderStringify(value) : sanitizer(value, tagName || '', name);
-
-    if (isProceduralRenderer(renderer)) {
-      renderer.setAttribute(element, name, strValue, namespace);
-    } else {
-      namespace ? element.setAttributeNS(namespace, name, strValue) : element.setAttribute(name, strValue);
-    }
+    renderer.setAttribute(element, name, strValue, namespace);
   }
 }
 /**
@@ -72033,8 +72419,7 @@ const LContainerArray = class LContainer extends Array {};
  */
 
 function createLContainer(hostNative, currentView, native, tNode) {
-  ngDevMode && assertLView(currentView);
-  ngDevMode && !isProceduralRenderer(currentView[RENDERER]) && assertDomNode(native); // https://jsperf.com/array-literal-vs-new-array-really
+  ngDevMode && assertLView(currentView); // https://jsperf.com/array-literal-vs-new-array-really
 
   const lContainer = new (ngDevMode ? LContainerArray : Array)(hostNative, // host native
   true, // Boolean `true` in this position signifies that this is an `LContainer`
@@ -72171,7 +72556,7 @@ function refreshContainsDirtyView(lView) {
   }
 }
 
-function renderComponent$1(hostLView, componentHostIdx) {
+function renderComponent(hostLView, componentHostIdx) {
   ngDevMode && assertEqual(isCreationMode(hostLView), true, 'Should be run in creation mode');
   const componentView = getComponentLViewByIndex(componentHostIdx, hostLView);
   const componentTView = componentView[TVIEW];
@@ -72575,542 +72960,404 @@ function computeStaticStyling(tNode, attrs, writeToHost) {
  * found in the LICENSE file at https://angular.io/license
  */
 
-/**
- * Synchronously perform change detection on a component (and possibly its sub-components).
- *
- * This function triggers change detection in a synchronous way on a component.
- *
- * @param component The component which the change detection should be performed on.
- */
+
+function collectNativeNodes(tView, lView, tNode, result, isProjection = false) {
+  while (tNode !== null) {
+    ngDevMode && assertTNodeType(tNode, 3
+    /* TNodeType.AnyRNode */
+    | 12
+    /* TNodeType.AnyContainer */
+    | 16
+    /* TNodeType.Projection */
+    | 32
+    /* TNodeType.Icu */
+    );
+    const lNode = lView[tNode.index];
+
+    if (lNode !== null) {
+      result.push(unwrapRNode(lNode));
+    } // A given lNode can represent either a native node or a LContainer (when it is a host of a
+    // ViewContainerRef). When we find a LContainer we need to descend into it to collect root nodes
+    // from the views in this container.
 
 
-function detectChanges(component) {
-  const view = getComponentViewByInstance(component);
-  detectChangesInternal(view[TVIEW], view, component);
-}
-/**
- * Marks the component as dirty (needing change detection). Marking a component dirty will
- * schedule a change detection on it at some point in the future.
- *
- * Marking an already dirty component as dirty won't do anything. Only one outstanding change
- * detection can be scheduled per component tree.
- *
- * @param component Component to mark as dirty.
- */
+    if (isLContainer(lNode)) {
+      for (let i = CONTAINER_HEADER_OFFSET; i < lNode.length; i++) {
+        const lViewInAContainer = lNode[i];
+        const lViewFirstChildTNode = lViewInAContainer[TVIEW].firstChild;
 
-
-function markDirty(component) {
-  ngDevMode && assertDefined(component, 'component');
-  const rootView = markViewDirty(getComponentViewByInstance(component));
-  ngDevMode && assertDefined(rootView[CONTEXT], 'rootContext should be defined');
-  scheduleTick(rootView[CONTEXT], 1
-  /* RootContextFlags.DetectChanges */
-  );
-}
-/**
- * Used to perform change detection on the whole application.
- *
- * This is equivalent to `detectChanges`, but invoked on root component. Additionally, `tick`
- * executes lifecycle hooks and conditionally checks components based on their
- * `ChangeDetectionStrategy` and dirtiness.
- *
- * The preferred way to trigger change detection is to call `markDirty`. `markDirty` internally
- * schedules `tick` using a scheduler in order to coalesce multiple `markDirty` calls into a
- * single change detection run. By default, the scheduler is `requestAnimationFrame`, but can
- * be changed when calling `renderComponent` and providing the `scheduler` option.
- */
-
-
-function tick(component) {
-  const rootView = getRootView(component);
-  const rootContext = rootView[CONTEXT];
-  tickRootContext(rootContext);
-}
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-/**
- * Retrieves the component instance associated with a given DOM element.
- *
- * @usageNotes
- * Given the following DOM structure:
- *
- * ```html
- * <app-root>
- *   <div>
- *     <child-comp></child-comp>
- *   </div>
- * </app-root>
- * ```
- *
- * Calling `getComponent` on `<child-comp>` will return the instance of `ChildComponent`
- * associated with this DOM element.
- *
- * Calling the function on `<app-root>` will return the `MyApp` instance.
- *
- *
- * @param element DOM element from which the component should be retrieved.
- * @returns Component instance associated with the element or `null` if there
- *    is no component associated with it.
- *
- * @publicApi
- * @globalApi ng
- */
-
-
-function getComponent$1(element) {
-  ngDevMode && assertDomElement(element);
-  const context = getLContext(element);
-  if (context === null) return null;
-
-  if (context.component === undefined) {
-    const lView = context.lView;
-
-    if (lView === null) {
-      return null;
-    }
-
-    context.component = getComponentAtNodeIndex(context.nodeIndex, lView);
-  }
-
-  return context.component;
-}
-/**
- * If inside an embedded view (e.g. `*ngIf` or `*ngFor`), retrieves the context of the embedded
- * view that the element is part of. Otherwise retrieves the instance of the component whose view
- * owns the element (in this case, the result is the same as calling `getOwningComponent`).
- *
- * @param element Element for which to get the surrounding component instance.
- * @returns Instance of the component that is around the element or null if the element isn't
- *    inside any component.
- *
- * @publicApi
- * @globalApi ng
- */
-
-
-function getContext(element) {
-  assertDomElement(element);
-  const context = getLContext(element);
-  const lView = context ? context.lView : null;
-  return lView === null ? null : lView[CONTEXT];
-}
-/**
- * Retrieves the component instance whose view contains the DOM element.
- *
- * For example, if `<child-comp>` is used in the template of `<app-comp>`
- * (i.e. a `ViewChild` of `<app-comp>`), calling `getOwningComponent` on `<child-comp>`
- * would return `<app-comp>`.
- *
- * @param elementOrDir DOM element, component or directive instance
- *    for which to retrieve the root components.
- * @returns Component instance whose view owns the DOM element or null if the element is not
- *    part of a component view.
- *
- * @publicApi
- * @globalApi ng
- */
-
-
-function getOwningComponent(elementOrDir) {
-  const context = getLContext(elementOrDir);
-  let lView = context ? context.lView : null;
-  if (lView === null) return null;
-  let parent;
-
-  while (lView[TVIEW].type === 2
-  /* TViewType.Embedded */
-  && (parent = getLViewParent(lView))) {
-    lView = parent;
-  }
-
-  return lView[FLAGS] & 256
-  /* LViewFlags.IsRoot */
-  ? null : lView[CONTEXT];
-}
-/**
- * Retrieves all root components associated with a DOM element, directive or component instance.
- * Root components are those which have been bootstrapped by Angular.
- *
- * @param elementOrDir DOM element, component or directive instance
- *    for which to retrieve the root components.
- * @returns Root components associated with the target object.
- *
- * @publicApi
- * @globalApi ng
- */
-
-
-function getRootComponents(elementOrDir) {
-  const lView = readPatchedLView(elementOrDir);
-  return lView !== null ? [...getRootContext(lView).components] : [];
-}
-/**
- * Retrieves an `Injector` associated with an element, component or directive instance.
- *
- * @param elementOrDir DOM element, component or directive instance for which to
- *    retrieve the injector.
- * @returns Injector associated with the element, component or directive instance.
- *
- * @publicApi
- * @globalApi ng
- */
-
-
-function getInjector(elementOrDir) {
-  const context = getLContext(elementOrDir);
-  const lView = context ? context.lView : null;
-  if (lView === null) return Injector.NULL;
-  const tNode = lView[TVIEW].data[context.nodeIndex];
-  return new NodeInjector(tNode, lView);
-}
-/**
- * Retrieve a set of injection tokens at a given DOM node.
- *
- * @param element Element for which the injection tokens should be retrieved.
- */
-
-
-function getInjectionTokens(element) {
-  const context = getLContext(element);
-  const lView = context ? context.lView : null;
-  if (lView === null) return [];
-  const tView = lView[TVIEW];
-  const tNode = tView.data[context.nodeIndex];
-  const providerTokens = [];
-  const startIndex = tNode.providerIndexes & 1048575
-  /* TNodeProviderIndexes.ProvidersStartIndexMask */
-  ;
-  const endIndex = tNode.directiveEnd;
-
-  for (let i = startIndex; i < endIndex; i++) {
-    let value = tView.data[i];
-
-    if (isDirectiveDefHack(value)) {
-      // The fact that we sometimes store Type and sometimes DirectiveDef in this location is a
-      // design flaw.  We should always store same type so that we can be monomorphic. The issue
-      // is that for Components/Directives we store the def instead the type. The correct behavior
-      // is that we should always be storing injectable type in this location.
-      value = value.type;
-    }
-
-    providerTokens.push(value);
-  }
-
-  return providerTokens;
-}
-/**
- * Retrieves directive instances associated with a given DOM node. Does not include
- * component instances.
- *
- * @usageNotes
- * Given the following DOM structure:
- *
- * ```html
- * <app-root>
- *   <button my-button></button>
- *   <my-comp></my-comp>
- * </app-root>
- * ```
- *
- * Calling `getDirectives` on `<button>` will return an array with an instance of the `MyButton`
- * directive that is associated with the DOM node.
- *
- * Calling `getDirectives` on `<my-comp>` will return an empty array.
- *
- * @param node DOM node for which to get the directives.
- * @returns Array of directives associated with the node.
- *
- * @publicApi
- * @globalApi ng
- */
-
-
-function getDirectives(node) {
-  // Skip text nodes because we can't have directives associated with them.
-  if (node instanceof Text) {
-    return [];
-  }
-
-  const context = getLContext(node);
-  const lView = context ? context.lView : null;
-
-  if (lView === null) {
-    return [];
-  }
-
-  const tView = lView[TVIEW];
-  const nodeIndex = context.nodeIndex;
-
-  if (!tView?.data[nodeIndex]) {
-    return [];
-  }
-
-  if (context.directives === undefined) {
-    context.directives = getDirectivesAtNodeIndex(nodeIndex, lView, false);
-  } // The `directives` in this case are a named array called `LComponentView`. Clone the
-  // result so we don't expose an internal data structure in the user's console.
-
-
-  return context.directives === null ? [] : [...context.directives];
-}
-/**
- * Returns the debug (partial) metadata for a particular directive or component instance.
- * The function accepts an instance of a directive or component and returns the corresponding
- * metadata.
- *
- * @param directiveOrComponentInstance Instance of a directive or component
- * @returns metadata of the passed directive or component
- *
- * @publicApi
- * @globalApi ng
- */
-
-
-function getDirectiveMetadata$1(directiveOrComponentInstance) {
-  const {
-    constructor
-  } = directiveOrComponentInstance;
-
-  if (!constructor) {
-    throw new Error('Unable to find the instance constructor');
-  } // In case a component inherits from a directive, we may have component and directive metadata
-  // To ensure we don't get the metadata of the directive, we want to call `getComponentDef` first.
-
-
-  const componentDef = getComponentDef(constructor);
-
-  if (componentDef) {
-    return {
-      inputs: componentDef.inputs,
-      outputs: componentDef.outputs,
-      encapsulation: componentDef.encapsulation,
-      changeDetection: componentDef.onPush ? ChangeDetectionStrategy.OnPush : ChangeDetectionStrategy.Default
-    };
-  }
-
-  const directiveDef = getDirectiveDef(constructor);
-
-  if (directiveDef) {
-    return {
-      inputs: directiveDef.inputs,
-      outputs: directiveDef.outputs
-    };
-  }
-
-  return null;
-}
-/**
- * Retrieve map of local references.
- *
- * The references are retrieved as a map of local reference name to element or directive instance.
- *
- * @param target DOM element, component or directive instance for which to retrieve
- *    the local references.
- */
-
-
-function getLocalRefs(target) {
-  const context = getLContext(target);
-  if (context === null) return {};
-
-  if (context.localRefs === undefined) {
-    const lView = context.lView;
-
-    if (lView === null) {
-      return {};
-    }
-
-    context.localRefs = discoverLocalRefs(lView, context.nodeIndex);
-  }
-
-  return context.localRefs || {};
-}
-/**
- * Retrieves the host element of a component or directive instance.
- * The host element is the DOM element that matched the selector of the directive.
- *
- * @param componentOrDirective Component or directive instance for which the host
- *     element should be retrieved.
- * @returns Host element of the target.
- *
- * @publicApi
- * @globalApi ng
- */
-
-
-function getHostElement(componentOrDirective) {
-  return getLContext(componentOrDirective).native;
-}
-/**
- * Retrieves the rendered text for a given component.
- *
- * This function retrieves the host element of a component and
- * and then returns the `textContent` for that element. This implies
- * that the text returned will include re-projected content of
- * the component as well.
- *
- * @param component The component to return the content text for.
- */
-
-
-function getRenderedText(component) {
-  const hostElement = getHostElement(component);
-  return hostElement.textContent || '';
-}
-/**
- * Retrieves a list of event listeners associated with a DOM element. The list does include host
- * listeners, but it does not include event listeners defined outside of the Angular context
- * (e.g. through `addEventListener`).
- *
- * @usageNotes
- * Given the following DOM structure:
- *
- * ```html
- * <app-root>
- *   <div (click)="doSomething()"></div>
- * </app-root>
- * ```
- *
- * Calling `getListeners` on `<div>` will return an object that looks as follows:
- *
- * ```ts
- * {
- *   name: 'click',
- *   element: <div>,
- *   callback: () => doSomething(),
- *   useCapture: false
- * }
- * ```
- *
- * @param element Element for which the DOM listeners should be retrieved.
- * @returns Array of event listeners on the DOM element.
- *
- * @publicApi
- * @globalApi ng
- */
-
-
-function getListeners(element) {
-  ngDevMode && assertDomElement(element);
-  const lContext = getLContext(element);
-  const lView = lContext === null ? null : lContext.lView;
-  if (lView === null) return [];
-  const tView = lView[TVIEW];
-  const lCleanup = lView[CLEANUP];
-  const tCleanup = tView.cleanup;
-  const listeners = [];
-
-  if (tCleanup && lCleanup) {
-    for (let i = 0; i < tCleanup.length;) {
-      const firstParam = tCleanup[i++];
-      const secondParam = tCleanup[i++];
-
-      if (typeof firstParam === 'string') {
-        const name = firstParam;
-        const listenerElement = unwrapRNode(lView[secondParam]);
-        const callback = lCleanup[tCleanup[i++]];
-        const useCaptureOrIndx = tCleanup[i++]; // if useCaptureOrIndx is boolean then report it as is.
-        // if useCaptureOrIndx is positive number then it in unsubscribe method
-        // if useCaptureOrIndx is negative number then it is a Subscription
-
-        const type = typeof useCaptureOrIndx === 'boolean' || useCaptureOrIndx >= 0 ? 'dom' : 'output';
-        const useCapture = typeof useCaptureOrIndx === 'boolean' ? useCaptureOrIndx : false;
-
-        if (element == listenerElement) {
-          listeners.push({
-            element,
-            name,
-            callback,
-            useCapture,
-            type
-          });
+        if (lViewFirstChildTNode !== null) {
+          collectNativeNodes(lViewInAContainer[TVIEW], lViewInAContainer, lViewFirstChildTNode, result);
         }
       }
     }
+
+    const tNodeType = tNode.type;
+
+    if (tNodeType & 8
+    /* TNodeType.ElementContainer */
+    ) {
+      collectNativeNodes(tView, lView, tNode.child, result);
+    } else if (tNodeType & 32
+    /* TNodeType.Icu */
+    ) {
+      const nextRNode = icuContainerIterate(tNode, lView);
+      let rNode;
+
+      while (rNode = nextRNode()) {
+        result.push(rNode);
+      }
+    } else if (tNodeType & 16
+    /* TNodeType.Projection */
+    ) {
+      const nodesInSlot = getProjectionNodes(lView, tNode);
+
+      if (Array.isArray(nodesInSlot)) {
+        result.push(...nodesInSlot);
+      } else {
+        const parentView = getLViewParent(lView[DECLARATION_COMPONENT_VIEW]);
+        ngDevMode && assertParentView(parentView);
+        collectNativeNodes(parentView[TVIEW], parentView, nodesInSlot, result, true);
+      }
+    }
+
+    tNode = isProjection ? tNode.projectionNext : tNode.next;
   }
 
-  listeners.sort(sortListeners);
-  return listeners;
-}
-
-function sortListeners(a, b) {
-  if (a.name == b.name) return 0;
-  return a.name < b.name ? -1 : 1;
+  return result;
 }
 /**
- * This function should not exist because it is megamorphic and only mostly correct.
+ * @license
+ * Copyright Google LLC All Rights Reserved.
  *
- * See call site for more info.
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
  */
 
 
-function isDirectiveDefHack(obj) {
-  return obj.type !== undefined && obj.template !== undefined && obj.declaredInputs !== undefined;
-}
-/**
- * Returns the attached `DebugNode` instance for an element in the DOM.
- *
- * @param element DOM element which is owned by an existing component's view.
- */
-
-
-function getDebugNode$1(element) {
-  if (ngDevMode && !(element instanceof Node)) {
-    throw new Error('Expecting instance of DOM Element');
+class ViewRef$1 {
+  constructor(
+  /**
+   * This represents `LView` associated with the component when ViewRef is a ChangeDetectorRef.
+   *
+   * When ViewRef is created for a dynamic component, this also represents the `LView` for the
+   * component.
+   *
+   * For a "regular" ViewRef created for an embedded view, this is the `LView` for the embedded
+   * view.
+   *
+   * @internal
+   */
+  _lView,
+  /**
+   * This represents the `LView` associated with the point where `ChangeDetectorRef` was
+   * requested.
+   *
+   * This may be different from `_lView` if the `_cdRefInjectingView` is an embedded view.
+   */
+  _cdRefInjectingView) {
+    this._lView = _lView;
+    this._cdRefInjectingView = _cdRefInjectingView;
+    this._appRef = null;
+    this._attachedToViewContainer = false;
   }
 
-  const lContext = getLContext(element);
-  const lView = lContext ? lContext.lView : null;
+  get rootNodes() {
+    const lView = this._lView;
+    const tView = lView[TVIEW];
+    return collectNativeNodes(tView, lView, tView.firstChild, []);
+  }
 
-  if (lView === null) {
+  get context() {
+    return this._lView[CONTEXT];
+  }
+
+  set context(value) {
+    this._lView[CONTEXT] = value;
+  }
+
+  get destroyed() {
+    return (this._lView[FLAGS] & 128
+    /* LViewFlags.Destroyed */
+    ) === 128
+    /* LViewFlags.Destroyed */
+    ;
+  }
+
+  destroy() {
+    if (this._appRef) {
+      this._appRef.detachView(this);
+    } else if (this._attachedToViewContainer) {
+      const parent = this._lView[PARENT];
+
+      if (isLContainer(parent)) {
+        const viewRefs = parent[VIEW_REFS];
+        const index = viewRefs ? viewRefs.indexOf(this) : -1;
+
+        if (index > -1) {
+          ngDevMode && assertEqual(index, parent.indexOf(this._lView) - CONTAINER_HEADER_OFFSET, 'An attached view should be in the same position within its container as its ViewRef in the VIEW_REFS array.');
+          detachView(parent, index);
+          removeFromArray(viewRefs, index);
+        }
+      }
+
+      this._attachedToViewContainer = false;
+    }
+
+    destroyLView(this._lView[TVIEW], this._lView);
+  }
+
+  onDestroy(callback) {
+    storeCleanupWithContext(this._lView[TVIEW], this._lView, null, callback);
+  }
+  /**
+   * Marks a view and all of its ancestors dirty.
+   *
+   * This can be used to ensure an {@link ChangeDetectionStrategy#OnPush OnPush} component is
+   * checked when it needs to be re-rendered but the two normal triggers haven't marked it
+   * dirty (i.e. inputs haven't changed and events haven't fired in the view).
+   *
+   * <!-- TODO: Add a link to a chapter on OnPush components -->
+   *
+   * @usageNotes
+   * ### Example
+   *
+   * ```typescript
+   * @Component({
+   *   selector: 'app-root',
+   *   template: `Number of ticks: {{numberOfTicks}}`
+   *   changeDetection: ChangeDetectionStrategy.OnPush,
+   * })
+   * class AppComponent {
+   *   numberOfTicks = 0;
+   *
+   *   constructor(private ref: ChangeDetectorRef) {
+   *     setInterval(() => {
+   *       this.numberOfTicks++;
+   *       // the following is required, otherwise the view will not be updated
+   *       this.ref.markForCheck();
+   *     }, 1000);
+   *   }
+   * }
+   * ```
+   */
+
+
+  markForCheck() {
+    markViewDirty(this._cdRefInjectingView || this._lView);
+  }
+  /**
+   * Detaches the view from the change detection tree.
+   *
+   * Detached views will not be checked during change detection runs until they are
+   * re-attached, even if they are dirty. `detach` can be used in combination with
+   * {@link ChangeDetectorRef#detectChanges detectChanges} to implement local change
+   * detection checks.
+   *
+   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest -->
+   * <!-- TODO: Add a live demo once ref.detectChanges is merged into master -->
+   *
+   * @usageNotes
+   * ### Example
+   *
+   * The following example defines a component with a large list of readonly data.
+   * Imagine the data changes constantly, many times per second. For performance reasons,
+   * we want to check and update the list every five seconds. We can do that by detaching
+   * the component's change detector and doing a local check every five seconds.
+   *
+   * ```typescript
+   * class DataProvider {
+   *   // in a real application the returned data will be different every time
+   *   get data() {
+   *     return [1,2,3,4,5];
+   *   }
+   * }
+   *
+   * @Component({
+   *   selector: 'giant-list',
+   *   template: `
+   *     <li *ngFor="let d of dataProvider.data">Data {{d}}</li>
+   *   `,
+   * })
+   * class GiantList {
+   *   constructor(private ref: ChangeDetectorRef, private dataProvider: DataProvider) {
+   *     ref.detach();
+   *     setInterval(() => {
+   *       this.ref.detectChanges();
+   *     }, 5000);
+   *   }
+   * }
+   *
+   * @Component({
+   *   selector: 'app',
+   *   providers: [DataProvider],
+   *   template: `
+   *     <giant-list><giant-list>
+   *   `,
+   * })
+   * class App {
+   * }
+   * ```
+   */
+
+
+  detach() {
+    this._lView[FLAGS] &= ~64
+    /* LViewFlags.Attached */
+    ;
+  }
+  /**
+   * Re-attaches a view to the change detection tree.
+   *
+   * This can be used to re-attach views that were previously detached from the tree
+   * using {@link ChangeDetectorRef#detach detach}. Views are attached to the tree by default.
+   *
+   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest -->
+   *
+   * @usageNotes
+   * ### Example
+   *
+   * The following example creates a component displaying `live` data. The component will detach
+   * its change detector from the main change detector tree when the component's live property
+   * is set to false.
+   *
+   * ```typescript
+   * class DataProvider {
+   *   data = 1;
+   *
+   *   constructor() {
+   *     setInterval(() => {
+   *       this.data = this.data * 2;
+   *     }, 500);
+   *   }
+   * }
+   *
+   * @Component({
+   *   selector: 'live-data',
+   *   inputs: ['live'],
+   *   template: 'Data: {{dataProvider.data}}'
+   * })
+   * class LiveData {
+   *   constructor(private ref: ChangeDetectorRef, private dataProvider: DataProvider) {}
+   *
+   *   set live(value) {
+   *     if (value) {
+   *       this.ref.reattach();
+   *     } else {
+   *       this.ref.detach();
+   *     }
+   *   }
+   * }
+   *
+   * @Component({
+   *   selector: 'app-root',
+   *   providers: [DataProvider],
+   *   template: `
+   *     Live Update: <input type="checkbox" [(ngModel)]="live">
+   *     <live-data [live]="live"><live-data>
+   *   `,
+   * })
+   * class AppComponent {
+   *   live = true;
+   * }
+   * ```
+   */
+
+
+  reattach() {
+    this._lView[FLAGS] |= 64
+    /* LViewFlags.Attached */
+    ;
+  }
+  /**
+   * Checks the view and its children.
+   *
+   * This can also be used in combination with {@link ChangeDetectorRef#detach detach} to implement
+   * local change detection checks.
+   *
+   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest -->
+   * <!-- TODO: Add a live demo once ref.detectChanges is merged into master -->
+   *
+   * @usageNotes
+   * ### Example
+   *
+   * The following example defines a component with a large list of readonly data.
+   * Imagine, the data changes constantly, many times per second. For performance reasons,
+   * we want to check and update the list every five seconds.
+   *
+   * We can do that by detaching the component's change detector and doing a local change detection
+   * check every five seconds.
+   *
+   * See {@link ChangeDetectorRef#detach detach} for more information.
+   */
+
+
+  detectChanges() {
+    detectChangesInternal(this._lView[TVIEW], this._lView, this.context);
+  }
+  /**
+   * Checks the change detector and its children, and throws if any changes are detected.
+   *
+   * This is used in development mode to verify that running change detection doesn't
+   * introduce other changes.
+   */
+
+
+  checkNoChanges() {
+    if (ngDevMode) {
+      checkNoChangesInternal(this._lView[TVIEW], this._lView, this.context);
+    }
+  }
+
+  attachToViewContainerRef() {
+    if (this._appRef) {
+      throw new RuntimeError(902
+      /* RuntimeErrorCode.VIEW_ALREADY_ATTACHED */
+      , ngDevMode && 'This view is already attached directly to the ApplicationRef!');
+    }
+
+    this._attachedToViewContainer = true;
+  }
+
+  detachFromAppRef() {
+    this._appRef = null;
+    renderDetachView(this._lView[TVIEW], this._lView);
+  }
+
+  attachToAppRef(appRef) {
+    if (this._attachedToViewContainer) {
+      throw new RuntimeError(902
+      /* RuntimeErrorCode.VIEW_ALREADY_ATTACHED */
+      , ngDevMode && 'This view is already attached to a ViewContainer!');
+    }
+
+    this._appRef = appRef;
+  }
+
+}
+/** @internal */
+
+
+class RootViewRef extends ViewRef$1 {
+  constructor(_view) {
+    super(_view);
+    this._view = _view;
+  }
+
+  detectChanges() {
+    detectChangesInRootView(this._view);
+  }
+
+  checkNoChanges() {
+    if (ngDevMode) {
+      checkNoChangesInRootView(this._view);
+    }
+  }
+
+  get context() {
     return null;
   }
 
-  const nodeIndex = lContext.nodeIndex;
-
-  if (nodeIndex !== -1) {
-    const valueInLView = lView[nodeIndex]; // this means that value in the lView is a component with its own
-    // data. In this situation the TNode is not accessed at the same spot.
-
-    const tNode = isLView(valueInLView) ? valueInLView[T_HOST] : getTNode(lView[TVIEW], nodeIndex);
-    ngDevMode && assertEqual(tNode.index, nodeIndex, 'Expecting that TNode at index is same as index');
-    return buildDebugNode(tNode, lView);
-  }
-
-  return null;
-}
-/**
- * Retrieve the component `LView` from component/element.
- *
- * NOTE: `LView` is a private and should not be leaked outside.
- *       Don't export this method to `ng.*` on window.
- *
- * @param target DOM element or component instance for which to retrieve the LView.
- */
-
-
-function getComponentLView(target) {
-  const lContext = getLContext(target);
-  const nodeIndx = lContext.nodeIndex;
-  const lView = lContext.lView;
-  ngDevMode && assertLView(lView);
-  const componentLView = lView[nodeIndx];
-  ngDevMode && assertLView(componentLView);
-  return componentLView;
-}
-/** Asserts that a value is a DOM Element. */
-
-
-function assertDomElement(value) {
-  if (typeof Element !== 'undefined' && !(value instanceof Element)) {
-    throw new Error('Expecting instance of DOM Element');
-  }
 }
 /**
  * @license
@@ -73120,111 +73367,266 @@ function assertDomElement(value) {
  * found in the LICENSE file at https://angular.io/license
  */
 
-/**
- * Marks a component for check (in case of OnPush components) and synchronously
- * performs change detection on the application this component belongs to.
- *
- * @param component Component to {@link ChangeDetectorRef#markForCheck mark for check}.
- *
- * @publicApi
- * @globalApi ng
- */
 
-
-function applyChanges(component) {
-  markDirty(component);
-  getRootComponents(component).forEach(rootComponent => detectChanges(rootComponent));
-}
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-/**
- * This file introduces series of globally accessible debug tools
- * to allow for the Angular debugging story to function.
- *
- * To see this in action run the following command:
- *
- *   bazel run //packages/core/test/bundling/todo:devserver
- *
- *  Then load `localhost:5432` and start using the console tools.
- */
-
-/**
- * This value reflects the property on the window where the dev
- * tools are patched (window.ng).
- * */
-
-
-const GLOBAL_PUBLISH_EXPANDO_KEY = 'ng';
-let _published = false;
-/**
- * Publishes a collection of default debug tools onto`window.ng`.
- *
- * These functions are available globally when Angular is in development
- * mode and are automatically stripped away from prod mode is on.
- */
-
-function publishDefaultGlobalUtils$1() {
-  if (!_published) {
-    _published = true;
-    /**
-     * Warning: this function is *INTERNAL* and should not be relied upon in application's code.
-     * The contract of the function might be changed in any release and/or the function can be
-     * removed completely.
-     */
-
-    publishGlobalUtil('ɵsetProfiler', setProfiler);
-    publishGlobalUtil('getDirectiveMetadata', getDirectiveMetadata$1);
-    publishGlobalUtil('getComponent', getComponent$1);
-    publishGlobalUtil('getContext', getContext);
-    publishGlobalUtil('getListeners', getListeners);
-    publishGlobalUtil('getOwningComponent', getOwningComponent);
-    publishGlobalUtil('getHostElement', getHostElement);
-    publishGlobalUtil('getInjector', getInjector);
-    publishGlobalUtil('getRootComponents', getRootComponents);
-    publishGlobalUtil('getDirectives', getDirectives);
-    publishGlobalUtil('applyChanges', applyChanges);
+class ComponentFactoryResolver extends ComponentFactoryResolver$1 {
+  /**
+   * @param ngModule The NgModuleRef to which all resolved factories are bound.
+   */
+  constructor(ngModule) {
+    super();
+    this.ngModule = ngModule;
   }
+
+  resolveComponentFactory(component) {
+    ngDevMode && assertComponentType(component);
+    const componentDef = getComponentDef(component);
+    return new ComponentFactory(componentDef, this.ngModule);
+  }
+
 }
-/**
- * Publishes the given function to `window.ng` so that it can be
- * used from the browser console when an application is not in production.
- */
 
+function toRefArray(map) {
+  const array = [];
 
-function publishGlobalUtil(name, fn) {
-  if (typeof COMPILED === 'undefined' || !COMPILED) {
-    // Note: we can't export `ng` when using closure enhanced optimization as:
-    // - closure declares globals itself for minified names, which sometimes clobber our `ng` global
-    // - we can't declare a closure extern as the namespace `ng` is already used within Google
-    //   for typings for AngularJS (via `goog.provide('ng....')`).
-    const w = _global;
-    ngDevMode && assertDefined(fn, 'function not defined');
-
-    if (w) {
-      let container = w[GLOBAL_PUBLISH_EXPANDO_KEY];
-
-      if (!container) {
-        container = w[GLOBAL_PUBLISH_EXPANDO_KEY] = {};
-      }
-
-      container[name] = fn;
+  for (let nonMinified in map) {
+    if (map.hasOwnProperty(nonMinified)) {
+      const minified = map[nonMinified];
+      array.push({
+        propName: minified,
+        templateName: nonMinified
+      });
     }
   }
+
+  return array;
+}
+
+function getNamespace(elementName) {
+  const name = elementName.toLowerCase();
+  return name === 'svg' ? SVG_NAMESPACE : name === 'math' ? MATH_ML_NAMESPACE : null;
 }
 /**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
+ * Injector that looks up a value using a specific injector, before falling back to the module
+ * injector. Used primarily when creating components or embedded views dynamically.
  */
-// TODO: A hack to not pull in the NullInjector from @angular/core.
+
+
+class ChainedInjector {
+  constructor(injector, parentInjector) {
+    this.injector = injector;
+    this.parentInjector = parentInjector;
+  }
+
+  get(token, notFoundValue, flags) {
+    const value = this.injector.get(token, NOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR, flags);
+
+    if (value !== NOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR || notFoundValue === NOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR) {
+      // Return the value from the root element injector when
+      // - it provides it
+      //   (value !== NOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR)
+      // - the module injector should not be checked
+      //   (notFoundValue === NOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR)
+      return value;
+    }
+
+    return this.parentInjector.get(token, notFoundValue, flags);
+  }
+
+}
+/**
+ * Render3 implementation of {@link viewEngine_ComponentFactory}.
+ */
+
+
+class ComponentFactory extends ComponentFactory$1 {
+  /**
+   * @param componentDef The component definition.
+   * @param ngModule The NgModuleRef to which the factory is bound.
+   */
+  constructor(componentDef, ngModule) {
+    super();
+    this.componentDef = componentDef;
+    this.ngModule = ngModule;
+    this.componentType = componentDef.type;
+    this.selector = stringifyCSSSelectorList(componentDef.selectors);
+    this.ngContentSelectors = componentDef.ngContentSelectors ? componentDef.ngContentSelectors : [];
+    this.isBoundToModule = !!ngModule;
+  }
+
+  get inputs() {
+    return toRefArray(this.componentDef.inputs);
+  }
+
+  get outputs() {
+    return toRefArray(this.componentDef.outputs);
+  }
+
+  create(injector, projectableNodes, rootSelectorOrNode, environmentInjector) {
+    environmentInjector = environmentInjector || this.ngModule;
+    let realEnvironmentInjector = environmentInjector instanceof EnvironmentInjector ? environmentInjector : environmentInjector?.injector;
+
+    if (realEnvironmentInjector && this.componentDef.getStandaloneInjector !== null) {
+      realEnvironmentInjector = this.componentDef.getStandaloneInjector(realEnvironmentInjector) || realEnvironmentInjector;
+    }
+
+    const rootViewInjector = realEnvironmentInjector ? new ChainedInjector(injector, realEnvironmentInjector) : injector;
+    const rendererFactory = rootViewInjector.get(RendererFactory2, null);
+
+    if (rendererFactory === null) {
+      throw new RuntimeError(407
+      /* RuntimeErrorCode.RENDERER_NOT_FOUND */
+      , ngDevMode && 'Angular was not able to inject a renderer (RendererFactory2). ' + 'Likely this is due to a broken DI hierarchy. ' + 'Make sure that any injector used to create this component has a correct parent.');
+    }
+
+    const sanitizer = rootViewInjector.get(Sanitizer, null);
+    const hostRenderer = rendererFactory.createRenderer(null, this.componentDef); // Determine a tag name used for creating host elements when this component is created
+    // dynamically. Default to 'div' if this component did not specify any tag name in its selector.
+
+    const elementName = this.componentDef.selectors[0][0] || 'div';
+    const hostRNode = rootSelectorOrNode ? locateHostElement(hostRenderer, rootSelectorOrNode, this.componentDef.encapsulation) : createElementNode(rendererFactory.createRenderer(null, this.componentDef), elementName, getNamespace(elementName));
+    const rootFlags = this.componentDef.onPush ? 32
+    /* LViewFlags.Dirty */
+    | 256
+    /* LViewFlags.IsRoot */
+    : 16
+    /* LViewFlags.CheckAlways */
+    | 256
+    /* LViewFlags.IsRoot */
+    ;
+    const rootContext = createRootContext(); // Create the root view. Uses empty TView and ContentTemplate.
+
+    const rootTView = createTView(0
+    /* TViewType.Root */
+    , null, null, 1, 0, null, null, null, null, null);
+    const rootLView = createLView(null, rootTView, rootContext, rootFlags, null, null, rendererFactory, hostRenderer, sanitizer, rootViewInjector, null); // rootView is the parent when bootstrapping
+    // TODO(misko): it looks like we are entering view here but we don't really need to as
+    // `renderView` does that. However as the code is written it is needed because
+    // `createRootComponentView` and `createRootComponent` both read global state. Fixing those
+    // issues would allow us to drop this.
+
+    enterView(rootLView);
+    let component;
+    let tElementNode;
+
+    try {
+      const componentView = createRootComponentView(hostRNode, this.componentDef, rootLView, rendererFactory, hostRenderer);
+
+      if (hostRNode) {
+        if (rootSelectorOrNode) {
+          setUpAttributes(hostRenderer, hostRNode, ['ng-version', VERSION.full]);
+        } else {
+          // If host element is created as a part of this function call (i.e. `rootSelectorOrNode`
+          // is not defined), also apply attributes and classes extracted from component selector.
+          // Extract attributes and classes from the first selector only to match VE behavior.
+          const {
+            attrs,
+            classes
+          } = extractAttrsAndClassesFromSelector(this.componentDef.selectors[0]);
+
+          if (attrs) {
+            setUpAttributes(hostRenderer, hostRNode, attrs);
+          }
+
+          if (classes && classes.length > 0) {
+            writeDirectClass(hostRenderer, hostRNode, classes.join(' '));
+          }
+        }
+      }
+
+      tElementNode = getTNode(rootTView, HEADER_OFFSET);
+
+      if (projectableNodes !== undefined) {
+        const projection = tElementNode.projection = [];
+
+        for (let i = 0; i < this.ngContentSelectors.length; i++) {
+          const nodesforSlot = projectableNodes[i]; // Projectable nodes can be passed as array of arrays or an array of iterables (ngUpgrade
+          // case). Here we do normalize passed data structure to be an array of arrays to avoid
+          // complex checks down the line.
+          // We also normalize the length of the passed in projectable nodes (to match the number of
+          // <ng-container> slots defined by a component).
+
+          projection.push(nodesforSlot != null ? Array.from(nodesforSlot) : null);
+        }
+      } // TODO: should LifecycleHooksFeature and other host features be generated by the compiler and
+      // executed here?
+      // Angular 5 reference: https://stackblitz.com/edit/lifecycle-hooks-vcref
+
+
+      component = createRootComponent(componentView, this.componentDef, rootLView, rootContext, [LifecycleHooksFeature]);
+      renderView(rootTView, rootLView, null);
+    } finally {
+      leaveView();
+    }
+
+    return new ComponentRef(this.componentType, component, createElementRef(tElementNode, rootLView), rootLView, tElementNode);
+  }
+
+}
+
+const componentFactoryResolver = new ComponentFactoryResolver();
+/**
+ * Creates a ComponentFactoryResolver and stores it on the injector. Or, if the
+ * ComponentFactoryResolver
+ * already exists, retrieves the existing ComponentFactoryResolver.
+ *
+ * @returns The ComponentFactoryResolver instance to use
+ */
+
+function injectComponentFactoryResolver() {
+  return componentFactoryResolver;
+}
+/**
+ * Represents an instance of a Component created via a {@link ComponentFactory}.
+ *
+ * `ComponentRef` provides access to the Component Instance as well other objects related to this
+ * Component Instance and allows you to destroy the Component Instance via the {@link #destroy}
+ * method.
+ *
+ */
+
+
+class ComponentRef extends ComponentRef$1 {
+  constructor(componentType, instance, location, _rootLView, _tNode) {
+    super();
+    this.location = location;
+    this._rootLView = _rootLView;
+    this._tNode = _tNode;
+    this.instance = instance;
+    this.hostView = this.changeDetectorRef = new RootViewRef(_rootLView);
+    this.componentType = componentType;
+  }
+
+  setInput(name, value) {
+    const inputData = this._tNode.inputs;
+    let dataValue;
+
+    if (inputData !== null && (dataValue = inputData[name])) {
+      const lView = this._rootLView;
+      setInputsForProperty(lView[TVIEW], lView, dataValue, name, value);
+      markDirtyIfOnPush(lView, this._tNode.index);
+    } else {
+      if (ngDevMode) {
+        const cmpNameForError = stringifyForError(this.componentType);
+        let message = `Can't set value of the '${name}' input on the '${cmpNameForError}' component. `;
+        message += `Make sure that the '${name}' property is annotated with @Input() or a mapped @Input('${name}') exists.`;
+        reportUnknownPropertyError(message);
+      }
+    }
+  }
+
+  get injector() {
+    return new NodeInjector(this._tNode, this._rootLView);
+  }
+
+  destroy() {
+    this.hostView.destroy();
+  }
+
+  onDestroy(callback) {
+    this.hostView.onDestroy(callback);
+  }
+
+} // TODO: A hack to not pull in the NullInjector from @angular/core.
 
 
 const NULL_INJECTOR = {
@@ -73232,67 +73634,6 @@ const NULL_INJECTOR = {
     throwProviderNotFoundError(token, 'NullInjector');
   }
 };
-/**
- * Bootstraps a Component into an existing host element and returns an instance
- * of the component.
- *
- * Use this function to bootstrap a component into the DOM tree. Each invocation
- * of this function will create a separate tree of components, injectors and
- * change detection cycles and lifetimes. To dynamically insert a new component
- * into an existing tree such that it shares the same injection, change detection
- * and object lifetime, use {@link ViewContainer#createComponent}.
- *
- * @param componentType Component to bootstrap
- * @param options Optional parameters which control bootstrapping
- */
-
-function renderComponent(componentType
-/* Type as workaround for: Microsoft/TypeScript/issues/4881 */
-, opts = {}) {
-  ngDevMode && publishDefaultGlobalUtils$1();
-  ngDevMode && assertComponentType(componentType);
-  enableRenderer3();
-  const rendererFactory = opts.rendererFactory || domRendererFactory3;
-  const sanitizer = opts.sanitizer || null;
-  const componentDef = getComponentDef(componentType);
-  if (componentDef.type != componentType) componentDef.type = componentType; // The first index of the first selector is the tag name.
-
-  const componentTag = componentDef.selectors[0][0];
-  const hostRenderer = rendererFactory.createRenderer(null, null);
-  const hostRNode = locateHostElement(hostRenderer, opts.host || componentTag, componentDef.encapsulation);
-  const rootFlags = componentDef.onPush ? 32
-  /* LViewFlags.Dirty */
-  | 256
-  /* LViewFlags.IsRoot */
-  : 16
-  /* LViewFlags.CheckAlways */
-  | 256
-  /* LViewFlags.IsRoot */
-  ;
-  const rootContext = createRootContext(opts.scheduler, opts.playerHandler);
-  const renderer = rendererFactory.createRenderer(hostRNode, componentDef);
-  const rootTView = createTView(0
-  /* TViewType.Root */
-  , null, null, 1, 0, null, null, null, null, null);
-  const rootView = createLView(null, rootTView, rootContext, rootFlags, null, null, rendererFactory, renderer, null, opts.injector || null, null);
-  enterView(rootView);
-  let component;
-
-  try {
-    if (rendererFactory.begin) rendererFactory.begin();
-    const componentView = createRootComponentView(hostRNode, componentDef, rootView, rendererFactory, renderer, sanitizer);
-    component = createRootComponent(componentView, componentDef, rootView, rootContext, opts.hostFeatures || null); // create mode pass
-
-    renderView(rootTView, rootView, null); // update mode pass
-
-    refreshView(rootTView, rootView, null, null);
-  } finally {
-    leaveView();
-    if (rendererFactory.end) rendererFactory.end();
-  }
-
-  return component;
-}
 /**
  * Creates the root component view and the root component node.
  *
@@ -73305,7 +73646,6 @@ function renderComponent(componentType
  *
  * @returns Component view created
  */
-
 
 function createRootComponentView(rNode, def, rootView, rendererFactory, hostRenderer, sanitizer) {
   const tView = rootView[TVIEW];
@@ -73354,7 +73694,7 @@ function createRootComponentView(rNode, def, rootView, rendererFactory, hostRend
   return rootView[index] = componentView;
 }
 /**
- * Creates a root component and sets it up with features and host bindings. Shared by
+ * Creates a root component and sets it up with features and host bindings.Shared by
  * renderComponent() and ViewContainerRef.createComponent().
  */
 
@@ -74492,6 +74832,46 @@ function ɵɵattributeInterpolateV(attrName, values, sanitizer, namespace) {
  * found in the LICENSE file at https://angular.io/license
  */
 
+/**
+ * Synchronously perform change detection on a component (and possibly its sub-components).
+ *
+ * This function triggers change detection in a synchronous way on a component.
+ *
+ * @param component The component which the change detection should be performed on.
+ */
+
+
+function detectChanges(component) {
+  const view = getComponentViewByInstance(component);
+  detectChangesInternal(view[TVIEW], view, component);
+}
+/**
+ * Marks the component as dirty (needing change detection). Marking a component dirty will
+ * schedule a change detection on it at some point in the future.
+ *
+ * Marking an already dirty component as dirty won't do anything. Only one outstanding change
+ * detection can be scheduled per component tree.
+ *
+ * @param component Component to mark as dirty.
+ */
+
+
+function markDirty(component) {
+  ngDevMode && assertDefined(component, 'component');
+  const rootView = markViewDirty(getComponentViewByInstance(component));
+  ngDevMode && assertDefined(rootView[CONTEXT], 'rootContext should be defined');
+  scheduleTick(rootView[CONTEXT], 1
+  /* RootContextFlags.DetectChanges */
+  );
+}
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
 
 function templateFirstCreatePass(index, tView, lView, templateFn, decls, vars, tagName, attrsIndex, localRefsIndex) {
   ngDevMode && assertFirstCreatePass(tView);
@@ -75121,55 +75501,45 @@ function listenerInternal(tView, lView, renderer, tNode, eventName, listenerFn, 
     const lCleanupIndex = lCleanup.length;
     const idxOrTargetGetter = eventTargetResolver ? _lView => eventTargetResolver(unwrapRNode(_lView[tNode.index])) : tNode.index; // In order to match current behavior, native DOM event listeners must be added for all
     // events (including outputs).
+    // There might be cases where multiple directives on the same element try to register an event
+    // handler function for the same event. In this situation we want to avoid registration of
+    // several native listeners as each registration would be intercepted by NgZone and
+    // trigger change detection. This would mean that a single user action would result in several
+    // change detections being invoked. To avoid this situation we want to have only one call to
+    // native handler registration (for the same element and same type of event).
+    //
+    // In order to have just one native event handler in presence of multiple handler functions,
+    // we just register a first handler function as a native event listener and then chain
+    // (coalesce) other handler functions on top of the first native handler function.
 
-    if (isProceduralRenderer(renderer)) {
-      // There might be cases where multiple directives on the same element try to register an event
-      // handler function for the same event. In this situation we want to avoid registration of
-      // several native listeners as each registration would be intercepted by NgZone and
-      // trigger change detection. This would mean that a single user action would result in several
-      // change detections being invoked. To avoid this situation we want to have only one call to
-      // native handler registration (for the same element and same type of event).
-      //
-      // In order to have just one native event handler in presence of multiple handler functions,
-      // we just register a first handler function as a native event listener and then chain
-      // (coalesce) other handler functions on top of the first native handler function.
-      let existingListener = null; // Please note that the coalescing described here doesn't happen for events specifying an
-      // alternative target (ex. (document:click)) - this is to keep backward compatibility with the
-      // view engine.
-      // Also, we don't have to search for existing listeners is there are no directives
-      // matching on a given node as we can't register multiple event handlers for the same event in
-      // a template (this would mean having duplicate attributes).
+    let existingListener = null; // Please note that the coalescing described here doesn't happen for events specifying an
+    // alternative target (ex. (document:click)) - this is to keep backward compatibility with the
+    // view engine.
+    // Also, we don't have to search for existing listeners is there are no directives
+    // matching on a given node as we can't register multiple event handlers for the same event in
+    // a template (this would mean having duplicate attributes).
 
-      if (!eventTargetResolver && isTNodeDirectiveHost) {
-        existingListener = findExistingListener(tView, lView, eventName, tNode.index);
-      }
+    if (!eventTargetResolver && isTNodeDirectiveHost) {
+      existingListener = findExistingListener(tView, lView, eventName, tNode.index);
+    }
 
-      if (existingListener !== null) {
-        // Attach a new listener to coalesced listeners list, maintaining the order in which
-        // listeners are registered. For performance reasons, we keep a reference to the last
-        // listener in that list (in `__ngLastListenerFn__` field), so we can avoid going through
-        // the entire set each time we need to add a new listener.
-        const lastListenerFn = existingListener.__ngLastListenerFn__ || existingListener;
-        lastListenerFn.__ngNextListenerFn__ = listenerFn;
-        existingListener.__ngLastListenerFn__ = listenerFn;
-        processOutputs = false;
-      } else {
-        listenerFn = wrapListener(tNode, lView, context, listenerFn, false
-        /** preventDefault */
-        );
-        const cleanupFn = renderer.listen(target, eventName, listenerFn);
-        ngDevMode && ngDevMode.rendererAddEventListener++;
-        lCleanup.push(listenerFn, cleanupFn);
-        tCleanup && tCleanup.push(eventName, idxOrTargetGetter, lCleanupIndex, lCleanupIndex + 1);
-      }
+    if (existingListener !== null) {
+      // Attach a new listener to coalesced listeners list, maintaining the order in which
+      // listeners are registered. For performance reasons, we keep a reference to the last
+      // listener in that list (in `__ngLastListenerFn__` field), so we can avoid going through
+      // the entire set each time we need to add a new listener.
+      const lastListenerFn = existingListener.__ngLastListenerFn__ || existingListener;
+      lastListenerFn.__ngNextListenerFn__ = listenerFn;
+      existingListener.__ngLastListenerFn__ = listenerFn;
+      processOutputs = false;
     } else {
-      listenerFn = wrapListener(tNode, lView, context, listenerFn, true
+      listenerFn = wrapListener(tNode, lView, context, listenerFn, false
       /** preventDefault */
       );
-      target.addEventListener(eventName, listenerFn, useCapture);
+      const cleanupFn = renderer.listen(target, eventName, listenerFn);
       ngDevMode && ngDevMode.rendererAddEventListener++;
-      lCleanup.push(listenerFn);
-      tCleanup && tCleanup.push(eventName, idxOrTargetGetter, lCleanupIndex, useCapture);
+      lCleanup.push(listenerFn, cleanupFn);
+      tCleanup && tCleanup.push(eventName, idxOrTargetGetter, lCleanupIndex, lCleanupIndex + 1);
     }
   } else {
     // Even if there is no native listener to add, we still need to wrap the listener so that OnPush
@@ -75898,7 +76268,7 @@ function ɵɵpropertyInterpolate8(propName, prefix, v0, i0, v1, i1, v2, i2, v3, 
  * be conducted at runtime so child components that add new `@Inputs` don't have to be re-compiled.
  *
  * @param propName The name of the property to update.
- * @param values The collection of values and the strings inbetween those values, beginning with a
+ * @param values The collection of values and the strings in between those values, beginning with a
  * string prefix and ending with a string suffix.
  * (e.g. `['prefix', value0, '-', value1, '-', value2, ..., value99, 'suffix']`)
  * @param sanitizer An optional sanitizer function
@@ -79309,7 +79679,7 @@ var I18nCreateOpCode;
    */
   I18nCreateOpCode[I18nCreateOpCode["SHIFT"] = 2] = "SHIFT";
   /**
-   * Should the node be appended to parent imedditatly after creation.
+   * Should the node be appended to parent immediately after creation.
    */
 
   I18nCreateOpCode[I18nCreateOpCode["APPEND_EAGERLY"] = 1] = "APPEND_EAGERLY";
@@ -81899,59 +82269,13 @@ function ɵɵProvidersFeature(providers, viewProviders = []) {
  * found in the LICENSE file at https://angular.io/license
  */
 
-
-function noComponentFactoryError(component) {
-  const error = Error(`No component factory found for ${stringify(component)}. Did you add it to @NgModule.entryComponents?`);
-  error[ERROR_COMPONENT] = component;
-  return error;
-}
-
-const ERROR_COMPONENT = 'ngComponent';
-
-function getComponent(error) {
-  return error[ERROR_COMPONENT];
-}
-
-class _NullComponentFactoryResolver {
-  resolveComponentFactory(component) {
-    throw noComponentFactoryError(component);
-  }
-
-}
-/**
- * A simple registry that maps `Components` to generated `ComponentFactory` classes
- * that can be used to create instances of components.
- * Use to obtain the factory for a given component type,
- * then use the factory's `create()` method to create a component of that type.
- *
- * Note: since v13, dynamic component creation via
- * [`ViewContainerRef.createComponent`](api/core/ViewContainerRef#createComponent)
- * does **not** require resolving component factory: component class can be used directly.
- *
- * @publicApi
- *
- * @deprecated Angular no longer requires Component factories. Please use other APIs where
- *     Component class can be used directly.
- */
-
-
-class ComponentFactoryResolver$1 {}
-
-ComponentFactoryResolver$1.NULL = /* @__PURE__ */new _NullComponentFactoryResolver();
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
 /**
  * Represents an instance of an `NgModule` created by an `NgModuleFactory`.
  * Provides access to the `NgModule` instance and related objects.
  *
  * @publicApi
  */
+
 
 class NgModuleRef$1 {}
 /**
@@ -81962,7 +82286,7 @@ class NgModuleRef$1 {}
  * JIT mode. See [JIT API changes due to ViewEngine deprecation](guide/deprecations#jit-api-changes)
  * for additional context. Angular provides APIs that accept NgModule classes directly (such as
  * [PlatformRef.bootstrapModule](api/core/PlatformRef#bootstrapModule) and
- * [createNgModuleRef](api/core/createNgModuleRef)), consider switching to those APIs instead of
+ * [createNgModule](api/core/createNgModule)), consider switching to those APIs instead of
  * using factory-based ones.
  */
 
@@ -81977,913 +82301,29 @@ class NgModuleFactory$1 {}
  */
 
 /**
- * Represents a component created by a `ComponentFactory`.
- * Provides access to the component instance and related objects,
- * and provides the means of destroying the instance.
- *
- * @publicApi
- */
-
-
-class ComponentRef$1 {}
-/**
- * Base class for a factory that can create a component dynamically.
- * Instantiate a factory for a given type of component with `resolveComponentFactory()`.
- * Use the resulting `ComponentFactory.create()` method to create a component of that type.
- *
- * @see [Dynamic Components](guide/dynamic-component-loader)
- *
- * @publicApi
- *
- * @deprecated Angular no longer requires Component factories. Please use other APIs where
- *     Component class can be used directly.
- */
-
-
-class ComponentFactory$1 {}
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-/**
- * Creates an ElementRef from the most recent node.
- *
- * @returns The ElementRef instance to use
- */
-
-
-function injectElementRef() {
-  return createElementRef(getCurrentTNode(), getLView());
-}
-/**
- * Creates an ElementRef given a node.
- *
- * @param tNode The node for which you'd like an ElementRef
- * @param lView The view to which the node belongs
- * @returns The ElementRef instance to use
- */
-
-
-function createElementRef(tNode, lView) {
-  return new ElementRef(getNativeByTNode(tNode, lView));
-}
-/**
- * A wrapper around a native element inside of a View.
- *
- * An `ElementRef` is backed by a render-specific element. In the browser, this is usually a DOM
- * element.
- *
- * @security Permitting direct access to the DOM can make your application more vulnerable to
- * XSS attacks. Carefully review any use of `ElementRef` in your code. For more detail, see the
- * [Security Guide](https://g.co/ng/security).
- *
- * @publicApi
- */
-// Note: We don't expose things like `Injector`, `ViewContainer`, ... here,
-// i.e. users have to ask for what they need. With that, we can build better analysis tools
-// and could do better codegen in the future.
-
-
-class ElementRef {
-  constructor(nativeElement) {
-    this.nativeElement = nativeElement;
-  }
-
-}
-/**
- * @internal
- * @nocollapse
- */
-
-
-ElementRef.__NG_ELEMENT_ID__ = injectElementRef;
-/**
- * Unwraps `ElementRef` and return the `nativeElement`.
- *
- * @param value value to unwrap
- * @returns `nativeElement` if `ElementRef` otherwise returns value as is.
- */
-
-function unwrapElementRef(value) {
-  return value instanceof ElementRef ? value.nativeElement : value;
-}
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-
-const Renderer2Interceptor = new InjectionToken('Renderer2Interceptor');
-/**
- * Creates and initializes a custom renderer that implements the `Renderer2` base class.
- *
- * @publicApi
- */
-
-class RendererFactory2 {}
-/**
- * Extend this base class to implement custom rendering. By default, Angular
- * renders a template into DOM. You can use custom rendering to intercept
- * rendering calls, or to render to something other than DOM.
- *
- * Create your custom renderer using `RendererFactory2`.
- *
- * Use a custom renderer to bypass Angular's templating and
- * make custom UI changes that can't be expressed declaratively.
- * For example if you need to set a property or an attribute whose name is
- * not statically known, use the `setProperty()` or
- * `setAttribute()` method.
- *
- * @publicApi
- */
-
-
-class Renderer2 {}
-/**
- * @internal
- * @nocollapse
- */
-
-
-Renderer2.__NG_ELEMENT_ID__ = () => injectRenderer2();
-/** Returns a Renderer2 (or throws when application was bootstrapped with Renderer3) */
-
-
-function getOrCreateRenderer2(lView) {
-  const renderer = lView[RENDERER];
-
-  if (ngDevMode && !isProceduralRenderer(renderer)) {
-    throw new Error('Cannot inject Renderer2 when the application uses Renderer3!');
-  }
-
-  return renderer;
-}
-/** Injects a Renderer2 for the current component. */
-
-
-function injectRenderer2() {
-  // We need the Renderer to be based on the component that it's being injected into, however since
-  // DI happens before we've entered its view, `getLView` will return the parent view instead.
-  const lView = getLView();
-  const tNode = getCurrentTNode();
-  const nodeAtIndex = getComponentLViewByIndex(tNode.index, lView);
-  return getOrCreateRenderer2(isLView(nodeAtIndex) ? nodeAtIndex : lView);
-}
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-/**
- * Sanitizer is used by the views to sanitize potentially dangerous values.
- *
- * @publicApi
- */
-
-
-class Sanitizer {}
-/** @nocollapse */
-
-
-Sanitizer.ɵprov = ɵɵdefineInjectable({
-  token: Sanitizer,
-  providedIn: 'root',
-  factory: () => null
-});
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-/**
- * @description Represents the version of Angular
- *
- * @publicApi
- */
-
-class Version {
-  constructor(full) {
-    this.full = full;
-    this.major = full.split('.')[0];
-    this.minor = full.split('.')[1];
-    this.patch = full.split('.').slice(2).join('.');
-  }
-
-}
-/**
- * @publicApi
- */
-
-
-const VERSION = new Version('14.0.4');
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-// This default value is when checking the hierarchy for a token.
-//
-// It means both:
-// - the token is not provided by the current injector,
-// - only the element injectors should be checked (ie do not check module injectors
-//
-//          mod1
-//         /
-//       el1   mod2
-//         \  /
-//         el2
-//
-// When requesting el2.injector.get(token), we should check in the following order and return the
-// first found value:
-// - el2.injector.get(token, default)
-// - el1.injector.get(token, NOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR) -> do not check the module
-// - mod2.injector.get(token, default)
-
-const NOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR = {};
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-function collectNativeNodes(tView, lView, tNode, result, isProjection = false) {
-  while (tNode !== null) {
-    ngDevMode && assertTNodeType(tNode, 3
-    /* TNodeType.AnyRNode */
-    | 12
-    /* TNodeType.AnyContainer */
-    | 16
-    /* TNodeType.Projection */
-    | 32
-    /* TNodeType.Icu */
-    );
-    const lNode = lView[tNode.index];
-
-    if (lNode !== null) {
-      result.push(unwrapRNode(lNode));
-    } // A given lNode can represent either a native node or a LContainer (when it is a host of a
-    // ViewContainerRef). When we find a LContainer we need to descend into it to collect root nodes
-    // from the views in this container.
-
-
-    if (isLContainer(lNode)) {
-      for (let i = CONTAINER_HEADER_OFFSET; i < lNode.length; i++) {
-        const lViewInAContainer = lNode[i];
-        const lViewFirstChildTNode = lViewInAContainer[TVIEW].firstChild;
-
-        if (lViewFirstChildTNode !== null) {
-          collectNativeNodes(lViewInAContainer[TVIEW], lViewInAContainer, lViewFirstChildTNode, result);
-        }
-      }
-    }
-
-    const tNodeType = tNode.type;
-
-    if (tNodeType & 8
-    /* TNodeType.ElementContainer */
-    ) {
-      collectNativeNodes(tView, lView, tNode.child, result);
-    } else if (tNodeType & 32
-    /* TNodeType.Icu */
-    ) {
-      const nextRNode = icuContainerIterate(tNode, lView);
-      let rNode;
-
-      while (rNode = nextRNode()) {
-        result.push(rNode);
-      }
-    } else if (tNodeType & 16
-    /* TNodeType.Projection */
-    ) {
-      const nodesInSlot = getProjectionNodes(lView, tNode);
-
-      if (Array.isArray(nodesInSlot)) {
-        result.push(...nodesInSlot);
-      } else {
-        const parentView = getLViewParent(lView[DECLARATION_COMPONENT_VIEW]);
-        ngDevMode && assertParentView(parentView);
-        collectNativeNodes(parentView[TVIEW], parentView, nodesInSlot, result, true);
-      }
-    }
-
-    tNode = isProjection ? tNode.projectionNext : tNode.next;
-  }
-
-  return result;
-}
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-
-class ViewRef$1 {
-  constructor(
-  /**
-   * This represents `LView` associated with the component when ViewRef is a ChangeDetectorRef.
-   *
-   * When ViewRef is created for a dynamic component, this also represents the `LView` for the
-   * component.
-   *
-   * For a "regular" ViewRef created for an embedded view, this is the `LView` for the embedded
-   * view.
-   *
-   * @internal
-   */
-  _lView,
-  /**
-   * This represents the `LView` associated with the point where `ChangeDetectorRef` was
-   * requested.
-   *
-   * This may be different from `_lView` if the `_cdRefInjectingView` is an embedded view.
-   */
-  _cdRefInjectingView) {
-    this._lView = _lView;
-    this._cdRefInjectingView = _cdRefInjectingView;
-    this._appRef = null;
-    this._attachedToViewContainer = false;
-  }
-
-  get rootNodes() {
-    const lView = this._lView;
-    const tView = lView[TVIEW];
-    return collectNativeNodes(tView, lView, tView.firstChild, []);
-  }
-
-  get context() {
-    return this._lView[CONTEXT];
-  }
-
-  set context(value) {
-    this._lView[CONTEXT] = value;
-  }
-
-  get destroyed() {
-    return (this._lView[FLAGS] & 128
-    /* LViewFlags.Destroyed */
-    ) === 128
-    /* LViewFlags.Destroyed */
-    ;
-  }
-
-  destroy() {
-    if (this._appRef) {
-      this._appRef.detachView(this);
-    } else if (this._attachedToViewContainer) {
-      const parent = this._lView[PARENT];
-
-      if (isLContainer(parent)) {
-        const viewRefs = parent[VIEW_REFS];
-        const index = viewRefs ? viewRefs.indexOf(this) : -1;
-
-        if (index > -1) {
-          ngDevMode && assertEqual(index, parent.indexOf(this._lView) - CONTAINER_HEADER_OFFSET, 'An attached view should be in the same position within its container as its ViewRef in the VIEW_REFS array.');
-          detachView(parent, index);
-          removeFromArray(viewRefs, index);
-        }
-      }
-
-      this._attachedToViewContainer = false;
-    }
-
-    destroyLView(this._lView[TVIEW], this._lView);
-  }
-
-  onDestroy(callback) {
-    storeCleanupWithContext(this._lView[TVIEW], this._lView, null, callback);
-  }
-  /**
-   * Marks a view and all of its ancestors dirty.
-   *
-   * This can be used to ensure an {@link ChangeDetectionStrategy#OnPush OnPush} component is
-   * checked when it needs to be re-rendered but the two normal triggers haven't marked it
-   * dirty (i.e. inputs haven't changed and events haven't fired in the view).
-   *
-   * <!-- TODO: Add a link to a chapter on OnPush components -->
-   *
-   * @usageNotes
-   * ### Example
-   *
-   * ```typescript
-   * @Component({
-   *   selector: 'app-root',
-   *   template: `Number of ticks: {{numberOfTicks}}`
-   *   changeDetection: ChangeDetectionStrategy.OnPush,
-   * })
-   * class AppComponent {
-   *   numberOfTicks = 0;
-   *
-   *   constructor(private ref: ChangeDetectorRef) {
-   *     setInterval(() => {
-   *       this.numberOfTicks++;
-   *       // the following is required, otherwise the view will not be updated
-   *       this.ref.markForCheck();
-   *     }, 1000);
-   *   }
-   * }
-   * ```
-   */
-
-
-  markForCheck() {
-    markViewDirty(this._cdRefInjectingView || this._lView);
-  }
-  /**
-   * Detaches the view from the change detection tree.
-   *
-   * Detached views will not be checked during change detection runs until they are
-   * re-attached, even if they are dirty. `detach` can be used in combination with
-   * {@link ChangeDetectorRef#detectChanges detectChanges} to implement local change
-   * detection checks.
-   *
-   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest -->
-   * <!-- TODO: Add a live demo once ref.detectChanges is merged into master -->
-   *
-   * @usageNotes
-   * ### Example
-   *
-   * The following example defines a component with a large list of readonly data.
-   * Imagine the data changes constantly, many times per second. For performance reasons,
-   * we want to check and update the list every five seconds. We can do that by detaching
-   * the component's change detector and doing a local check every five seconds.
-   *
-   * ```typescript
-   * class DataProvider {
-   *   // in a real application the returned data will be different every time
-   *   get data() {
-   *     return [1,2,3,4,5];
-   *   }
-   * }
-   *
-   * @Component({
-   *   selector: 'giant-list',
-   *   template: `
-   *     <li *ngFor="let d of dataProvider.data">Data {{d}}</li>
-   *   `,
-   * })
-   * class GiantList {
-   *   constructor(private ref: ChangeDetectorRef, private dataProvider: DataProvider) {
-   *     ref.detach();
-   *     setInterval(() => {
-   *       this.ref.detectChanges();
-   *     }, 5000);
-   *   }
-   * }
-   *
-   * @Component({
-   *   selector: 'app',
-   *   providers: [DataProvider],
-   *   template: `
-   *     <giant-list><giant-list>
-   *   `,
-   * })
-   * class App {
-   * }
-   * ```
-   */
-
-
-  detach() {
-    this._lView[FLAGS] &= ~64
-    /* LViewFlags.Attached */
-    ;
-  }
-  /**
-   * Re-attaches a view to the change detection tree.
-   *
-   * This can be used to re-attach views that were previously detached from the tree
-   * using {@link ChangeDetectorRef#detach detach}. Views are attached to the tree by default.
-   *
-   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest -->
-   *
-   * @usageNotes
-   * ### Example
-   *
-   * The following example creates a component displaying `live` data. The component will detach
-   * its change detector from the main change detector tree when the component's live property
-   * is set to false.
-   *
-   * ```typescript
-   * class DataProvider {
-   *   data = 1;
-   *
-   *   constructor() {
-   *     setInterval(() => {
-   *       this.data = this.data * 2;
-   *     }, 500);
-   *   }
-   * }
-   *
-   * @Component({
-   *   selector: 'live-data',
-   *   inputs: ['live'],
-   *   template: 'Data: {{dataProvider.data}}'
-   * })
-   * class LiveData {
-   *   constructor(private ref: ChangeDetectorRef, private dataProvider: DataProvider) {}
-   *
-   *   set live(value) {
-   *     if (value) {
-   *       this.ref.reattach();
-   *     } else {
-   *       this.ref.detach();
-   *     }
-   *   }
-   * }
-   *
-   * @Component({
-   *   selector: 'app-root',
-   *   providers: [DataProvider],
-   *   template: `
-   *     Live Update: <input type="checkbox" [(ngModel)]="live">
-   *     <live-data [live]="live"><live-data>
-   *   `,
-   * })
-   * class AppComponent {
-   *   live = true;
-   * }
-   * ```
-   */
-
-
-  reattach() {
-    this._lView[FLAGS] |= 64
-    /* LViewFlags.Attached */
-    ;
-  }
-  /**
-   * Checks the view and its children.
-   *
-   * This can also be used in combination with {@link ChangeDetectorRef#detach detach} to implement
-   * local change detection checks.
-   *
-   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest -->
-   * <!-- TODO: Add a live demo once ref.detectChanges is merged into master -->
-   *
-   * @usageNotes
-   * ### Example
-   *
-   * The following example defines a component with a large list of readonly data.
-   * Imagine, the data changes constantly, many times per second. For performance reasons,
-   * we want to check and update the list every five seconds.
-   *
-   * We can do that by detaching the component's change detector and doing a local change detection
-   * check every five seconds.
-   *
-   * See {@link ChangeDetectorRef#detach detach} for more information.
-   */
-
-
-  detectChanges() {
-    detectChangesInternal(this._lView[TVIEW], this._lView, this.context);
-  }
-  /**
-   * Checks the change detector and its children, and throws if any changes are detected.
-   *
-   * This is used in development mode to verify that running change detection doesn't
-   * introduce other changes.
-   */
-
-
-  checkNoChanges() {
-    if (ngDevMode) {
-      checkNoChangesInternal(this._lView[TVIEW], this._lView, this.context);
-    }
-  }
-
-  attachToViewContainerRef() {
-    if (this._appRef) {
-      throw new RuntimeError(902
-      /* RuntimeErrorCode.VIEW_ALREADY_ATTACHED */
-      , ngDevMode && 'This view is already attached directly to the ApplicationRef!');
-    }
-
-    this._attachedToViewContainer = true;
-  }
-
-  detachFromAppRef() {
-    this._appRef = null;
-    renderDetachView(this._lView[TVIEW], this._lView);
-  }
-
-  attachToAppRef(appRef) {
-    if (this._attachedToViewContainer) {
-      throw new RuntimeError(902
-      /* RuntimeErrorCode.VIEW_ALREADY_ATTACHED */
-      , ngDevMode && 'This view is already attached to a ViewContainer!');
-    }
-
-    this._appRef = appRef;
-  }
-
-}
-/** @internal */
-
-
-class RootViewRef extends ViewRef$1 {
-  constructor(_view) {
-    super(_view);
-    this._view = _view;
-  }
-
-  detectChanges() {
-    detectChangesInRootView(this._view);
-  }
-
-  checkNoChanges() {
-    if (ngDevMode) {
-      checkNoChangesInRootView(this._view);
-    }
-  }
-
-  get context() {
-    return null;
-  }
-
-}
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-
-class ComponentFactoryResolver extends ComponentFactoryResolver$1 {
-  /**
-   * @param ngModule The NgModuleRef to which all resolved factories are bound.
-   */
-  constructor(ngModule) {
-    super();
-    this.ngModule = ngModule;
-  }
-
-  resolveComponentFactory(component) {
-    ngDevMode && assertComponentType(component);
-    const componentDef = getComponentDef(component);
-    return new ComponentFactory(componentDef, this.ngModule);
-  }
-
-}
-
-function toRefArray(map) {
-  const array = [];
-
-  for (let nonMinified in map) {
-    if (map.hasOwnProperty(nonMinified)) {
-      const minified = map[nonMinified];
-      array.push({
-        propName: minified,
-        templateName: nonMinified
-      });
-    }
-  }
-
-  return array;
-}
-
-function getNamespace(elementName) {
-  const name = elementName.toLowerCase();
-  return name === 'svg' ? SVG_NAMESPACE : name === 'math' ? MATH_ML_NAMESPACE : null;
-}
-/**
- * Injector that looks up a value using a specific injector, before falling back to the module
- * injector. Used primarily when creating components or embedded views dynamically.
- */
-
-
-class ChainedInjector {
-  constructor(injector, parentInjector) {
-    this.injector = injector;
-    this.parentInjector = parentInjector;
-  }
-
-  get(token, notFoundValue, flags) {
-    const value = this.injector.get(token, NOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR, flags);
-
-    if (value !== NOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR || notFoundValue === NOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR) {
-      // Return the value from the root element injector when
-      // - it provides it
-      //   (value !== NOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR)
-      // - the module injector should not be checked
-      //   (notFoundValue === NOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR)
-      return value;
-    }
-
-    return this.parentInjector.get(token, notFoundValue, flags);
-  }
-
-}
-/**
- * Render3 implementation of {@link viewEngine_ComponentFactory}.
- */
-
-
-class ComponentFactory extends ComponentFactory$1 {
-  /**
-   * @param componentDef The component definition.
-   * @param ngModule The NgModuleRef to which the factory is bound.
-   */
-  constructor(componentDef, ngModule) {
-    super();
-    this.componentDef = componentDef;
-    this.ngModule = ngModule;
-    this.componentType = componentDef.type;
-    this.selector = stringifyCSSSelectorList(componentDef.selectors);
-    this.ngContentSelectors = componentDef.ngContentSelectors ? componentDef.ngContentSelectors : [];
-    this.isBoundToModule = !!ngModule;
-  }
-
-  get inputs() {
-    return toRefArray(this.componentDef.inputs);
-  }
-
-  get outputs() {
-    return toRefArray(this.componentDef.outputs);
-  }
-
-  create(injector, projectableNodes, rootSelectorOrNode, environmentInjector) {
-    environmentInjector = environmentInjector || this.ngModule;
-    let realEnvironmentInjector = environmentInjector instanceof EnvironmentInjector ? environmentInjector : environmentInjector?.injector;
-
-    if (realEnvironmentInjector && this.componentDef.getStandaloneInjector !== null) {
-      realEnvironmentInjector = this.componentDef.getStandaloneInjector(realEnvironmentInjector) || realEnvironmentInjector;
-    }
-
-    const rootViewInjector = realEnvironmentInjector ? new ChainedInjector(injector, realEnvironmentInjector) : injector;
-    const rendererFactory = rootViewInjector.get(RendererFactory2, domRendererFactory3);
-    const sanitizer = rootViewInjector.get(Sanitizer, null);
-    const hostRenderer = rendererFactory.createRenderer(null, this.componentDef); // Determine a tag name used for creating host elements when this component is created
-    // dynamically. Default to 'div' if this component did not specify any tag name in its selector.
-
-    const elementName = this.componentDef.selectors[0][0] || 'div';
-    const hostRNode = rootSelectorOrNode ? locateHostElement(hostRenderer, rootSelectorOrNode, this.componentDef.encapsulation) : createElementNode(rendererFactory.createRenderer(null, this.componentDef), elementName, getNamespace(elementName));
-    const rootFlags = this.componentDef.onPush ? 32
-    /* LViewFlags.Dirty */
-    | 256
-    /* LViewFlags.IsRoot */
-    : 16
-    /* LViewFlags.CheckAlways */
-    | 256
-    /* LViewFlags.IsRoot */
-    ;
-    const rootContext = createRootContext(); // Create the root view. Uses empty TView and ContentTemplate.
-
-    const rootTView = createTView(0
-    /* TViewType.Root */
-    , null, null, 1, 0, null, null, null, null, null);
-    const rootLView = createLView(null, rootTView, rootContext, rootFlags, null, null, rendererFactory, hostRenderer, sanitizer, rootViewInjector, null); // rootView is the parent when bootstrapping
-    // TODO(misko): it looks like we are entering view here but we don't really need to as
-    // `renderView` does that. However as the code is written it is needed because
-    // `createRootComponentView` and `createRootComponent` both read global state. Fixing those
-    // issues would allow us to drop this.
-
-    enterView(rootLView);
-    let component;
-    let tElementNode;
-
-    try {
-      const componentView = createRootComponentView(hostRNode, this.componentDef, rootLView, rendererFactory, hostRenderer);
-
-      if (hostRNode) {
-        if (rootSelectorOrNode) {
-          setUpAttributes(hostRenderer, hostRNode, ['ng-version', VERSION.full]);
-        } else {
-          // If host element is created as a part of this function call (i.e. `rootSelectorOrNode`
-          // is not defined), also apply attributes and classes extracted from component selector.
-          // Extract attributes and classes from the first selector only to match VE behavior.
-          const {
-            attrs,
-            classes
-          } = extractAttrsAndClassesFromSelector(this.componentDef.selectors[0]);
-
-          if (attrs) {
-            setUpAttributes(hostRenderer, hostRNode, attrs);
-          }
-
-          if (classes && classes.length > 0) {
-            writeDirectClass(hostRenderer, hostRNode, classes.join(' '));
-          }
-        }
-      }
-
-      tElementNode = getTNode(rootTView, HEADER_OFFSET);
-
-      if (projectableNodes !== undefined) {
-        const projection = tElementNode.projection = [];
-
-        for (let i = 0; i < this.ngContentSelectors.length; i++) {
-          const nodesforSlot = projectableNodes[i]; // Projectable nodes can be passed as array of arrays or an array of iterables (ngUpgrade
-          // case). Here we do normalize passed data structure to be an array of arrays to avoid
-          // complex checks down the line.
-          // We also normalize the length of the passed in projectable nodes (to match the number of
-          // <ng-container> slots defined by a component).
-
-          projection.push(nodesforSlot != null ? Array.from(nodesforSlot) : null);
-        }
-      } // TODO: should LifecycleHooksFeature and other host features be generated by the compiler and
-      // executed here?
-      // Angular 5 reference: https://stackblitz.com/edit/lifecycle-hooks-vcref
-
-
-      component = createRootComponent(componentView, this.componentDef, rootLView, rootContext, [LifecycleHooksFeature]);
-      renderView(rootTView, rootLView, null);
-    } finally {
-      leaveView();
-    }
-
-    return new ComponentRef(this.componentType, component, createElementRef(tElementNode, rootLView), rootLView, tElementNode);
-  }
-
-}
-
-const componentFactoryResolver = new ComponentFactoryResolver();
-/**
- * Creates a ComponentFactoryResolver and stores it on the injector. Or, if the
- * ComponentFactoryResolver
- * already exists, retrieves the existing ComponentFactoryResolver.
- *
- * @returns The ComponentFactoryResolver instance to use
- */
-
-function injectComponentFactoryResolver() {
-  return componentFactoryResolver;
-}
-/**
- * Represents an instance of a Component created via a {@link ComponentFactory}.
- *
- * `ComponentRef` provides access to the Component Instance as well other objects related to this
- * Component Instance and allows you to destroy the Component Instance via the {@link #destroy}
- * method.
- *
- */
-
-
-class ComponentRef extends ComponentRef$1 {
-  constructor(componentType, instance, location, _rootLView, _tNode) {
-    super();
-    this.location = location;
-    this._rootLView = _rootLView;
-    this._tNode = _tNode;
-    this.instance = instance;
-    this.hostView = this.changeDetectorRef = new RootViewRef(_rootLView);
-    this.componentType = componentType;
-  }
-
-  get injector() {
-    return new NodeInjector(this._tNode, this._rootLView);
-  }
-
-  destroy() {
-    this.hostView.destroy();
-  }
-
-  onDestroy(callback) {
-    this.hostView.onDestroy(callback);
-  }
-
-}
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-/**
  * Returns a new NgModuleRef instance based on the NgModule class and parent injector provided.
+ *
  * @param ngModule NgModule class.
  * @param parentInjector Optional injector instance to use as a parent for the module injector. If
  *     not provided, `NullInjector` will be used instead.
+ * @returns NgModuleRef that represents an NgModule instance.
+ *
  * @publicApi
  */
 
 
-function createNgModuleRef(ngModule, parentInjector) {
+function createNgModule(ngModule, parentInjector) {
   return new NgModuleRef(ngModule, parentInjector ?? null);
 }
+/**
+ * The `createNgModule` function alias for backwards-compatibility.
+ * Please avoid using it directly and use `createNgModule` instead.
+ *
+ * @deprecated Use `createNgModule` instead.
+ */
+
+
+const createNgModuleRef = createNgModule;
 
 class NgModuleRef extends NgModuleRef$1 {
   constructor(ngModuleType, _parent) {
@@ -82891,7 +82331,6 @@ class NgModuleRef extends NgModuleRef$1 {
     this._parent = _parent; // tslint:disable-next-line:require-internal-with-underscore
 
     this._bootstrapComponents = [];
-    this.injector = this;
     this.destroyCbs = []; // When bootstrapping a module we have a dependency graph that looks like this:
     // ApplicationRef -> ComponentFactoryResolver -> NgModuleRef. The problem is that if the
     // module being resolved tries to inject the ComponentFactoryResolver, it'll create a
@@ -82915,15 +82354,11 @@ class NgModuleRef extends NgModuleRef$1 {
 
     this._r3Injector.resolveInjectorInitializers();
 
-    this.instance = this.get(ngModuleType);
+    this.instance = this._r3Injector.get(ngModuleType);
   }
 
-  get(token, notFoundValue = Injector.THROW_IF_NOT_FOUND, injectFlags = InjectFlags.Default) {
-    if (token === Injector || token === NgModuleRef$1 || token === INJECTOR) {
-      return this;
-    }
-
-    return this._r3Injector.get(token, notFoundValue, injectFlags);
+  get injector() {
+    return this._r3Injector;
   }
 
   destroy() {
@@ -82981,12 +82416,20 @@ class EnvironmentNgModuleRefAdapter extends NgModuleRef$1 {
 /**
  * Create a new environment injector.
  *
+ * Learn more about environment injectors in
+ * [this guide](guide/standalone-components#environment-injectors).
+ *
+ * @param providers An array of providers.
+ * @param parent A parent environment injector.
+ * @param debugName An optional name for this injector instance, which will be used in error
+ *     messages.
+ *
  * @publicApi
  * @developerPreview
  */
 
 
-function createEnvironmentInjector(providers, parent = null, debugName = null) {
+function createEnvironmentInjector(providers, parent, debugName = null) {
   const adapter = new EnvironmentNgModuleRefAdapter(providers, parent, debugName);
   return adapter.injector;
 }
@@ -83049,7 +82492,7 @@ StandaloneService.ɵprov = ɵɵdefineInjectable({
 /**
  * A feature that acts as a setup code for the {@link StandaloneService}.
  *
- * The most important responsaibility of this feature is to expose the "getStandaloneInjector"
+ * The most important responsibility of this feature is to expose the "getStandaloneInjector"
  * function (an entry points to a standalone injector creation) on a component definition object. We
  * go through the features infrastructure to make sure that the standalone injector creation logic
  * is tree-shakable and not included in applications that don't use standalone components.
@@ -83061,6 +82504,492 @@ function ɵɵStandaloneFeature(definition) {
   definition.getStandaloneInjector = parentInjector => {
     return parentInjector.get(StandaloneService).getOrCreateStandaloneInjector(definition);
   };
+}
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * Retrieves the component instance associated with a given DOM element.
+ *
+ * @usageNotes
+ * Given the following DOM structure:
+ *
+ * ```html
+ * <app-root>
+ *   <div>
+ *     <child-comp></child-comp>
+ *   </div>
+ * </app-root>
+ * ```
+ *
+ * Calling `getComponent` on `<child-comp>` will return the instance of `ChildComponent`
+ * associated with this DOM element.
+ *
+ * Calling the function on `<app-root>` will return the `MyApp` instance.
+ *
+ *
+ * @param element DOM element from which the component should be retrieved.
+ * @returns Component instance associated with the element or `null` if there
+ *    is no component associated with it.
+ *
+ * @publicApi
+ * @globalApi ng
+ */
+
+
+function getComponent(element) {
+  ngDevMode && assertDomElement(element);
+  const context = getLContext(element);
+  if (context === null) return null;
+
+  if (context.component === undefined) {
+    const lView = context.lView;
+
+    if (lView === null) {
+      return null;
+    }
+
+    context.component = getComponentAtNodeIndex(context.nodeIndex, lView);
+  }
+
+  return context.component;
+}
+/**
+ * If inside an embedded view (e.g. `*ngIf` or `*ngFor`), retrieves the context of the embedded
+ * view that the element is part of. Otherwise retrieves the instance of the component whose view
+ * owns the element (in this case, the result is the same as calling `getOwningComponent`).
+ *
+ * @param element Element for which to get the surrounding component instance.
+ * @returns Instance of the component that is around the element or null if the element isn't
+ *    inside any component.
+ *
+ * @publicApi
+ * @globalApi ng
+ */
+
+
+function getContext(element) {
+  assertDomElement(element);
+  const context = getLContext(element);
+  const lView = context ? context.lView : null;
+  return lView === null ? null : lView[CONTEXT];
+}
+/**
+ * Retrieves the component instance whose view contains the DOM element.
+ *
+ * For example, if `<child-comp>` is used in the template of `<app-comp>`
+ * (i.e. a `ViewChild` of `<app-comp>`), calling `getOwningComponent` on `<child-comp>`
+ * would return `<app-comp>`.
+ *
+ * @param elementOrDir DOM element, component or directive instance
+ *    for which to retrieve the root components.
+ * @returns Component instance whose view owns the DOM element or null if the element is not
+ *    part of a component view.
+ *
+ * @publicApi
+ * @globalApi ng
+ */
+
+
+function getOwningComponent(elementOrDir) {
+  const context = getLContext(elementOrDir);
+  let lView = context ? context.lView : null;
+  if (lView === null) return null;
+  let parent;
+
+  while (lView[TVIEW].type === 2
+  /* TViewType.Embedded */
+  && (parent = getLViewParent(lView))) {
+    lView = parent;
+  }
+
+  return lView[FLAGS] & 256
+  /* LViewFlags.IsRoot */
+  ? null : lView[CONTEXT];
+}
+/**
+ * Retrieves all root components associated with a DOM element, directive or component instance.
+ * Root components are those which have been bootstrapped by Angular.
+ *
+ * @param elementOrDir DOM element, component or directive instance
+ *    for which to retrieve the root components.
+ * @returns Root components associated with the target object.
+ *
+ * @publicApi
+ * @globalApi ng
+ */
+
+
+function getRootComponents(elementOrDir) {
+  const lView = readPatchedLView(elementOrDir);
+  return lView !== null ? [...getRootContext(lView).components] : [];
+}
+/**
+ * Retrieves an `Injector` associated with an element, component or directive instance.
+ *
+ * @param elementOrDir DOM element, component or directive instance for which to
+ *    retrieve the injector.
+ * @returns Injector associated with the element, component or directive instance.
+ *
+ * @publicApi
+ * @globalApi ng
+ */
+
+
+function getInjector(elementOrDir) {
+  const context = getLContext(elementOrDir);
+  const lView = context ? context.lView : null;
+  if (lView === null) return Injector.NULL;
+  const tNode = lView[TVIEW].data[context.nodeIndex];
+  return new NodeInjector(tNode, lView);
+}
+/**
+ * Retrieve a set of injection tokens at a given DOM node.
+ *
+ * @param element Element for which the injection tokens should be retrieved.
+ */
+
+
+function getInjectionTokens(element) {
+  const context = getLContext(element);
+  const lView = context ? context.lView : null;
+  if (lView === null) return [];
+  const tView = lView[TVIEW];
+  const tNode = tView.data[context.nodeIndex];
+  const providerTokens = [];
+  const startIndex = tNode.providerIndexes & 1048575
+  /* TNodeProviderIndexes.ProvidersStartIndexMask */
+  ;
+  const endIndex = tNode.directiveEnd;
+
+  for (let i = startIndex; i < endIndex; i++) {
+    let value = tView.data[i];
+
+    if (isDirectiveDefHack(value)) {
+      // The fact that we sometimes store Type and sometimes DirectiveDef in this location is a
+      // design flaw.  We should always store same type so that we can be monomorphic. The issue
+      // is that for Components/Directives we store the def instead the type. The correct behavior
+      // is that we should always be storing injectable type in this location.
+      value = value.type;
+    }
+
+    providerTokens.push(value);
+  }
+
+  return providerTokens;
+}
+/**
+ * Retrieves directive instances associated with a given DOM node. Does not include
+ * component instances.
+ *
+ * @usageNotes
+ * Given the following DOM structure:
+ *
+ * ```html
+ * <app-root>
+ *   <button my-button></button>
+ *   <my-comp></my-comp>
+ * </app-root>
+ * ```
+ *
+ * Calling `getDirectives` on `<button>` will return an array with an instance of the `MyButton`
+ * directive that is associated with the DOM node.
+ *
+ * Calling `getDirectives` on `<my-comp>` will return an empty array.
+ *
+ * @param node DOM node for which to get the directives.
+ * @returns Array of directives associated with the node.
+ *
+ * @publicApi
+ * @globalApi ng
+ */
+
+
+function getDirectives(node) {
+  // Skip text nodes because we can't have directives associated with them.
+  if (node instanceof Text) {
+    return [];
+  }
+
+  const context = getLContext(node);
+  const lView = context ? context.lView : null;
+
+  if (lView === null) {
+    return [];
+  }
+
+  const tView = lView[TVIEW];
+  const nodeIndex = context.nodeIndex;
+
+  if (!tView?.data[nodeIndex]) {
+    return [];
+  }
+
+  if (context.directives === undefined) {
+    context.directives = getDirectivesAtNodeIndex(nodeIndex, lView, false);
+  } // The `directives` in this case are a named array called `LComponentView`. Clone the
+  // result so we don't expose an internal data structure in the user's console.
+
+
+  return context.directives === null ? [] : [...context.directives];
+}
+/**
+ * Returns the debug (partial) metadata for a particular directive or component instance.
+ * The function accepts an instance of a directive or component and returns the corresponding
+ * metadata.
+ *
+ * @param directiveOrComponentInstance Instance of a directive or component
+ * @returns metadata of the passed directive or component
+ *
+ * @publicApi
+ * @globalApi ng
+ */
+
+
+function getDirectiveMetadata$1(directiveOrComponentInstance) {
+  const {
+    constructor
+  } = directiveOrComponentInstance;
+
+  if (!constructor) {
+    throw new Error('Unable to find the instance constructor');
+  } // In case a component inherits from a directive, we may have component and directive metadata
+  // To ensure we don't get the metadata of the directive, we want to call `getComponentDef` first.
+
+
+  const componentDef = getComponentDef(constructor);
+
+  if (componentDef) {
+    return {
+      inputs: componentDef.inputs,
+      outputs: componentDef.outputs,
+      encapsulation: componentDef.encapsulation,
+      changeDetection: componentDef.onPush ? ChangeDetectionStrategy.OnPush : ChangeDetectionStrategy.Default
+    };
+  }
+
+  const directiveDef = getDirectiveDef(constructor);
+
+  if (directiveDef) {
+    return {
+      inputs: directiveDef.inputs,
+      outputs: directiveDef.outputs
+    };
+  }
+
+  return null;
+}
+/**
+ * Retrieve map of local references.
+ *
+ * The references are retrieved as a map of local reference name to element or directive instance.
+ *
+ * @param target DOM element, component or directive instance for which to retrieve
+ *    the local references.
+ */
+
+
+function getLocalRefs(target) {
+  const context = getLContext(target);
+  if (context === null) return {};
+
+  if (context.localRefs === undefined) {
+    const lView = context.lView;
+
+    if (lView === null) {
+      return {};
+    }
+
+    context.localRefs = discoverLocalRefs(lView, context.nodeIndex);
+  }
+
+  return context.localRefs || {};
+}
+/**
+ * Retrieves the host element of a component or directive instance.
+ * The host element is the DOM element that matched the selector of the directive.
+ *
+ * @param componentOrDirective Component or directive instance for which the host
+ *     element should be retrieved.
+ * @returns Host element of the target.
+ *
+ * @publicApi
+ * @globalApi ng
+ */
+
+
+function getHostElement(componentOrDirective) {
+  return getLContext(componentOrDirective).native;
+}
+/**
+ * Retrieves the rendered text for a given component.
+ *
+ * This function retrieves the host element of a component and
+ * and then returns the `textContent` for that element. This implies
+ * that the text returned will include re-projected content of
+ * the component as well.
+ *
+ * @param component The component to return the content text for.
+ */
+
+
+function getRenderedText(component) {
+  const hostElement = getHostElement(component);
+  return hostElement.textContent || '';
+}
+/**
+ * Retrieves a list of event listeners associated with a DOM element. The list does include host
+ * listeners, but it does not include event listeners defined outside of the Angular context
+ * (e.g. through `addEventListener`).
+ *
+ * @usageNotes
+ * Given the following DOM structure:
+ *
+ * ```html
+ * <app-root>
+ *   <div (click)="doSomething()"></div>
+ * </app-root>
+ * ```
+ *
+ * Calling `getListeners` on `<div>` will return an object that looks as follows:
+ *
+ * ```ts
+ * {
+ *   name: 'click',
+ *   element: <div>,
+ *   callback: () => doSomething(),
+ *   useCapture: false
+ * }
+ * ```
+ *
+ * @param element Element for which the DOM listeners should be retrieved.
+ * @returns Array of event listeners on the DOM element.
+ *
+ * @publicApi
+ * @globalApi ng
+ */
+
+
+function getListeners(element) {
+  ngDevMode && assertDomElement(element);
+  const lContext = getLContext(element);
+  const lView = lContext === null ? null : lContext.lView;
+  if (lView === null) return [];
+  const tView = lView[TVIEW];
+  const lCleanup = lView[CLEANUP];
+  const tCleanup = tView.cleanup;
+  const listeners = [];
+
+  if (tCleanup && lCleanup) {
+    for (let i = 0; i < tCleanup.length;) {
+      const firstParam = tCleanup[i++];
+      const secondParam = tCleanup[i++];
+
+      if (typeof firstParam === 'string') {
+        const name = firstParam;
+        const listenerElement = unwrapRNode(lView[secondParam]);
+        const callback = lCleanup[tCleanup[i++]];
+        const useCaptureOrIndx = tCleanup[i++]; // if useCaptureOrIndx is boolean then report it as is.
+        // if useCaptureOrIndx is positive number then it in unsubscribe method
+        // if useCaptureOrIndx is negative number then it is a Subscription
+
+        const type = typeof useCaptureOrIndx === 'boolean' || useCaptureOrIndx >= 0 ? 'dom' : 'output';
+        const useCapture = typeof useCaptureOrIndx === 'boolean' ? useCaptureOrIndx : false;
+
+        if (element == listenerElement) {
+          listeners.push({
+            element,
+            name,
+            callback,
+            useCapture,
+            type
+          });
+        }
+      }
+    }
+  }
+
+  listeners.sort(sortListeners);
+  return listeners;
+}
+
+function sortListeners(a, b) {
+  if (a.name == b.name) return 0;
+  return a.name < b.name ? -1 : 1;
+}
+/**
+ * This function should not exist because it is megamorphic and only mostly correct.
+ *
+ * See call site for more info.
+ */
+
+
+function isDirectiveDefHack(obj) {
+  return obj.type !== undefined && obj.template !== undefined && obj.declaredInputs !== undefined;
+}
+/**
+ * Returns the attached `DebugNode` instance for an element in the DOM.
+ *
+ * @param element DOM element which is owned by an existing component's view.
+ */
+
+
+function getDebugNode$1(element) {
+  if (ngDevMode && !(element instanceof Node)) {
+    throw new Error('Expecting instance of DOM Element');
+  }
+
+  const lContext = getLContext(element);
+  const lView = lContext ? lContext.lView : null;
+
+  if (lView === null) {
+    return null;
+  }
+
+  const nodeIndex = lContext.nodeIndex;
+
+  if (nodeIndex !== -1) {
+    const valueInLView = lView[nodeIndex]; // this means that value in the lView is a component with its own
+    // data. In this situation the TNode is not accessed at the same spot.
+
+    const tNode = isLView(valueInLView) ? valueInLView[T_HOST] : getTNode(lView[TVIEW], nodeIndex);
+    ngDevMode && assertEqual(tNode.index, nodeIndex, 'Expecting that TNode at index is same as index');
+    return buildDebugNode(tNode, lView);
+  }
+
+  return null;
+}
+/**
+ * Retrieve the component `LView` from component/element.
+ *
+ * NOTE: `LView` is a private and should not be leaked outside.
+ *       Don't export this method to `ng.*` on window.
+ *
+ * @param target DOM element or component instance for which to retrieve the LView.
+ */
+
+
+function getComponentLView(target) {
+  const lContext = getLContext(target);
+  const nodeIndx = lContext.nodeIndex;
+  const lView = lContext.lView;
+  ngDevMode && assertLView(lView);
+  const componentLView = lView[nodeIndx];
+  ngDevMode && assertLView(componentLView);
+  return componentLView;
+}
+/** Asserts that a value is a DOM Element. */
+
+
+function assertDomElement(value) {
+  if (typeof Element !== 'undefined' && !(value instanceof Element)) {
+    throw new Error('Expecting instance of DOM Element');
+  }
 }
 /**
  * @license
@@ -84206,7 +84135,7 @@ const R3ViewContainerRef = class ViewContainerRef extends VE_ViewContainerRef {
       // so that a component can use DI tokens provided in MgModules. For this reason, we can not
       // rely on the provided injector, since it might be detached from the DI tree (for example, if
       // it was created via `Injector.create` without specifying a parent injector, or if an
-      // injector is retrieved from an `NgModuleRef` created via `createNgModuleRef` using an
+      // injector is retrieved from an `NgModuleRef` created via `createNgModule` using an
       // NgModule outside of a module tree). Instead, we always use `ViewContainerRef`'s parent
       // injector, which is normally connected to the DI tree, which includes module injector
       // subtree.
@@ -84416,7 +84345,7 @@ const unusedValueExportToPlacateAjd = 1;
  * found in the LICENSE file at https://angular.io/license
  */
 
-const unusedValueToPlacateAjd = unusedValueExportToPlacateAjd$1 + unusedValueExportToPlacateAjd$5 + unusedValueExportToPlacateAjd$4 + unusedValueExportToPlacateAjd;
+const unusedValueToPlacateAjd = unusedValueExportToPlacateAjd$1 + unusedValueExportToPlacateAjd$6 + unusedValueExportToPlacateAjd$5 + unusedValueExportToPlacateAjd;
 
 class LQuery_ {
   constructor(queryList) {
@@ -87267,6 +87196,111 @@ class CompilerFactory {}
  * found in the LICENSE file at https://angular.io/license
  */
 
+/**
+ * Marks a component for check (in case of OnPush components) and synchronously
+ * performs change detection on the application this component belongs to.
+ *
+ * @param component Component to {@link ChangeDetectorRef#markForCheck mark for check}.
+ *
+ * @publicApi
+ * @globalApi ng
+ */
+
+
+function applyChanges(component) {
+  markDirty(component);
+  getRootComponents(component).forEach(rootComponent => detectChanges(rootComponent));
+}
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * This file introduces series of globally accessible debug tools
+ * to allow for the Angular debugging story to function.
+ *
+ * To see this in action run the following command:
+ *
+ *   bazel run //packages/core/test/bundling/todo:devserver
+ *
+ *  Then load `localhost:5432` and start using the console tools.
+ */
+
+/**
+ * This value reflects the property on the window where the dev
+ * tools are patched (window.ng).
+ * */
+
+
+const GLOBAL_PUBLISH_EXPANDO_KEY = 'ng';
+let _published = false;
+/**
+ * Publishes a collection of default debug tools onto`window.ng`.
+ *
+ * These functions are available globally when Angular is in development
+ * mode and are automatically stripped away from prod mode is on.
+ */
+
+function publishDefaultGlobalUtils$1() {
+  if (!_published) {
+    _published = true;
+    /**
+     * Warning: this function is *INTERNAL* and should not be relied upon in application's code.
+     * The contract of the function might be changed in any release and/or the function can be
+     * removed completely.
+     */
+
+    publishGlobalUtil('ɵsetProfiler', setProfiler);
+    publishGlobalUtil('getDirectiveMetadata', getDirectiveMetadata$1);
+    publishGlobalUtil('getComponent', getComponent);
+    publishGlobalUtil('getContext', getContext);
+    publishGlobalUtil('getListeners', getListeners);
+    publishGlobalUtil('getOwningComponent', getOwningComponent);
+    publishGlobalUtil('getHostElement', getHostElement);
+    publishGlobalUtil('getInjector', getInjector);
+    publishGlobalUtil('getRootComponents', getRootComponents);
+    publishGlobalUtil('getDirectives', getDirectives);
+    publishGlobalUtil('applyChanges', applyChanges);
+  }
+}
+/**
+ * Publishes the given function to `window.ng` so that it can be
+ * used from the browser console when an application is not in production.
+ */
+
+
+function publishGlobalUtil(name, fn) {
+  if (typeof COMPILED === 'undefined' || !COMPILED) {
+    // Note: we can't export `ng` when using closure enhanced optimization as:
+    // - closure declares globals itself for minified names, which sometimes clobber our `ng` global
+    // - we can't declare a closure extern as the namespace `ng` is already used within Google
+    //   for typings for AngularJS (via `goog.provide('ng....')`).
+    const w = _global;
+    ngDevMode && assertDefined(fn, 'function not defined');
+
+    if (w) {
+      let container = w[GLOBAL_PUBLISH_EXPANDO_KEY];
+
+      if (!container) {
+        container = w[GLOBAL_PUBLISH_EXPANDO_KEY] = {};
+      }
+
+      container[name] = fn;
+    }
+  }
+}
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
 
 const promise = (() => Promise.resolve(0))();
 
@@ -87446,6 +87480,11 @@ class NgZone {
     const self = this;
     self._nesting = 0;
     self._outer = self._inner = Zone.current;
+
+    if (Zone['AsyncStackTaggingZoneSpec']) {
+      const AsyncStackTaggingZoneSpec = Zone['AsyncStackTaggingZoneSpec'];
+      self._inner = self._inner.fork(new AsyncStackTaggingZoneSpec('Angular'));
+    }
 
     if (Zone['TaskTrackingZoneSpec']) {
       self._inner = self._inner.fork(new Zone['TaskTrackingZoneSpec']());
@@ -88883,7 +88922,9 @@ class ApplicationRef {
   get destroyed() {
     return this._destroyed;
   }
-  /** @internal */
+  /**
+   * The `EnvironmentInjector` used to create this application.
+   */
 
 
   get injector() {
@@ -89094,7 +89135,7 @@ class ApplicationRef {
   }
   /**
    * Destroys an Angular application represented by this `ApplicationRef`. Calling this function
-   * will destroy the associated environnement injectors as well as all the bootstrapped components
+   * will destroy the associated environment injectors as well as all the bootstrapped components
    * with their views.
    */
 
@@ -89134,7 +89175,7 @@ class ApplicationRef {
 }
 
 ApplicationRef.ɵfac = function ApplicationRef_Factory(t) {
-  return new (t || ApplicationRef)(ɵɵinject(NgZone), ɵɵinject(Injector), ɵɵinject(ErrorHandler));
+  return new (t || ApplicationRef)(ɵɵinject(NgZone), ɵɵinject(EnvironmentInjector), ɵɵinject(ErrorHandler));
 };
 
 ApplicationRef.ɵprov = /*@__PURE__*/ɵɵdefineInjectable({
@@ -89153,7 +89194,7 @@ ApplicationRef.ɵprov = /*@__PURE__*/ɵɵdefineInjectable({
     return [{
       type: NgZone
     }, {
-      type: Injector
+      type: EnvironmentInjector
     }, {
       type: ErrorHandler
     }];
@@ -89552,7 +89593,7 @@ class DebugNode {
 
   get componentInstance() {
     const nativeElement = this.nativeNode;
-    return nativeElement && (getComponent$1(nativeElement) || getOwningComponent(nativeElement));
+    return nativeElement && (getComponent(nativeElement) || getOwningComponent(nativeElement));
   }
   /**
    * An object that provides parent context for this element. Often an ancestor component instance
@@ -89565,7 +89606,7 @@ class DebugNode {
 
 
   get context() {
-    return getComponent$1(this.nativeNode) || getContext(this.nativeNode);
+    return getComponent(this.nativeNode) || getContext(this.nativeNode);
   }
   /**
    * The callbacks attached to the component's @Output properties and/or the element's event
@@ -89966,10 +90007,9 @@ function _queryNodeChildren(tNode, lView, predicate, matches, elementsOnly, root
       // Renderer2. Note that this is __not__ optimal, because we're walking similar trees multiple
       // times. ViewEngine could do it more efficiently, because all the insertions go through
       // Renderer2, however that's not the case in Ivy. This approach is being used because:
-      // 1. Matching the ViewEngine behavior would mean potentially introducing a depedency
+      // 1. Matching the ViewEngine behavior would mean potentially introducing a dependency
       //    from `Renderer2` to Ivy which could bring Ivy code into ViewEngine.
-      // 2. We would have to make `Renderer3` "know" about debug nodes.
-      // 3. It allows us to capture nodes that were inserted directly via the DOM.
+      // 2. It allows us to capture nodes that were inserted directly via the DOM.
 
 
       nativeNode && _queryNativeNodeDescendants(nativeNode, predicate, matches, elementsOnly);
@@ -91740,6 +91780,154 @@ function ɵɵngDeclarePipe(decl) {
  * found in the LICENSE file at https://angular.io/license
  */
 
+/**
+ * Creates a `ComponentRef` instance based on provided component type and a set of options.
+ *
+ * @usageNotes
+ *
+ * The example below demonstrates how the `createComponent` function can be used
+ * to create an instance of a ComponentRef dynamically and attach it to an ApplicationRef,
+ * so that it gets included into change detection cycles.
+ *
+ * Note: the example uses standalone components, but the function can also be used for
+ * non-standalone components (declared in an NgModule) as well.
+ *
+ * ```typescript
+ * @Component({
+ *   standalone: true,
+ *   template: `Hello {{ name }}!`
+ * })
+ * class HelloComponent {
+ *   name = 'Angular';
+ * }
+ *
+ * @Component({
+ *   standalone: true,
+ *   template: `<div id="hello-component-host"></div>`
+ * })
+ * class RootComponent {}
+ *
+ * // Bootstrap an application.
+ * const applicationRef = await bootstrapApplication(RootComponent);
+ *
+ * // Locate a DOM node that would be used as a host.
+ * const host = document.getElementById('hello-component-host');
+ *
+ * // Get an `EnvironmentInjector` instance from the `ApplicationRef`.
+ * const environmentInjector = applicationRef.injector;
+ *
+ * // We can now create a `ComponentRef` instance.
+ * const componentRef = createComponent(HelloComponent, {host, environmentInjector});
+ *
+ * // Last step is to register the newly created ref using the `ApplicationRef` instance
+ * // to include the component view into change detection cycles.
+ * applicationRef.attachView(componentRef.hostView);
+ * ```
+ *
+ * @param component Component class reference.
+ * @param options Set of options to use:
+ *  * `environmentInjector`: An `EnvironmentInjector` instance to be used for the component, see
+ * additional info about it at https://angular.io/guide/standalone-components#environment-injectors.
+ *  * `hostElement` (optional): A DOM node that should act as a host node for the component. If not
+ * provided, Angular creates one based on the tag name used in the component selector (and falls
+ * back to using `div` if selector doesn't have tag name info).
+ *  * `elementInjector` (optional): An `ElementInjector` instance, see additional info about it at
+ * https://angular.io/guide/hierarchical-dependency-injection#elementinjector.
+ *  * `projectableNodes` (optional): A list of DOM nodes that should be projected through
+ *                      [`<ng-content>`](api/core/ng-content) of the new component instance.
+ * @returns ComponentRef instance that represents a given Component.
+ *
+ * @publicApi
+ */
+
+
+function createComponent(component, options) {
+  ngDevMode && assertComponentDef(component);
+  const componentDef = getComponentDef(component);
+  const elementInjector = options.elementInjector || getNullInjector();
+  const factory = new ComponentFactory(componentDef);
+  return factory.create(elementInjector, options.projectableNodes, options.hostElement, options.environmentInjector);
+}
+/**
+ * Creates an object that allows to retrieve component metadata.
+ *
+ * @usageNotes
+ *
+ * The example below demonstrates how to use the function and how the fields
+ * of the returned object map to the component metadata.
+ *
+ * ```typescript
+ * @Component({
+ *   standalone: true,
+ *   selector: 'foo-component',
+ *   template: `
+ *     <ng-content></ng-content>
+ *     <ng-content select="content-selector-a"></ng-content>
+ *   `,
+ * })
+ * class FooComponent {
+ *   @Input('inputName') inputPropName: string;
+ *   @Output('outputName') outputPropName = new EventEmitter<void>();
+ * }
+ *
+ * const mirror = reflectComponentType(FooComponent);
+ * expect(mirror.type).toBe(FooComponent);
+ * expect(mirror.selector).toBe('foo-component');
+ * expect(mirror.isStandalone).toBe(true);
+ * expect(mirror.inputs).toEqual([{propName: 'inputName', templateName: 'inputPropName'}]);
+ * expect(mirror.outputs).toEqual([{propName: 'outputName', templateName: 'outputPropName'}]);
+ * expect(mirror.ngContentSelectors).toEqual([
+ *   '*',                 // first `<ng-content>` in a template, the selector defaults to `*`
+ *   'content-selector-a' // second `<ng-content>` in a template
+ * ]);
+ * ```
+ *
+ * @param component Component class reference.
+ * @returns An object that allows to retrieve component metadata.
+ *
+ * @publicApi
+ */
+
+
+function reflectComponentType(component) {
+  const componentDef = getComponentDef(component);
+  if (!componentDef) return null;
+  const factory = new ComponentFactory(componentDef);
+  return {
+    get selector() {
+      return factory.selector;
+    },
+
+    get type() {
+      return factory.componentType;
+    },
+
+    get inputs() {
+      return factory.inputs;
+    },
+
+    get outputs() {
+      return factory.outputs;
+    },
+
+    get ngContentSelectors() {
+      return factory.ngContentSelectors;
+    },
+
+    get isStandalone() {
+      return componentDef.standalone;
+    }
+
+  };
+}
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
 
 if (typeof ngDevMode !== 'undefined' && ngDevMode) {
   // This helper is to give a reasonable error message to people upgrading to v9 that have not yet
@@ -91842,7 +92030,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ 4350);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ 6942);
 /**
- * @license Angular v14.0.4
+ * @license Angular v14.1.1
  * (c) 2010-2022 Google LLC. https://angular.io/
  * License: MIT
  */
@@ -92473,7 +92661,7 @@ class Validators {
    *
    * Tests the value using a [regular
    * expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
-   * pattern suitable for common usecases. The pattern is based on the definition of a valid email
+   * pattern suitable for common use cases. The pattern is based on the definition of a valid email
    * address in the [WHATWG HTML
    * specification](https://html.spec.whatwg.org/multipage/input.html#valid-e-mail-address) with
    * some enhancements to incorporate more RFC rules (such as rules related to domain names and the
@@ -92990,7 +93178,7 @@ function hasValidator(validators, validator) {
  * Combines two arrays of validators into one. If duplicates are provided, only one will be added.
  *
  * @param validators The new validators.
- * @param currentValidators The base array of currrent validators.
+ * @param currentValidators The base array of current validators.
  * @returns An array of validators.
  */
 
@@ -93000,7 +93188,7 @@ function addValidators(validators, currentValidators) {
   const validatorsToAdd = makeValidatorsArray(validators);
   validatorsToAdd.forEach(v => {
     // Note: if there are duplicate entries in the new validators array,
-    // only the first one would be added to the current list of validarors.
+    // only the first one would be added to the current list of validators.
     // Duplicate ones would be ignored since `hasValidator` would detect
     // the presence of a validator function and we update the current list in place.
     if (!hasValidator(current, v)) {
@@ -95711,7 +95899,9 @@ function _describeControlLocation(dir) {
 function _throwInvalidValueAccessorError(dir) {
   const loc = _describeControlLocation(dir);
 
-  throw new Error(`Value accessor was not provided as an array for form control with ${loc}. ` + `Check that the \`NG_VALUE_ACCESSOR\` token is configured as a \`multi: true\` provider.`);
+  throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](1200
+  /* RuntimeErrorCode.NG_VALUE_ACCESSOR_NOT_PROVIDED */
+  , `Value accessor was not provided as an array for form control with ${loc}. ` + `Check that the \`NG_VALUE_ACCESSOR\` token is configured as a \`multi: true\` provider.`);
 }
 
 function isPropertyUpdated(changes, viewModel) {
@@ -96428,7 +96618,9 @@ AbstractFormGroupDirective.ɵdir = /* @__PURE__ */_angular_core__WEBPACK_IMPORTE
 
 
 function modelParentException() {
-  return new Error(`
+  return new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](1350
+  /* RuntimeErrorCode.NGMODEL_IN_FORM_GROUP */
+  , `
     ngModel cannot be used to register form controls with a parent formGroup directive.  Try using
     formGroup's partner directive "formControlName" instead.  Example:
 
@@ -96442,7 +96634,9 @@ function modelParentException() {
 }
 
 function formGroupNameException() {
-  return new Error(`
+  return new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](1351
+  /* RuntimeErrorCode.NGMODEL_IN_FORM_GROUP_NAME */
+  , `
     ngModel cannot be used to register form controls with a parent formGroupName or formArrayName directive.
 
     Option 1: Use formControlName instead of ngModel (reactive strategy):
@@ -96455,7 +96649,9 @@ function formGroupNameException() {
 }
 
 function missingNameException() {
-  return new Error(`If ngModel is used within a form tag, either the name attribute must be set or the form
+  return new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](1352
+  /* RuntimeErrorCode.NGMODEL_WITHOUT_NAME */
+  , `If ngModel is used within a form tag, either the name attribute must be set or the form
     control must be defined as 'standalone' in ngModelOptions.
 
     Example 1: <input [(ngModel)]="person.firstName" name="first">
@@ -96463,7 +96659,9 @@ function missingNameException() {
 }
 
 function modelGroupParentException() {
-  return new Error(`
+  return new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](1353
+  /* RuntimeErrorCode.NGMODELGROUP_IN_FORM_GROUP */
+  , `
     ngModelGroup cannot be used with a parent formGroup directive.
 
     Option 1: Use formGroupName instead of ngModelGroup (reactive strategy):
@@ -97149,7 +97347,9 @@ const RADIO_VALUE_ACCESSOR = {
 };
 
 function throwNameError() {
-  throw new Error(`
+  throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](1202
+  /* RuntimeErrorCode.NAME_AND_FORM_CONTROL_NAME_MUST_MATCH */
+  , `
       If you define both a name and a formControlName attribute on your radio button, their values
       must match. Ex: <input type="radio" formControlName="food" name="food">
     `);
@@ -98863,7 +99063,9 @@ class SelectControlValueAccessor extends BuiltInControlValueAccessor {
 
   set compareWith(fn) {
     if (typeof fn !== 'function' && (typeof ngDevMode === 'undefined' || ngDevMode)) {
-      throw new Error(`compareWith must be a function, but received ${JSON.stringify(fn)}`);
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](1201
+      /* RuntimeErrorCode.COMPAREWITH_NOT_A_FN */
+      , `compareWith must be a function, but received ${JSON.stringify(fn)}`);
     }
 
     this._compareWith = fn;
@@ -99159,7 +99361,9 @@ class SelectMultipleControlValueAccessor extends BuiltInControlValueAccessor {
 
   set compareWith(fn) {
     if (typeof fn !== 'function' && (typeof ngDevMode === 'undefined' || ngDevMode)) {
-      throw new Error(`compareWith must be a function, but received ${JSON.stringify(fn)}`);
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](1201
+      /* RuntimeErrorCode.COMPAREWITH_NOT_A_FN */
+      , `compareWith must be a function, but received ${JSON.stringify(fn)}`);
     }
 
     this._compareWith = fn;
@@ -100987,29 +101191,18 @@ class FormBuilder {
   group(controls, options = null) {
     const reducedControls = this._reduceControls(controls);
 
-    let validators = null;
-    let asyncValidators = null;
-    let updateOn = undefined;
+    let newOptions = {};
 
-    if (options !== null) {
-      if (isAbstractControlOptions(options)) {
-        // `options` are `AbstractControlOptions`
-        validators = options.validators != null ? options.validators : null;
-        asyncValidators = options.asyncValidators != null ? options.asyncValidators : null;
-        updateOn = options.updateOn != null ? options.updateOn : undefined;
-      } else {
-        // `options` are legacy form group options
-        validators = options['validator'] != null ? options['validator'] : null;
-        asyncValidators = options['asyncValidator'] != null ? options['asyncValidator'] : null;
-      }
-    } // Cast to `any` because the inferred types are not as specific as Element.
+    if (isAbstractControlOptions(options)) {
+      // `options` are `AbstractControlOptions`
+      newOptions = options;
+    } else if (options !== null) {
+      // `options` are legacy form group options
+      newOptions.validators = options.validator;
+      newOptions.asyncValidators = options.asyncValidator;
+    }
 
-
-    return new FormGroup(reducedControls, {
-      asyncValidators,
-      updateOn,
-      validators
-    });
+    return new FormGroup(reducedControls, newOptions);
   }
   /**
    * @description
@@ -101225,7 +101418,7 @@ UntypedFormBuilder.ɵprov = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODUL
  */
 
 
-const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.Version('14.0.4');
+const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.Version('14.1.1');
 /**
  * @license
  * Copyright Google LLC All Rights Reserved.
@@ -101279,7 +101472,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ 4666);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ 4497);
 /**
- * @license Angular v14.0.4
+ * @license Angular v14.1.1
  * (c) 2010-2022 Google LLC. https://angular.io/
  * License: MIT
  */
@@ -101559,7 +101752,7 @@ class CachedResourceLoader extends _angular_compiler__WEBPACK_IMPORTED_MODULE_0_
  */
 
 
-const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__.Version('14.0.4');
+const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__.Version('14.1.1');
 /**
  * @license
  * Copyright Google LLC All Rights Reserved.
@@ -101661,7 +101854,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common */ 4666);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 2560);
 /**
- * @license Angular v14.0.4
+ * @license Angular v14.1.1
  * (c) 2010-2022 Google LLC. https://angular.io/
  * License: MIT
  */
@@ -103724,8 +103917,10 @@ function makeStateKey(key) {
  * A key value store that is transferred from the application on the server side to the application
  * on the client side.
  *
- * `TransferState` will be available as an injectable token. To use it import
- * `ServerTransferStateModule` on the server and `BrowserTransferStateModule` on the client.
+ * The `TransferState` is available as an injectable token.
+ * On the client, just inject this token using DI and use it, it will be lazily initialized.
+ * On the server it's already included if `renderApplication` function is used. Otherwise, import
+ * the `ServerTransferStateModule` module to make the `TransferState` available.
  *
  * The values in the store are serialized/deserialized using JSON.stringify/JSON.parse. So only
  * boolean, number, string, null and non-class objects will be serialized and deserialized in a
@@ -103739,14 +103934,6 @@ class TransferState {
   constructor() {
     this.store = {};
     this.onSerializeCallbacks = {};
-  }
-  /** @internal */
-
-
-  static init(initState) {
-    const transferState = new TransferState();
-    transferState.store = initState;
-    return transferState;
   }
   /**
    * Get the value corresponding to a key. Return `defaultValue` if key is not found.
@@ -103816,16 +104003,35 @@ TransferState.ɵfac = function TransferState_Factory(t) {
 
 TransferState.ɵprov = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
   token: TransferState,
-  factory: TransferState.ɵfac
+  factory: function () {
+    return (() => {
+      const doc = (0,_angular_core__WEBPACK_IMPORTED_MODULE_1__.inject)(_angular_common__WEBPACK_IMPORTED_MODULE_0__.DOCUMENT);
+      const appId = (0,_angular_core__WEBPACK_IMPORTED_MODULE_1__.inject)(_angular_core__WEBPACK_IMPORTED_MODULE_1__.APP_ID);
+      const state = new TransferState();
+      state.store = retrieveTransferredState(doc, appId);
+      return state;
+    })();
+  },
+  providedIn: 'root'
 });
 
 (function () {
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](TransferState, [{
-    type: _angular_core__WEBPACK_IMPORTED_MODULE_1__.Injectable
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_1__.Injectable,
+    args: [{
+      providedIn: 'root',
+      useFactory: () => {
+        const doc = (0,_angular_core__WEBPACK_IMPORTED_MODULE_1__.inject)(_angular_common__WEBPACK_IMPORTED_MODULE_0__.DOCUMENT);
+        const appId = (0,_angular_core__WEBPACK_IMPORTED_MODULE_1__.inject)(_angular_core__WEBPACK_IMPORTED_MODULE_1__.APP_ID);
+        const state = new TransferState();
+        state.store = retrieveTransferredState(doc, appId);
+        return state;
+      }
+    }]
   }], null, null);
 })();
 
-function initTransferState(doc, appId) {
+function retrieveTransferredState(doc, appId) {
   // Locate the script tag with the JSON data transferred from the server.
   // The id of the script tag is set to the Angular appId + 'state'.
   const script = doc.getElementById(appId + '-state');
@@ -103840,13 +104046,15 @@ function initTransferState(doc, appId) {
     }
   }
 
-  return TransferState.init(initialState);
+  return initialState;
 }
 /**
  * NgModule to install on the client side while using the `TransferState` to transfer state from
  * server to client.
  *
  * @publicApi
+ * @deprecated no longer needed, you can inject the `TransferState` in an app without providing
+ *     this module.
  */
 
 
@@ -103859,24 +104067,12 @@ BrowserTransferStateModule.ɵfac = function BrowserTransferStateModule_Factory(t
 BrowserTransferStateModule.ɵmod = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
   type: BrowserTransferStateModule
 });
-BrowserTransferStateModule.ɵinj = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
-  providers: [{
-    provide: TransferState,
-    useFactory: initTransferState,
-    deps: [_angular_common__WEBPACK_IMPORTED_MODULE_0__.DOCUMENT, _angular_core__WEBPACK_IMPORTED_MODULE_1__.APP_ID]
-  }]
-});
+BrowserTransferStateModule.ɵinj = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({});
 
 (function () {
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](BrowserTransferStateModule, [{
     type: _angular_core__WEBPACK_IMPORTED_MODULE_1__.NgModule,
-    args: [{
-      providers: [{
-        provide: TransferState,
-        useFactory: initTransferState,
-        deps: [_angular_common__WEBPACK_IMPORTED_MODULE_0__.DOCUMENT, _angular_core__WEBPACK_IMPORTED_MODULE_1__.APP_ID]
-      }]
-    }]
+    args: [{}]
   }], null, null);
 })();
 /**
@@ -104503,7 +104699,7 @@ DomSanitizerImpl.ɵprov = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_
  */
 
 
-const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__.Version('14.0.4');
+const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__.Version('14.1.1');
 /**
  * @license
  * Copyright Google LLC All Rights Reserved.
@@ -104594,6 +104790,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "UrlTree": () => (/* binding */ UrlTree),
 /* harmony export */   "VERSION": () => (/* binding */ VERSION),
 /* harmony export */   "convertToParamMap": () => (/* binding */ convertToParamMap),
+/* harmony export */   "createUrlTreeFromSnapshot": () => (/* binding */ createUrlTreeFromSnapshot),
 /* harmony export */   "provideRoutes": () => (/* binding */ provideRoutes),
 /* harmony export */   "ɵEmptyOutletComponent": () => (/* binding */ ɵEmptyOutletComponent),
 /* harmony export */   "ɵROUTER_PROVIDERS": () => (/* binding */ ROUTER_PROVIDERS),
@@ -104601,41 +104798,43 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ɵflatten": () => (/* binding */ flatten),
 /* harmony export */   "ɵprovidePreloading": () => (/* binding */ providePreloading)
 /* harmony export */ });
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/common */ 4666);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 2560);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ 4383);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ 4139);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ 4505);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs */ 9193);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! rxjs */ 6587);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! rxjs */ 213);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! rxjs */ 5828);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! rxjs */ 1635);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! rxjs */ 2378);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! rxjs */ 6439);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! rxjs */ 4483);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! rxjs */ 2218);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! rxjs */ 5828);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! rxjs */ 2160);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! rxjs */ 6800);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! rxjs */ 6587);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! rxjs */ 213);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! rxjs */ 2378);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! rxjs */ 6439);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! rxjs */ 4483);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! rxjs */ 2218);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! @angular/common */ 4666);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ 6942);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ 9095);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/operators */ 3910);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs/operators */ 5722);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! rxjs/operators */ 2647);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! rxjs/operators */ 9151);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! rxjs/operators */ 7418);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! rxjs/operators */ 1133);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! rxjs/operators */ 5690);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! rxjs/operators */ 5670);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! rxjs/operators */ 522);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! rxjs/operators */ 8759);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! rxjs/operators */ 2160);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! rxjs/operators */ 9361);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! rxjs/operators */ 4661);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! rxjs/operators */ 8331);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! rxjs/operators */ 9701);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! rxjs/operators */ 6675);
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @angular/platform-browser */ 4497);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! rxjs/operators */ 9151);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! rxjs/operators */ 522);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! rxjs/operators */ 5670);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! rxjs/operators */ 1133);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! rxjs/operators */ 8759);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! rxjs/operators */ 7418);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! rxjs/operators */ 2647);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! rxjs/operators */ 5690);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! rxjs/operators */ 5050);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! rxjs/operators */ 9701);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! rxjs/operators */ 7760);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! rxjs/operators */ 9361);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! rxjs/operators */ 4661);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! rxjs/operators */ 8331);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! rxjs/operators */ 6675);
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @angular/platform-browser */ 4497);
 /**
- * @license Angular v14.0.4
+ * @license Angular v14.1.1
  * (c) 2010-2022 Google LLC. https://angular.io/
  * License: MIT
  */
@@ -104655,622 +104854,10 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 /**
- * Base for events the router goes through, as opposed to events tied to a specific
- * route. Fired one time for any given navigation.
- *
- * The following code shows how a class subscribes to router events.
- *
- * ```ts
- * import {Event, RouterEvent, Router} from '@angular/router';
- *
- * class MyService {
- *   constructor(public router: Router) {
- *     router.events.pipe(
- *        filter((e: Event): e is RouterEvent => e instanceof RouterEvent)
- *     ).subscribe((e: RouterEvent) => {
- *       // Do something
- *     });
- *   }
- * }
- * ```
- *
- * @see `Event`
- * @see [Router events summary](guide/router-reference#router-events)
- * @publicApi
- */
-
-class RouterEvent {
-  constructor(
-  /** A unique ID that the router assigns to every router navigation. */
-  id,
-  /** The URL that is the destination for this navigation. */
-  url) {
-    this.id = id;
-    this.url = url;
-  }
-
-}
-/**
- * An event triggered when a navigation starts.
- *
- * @publicApi
- */
-
-
-class NavigationStart extends RouterEvent {
-  constructor(
-  /** @docsNotRequired */
-  id,
-  /** @docsNotRequired */
-  url,
-  /** @docsNotRequired */
-  navigationTrigger = 'imperative',
-  /** @docsNotRequired */
-  restoredState = null) {
-    super(id, url);
-    this.type = 0
-    /* EventType.NavigationStart */
-    ;
-    this.navigationTrigger = navigationTrigger;
-    this.restoredState = restoredState;
-  }
-  /** @docsNotRequired */
-
-
-  toString() {
-    return `NavigationStart(id: ${this.id}, url: '${this.url}')`;
-  }
-
-}
-/**
- * An event triggered when a navigation ends successfully.
- *
- * @see `NavigationStart`
- * @see `NavigationCancel`
- * @see `NavigationError`
- *
- * @publicApi
- */
-
-
-class NavigationEnd extends RouterEvent {
-  constructor(
-  /** @docsNotRequired */
-  id,
-  /** @docsNotRequired */
-  url,
-  /** @docsNotRequired */
-  urlAfterRedirects) {
-    super(id, url);
-    this.urlAfterRedirects = urlAfterRedirects;
-    this.type = 1
-    /* EventType.NavigationEnd */
-    ;
-  }
-  /** @docsNotRequired */
-
-
-  toString() {
-    return `NavigationEnd(id: ${this.id}, url: '${this.url}', urlAfterRedirects: '${this.urlAfterRedirects}')`;
-  }
-
-}
-/**
- * An event triggered when a navigation is canceled, directly or indirectly.
- * This can happen for several reasons including when a route guard
- * returns `false` or initiates a redirect by returning a `UrlTree`.
- *
- * @see `NavigationStart`
- * @see `NavigationEnd`
- * @see `NavigationError`
- *
- * @publicApi
- */
-
-
-class NavigationCancel extends RouterEvent {
-  constructor(
-  /** @docsNotRequired */
-  id,
-  /** @docsNotRequired */
-  url,
-  /** @docsNotRequired */
-  reason) {
-    super(id, url);
-    this.reason = reason;
-    this.type = 2
-    /* EventType.NavigationCancel */
-    ;
-  }
-  /** @docsNotRequired */
-
-
-  toString() {
-    return `NavigationCancel(id: ${this.id}, url: '${this.url}')`;
-  }
-
-}
-/**
- * An event triggered when a navigation fails due to an unexpected error.
- *
- * @see `NavigationStart`
- * @see `NavigationEnd`
- * @see `NavigationCancel`
- *
- * @publicApi
- */
-
-
-class NavigationError extends RouterEvent {
-  constructor(
-  /** @docsNotRequired */
-  id,
-  /** @docsNotRequired */
-  url,
-  /** @docsNotRequired */
-  error) {
-    super(id, url);
-    this.error = error;
-    this.type = 3
-    /* EventType.NavigationError */
-    ;
-  }
-  /** @docsNotRequired */
-
-
-  toString() {
-    return `NavigationError(id: ${this.id}, url: '${this.url}', error: ${this.error})`;
-  }
-
-}
-/**
- * An event triggered when routes are recognized.
- *
- * @publicApi
- */
-
-
-class RoutesRecognized extends RouterEvent {
-  constructor(
-  /** @docsNotRequired */
-  id,
-  /** @docsNotRequired */
-  url,
-  /** @docsNotRequired */
-  urlAfterRedirects,
-  /** @docsNotRequired */
-  state) {
-    super(id, url);
-    this.urlAfterRedirects = urlAfterRedirects;
-    this.state = state;
-    this.type = 4
-    /* EventType.RoutesRecognized */
-    ;
-  }
-  /** @docsNotRequired */
-
-
-  toString() {
-    return `RoutesRecognized(id: ${this.id}, url: '${this.url}', urlAfterRedirects: '${this.urlAfterRedirects}', state: ${this.state})`;
-  }
-
-}
-/**
- * An event triggered at the start of the Guard phase of routing.
- *
- * @see `GuardsCheckEnd`
- *
- * @publicApi
- */
-
-
-class GuardsCheckStart extends RouterEvent {
-  constructor(
-  /** @docsNotRequired */
-  id,
-  /** @docsNotRequired */
-  url,
-  /** @docsNotRequired */
-  urlAfterRedirects,
-  /** @docsNotRequired */
-  state) {
-    super(id, url);
-    this.urlAfterRedirects = urlAfterRedirects;
-    this.state = state;
-    this.type = 7
-    /* EventType.GuardsCheckStart */
-    ;
-  }
-
-  toString() {
-    return `GuardsCheckStart(id: ${this.id}, url: '${this.url}', urlAfterRedirects: '${this.urlAfterRedirects}', state: ${this.state})`;
-  }
-
-}
-/**
- * An event triggered at the end of the Guard phase of routing.
- *
- * @see `GuardsCheckStart`
- *
- * @publicApi
- */
-
-
-class GuardsCheckEnd extends RouterEvent {
-  constructor(
-  /** @docsNotRequired */
-  id,
-  /** @docsNotRequired */
-  url,
-  /** @docsNotRequired */
-  urlAfterRedirects,
-  /** @docsNotRequired */
-  state,
-  /** @docsNotRequired */
-  shouldActivate) {
-    super(id, url);
-    this.urlAfterRedirects = urlAfterRedirects;
-    this.state = state;
-    this.shouldActivate = shouldActivate;
-    this.type = 8
-    /* EventType.GuardsCheckEnd */
-    ;
-  }
-
-  toString() {
-    return `GuardsCheckEnd(id: ${this.id}, url: '${this.url}', urlAfterRedirects: '${this.urlAfterRedirects}', state: ${this.state}, shouldActivate: ${this.shouldActivate})`;
-  }
-
-}
-/**
- * An event triggered at the start of the Resolve phase of routing.
- *
- * Runs in the "resolve" phase whether or not there is anything to resolve.
- * In future, may change to only run when there are things to be resolved.
- *
- * @see `ResolveEnd`
- *
- * @publicApi
- */
-
-
-class ResolveStart extends RouterEvent {
-  constructor(
-  /** @docsNotRequired */
-  id,
-  /** @docsNotRequired */
-  url,
-  /** @docsNotRequired */
-  urlAfterRedirects,
-  /** @docsNotRequired */
-  state) {
-    super(id, url);
-    this.urlAfterRedirects = urlAfterRedirects;
-    this.state = state;
-    this.type = 5
-    /* EventType.ResolveStart */
-    ;
-  }
-
-  toString() {
-    return `ResolveStart(id: ${this.id}, url: '${this.url}', urlAfterRedirects: '${this.urlAfterRedirects}', state: ${this.state})`;
-  }
-
-}
-/**
- * An event triggered at the end of the Resolve phase of routing.
- * @see `ResolveStart`.
- *
- * @publicApi
- */
-
-
-class ResolveEnd extends RouterEvent {
-  constructor(
-  /** @docsNotRequired */
-  id,
-  /** @docsNotRequired */
-  url,
-  /** @docsNotRequired */
-  urlAfterRedirects,
-  /** @docsNotRequired */
-  state) {
-    super(id, url);
-    this.urlAfterRedirects = urlAfterRedirects;
-    this.state = state;
-    this.type = 6
-    /* EventType.ResolveEnd */
-    ;
-  }
-
-  toString() {
-    return `ResolveEnd(id: ${this.id}, url: '${this.url}', urlAfterRedirects: '${this.urlAfterRedirects}', state: ${this.state})`;
-  }
-
-}
-/**
- * An event triggered before lazy loading a route configuration.
- *
- * @see `RouteConfigLoadEnd`
- *
- * @publicApi
- */
-
-
-class RouteConfigLoadStart {
-  constructor(
-  /** @docsNotRequired */
-  route) {
-    this.route = route;
-    this.type = 9
-    /* EventType.RouteConfigLoadStart */
-    ;
-  }
-
-  toString() {
-    return `RouteConfigLoadStart(path: ${this.route.path})`;
-  }
-
-}
-/**
- * An event triggered when a route has been lazy loaded.
- *
- * @see `RouteConfigLoadStart`
- *
- * @publicApi
- */
-
-
-class RouteConfigLoadEnd {
-  constructor(
-  /** @docsNotRequired */
-  route) {
-    this.route = route;
-    this.type = 10
-    /* EventType.RouteConfigLoadEnd */
-    ;
-  }
-
-  toString() {
-    return `RouteConfigLoadEnd(path: ${this.route.path})`;
-  }
-
-}
-/**
- * An event triggered at the start of the child-activation
- * part of the Resolve phase of routing.
- * @see  `ChildActivationEnd`
- * @see `ResolveStart`
- *
- * @publicApi
- */
-
-
-class ChildActivationStart {
-  constructor(
-  /** @docsNotRequired */
-  snapshot) {
-    this.snapshot = snapshot;
-    this.type = 11
-    /* EventType.ChildActivationStart */
-    ;
-  }
-
-  toString() {
-    const path = this.snapshot.routeConfig && this.snapshot.routeConfig.path || '';
-    return `ChildActivationStart(path: '${path}')`;
-  }
-
-}
-/**
- * An event triggered at the end of the child-activation part
- * of the Resolve phase of routing.
- * @see `ChildActivationStart`
- * @see `ResolveStart`
- * @publicApi
- */
-
-
-class ChildActivationEnd {
-  constructor(
-  /** @docsNotRequired */
-  snapshot) {
-    this.snapshot = snapshot;
-    this.type = 12
-    /* EventType.ChildActivationEnd */
-    ;
-  }
-
-  toString() {
-    const path = this.snapshot.routeConfig && this.snapshot.routeConfig.path || '';
-    return `ChildActivationEnd(path: '${path}')`;
-  }
-
-}
-/**
- * An event triggered at the start of the activation part
- * of the Resolve phase of routing.
- * @see `ActivationEnd`
- * @see `ResolveStart`
- *
- * @publicApi
- */
-
-
-class ActivationStart {
-  constructor(
-  /** @docsNotRequired */
-  snapshot) {
-    this.snapshot = snapshot;
-    this.type = 13
-    /* EventType.ActivationStart */
-    ;
-  }
-
-  toString() {
-    const path = this.snapshot.routeConfig && this.snapshot.routeConfig.path || '';
-    return `ActivationStart(path: '${path}')`;
-  }
-
-}
-/**
- * An event triggered at the end of the activation part
- * of the Resolve phase of routing.
- * @see `ActivationStart`
- * @see `ResolveStart`
- *
- * @publicApi
- */
-
-
-class ActivationEnd {
-  constructor(
-  /** @docsNotRequired */
-  snapshot) {
-    this.snapshot = snapshot;
-    this.type = 14
-    /* EventType.ActivationEnd */
-    ;
-  }
-
-  toString() {
-    const path = this.snapshot.routeConfig && this.snapshot.routeConfig.path || '';
-    return `ActivationEnd(path: '${path}')`;
-  }
-
-}
-/**
- * An event triggered by scrolling.
- *
- * @publicApi
- */
-
-
-class Scroll {
-  constructor(
-  /** @docsNotRequired */
-  routerEvent,
-  /** @docsNotRequired */
-  position,
-  /** @docsNotRequired */
-  anchor) {
-    this.routerEvent = routerEvent;
-    this.position = position;
-    this.anchor = anchor;
-    this.type = 15
-    /* EventType.Scroll */
-    ;
-  }
-
-  toString() {
-    const pos = this.position ? `${this.position[0]}, ${this.position[1]}` : null;
-    return `Scroll(anchor: '${this.anchor}', position: '${pos}')`;
-  }
-
-}
-
-function stringifyEvent(routerEvent) {
-  if (!('type' in routerEvent)) {
-    return `Unknown Router Event: ${routerEvent.constructor.name}`;
-  }
-
-  switch (routerEvent.type) {
-    case 14
-    /* EventType.ActivationEnd */
-    :
-      return `ActivationEnd(path: '${routerEvent.snapshot.routeConfig?.path || ''}')`;
-
-    case 13
-    /* EventType.ActivationStart */
-    :
-      return `ActivationStart(path: '${routerEvent.snapshot.routeConfig?.path || ''}')`;
-
-    case 12
-    /* EventType.ChildActivationEnd */
-    :
-      return `ChildActivationEnd(path: '${routerEvent.snapshot.routeConfig?.path || ''}')`;
-
-    case 11
-    /* EventType.ChildActivationStart */
-    :
-      return `ChildActivationStart(path: '${routerEvent.snapshot.routeConfig?.path || ''}')`;
-
-    case 8
-    /* EventType.GuardsCheckEnd */
-    :
-      return `GuardsCheckEnd(id: ${routerEvent.id}, url: '${routerEvent.url}', urlAfterRedirects: '${routerEvent.urlAfterRedirects}', state: ${routerEvent.state}, shouldActivate: ${routerEvent.shouldActivate})`;
-
-    case 7
-    /* EventType.GuardsCheckStart */
-    :
-      return `GuardsCheckStart(id: ${routerEvent.id}, url: '${routerEvent.url}', urlAfterRedirects: '${routerEvent.urlAfterRedirects}', state: ${routerEvent.state})`;
-
-    case 2
-    /* EventType.NavigationCancel */
-    :
-      return `NavigationCancel(id: ${routerEvent.id}, url: '${routerEvent.url}')`;
-
-    case 1
-    /* EventType.NavigationEnd */
-    :
-      return `NavigationEnd(id: ${routerEvent.id}, url: '${routerEvent.url}', urlAfterRedirects: '${routerEvent.urlAfterRedirects}')`;
-
-    case 3
-    /* EventType.NavigationError */
-    :
-      return `NavigationError(id: ${routerEvent.id}, url: '${routerEvent.url}', error: ${routerEvent.error})`;
-
-    case 0
-    /* EventType.NavigationStart */
-    :
-      return `NavigationStart(id: ${routerEvent.id}, url: '${routerEvent.url}')`;
-
-    case 6
-    /* EventType.ResolveEnd */
-    :
-      return `ResolveEnd(id: ${routerEvent.id}, url: '${routerEvent.url}', urlAfterRedirects: '${routerEvent.urlAfterRedirects}', state: ${routerEvent.state})`;
-
-    case 5
-    /* EventType.ResolveStart */
-    :
-      return `ResolveStart(id: ${routerEvent.id}, url: '${routerEvent.url}', urlAfterRedirects: '${routerEvent.urlAfterRedirects}', state: ${routerEvent.state})`;
-
-    case 10
-    /* EventType.RouteConfigLoadEnd */
-    :
-      return `RouteConfigLoadEnd(path: ${routerEvent.route.path})`;
-
-    case 9
-    /* EventType.RouteConfigLoadStart */
-    :
-      return `RouteConfigLoadStart(path: ${routerEvent.route.path})`;
-
-    case 4
-    /* EventType.RoutesRecognized */
-    :
-      return `RoutesRecognized(id: ${routerEvent.id}, url: '${routerEvent.url}', urlAfterRedirects: '${routerEvent.urlAfterRedirects}', state: ${routerEvent.state})`;
-
-    case 15
-    /* EventType.Scroll */
-    :
-      const pos = routerEvent.position ? `${routerEvent.position[0]}, ${routerEvent.position[1]}` : null;
-      return `Scroll(anchor: '${routerEvent.anchor}', position: '${pos}')`;
-  }
-}
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-/**
  * The primary routing outlet.
  *
  * @publicApi
  */
-
 
 const PRIMARY_OUTLET = 'primary';
 
@@ -105317,18 +104904,6 @@ class ParamsAsMap {
 
 function convertToParamMap(params) {
   return new ParamsAsMap(params);
-}
-
-const NAVIGATION_CANCELING_ERROR = 'ngNavigationCancelingError';
-
-function navigationCancelingError(message) {
-  const error = Error('NavigationCancelingError: ' + message);
-  error[NAVIGATION_CANCELING_ERROR] = true;
-  return error;
-}
-
-function isNavigationCancelingError(error) {
-  return error && error[NAVIGATION_CANCELING_ERROR];
 } // Matches the route configuration (`route`) against the actual URL (`segments`).
 
 
@@ -105476,6 +105051,8 @@ function wrapIntoObservable(value) {
  * found in the LICENSE file at https://angular.io/license
  */
 
+
+const NG_DEV_MODE$8 = typeof ngDevMode === 'undefined' || ngDevMode;
 
 function createEmptyUrlTree() {
   return new UrlTree(new UrlSegmentGroup([], {}), {}, null);
@@ -106000,7 +105577,9 @@ class UrlParser {
     const path = matchSegments(this.remaining);
 
     if (path === '' && this.peekStartsWith(';')) {
-      throw new Error(`Empty path url segment cannot have parameters: '${this.remaining}'.`);
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4009
+      /* RuntimeErrorCode.EMPTY_PATH_WITH_PARAMS */
+      , NG_DEV_MODE$8 && `Empty path url segment cannot have parameters: '${this.remaining}'.`);
     }
 
     this.capture(path);
@@ -106089,7 +105668,9 @@ class UrlParser {
       // or the group was not closed
 
       if (next !== '/' && next !== ')' && next !== ';') {
-        throw new Error(`Cannot parse url '${this.url}'`);
+        throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4010
+        /* RuntimeErrorCode.UNPARSABLE_URL */
+        , NG_DEV_MODE$8 && `Cannot parse url '${this.url}'`);
       }
 
       let outletName = undefined;
@@ -106126,10 +105707,1206 @@ class UrlParser {
 
   capture(str) {
     if (!this.consumeOptional(str)) {
-      throw new Error(`Expected "${str}".`);
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4011
+      /* RuntimeErrorCode.UNEXPECTED_VALUE_IN_URL */
+      , NG_DEV_MODE$8 && `Expected "${str}".`);
     }
   }
 
+}
+
+function createRoot(rootCandidate) {
+  return rootCandidate.segments.length > 0 ? new UrlSegmentGroup([], {
+    [PRIMARY_OUTLET]: rootCandidate
+  }) : rootCandidate;
+}
+/**
+ * Recursively merges primary segment children into their parents and also drops empty children
+ * (those which have no segments and no children themselves). The latter prevents serializing a
+ * group into something like `/a(aux:)`, where `aux` is an empty child segment.
+ */
+
+
+function squashSegmentGroup(segmentGroup) {
+  const newChildren = {};
+
+  for (const childOutlet of Object.keys(segmentGroup.children)) {
+    const child = segmentGroup.children[childOutlet];
+    const childCandidate = squashSegmentGroup(child); // don't add empty children
+
+    if (childCandidate.segments.length > 0 || childCandidate.hasChildren()) {
+      newChildren[childOutlet] = childCandidate;
+    }
+  }
+
+  const s = new UrlSegmentGroup(segmentGroup.segments, newChildren);
+  return mergeTrivialChildren(s);
+}
+/**
+ * When possible, merges the primary outlet child into the parent `UrlSegmentGroup`.
+ *
+ * When a segment group has only one child which is a primary outlet, merges that child into the
+ * parent. That is, the child segment group's segments are merged into the `s` and the child's
+ * children become the children of `s`. Think of this like a 'squash', merging the child segment
+ * group into the parent.
+ */
+
+
+function mergeTrivialChildren(s) {
+  if (s.numberOfChildren === 1 && s.children[PRIMARY_OUTLET]) {
+    const c = s.children[PRIMARY_OUTLET];
+    return new UrlSegmentGroup(s.segments.concat(c.segments), c.children);
+  }
+
+  return s;
+}
+
+function isUrlTree(v) {
+  return v instanceof UrlTree;
+}
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+
+const NG_DEV_MODE$7 = typeof ngDevMode === 'undefined' || ngDevMode;
+/**
+ * Creates a `UrlTree` relative to an `ActivatedRouteSnapshot`.
+ *
+ * @publicApi
+ *
+ *
+ * @param relativeTo The `ActivatedRouteSnapshot` to apply the commands to
+ * @param commands An array of URL fragments with which to construct the new URL tree.
+ * If the path is static, can be the literal URL string. For a dynamic path, pass an array of path
+ * segments, followed by the parameters for each segment.
+ * The fragments are applied to the one provided in the `relativeTo` parameter.
+ * @param queryParams The query parameters for the `UrlTree`. `null` if the `UrlTree` does not have
+ *     any query parameters.
+ * @param fragment The fragment for the `UrlTree`. `null` if the `UrlTree` does not have a fragment.
+ *
+ * @usageNotes
+ *
+ * ```
+ * // create /team/33/user/11
+ * createUrlTreeFromSnapshot(snapshot, ['/team', 33, 'user', 11]);
+ *
+ * // create /team/33;expand=true/user/11
+ * createUrlTreeFromSnapshot(snapshot, ['/team', 33, {expand: true}, 'user', 11]);
+ *
+ * // you can collapse static segments like this (this works only with the first passed-in value):
+ * createUrlTreeFromSnapshot(snapshot, ['/team/33/user', userId]);
+ *
+ * // If the first segment can contain slashes, and you do not want the router to split it,
+ * // you can do the following:
+ * createUrlTreeFromSnapshot(snapshot, [{segmentPath: '/one/two'}]);
+ *
+ * // create /team/33/(user/11//right:chat)
+ * createUrlTreeFromSnapshot(snapshot, ['/team', 33, {outlets: {primary: 'user/11', right:
+ * 'chat'}}], null, null);
+ *
+ * // remove the right secondary node
+ * createUrlTreeFromSnapshot(snapshot, ['/team', 33, {outlets: {primary: 'user/11', right: null}}]);
+ *
+ * // For the examples below, assume the current URL is for the `/team/33/user/11` and the
+ * `ActivatedRouteSnapshot` points to `user/11`:
+ *
+ * // navigate to /team/33/user/11/details
+ * createUrlTreeFromSnapshot(snapshot, ['details']);
+ *
+ * // navigate to /team/33/user/22
+ * createUrlTreeFromSnapshot(snapshot, ['../22']);
+ *
+ * // navigate to /team/44/user/22
+ * createUrlTreeFromSnapshot(snapshot, ['../../team/44/user/22']);
+ * ```
+ */
+
+function createUrlTreeFromSnapshot(relativeTo, commands, queryParams = null, fragment = null) {
+  const relativeToUrlSegmentGroup = createSegmentGroupFromRoute(relativeTo);
+  return createUrlTreeFromSegmentGroup(relativeToUrlSegmentGroup, commands, queryParams, fragment);
+}
+
+function createSegmentGroupFromRoute(route) {
+  let targetGroup;
+
+  function createSegmentGroupFromRouteRecursive(currentRoute) {
+    const childOutlets = {};
+
+    for (const childSnapshot of currentRoute.children) {
+      const root = createSegmentGroupFromRouteRecursive(childSnapshot);
+      childOutlets[childSnapshot.outlet] = root;
+    }
+
+    const segmentGroup = new UrlSegmentGroup(currentRoute.url, childOutlets);
+
+    if (currentRoute === route) {
+      targetGroup = segmentGroup;
+    }
+
+    return segmentGroup;
+  }
+
+  const rootCandidate = createSegmentGroupFromRouteRecursive(route.root);
+  const rootSegmentGroup = createRoot(rootCandidate);
+  return targetGroup ?? rootSegmentGroup;
+}
+
+function createUrlTreeFromSegmentGroup(relativeTo, commands, queryParams, fragment) {
+  let root = relativeTo;
+
+  while (root.parent) {
+    root = root.parent;
+  } // There are no commands so the `UrlTree` goes to the same path as the one created from the
+  // `UrlSegmentGroup`. All we need to do is update the `queryParams` and `fragment` without
+  // applying any other logic.
+
+
+  if (commands.length === 0) {
+    return tree(root, root, root, queryParams, fragment);
+  }
+
+  const nav = computeNavigation(commands);
+
+  if (nav.toRoot()) {
+    return tree(root, root, new UrlSegmentGroup([], {}), queryParams, fragment);
+  }
+
+  const position = findStartingPositionForTargetGroup(nav, root, relativeTo);
+  const newSegmentGroup = position.processChildren ? updateSegmentGroupChildren(position.segmentGroup, position.index, nav.commands) : updateSegmentGroup(position.segmentGroup, position.index, nav.commands);
+  return tree(root, position.segmentGroup, newSegmentGroup, queryParams, fragment);
+}
+
+function createUrlTree(route, urlTree, commands, queryParams, fragment) {
+  if (commands.length === 0) {
+    return tree(urlTree.root, urlTree.root, urlTree.root, queryParams, fragment);
+  }
+
+  const nav = computeNavigation(commands);
+
+  if (nav.toRoot()) {
+    return tree(urlTree.root, urlTree.root, new UrlSegmentGroup([], {}), queryParams, fragment);
+  }
+
+  function createTreeUsingPathIndex(lastPathIndex) {
+    const startingPosition = findStartingPosition(nav, urlTree, route.snapshot?._urlSegment, lastPathIndex);
+    const segmentGroup = startingPosition.processChildren ? updateSegmentGroupChildren(startingPosition.segmentGroup, startingPosition.index, nav.commands) : updateSegmentGroup(startingPosition.segmentGroup, startingPosition.index, nav.commands);
+    return tree(urlTree.root, startingPosition.segmentGroup, segmentGroup, queryParams, fragment);
+  } // Note: The types should disallow `snapshot` from being `undefined` but due to test mocks, this
+  // may be the case. Since we try to access it at an earlier point before the refactor to add the
+  // warning for `relativeLinkResolution: 'legacy'`, this may cause failures in tests where it
+  // didn't before.
+
+
+  const result = createTreeUsingPathIndex(route.snapshot?._lastPathIndex); // Check if application is relying on `relativeLinkResolution: 'legacy'`
+
+  if (typeof ngDevMode === 'undefined' || !!ngDevMode) {
+    const correctedResult = createTreeUsingPathIndex(route.snapshot?._correctedLastPathIndex);
+
+    if (correctedResult.toString() !== result.toString()) {
+      console.warn(`relativeLinkResolution: 'legacy' is deprecated and will be removed in a future version of Angular. The link to ${result.toString()} will change to ${correctedResult.toString()} if the code is not updated before then.`);
+    }
+  }
+
+  return result;
+}
+
+function isMatrixParams(command) {
+  return typeof command === 'object' && command != null && !command.outlets && !command.segmentPath;
+}
+/**
+ * Determines if a given command has an `outlets` map. When we encounter a command
+ * with an outlets k/v map, we need to apply each outlet individually to the existing segment.
+ */
+
+
+function isCommandWithOutlets(command) {
+  return typeof command === 'object' && command != null && command.outlets;
+}
+
+function tree(oldRoot, oldSegmentGroup, newSegmentGroup, queryParams, fragment) {
+  let qp = {};
+
+  if (queryParams) {
+    forEach(queryParams, (value, name) => {
+      qp[name] = Array.isArray(value) ? value.map(v => `${v}`) : `${value}`;
+    });
+  }
+
+  let rootCandidate;
+
+  if (oldRoot === oldSegmentGroup) {
+    rootCandidate = newSegmentGroup;
+  } else {
+    rootCandidate = replaceSegment(oldRoot, oldSegmentGroup, newSegmentGroup);
+  }
+
+  const newRoot = createRoot(squashSegmentGroup(rootCandidate));
+  return new UrlTree(newRoot, qp, fragment);
+}
+/**
+ * Replaces the `oldSegment` which is located in some child of the `current` with the `newSegment`.
+ * This also has the effect of creating new `UrlSegmentGroup` copies to update references. This
+ * shouldn't be necessary but the fallback logic for an invalid ActivatedRoute in the creation uses
+ * the Router's current url tree. If we don't create new segment groups, we end up modifying that
+ * value.
+ */
+
+
+function replaceSegment(current, oldSegment, newSegment) {
+  const children = {};
+  forEach(current.children, (c, outletName) => {
+    if (c === oldSegment) {
+      children[outletName] = newSegment;
+    } else {
+      children[outletName] = replaceSegment(c, oldSegment, newSegment);
+    }
+  });
+  return new UrlSegmentGroup(current.segments, children);
+}
+
+class Navigation {
+  constructor(isAbsolute, numberOfDoubleDots, commands) {
+    this.isAbsolute = isAbsolute;
+    this.numberOfDoubleDots = numberOfDoubleDots;
+    this.commands = commands;
+
+    if (isAbsolute && commands.length > 0 && isMatrixParams(commands[0])) {
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4003
+      /* RuntimeErrorCode.ROOT_SEGMENT_MATRIX_PARAMS */
+      , NG_DEV_MODE$7 && 'Root segment cannot have matrix parameters');
+    }
+
+    const cmdWithOutlet = commands.find(isCommandWithOutlets);
+
+    if (cmdWithOutlet && cmdWithOutlet !== last(commands)) {
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4004
+      /* RuntimeErrorCode.MISPLACED_OUTLETS_COMMAND */
+      , NG_DEV_MODE$7 && '{outlets:{}} has to be the last command');
+    }
+  }
+
+  toRoot() {
+    return this.isAbsolute && this.commands.length === 1 && this.commands[0] == '/';
+  }
+
+}
+/** Transforms commands to a normalized `Navigation` */
+
+
+function computeNavigation(commands) {
+  if (typeof commands[0] === 'string' && commands.length === 1 && commands[0] === '/') {
+    return new Navigation(true, 0, commands);
+  }
+
+  let numberOfDoubleDots = 0;
+  let isAbsolute = false;
+  const res = commands.reduce((res, cmd, cmdIdx) => {
+    if (typeof cmd === 'object' && cmd != null) {
+      if (cmd.outlets) {
+        const outlets = {};
+        forEach(cmd.outlets, (commands, name) => {
+          outlets[name] = typeof commands === 'string' ? commands.split('/') : commands;
+        });
+        return [...res, {
+          outlets
+        }];
+      }
+
+      if (cmd.segmentPath) {
+        return [...res, cmd.segmentPath];
+      }
+    }
+
+    if (!(typeof cmd === 'string')) {
+      return [...res, cmd];
+    }
+
+    if (cmdIdx === 0) {
+      cmd.split('/').forEach((urlPart, partIndex) => {
+        if (partIndex == 0 && urlPart === '.') {// skip './a'
+        } else if (partIndex == 0 && urlPart === '') {
+          //  '/a'
+          isAbsolute = true;
+        } else if (urlPart === '..') {
+          //  '../a'
+          numberOfDoubleDots++;
+        } else if (urlPart != '') {
+          res.push(urlPart);
+        }
+      });
+      return res;
+    }
+
+    return [...res, cmd];
+  }, []);
+  return new Navigation(isAbsolute, numberOfDoubleDots, res);
+}
+
+class Position {
+  constructor(segmentGroup, processChildren, index) {
+    this.segmentGroup = segmentGroup;
+    this.processChildren = processChildren;
+    this.index = index;
+  }
+
+}
+
+function findStartingPositionForTargetGroup(nav, root, target) {
+  if (nav.isAbsolute) {
+    return new Position(root, true, 0);
+  }
+
+  if (!target) {
+    // `NaN` is used only to maintain backwards compatibility with incorrectly mocked
+    // `ActivatedRouteSnapshot` in tests. In prior versions of this code, the position here was
+    // determined based on an internal property that was rarely mocked, resulting in `NaN`. In
+    // reality, this code path should _never_ be touched since `target` is not allowed to be falsey.
+    return new Position(root, false, NaN);
+  }
+
+  if (target.parent === null) {
+    return new Position(target, true, 0);
+  }
+
+  const modifier = isMatrixParams(nav.commands[0]) ? 0 : 1;
+  const index = target.segments.length - 1 + modifier;
+  return createPositionApplyingDoubleDots(target, index, nav.numberOfDoubleDots);
+}
+
+function findStartingPosition(nav, tree, segmentGroup, lastPathIndex) {
+  if (nav.isAbsolute) {
+    return new Position(tree.root, true, 0);
+  }
+
+  if (lastPathIndex === -1) {
+    // Pathless ActivatedRoute has _lastPathIndex === -1 but should not process children
+    // see issue #26224, #13011, #35687
+    // However, if the ActivatedRoute is the root we should process children like above.
+    const processChildren = segmentGroup === tree.root;
+    return new Position(segmentGroup, processChildren, 0);
+  }
+
+  const modifier = isMatrixParams(nav.commands[0]) ? 0 : 1;
+  const index = lastPathIndex + modifier;
+  return createPositionApplyingDoubleDots(segmentGroup, index, nav.numberOfDoubleDots);
+}
+
+function createPositionApplyingDoubleDots(group, index, numberOfDoubleDots) {
+  let g = group;
+  let ci = index;
+  let dd = numberOfDoubleDots;
+
+  while (dd > ci) {
+    dd -= ci;
+    g = g.parent;
+
+    if (!g) {
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4005
+      /* RuntimeErrorCode.INVALID_DOUBLE_DOTS */
+      , NG_DEV_MODE$7 && 'Invalid number of \'../\'');
+    }
+
+    ci = g.segments.length;
+  }
+
+  return new Position(g, false, ci - dd);
+}
+
+function getOutlets(commands) {
+  if (isCommandWithOutlets(commands[0])) {
+    return commands[0].outlets;
+  }
+
+  return {
+    [PRIMARY_OUTLET]: commands
+  };
+}
+
+function updateSegmentGroup(segmentGroup, startIndex, commands) {
+  if (!segmentGroup) {
+    segmentGroup = new UrlSegmentGroup([], {});
+  }
+
+  if (segmentGroup.segments.length === 0 && segmentGroup.hasChildren()) {
+    return updateSegmentGroupChildren(segmentGroup, startIndex, commands);
+  }
+
+  const m = prefixedWith(segmentGroup, startIndex, commands);
+  const slicedCommands = commands.slice(m.commandIndex);
+
+  if (m.match && m.pathIndex < segmentGroup.segments.length) {
+    const g = new UrlSegmentGroup(segmentGroup.segments.slice(0, m.pathIndex), {});
+    g.children[PRIMARY_OUTLET] = new UrlSegmentGroup(segmentGroup.segments.slice(m.pathIndex), segmentGroup.children);
+    return updateSegmentGroupChildren(g, 0, slicedCommands);
+  } else if (m.match && slicedCommands.length === 0) {
+    return new UrlSegmentGroup(segmentGroup.segments, {});
+  } else if (m.match && !segmentGroup.hasChildren()) {
+    return createNewSegmentGroup(segmentGroup, startIndex, commands);
+  } else if (m.match) {
+    return updateSegmentGroupChildren(segmentGroup, 0, slicedCommands);
+  } else {
+    return createNewSegmentGroup(segmentGroup, startIndex, commands);
+  }
+}
+
+function updateSegmentGroupChildren(segmentGroup, startIndex, commands) {
+  if (commands.length === 0) {
+    return new UrlSegmentGroup(segmentGroup.segments, {});
+  } else {
+    const outlets = getOutlets(commands);
+    const children = {};
+    forEach(outlets, (commands, outlet) => {
+      if (typeof commands === 'string') {
+        commands = [commands];
+      }
+
+      if (commands !== null) {
+        children[outlet] = updateSegmentGroup(segmentGroup.children[outlet], startIndex, commands);
+      }
+    });
+    forEach(segmentGroup.children, (child, childOutlet) => {
+      if (outlets[childOutlet] === undefined) {
+        children[childOutlet] = child;
+      }
+    });
+    return new UrlSegmentGroup(segmentGroup.segments, children);
+  }
+}
+
+function prefixedWith(segmentGroup, startIndex, commands) {
+  let currentCommandIndex = 0;
+  let currentPathIndex = startIndex;
+  const noMatch = {
+    match: false,
+    pathIndex: 0,
+    commandIndex: 0
+  };
+
+  while (currentPathIndex < segmentGroup.segments.length) {
+    if (currentCommandIndex >= commands.length) return noMatch;
+    const path = segmentGroup.segments[currentPathIndex];
+    const command = commands[currentCommandIndex]; // Do not try to consume command as part of the prefixing if it has outlets because it can
+    // contain outlets other than the one being processed. Consuming the outlets command would
+    // result in other outlets being ignored.
+
+    if (isCommandWithOutlets(command)) {
+      break;
+    }
+
+    const curr = `${command}`;
+    const next = currentCommandIndex < commands.length - 1 ? commands[currentCommandIndex + 1] : null;
+    if (currentPathIndex > 0 && curr === undefined) break;
+
+    if (curr && next && typeof next === 'object' && next.outlets === undefined) {
+      if (!compare(curr, next, path)) return noMatch;
+      currentCommandIndex += 2;
+    } else {
+      if (!compare(curr, {}, path)) return noMatch;
+      currentCommandIndex++;
+    }
+
+    currentPathIndex++;
+  }
+
+  return {
+    match: true,
+    pathIndex: currentPathIndex,
+    commandIndex: currentCommandIndex
+  };
+}
+
+function createNewSegmentGroup(segmentGroup, startIndex, commands) {
+  const paths = segmentGroup.segments.slice(0, startIndex);
+  let i = 0;
+
+  while (i < commands.length) {
+    const command = commands[i];
+
+    if (isCommandWithOutlets(command)) {
+      const children = createNewSegmentChildren(command.outlets);
+      return new UrlSegmentGroup(paths, children);
+    } // if we start with an object literal, we need to reuse the path part from the segment
+
+
+    if (i === 0 && isMatrixParams(commands[0])) {
+      const p = segmentGroup.segments[startIndex];
+      paths.push(new UrlSegment(p.path, stringify(commands[0])));
+      i++;
+      continue;
+    }
+
+    const curr = isCommandWithOutlets(command) ? command.outlets[PRIMARY_OUTLET] : `${command}`;
+    const next = i < commands.length - 1 ? commands[i + 1] : null;
+
+    if (curr && next && isMatrixParams(next)) {
+      paths.push(new UrlSegment(curr, stringify(next)));
+      i += 2;
+    } else {
+      paths.push(new UrlSegment(curr, {}));
+      i++;
+    }
+  }
+
+  return new UrlSegmentGroup(paths, {});
+}
+
+function createNewSegmentChildren(outlets) {
+  const children = {};
+  forEach(outlets, (commands, outlet) => {
+    if (typeof commands === 'string') {
+      commands = [commands];
+    }
+
+    if (commands !== null) {
+      children[outlet] = createNewSegmentGroup(new UrlSegmentGroup([], {}), 0, commands);
+    }
+  });
+  return children;
+}
+
+function stringify(params) {
+  const res = {};
+  forEach(params, (v, k) => res[k] = `${v}`);
+  return res;
+}
+
+function compare(path, params, segment) {
+  return path == segment.path && shallowEqual(params, segment.parameters);
+}
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * Base for events the router goes through, as opposed to events tied to a specific
+ * route. Fired one time for any given navigation.
+ *
+ * The following code shows how a class subscribes to router events.
+ *
+ * ```ts
+ * import {Event, RouterEvent, Router} from '@angular/router';
+ *
+ * class MyService {
+ *   constructor(public router: Router) {
+ *     router.events.pipe(
+ *        filter((e: Event): e is RouterEvent => e instanceof RouterEvent)
+ *     ).subscribe((e: RouterEvent) => {
+ *       // Do something
+ *     });
+ *   }
+ * }
+ * ```
+ *
+ * @see `Event`
+ * @see [Router events summary](guide/router-reference#router-events)
+ * @publicApi
+ */
+
+
+class RouterEvent {
+  constructor(
+  /** A unique ID that the router assigns to every router navigation. */
+  id,
+  /** The URL that is the destination for this navigation. */
+  url) {
+    this.id = id;
+    this.url = url;
+  }
+
+}
+/**
+ * An event triggered when a navigation starts.
+ *
+ * @publicApi
+ */
+
+
+class NavigationStart extends RouterEvent {
+  constructor(
+  /** @docsNotRequired */
+  id,
+  /** @docsNotRequired */
+  url,
+  /** @docsNotRequired */
+  navigationTrigger = 'imperative',
+  /** @docsNotRequired */
+  restoredState = null) {
+    super(id, url);
+    this.type = 0
+    /* EventType.NavigationStart */
+    ;
+    this.navigationTrigger = navigationTrigger;
+    this.restoredState = restoredState;
+  }
+  /** @docsNotRequired */
+
+
+  toString() {
+    return `NavigationStart(id: ${this.id}, url: '${this.url}')`;
+  }
+
+}
+/**
+ * An event triggered when a navigation ends successfully.
+ *
+ * @see `NavigationStart`
+ * @see `NavigationCancel`
+ * @see `NavigationError`
+ *
+ * @publicApi
+ */
+
+
+class NavigationEnd extends RouterEvent {
+  constructor(
+  /** @docsNotRequired */
+  id,
+  /** @docsNotRequired */
+  url,
+  /** @docsNotRequired */
+  urlAfterRedirects) {
+    super(id, url);
+    this.urlAfterRedirects = urlAfterRedirects;
+    this.type = 1
+    /* EventType.NavigationEnd */
+    ;
+  }
+  /** @docsNotRequired */
+
+
+  toString() {
+    return `NavigationEnd(id: ${this.id}, url: '${this.url}', urlAfterRedirects: '${this.urlAfterRedirects}')`;
+  }
+
+}
+/**
+ * An event triggered when a navigation is canceled, directly or indirectly.
+ * This can happen for several reasons including when a route guard
+ * returns `false` or initiates a redirect by returning a `UrlTree`.
+ *
+ * @see `NavigationStart`
+ * @see `NavigationEnd`
+ * @see `NavigationError`
+ *
+ * @publicApi
+ */
+
+
+class NavigationCancel extends RouterEvent {
+  constructor(
+  /** @docsNotRequired */
+  id,
+  /** @docsNotRequired */
+  url,
+  /**
+   * A description of why the navigation was cancelled. For debug purposes only. Use `code`
+   * instead for a stable cancellation reason that can be used in production.
+   */
+  reason,
+  /**
+   * A code to indicate why the navigation was canceled. This cancellation code is stable for
+   * the reason and can be relied on whereas the `reason` string could change and should not be
+   * used in production.
+   */
+  code) {
+    super(id, url);
+    this.reason = reason;
+    this.code = code;
+    this.type = 2
+    /* EventType.NavigationCancel */
+    ;
+  }
+  /** @docsNotRequired */
+
+
+  toString() {
+    return `NavigationCancel(id: ${this.id}, url: '${this.url}')`;
+  }
+
+}
+/**
+ * An event triggered when a navigation fails due to an unexpected error.
+ *
+ * @see `NavigationStart`
+ * @see `NavigationEnd`
+ * @see `NavigationCancel`
+ *
+ * @publicApi
+ */
+
+
+class NavigationError extends RouterEvent {
+  constructor(
+  /** @docsNotRequired */
+  id,
+  /** @docsNotRequired */
+  url,
+  /** @docsNotRequired */
+  error,
+  /**
+   * The target of the navigation when the error occurred.
+   *
+   * Note that this can be `undefined` because an error could have occurred before the
+   * `RouterStateSnapshot` was created for the navigation.
+   */
+  target) {
+    super(id, url);
+    this.error = error;
+    this.target = target;
+    this.type = 3
+    /* EventType.NavigationError */
+    ;
+  }
+  /** @docsNotRequired */
+
+
+  toString() {
+    return `NavigationError(id: ${this.id}, url: '${this.url}', error: ${this.error})`;
+  }
+
+}
+/**
+ * An event triggered when routes are recognized.
+ *
+ * @publicApi
+ */
+
+
+class RoutesRecognized extends RouterEvent {
+  constructor(
+  /** @docsNotRequired */
+  id,
+  /** @docsNotRequired */
+  url,
+  /** @docsNotRequired */
+  urlAfterRedirects,
+  /** @docsNotRequired */
+  state) {
+    super(id, url);
+    this.urlAfterRedirects = urlAfterRedirects;
+    this.state = state;
+    this.type = 4
+    /* EventType.RoutesRecognized */
+    ;
+  }
+  /** @docsNotRequired */
+
+
+  toString() {
+    return `RoutesRecognized(id: ${this.id}, url: '${this.url}', urlAfterRedirects: '${this.urlAfterRedirects}', state: ${this.state})`;
+  }
+
+}
+/**
+ * An event triggered at the start of the Guard phase of routing.
+ *
+ * @see `GuardsCheckEnd`
+ *
+ * @publicApi
+ */
+
+
+class GuardsCheckStart extends RouterEvent {
+  constructor(
+  /** @docsNotRequired */
+  id,
+  /** @docsNotRequired */
+  url,
+  /** @docsNotRequired */
+  urlAfterRedirects,
+  /** @docsNotRequired */
+  state) {
+    super(id, url);
+    this.urlAfterRedirects = urlAfterRedirects;
+    this.state = state;
+    this.type = 7
+    /* EventType.GuardsCheckStart */
+    ;
+  }
+
+  toString() {
+    return `GuardsCheckStart(id: ${this.id}, url: '${this.url}', urlAfterRedirects: '${this.urlAfterRedirects}', state: ${this.state})`;
+  }
+
+}
+/**
+ * An event triggered at the end of the Guard phase of routing.
+ *
+ * @see `GuardsCheckStart`
+ *
+ * @publicApi
+ */
+
+
+class GuardsCheckEnd extends RouterEvent {
+  constructor(
+  /** @docsNotRequired */
+  id,
+  /** @docsNotRequired */
+  url,
+  /** @docsNotRequired */
+  urlAfterRedirects,
+  /** @docsNotRequired */
+  state,
+  /** @docsNotRequired */
+  shouldActivate) {
+    super(id, url);
+    this.urlAfterRedirects = urlAfterRedirects;
+    this.state = state;
+    this.shouldActivate = shouldActivate;
+    this.type = 8
+    /* EventType.GuardsCheckEnd */
+    ;
+  }
+
+  toString() {
+    return `GuardsCheckEnd(id: ${this.id}, url: '${this.url}', urlAfterRedirects: '${this.urlAfterRedirects}', state: ${this.state}, shouldActivate: ${this.shouldActivate})`;
+  }
+
+}
+/**
+ * An event triggered at the start of the Resolve phase of routing.
+ *
+ * Runs in the "resolve" phase whether or not there is anything to resolve.
+ * In future, may change to only run when there are things to be resolved.
+ *
+ * @see `ResolveEnd`
+ *
+ * @publicApi
+ */
+
+
+class ResolveStart extends RouterEvent {
+  constructor(
+  /** @docsNotRequired */
+  id,
+  /** @docsNotRequired */
+  url,
+  /** @docsNotRequired */
+  urlAfterRedirects,
+  /** @docsNotRequired */
+  state) {
+    super(id, url);
+    this.urlAfterRedirects = urlAfterRedirects;
+    this.state = state;
+    this.type = 5
+    /* EventType.ResolveStart */
+    ;
+  }
+
+  toString() {
+    return `ResolveStart(id: ${this.id}, url: '${this.url}', urlAfterRedirects: '${this.urlAfterRedirects}', state: ${this.state})`;
+  }
+
+}
+/**
+ * An event triggered at the end of the Resolve phase of routing.
+ * @see `ResolveStart`.
+ *
+ * @publicApi
+ */
+
+
+class ResolveEnd extends RouterEvent {
+  constructor(
+  /** @docsNotRequired */
+  id,
+  /** @docsNotRequired */
+  url,
+  /** @docsNotRequired */
+  urlAfterRedirects,
+  /** @docsNotRequired */
+  state) {
+    super(id, url);
+    this.urlAfterRedirects = urlAfterRedirects;
+    this.state = state;
+    this.type = 6
+    /* EventType.ResolveEnd */
+    ;
+  }
+
+  toString() {
+    return `ResolveEnd(id: ${this.id}, url: '${this.url}', urlAfterRedirects: '${this.urlAfterRedirects}', state: ${this.state})`;
+  }
+
+}
+/**
+ * An event triggered before lazy loading a route configuration.
+ *
+ * @see `RouteConfigLoadEnd`
+ *
+ * @publicApi
+ */
+
+
+class RouteConfigLoadStart {
+  constructor(
+  /** @docsNotRequired */
+  route) {
+    this.route = route;
+    this.type = 9
+    /* EventType.RouteConfigLoadStart */
+    ;
+  }
+
+  toString() {
+    return `RouteConfigLoadStart(path: ${this.route.path})`;
+  }
+
+}
+/**
+ * An event triggered when a route has been lazy loaded.
+ *
+ * @see `RouteConfigLoadStart`
+ *
+ * @publicApi
+ */
+
+
+class RouteConfigLoadEnd {
+  constructor(
+  /** @docsNotRequired */
+  route) {
+    this.route = route;
+    this.type = 10
+    /* EventType.RouteConfigLoadEnd */
+    ;
+  }
+
+  toString() {
+    return `RouteConfigLoadEnd(path: ${this.route.path})`;
+  }
+
+}
+/**
+ * An event triggered at the start of the child-activation
+ * part of the Resolve phase of routing.
+ * @see  `ChildActivationEnd`
+ * @see `ResolveStart`
+ *
+ * @publicApi
+ */
+
+
+class ChildActivationStart {
+  constructor(
+  /** @docsNotRequired */
+  snapshot) {
+    this.snapshot = snapshot;
+    this.type = 11
+    /* EventType.ChildActivationStart */
+    ;
+  }
+
+  toString() {
+    const path = this.snapshot.routeConfig && this.snapshot.routeConfig.path || '';
+    return `ChildActivationStart(path: '${path}')`;
+  }
+
+}
+/**
+ * An event triggered at the end of the child-activation part
+ * of the Resolve phase of routing.
+ * @see `ChildActivationStart`
+ * @see `ResolveStart`
+ * @publicApi
+ */
+
+
+class ChildActivationEnd {
+  constructor(
+  /** @docsNotRequired */
+  snapshot) {
+    this.snapshot = snapshot;
+    this.type = 12
+    /* EventType.ChildActivationEnd */
+    ;
+  }
+
+  toString() {
+    const path = this.snapshot.routeConfig && this.snapshot.routeConfig.path || '';
+    return `ChildActivationEnd(path: '${path}')`;
+  }
+
+}
+/**
+ * An event triggered at the start of the activation part
+ * of the Resolve phase of routing.
+ * @see `ActivationEnd`
+ * @see `ResolveStart`
+ *
+ * @publicApi
+ */
+
+
+class ActivationStart {
+  constructor(
+  /** @docsNotRequired */
+  snapshot) {
+    this.snapshot = snapshot;
+    this.type = 13
+    /* EventType.ActivationStart */
+    ;
+  }
+
+  toString() {
+    const path = this.snapshot.routeConfig && this.snapshot.routeConfig.path || '';
+    return `ActivationStart(path: '${path}')`;
+  }
+
+}
+/**
+ * An event triggered at the end of the activation part
+ * of the Resolve phase of routing.
+ * @see `ActivationStart`
+ * @see `ResolveStart`
+ *
+ * @publicApi
+ */
+
+
+class ActivationEnd {
+  constructor(
+  /** @docsNotRequired */
+  snapshot) {
+    this.snapshot = snapshot;
+    this.type = 14
+    /* EventType.ActivationEnd */
+    ;
+  }
+
+  toString() {
+    const path = this.snapshot.routeConfig && this.snapshot.routeConfig.path || '';
+    return `ActivationEnd(path: '${path}')`;
+  }
+
+}
+/**
+ * An event triggered by scrolling.
+ *
+ * @publicApi
+ */
+
+
+class Scroll {
+  constructor(
+  /** @docsNotRequired */
+  routerEvent,
+  /** @docsNotRequired */
+  position,
+  /** @docsNotRequired */
+  anchor) {
+    this.routerEvent = routerEvent;
+    this.position = position;
+    this.anchor = anchor;
+    this.type = 15
+    /* EventType.Scroll */
+    ;
+  }
+
+  toString() {
+    const pos = this.position ? `${this.position[0]}, ${this.position[1]}` : null;
+    return `Scroll(anchor: '${this.anchor}', position: '${pos}')`;
+  }
+
+}
+
+function stringifyEvent(routerEvent) {
+  if (!('type' in routerEvent)) {
+    return `Unknown Router Event: ${routerEvent.constructor.name}`;
+  }
+
+  switch (routerEvent.type) {
+    case 14
+    /* EventType.ActivationEnd */
+    :
+      return `ActivationEnd(path: '${routerEvent.snapshot.routeConfig?.path || ''}')`;
+
+    case 13
+    /* EventType.ActivationStart */
+    :
+      return `ActivationStart(path: '${routerEvent.snapshot.routeConfig?.path || ''}')`;
+
+    case 12
+    /* EventType.ChildActivationEnd */
+    :
+      return `ChildActivationEnd(path: '${routerEvent.snapshot.routeConfig?.path || ''}')`;
+
+    case 11
+    /* EventType.ChildActivationStart */
+    :
+      return `ChildActivationStart(path: '${routerEvent.snapshot.routeConfig?.path || ''}')`;
+
+    case 8
+    /* EventType.GuardsCheckEnd */
+    :
+      return `GuardsCheckEnd(id: ${routerEvent.id}, url: '${routerEvent.url}', urlAfterRedirects: '${routerEvent.urlAfterRedirects}', state: ${routerEvent.state}, shouldActivate: ${routerEvent.shouldActivate})`;
+
+    case 7
+    /* EventType.GuardsCheckStart */
+    :
+      return `GuardsCheckStart(id: ${routerEvent.id}, url: '${routerEvent.url}', urlAfterRedirects: '${routerEvent.urlAfterRedirects}', state: ${routerEvent.state})`;
+
+    case 2
+    /* EventType.NavigationCancel */
+    :
+      return `NavigationCancel(id: ${routerEvent.id}, url: '${routerEvent.url}')`;
+
+    case 1
+    /* EventType.NavigationEnd */
+    :
+      return `NavigationEnd(id: ${routerEvent.id}, url: '${routerEvent.url}', urlAfterRedirects: '${routerEvent.urlAfterRedirects}')`;
+
+    case 3
+    /* EventType.NavigationError */
+    :
+      return `NavigationError(id: ${routerEvent.id}, url: '${routerEvent.url}', error: ${routerEvent.error})`;
+
+    case 0
+    /* EventType.NavigationStart */
+    :
+      return `NavigationStart(id: ${routerEvent.id}, url: '${routerEvent.url}')`;
+
+    case 6
+    /* EventType.ResolveEnd */
+    :
+      return `ResolveEnd(id: ${routerEvent.id}, url: '${routerEvent.url}', urlAfterRedirects: '${routerEvent.urlAfterRedirects}', state: ${routerEvent.state})`;
+
+    case 5
+    /* EventType.ResolveStart */
+    :
+      return `ResolveStart(id: ${routerEvent.id}, url: '${routerEvent.url}', urlAfterRedirects: '${routerEvent.urlAfterRedirects}', state: ${routerEvent.state})`;
+
+    case 10
+    /* EventType.RouteConfigLoadEnd */
+    :
+      return `RouteConfigLoadEnd(path: ${routerEvent.route.path})`;
+
+    case 9
+    /* EventType.RouteConfigLoadStart */
+    :
+      return `RouteConfigLoadStart(path: ${routerEvent.route.path})`;
+
+    case 4
+    /* EventType.RoutesRecognized */
+    :
+      return `RoutesRecognized(id: ${routerEvent.id}, url: '${routerEvent.url}', urlAfterRedirects: '${routerEvent.urlAfterRedirects}', state: ${routerEvent.state})`;
+
+    case 15
+    /* EventType.Scroll */
+    :
+      const pos = routerEvent.position ? `${routerEvent.position[0]}, ${routerEvent.position[1]}` : null;
+      return `Scroll(anchor: '${routerEvent.anchor}', position: '${pos}')`;
+  }
 }
 /**
  * @license
@@ -106786,362 +107563,42 @@ function createActivatedRoute(c) {
  */
 
 
-function createUrlTree(route, urlTree, commands, queryParams, fragment) {
-  if (commands.length === 0) {
-    return tree(urlTree.root, urlTree.root, urlTree.root, queryParams, fragment);
-  }
+const NAVIGATION_CANCELING_ERROR = 'ngNavigationCancelingError';
 
-  const nav = computeNavigation(commands);
-
-  if (nav.toRoot()) {
-    return tree(urlTree.root, urlTree.root, new UrlSegmentGroup([], {}), queryParams, fragment);
-  }
-
-  function createTreeUsingPathIndex(lastPathIndex) {
-    const startingPosition = findStartingPosition(nav, urlTree, route.snapshot?._urlSegment, lastPathIndex);
-    const segmentGroup = startingPosition.processChildren ? updateSegmentGroupChildren(startingPosition.segmentGroup, startingPosition.index, nav.commands) : updateSegmentGroup(startingPosition.segmentGroup, startingPosition.index, nav.commands);
-    return tree(urlTree.root, startingPosition.segmentGroup, segmentGroup, queryParams, fragment);
-  } // Note: The types should disallow `snapshot` from being `undefined` but due to test mocks, this
-  // may be the case. Since we try to access it at an earlier point before the refactor to add the
-  // warning for `relativeLinkResolution: 'legacy'`, this may cause failures in tests where it
-  // didn't before.
-
-
-  const result = createTreeUsingPathIndex(route.snapshot?._lastPathIndex); // Check if application is relying on `relativeLinkResolution: 'legacy'`
-
-  if (typeof ngDevMode === 'undefined' || !!ngDevMode) {
-    const correctedResult = createTreeUsingPathIndex(route.snapshot?._correctedLastPathIndex);
-
-    if (correctedResult.toString() !== result.toString()) {
-      console.warn(`relativeLinkResolution: 'legacy' is deprecated and will be removed in a future version of Angular. The link to ${result.toString()} will change to ${correctedResult.toString()} if the code is not updated before then.`);
-    }
-  }
-
-  return result;
+function redirectingNavigationError(urlSerializer, redirect) {
+  const {
+    redirectTo,
+    navigationBehaviorOptions
+  } = isUrlTree(redirect) ? {
+    redirectTo: redirect,
+    navigationBehaviorOptions: undefined
+  } : redirect;
+  const error = navigationCancelingError(ngDevMode && `Redirecting to "${urlSerializer.serialize(redirectTo)}"`, 0
+  /* NavigationCancellationCode.Redirect */
+  , redirect);
+  error.url = redirectTo;
+  error.navigationBehaviorOptions = navigationBehaviorOptions;
+  return error;
 }
 
-function isMatrixParams(command) {
-  return typeof command === 'object' && command != null && !command.outlets && !command.segmentPath;
-}
-/**
- * Determines if a given command has an `outlets` map. When we encounter a command
- * with an outlets k/v map, we need to apply each outlet individually to the existing segment.
- */
+function navigationCancelingError(message, code, redirectUrl) {
+  const error = new Error('NavigationCancelingError: ' + (message || ''));
+  error[NAVIGATION_CANCELING_ERROR] = true;
+  error.cancellationCode = code;
 
-
-function isCommandWithOutlets(command) {
-  return typeof command === 'object' && command != null && command.outlets;
-}
-
-function tree(oldRoot, oldSegmentGroup, newSegmentGroup, queryParams, fragment) {
-  let qp = {};
-
-  if (queryParams) {
-    forEach(queryParams, (value, name) => {
-      qp[name] = Array.isArray(value) ? value.map(v => `${v}`) : `${value}`;
-    });
+  if (redirectUrl) {
+    error.url = redirectUrl;
   }
 
-  if (oldRoot === oldSegmentGroup) {
-    return new UrlTree(newSegmentGroup, qp, fragment);
-  }
-
-  const newRoot = replaceSegment(oldRoot, oldSegmentGroup, newSegmentGroup);
-  return new UrlTree(newRoot, qp, fragment);
+  return error;
 }
 
-function replaceSegment(current, oldSegment, newSegment) {
-  const children = {};
-  forEach(current.children, (c, outletName) => {
-    if (c === oldSegment) {
-      children[outletName] = newSegment;
-    } else {
-      children[outletName] = replaceSegment(c, oldSegment, newSegment);
-    }
-  });
-  return new UrlSegmentGroup(current.segments, children);
+function isRedirectingNavigationCancelingError$1(error) {
+  return isNavigationCancelingError$1(error) && isUrlTree(error.url);
 }
 
-class Navigation {
-  constructor(isAbsolute, numberOfDoubleDots, commands) {
-    this.isAbsolute = isAbsolute;
-    this.numberOfDoubleDots = numberOfDoubleDots;
-    this.commands = commands;
-
-    if (isAbsolute && commands.length > 0 && isMatrixParams(commands[0])) {
-      throw new Error('Root segment cannot have matrix parameters');
-    }
-
-    const cmdWithOutlet = commands.find(isCommandWithOutlets);
-
-    if (cmdWithOutlet && cmdWithOutlet !== last(commands)) {
-      throw new Error('{outlets:{}} has to be the last command');
-    }
-  }
-
-  toRoot() {
-    return this.isAbsolute && this.commands.length === 1 && this.commands[0] == '/';
-  }
-
-}
-/** Transforms commands to a normalized `Navigation` */
-
-
-function computeNavigation(commands) {
-  if (typeof commands[0] === 'string' && commands.length === 1 && commands[0] === '/') {
-    return new Navigation(true, 0, commands);
-  }
-
-  let numberOfDoubleDots = 0;
-  let isAbsolute = false;
-  const res = commands.reduce((res, cmd, cmdIdx) => {
-    if (typeof cmd === 'object' && cmd != null) {
-      if (cmd.outlets) {
-        const outlets = {};
-        forEach(cmd.outlets, (commands, name) => {
-          outlets[name] = typeof commands === 'string' ? commands.split('/') : commands;
-        });
-        return [...res, {
-          outlets
-        }];
-      }
-
-      if (cmd.segmentPath) {
-        return [...res, cmd.segmentPath];
-      }
-    }
-
-    if (!(typeof cmd === 'string')) {
-      return [...res, cmd];
-    }
-
-    if (cmdIdx === 0) {
-      cmd.split('/').forEach((urlPart, partIndex) => {
-        if (partIndex == 0 && urlPart === '.') {// skip './a'
-        } else if (partIndex == 0 && urlPart === '') {
-          //  '/a'
-          isAbsolute = true;
-        } else if (urlPart === '..') {
-          //  '../a'
-          numberOfDoubleDots++;
-        } else if (urlPart != '') {
-          res.push(urlPart);
-        }
-      });
-      return res;
-    }
-
-    return [...res, cmd];
-  }, []);
-  return new Navigation(isAbsolute, numberOfDoubleDots, res);
-}
-
-class Position {
-  constructor(segmentGroup, processChildren, index) {
-    this.segmentGroup = segmentGroup;
-    this.processChildren = processChildren;
-    this.index = index;
-  }
-
-}
-
-function findStartingPosition(nav, tree, segmentGroup, lastPathIndex) {
-  if (nav.isAbsolute) {
-    return new Position(tree.root, true, 0);
-  }
-
-  if (lastPathIndex === -1) {
-    // Pathless ActivatedRoute has _lastPathIndex === -1 but should not process children
-    // see issue #26224, #13011, #35687
-    // However, if the ActivatedRoute is the root we should process children like above.
-    const processChildren = segmentGroup === tree.root;
-    return new Position(segmentGroup, processChildren, 0);
-  }
-
-  const modifier = isMatrixParams(nav.commands[0]) ? 0 : 1;
-  const index = lastPathIndex + modifier;
-  return createPositionApplyingDoubleDots(segmentGroup, index, nav.numberOfDoubleDots);
-}
-
-function createPositionApplyingDoubleDots(group, index, numberOfDoubleDots) {
-  let g = group;
-  let ci = index;
-  let dd = numberOfDoubleDots;
-
-  while (dd > ci) {
-    dd -= ci;
-    g = g.parent;
-
-    if (!g) {
-      throw new Error('Invalid number of \'../\'');
-    }
-
-    ci = g.segments.length;
-  }
-
-  return new Position(g, false, ci - dd);
-}
-
-function getOutlets(commands) {
-  if (isCommandWithOutlets(commands[0])) {
-    return commands[0].outlets;
-  }
-
-  return {
-    [PRIMARY_OUTLET]: commands
-  };
-}
-
-function updateSegmentGroup(segmentGroup, startIndex, commands) {
-  if (!segmentGroup) {
-    segmentGroup = new UrlSegmentGroup([], {});
-  }
-
-  if (segmentGroup.segments.length === 0 && segmentGroup.hasChildren()) {
-    return updateSegmentGroupChildren(segmentGroup, startIndex, commands);
-  }
-
-  const m = prefixedWith(segmentGroup, startIndex, commands);
-  const slicedCommands = commands.slice(m.commandIndex);
-
-  if (m.match && m.pathIndex < segmentGroup.segments.length) {
-    const g = new UrlSegmentGroup(segmentGroup.segments.slice(0, m.pathIndex), {});
-    g.children[PRIMARY_OUTLET] = new UrlSegmentGroup(segmentGroup.segments.slice(m.pathIndex), segmentGroup.children);
-    return updateSegmentGroupChildren(g, 0, slicedCommands);
-  } else if (m.match && slicedCommands.length === 0) {
-    return new UrlSegmentGroup(segmentGroup.segments, {});
-  } else if (m.match && !segmentGroup.hasChildren()) {
-    return createNewSegmentGroup(segmentGroup, startIndex, commands);
-  } else if (m.match) {
-    return updateSegmentGroupChildren(segmentGroup, 0, slicedCommands);
-  } else {
-    return createNewSegmentGroup(segmentGroup, startIndex, commands);
-  }
-}
-
-function updateSegmentGroupChildren(segmentGroup, startIndex, commands) {
-  if (commands.length === 0) {
-    return new UrlSegmentGroup(segmentGroup.segments, {});
-  } else {
-    const outlets = getOutlets(commands);
-    const children = {};
-    forEach(outlets, (commands, outlet) => {
-      if (typeof commands === 'string') {
-        commands = [commands];
-      }
-
-      if (commands !== null) {
-        children[outlet] = updateSegmentGroup(segmentGroup.children[outlet], startIndex, commands);
-      }
-    });
-    forEach(segmentGroup.children, (child, childOutlet) => {
-      if (outlets[childOutlet] === undefined) {
-        children[childOutlet] = child;
-      }
-    });
-    return new UrlSegmentGroup(segmentGroup.segments, children);
-  }
-}
-
-function prefixedWith(segmentGroup, startIndex, commands) {
-  let currentCommandIndex = 0;
-  let currentPathIndex = startIndex;
-  const noMatch = {
-    match: false,
-    pathIndex: 0,
-    commandIndex: 0
-  };
-
-  while (currentPathIndex < segmentGroup.segments.length) {
-    if (currentCommandIndex >= commands.length) return noMatch;
-    const path = segmentGroup.segments[currentPathIndex];
-    const command = commands[currentCommandIndex]; // Do not try to consume command as part of the prefixing if it has outlets because it can
-    // contain outlets other than the one being processed. Consuming the outlets command would
-    // result in other outlets being ignored.
-
-    if (isCommandWithOutlets(command)) {
-      break;
-    }
-
-    const curr = `${command}`;
-    const next = currentCommandIndex < commands.length - 1 ? commands[currentCommandIndex + 1] : null;
-    if (currentPathIndex > 0 && curr === undefined) break;
-
-    if (curr && next && typeof next === 'object' && next.outlets === undefined) {
-      if (!compare(curr, next, path)) return noMatch;
-      currentCommandIndex += 2;
-    } else {
-      if (!compare(curr, {}, path)) return noMatch;
-      currentCommandIndex++;
-    }
-
-    currentPathIndex++;
-  }
-
-  return {
-    match: true,
-    pathIndex: currentPathIndex,
-    commandIndex: currentCommandIndex
-  };
-}
-
-function createNewSegmentGroup(segmentGroup, startIndex, commands) {
-  const paths = segmentGroup.segments.slice(0, startIndex);
-  let i = 0;
-
-  while (i < commands.length) {
-    const command = commands[i];
-
-    if (isCommandWithOutlets(command)) {
-      const children = createNewSegmentChildren(command.outlets);
-      return new UrlSegmentGroup(paths, children);
-    } // if we start with an object literal, we need to reuse the path part from the segment
-
-
-    if (i === 0 && isMatrixParams(commands[0])) {
-      const p = segmentGroup.segments[startIndex];
-      paths.push(new UrlSegment(p.path, stringify(commands[0])));
-      i++;
-      continue;
-    }
-
-    const curr = isCommandWithOutlets(command) ? command.outlets[PRIMARY_OUTLET] : `${command}`;
-    const next = i < commands.length - 1 ? commands[i + 1] : null;
-
-    if (curr && next && isMatrixParams(next)) {
-      paths.push(new UrlSegment(curr, stringify(next)));
-      i += 2;
-    } else {
-      paths.push(new UrlSegment(curr, {}));
-      i++;
-    }
-  }
-
-  return new UrlSegmentGroup(paths, {});
-}
-
-function createNewSegmentChildren(outlets) {
-  const children = {};
-  forEach(outlets, (commands, outlet) => {
-    if (typeof commands === 'string') {
-      commands = [commands];
-    }
-
-    if (commands !== null) {
-      children[outlet] = createNewSegmentGroup(new UrlSegmentGroup([], {}), 0, commands);
-    }
-  });
-  return children;
-}
-
-function stringify(params) {
-  const res = {};
-  forEach(params, (v, k) => res[k] = `${v}`);
-  return res;
-}
-
-function compare(path, params, segment) {
-  return path == segment.path && shallowEqual(params, segment.parameters);
+function isNavigationCancelingError$1(error) {
+  return error && error[NAVIGATION_CANCELING_ERROR];
 }
 /**
  * @license
@@ -107249,6 +107706,8 @@ class ChildrenOutletContexts {
  * found in the LICENSE file at https://angular.io/license
  */
 
+
+const NG_DEV_MODE$6 = typeof ngDevMode === 'undefined' || ngDevMode;
 /**
  * @description
  *
@@ -107300,7 +107759,6 @@ class ChildrenOutletContexts {
  *
  * @publicApi
  */
-
 
 class RouterOutlet {
   constructor(parentContexts, location, name, changeDetector, environmentInjector) {
@@ -107367,12 +107825,16 @@ class RouterOutlet {
 
 
   get component() {
-    if (!this.activated) throw new Error('Outlet is not activated');
+    if (!this.activated) throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4012
+    /* RuntimeErrorCode.OUTLET_NOT_ACTIVATED */
+    , NG_DEV_MODE$6 && 'Outlet is not activated');
     return this.activated.instance;
   }
 
   get activatedRoute() {
-    if (!this.activated) throw new Error('Outlet is not activated');
+    if (!this.activated) throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4012
+    /* RuntimeErrorCode.OUTLET_NOT_ACTIVATED */
+    , NG_DEV_MODE$6 && 'Outlet is not activated');
     return this._activatedRoute;
   }
 
@@ -107389,7 +107851,9 @@ class RouterOutlet {
 
 
   detach() {
-    if (!this.activated) throw new Error('Outlet is not activated');
+    if (!this.activated) throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4012
+    /* RuntimeErrorCode.OUTLET_NOT_ACTIVATED */
+    , NG_DEV_MODE$6 && 'Outlet is not activated');
     this.location.detach();
     const cmp = this.activated;
     this.activated = null;
@@ -107421,7 +107885,9 @@ class RouterOutlet {
 
   activateWith(activatedRoute, resolverOrInjector) {
     if (this.isActivated) {
-      throw new Error('Cannot activate an already activated outlet');
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4013
+      /* RuntimeErrorCode.OUTLET_ALREADY_ACTIVATED */
+      , NG_DEV_MODE$6 && 'Cannot activate an already activated outlet');
     }
 
     this._activatedRoute = activatedRoute;
@@ -107634,14 +108100,18 @@ function validateConfig(config, parentPath = '', requireStandaloneComponents = f
 
 function assertStandalone(fullPath, component) {
   if (component && !(0,_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵisStandalone"])(component)) {
-    throw new Error(`Invalid configuration of route '${fullPath}'. The component must be standalone.`);
+    throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4014
+    /* RuntimeErrorCode.INVALID_ROUTE_CONFIG */
+    , `Invalid configuration of route '${fullPath}'. The component must be standalone.`);
   }
 }
 
 function validateNode(route, fullPath, requireStandaloneComponents) {
   if (typeof ngDevMode === 'undefined' || ngDevMode) {
     if (!route) {
-      throw new Error(`
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4014
+      /* RuntimeErrorCode.INVALID_ROUTE_CONFIG */
+      , `
       Invalid configuration of route '${fullPath}': Encountered undefined route.
       The reason might be an extra comma.
 
@@ -107655,56 +108125,82 @@ function validateNode(route, fullPath, requireStandaloneComponents) {
     }
 
     if (Array.isArray(route)) {
-      throw new Error(`Invalid configuration of route '${fullPath}': Array cannot be specified`);
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4014
+      /* RuntimeErrorCode.INVALID_ROUTE_CONFIG */
+      , `Invalid configuration of route '${fullPath}': Array cannot be specified`);
     }
 
     if (!route.component && !route.loadComponent && !route.children && !route.loadChildren && route.outlet && route.outlet !== PRIMARY_OUTLET) {
-      throw new Error(`Invalid configuration of route '${fullPath}': a componentless route without children or loadChildren cannot have a named outlet set`);
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4014
+      /* RuntimeErrorCode.INVALID_ROUTE_CONFIG */
+      , `Invalid configuration of route '${fullPath}': a componentless route without children or loadChildren cannot have a named outlet set`);
     }
 
     if (route.redirectTo && route.children) {
-      throw new Error(`Invalid configuration of route '${fullPath}': redirectTo and children cannot be used together`);
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4014
+      /* RuntimeErrorCode.INVALID_ROUTE_CONFIG */
+      , `Invalid configuration of route '${fullPath}': redirectTo and children cannot be used together`);
     }
 
     if (route.redirectTo && route.loadChildren) {
-      throw new Error(`Invalid configuration of route '${fullPath}': redirectTo and loadChildren cannot be used together`);
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4014
+      /* RuntimeErrorCode.INVALID_ROUTE_CONFIG */
+      , `Invalid configuration of route '${fullPath}': redirectTo and loadChildren cannot be used together`);
     }
 
     if (route.children && route.loadChildren) {
-      throw new Error(`Invalid configuration of route '${fullPath}': children and loadChildren cannot be used together`);
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4014
+      /* RuntimeErrorCode.INVALID_ROUTE_CONFIG */
+      , `Invalid configuration of route '${fullPath}': children and loadChildren cannot be used together`);
     }
 
     if (route.redirectTo && (route.component || route.loadComponent)) {
-      throw new Error(`Invalid configuration of route '${fullPath}': redirectTo and component/loadComponent cannot be used together`);
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4014
+      /* RuntimeErrorCode.INVALID_ROUTE_CONFIG */
+      , `Invalid configuration of route '${fullPath}': redirectTo and component/loadComponent cannot be used together`);
     }
 
     if (route.component && route.loadComponent) {
-      throw new Error(`Invalid configuration of route '${fullPath}': component and loadComponent cannot be used together`);
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4014
+      /* RuntimeErrorCode.INVALID_ROUTE_CONFIG */
+      , `Invalid configuration of route '${fullPath}': component and loadComponent cannot be used together`);
     }
 
     if (route.redirectTo && route.canActivate) {
-      throw new Error(`Invalid configuration of route '${fullPath}': redirectTo and canActivate cannot be used together. Redirects happen before activation ` + `so canActivate will never be executed.`);
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4014
+      /* RuntimeErrorCode.INVALID_ROUTE_CONFIG */
+      , `Invalid configuration of route '${fullPath}': redirectTo and canActivate cannot be used together. Redirects happen before activation ` + `so canActivate will never be executed.`);
     }
 
     if (route.path && route.matcher) {
-      throw new Error(`Invalid configuration of route '${fullPath}': path and matcher cannot be used together`);
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4014
+      /* RuntimeErrorCode.INVALID_ROUTE_CONFIG */
+      , `Invalid configuration of route '${fullPath}': path and matcher cannot be used together`);
     }
 
     if (route.redirectTo === void 0 && !route.component && !route.loadComponent && !route.children && !route.loadChildren) {
-      throw new Error(`Invalid configuration of route '${fullPath}'. One of the following must be provided: component, loadComponent, redirectTo, children or loadChildren`);
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4014
+      /* RuntimeErrorCode.INVALID_ROUTE_CONFIG */
+      , `Invalid configuration of route '${fullPath}'. One of the following must be provided: component, loadComponent, redirectTo, children or loadChildren`);
     }
 
     if (route.path === void 0 && route.matcher === void 0) {
-      throw new Error(`Invalid configuration of route '${fullPath}': routes must have either a path or a matcher specified`);
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4014
+      /* RuntimeErrorCode.INVALID_ROUTE_CONFIG */
+      , `Invalid configuration of route '${fullPath}': routes must have either a path or a matcher specified`);
     }
 
     if (typeof route.path === 'string' && route.path.charAt(0) === '/') {
-      throw new Error(`Invalid configuration of route '${fullPath}': path cannot start with a slash`);
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4014
+      /* RuntimeErrorCode.INVALID_ROUTE_CONFIG */
+      , `Invalid configuration of route '${fullPath}': path cannot start with a slash`);
     }
 
     if (route.path === '' && route.redirectTo !== void 0 && route.pathMatch === void 0) {
       const exp = `The default value of 'pathMatch' is 'prefix', but often the intent is to use 'full'.`;
-      throw new Error(`Invalid configuration of route '{path: "${fullPath}", redirectTo: "${route.redirectTo}"}': please provide 'pathMatch'. ${exp}`);
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4014
+      /* RuntimeErrorCode.INVALID_ROUTE_CONFIG */
+      , `Invalid configuration of route '{path: "${fullPath}", redirectTo: "${route.redirectTo}"}': please provide 'pathMatch'. ${exp}`);
     }
 
     if (requireStandaloneComponents) {
@@ -108004,6 +108500,158 @@ class ActivateRoutes {
  * found in the LICENSE file at https://angular.io/license
  */
 
+
+class CanActivate {
+  constructor(path) {
+    this.path = path;
+    this.route = this.path[this.path.length - 1];
+  }
+
+}
+
+class CanDeactivate {
+  constructor(component, route) {
+    this.component = component;
+    this.route = route;
+  }
+
+}
+
+function getAllRouteGuards(future, curr, parentContexts) {
+  const futureRoot = future._root;
+  const currRoot = curr ? curr._root : null;
+  return getChildRouteGuards(futureRoot, currRoot, parentContexts, [futureRoot.value]);
+}
+
+function getCanActivateChild(p) {
+  const canActivateChild = p.routeConfig ? p.routeConfig.canActivateChild : null;
+  if (!canActivateChild || canActivateChild.length === 0) return null;
+  return {
+    node: p,
+    guards: canActivateChild
+  };
+}
+
+function getToken(token, snapshot, fallbackInjector) {
+  const routeInjector = getClosestRouteInjector(snapshot);
+  const injector = routeInjector ?? fallbackInjector;
+  return injector.get(token);
+}
+
+function getChildRouteGuards(futureNode, currNode, contexts, futurePath, checks = {
+  canDeactivateChecks: [],
+  canActivateChecks: []
+}) {
+  const prevChildren = nodeChildrenAsMap(currNode); // Process the children of the future route
+
+  futureNode.children.forEach(c => {
+    getRouteGuards(c, prevChildren[c.value.outlet], contexts, futurePath.concat([c.value]), checks);
+    delete prevChildren[c.value.outlet];
+  }); // Process any children left from the current route (not active for the future route)
+
+  forEach(prevChildren, (v, k) => deactivateRouteAndItsChildren(v, contexts.getContext(k), checks));
+  return checks;
+}
+
+function getRouteGuards(futureNode, currNode, parentContexts, futurePath, checks = {
+  canDeactivateChecks: [],
+  canActivateChecks: []
+}) {
+  const future = futureNode.value;
+  const curr = currNode ? currNode.value : null;
+  const context = parentContexts ? parentContexts.getContext(futureNode.value.outlet) : null; // reusing the node
+
+  if (curr && future.routeConfig === curr.routeConfig) {
+    const shouldRun = shouldRunGuardsAndResolvers(curr, future, future.routeConfig.runGuardsAndResolvers);
+
+    if (shouldRun) {
+      checks.canActivateChecks.push(new CanActivate(futurePath));
+    } else {
+      // we need to set the data
+      future.data = curr.data;
+      future._resolvedData = curr._resolvedData;
+    } // If we have a component, we need to go through an outlet.
+
+
+    if (future.component) {
+      getChildRouteGuards(futureNode, currNode, context ? context.children : null, futurePath, checks); // if we have a componentless route, we recurse but keep the same outlet map.
+    } else {
+      getChildRouteGuards(futureNode, currNode, parentContexts, futurePath, checks);
+    }
+
+    if (shouldRun && context && context.outlet && context.outlet.isActivated) {
+      checks.canDeactivateChecks.push(new CanDeactivate(context.outlet.component, curr));
+    }
+  } else {
+    if (curr) {
+      deactivateRouteAndItsChildren(currNode, context, checks);
+    }
+
+    checks.canActivateChecks.push(new CanActivate(futurePath)); // If we have a component, we need to go through an outlet.
+
+    if (future.component) {
+      getChildRouteGuards(futureNode, null, context ? context.children : null, futurePath, checks); // if we have a componentless route, we recurse but keep the same outlet map.
+    } else {
+      getChildRouteGuards(futureNode, null, parentContexts, futurePath, checks);
+    }
+  }
+
+  return checks;
+}
+
+function shouldRunGuardsAndResolvers(curr, future, mode) {
+  if (typeof mode === 'function') {
+    return mode(curr, future);
+  }
+
+  switch (mode) {
+    case 'pathParamsChange':
+      return !equalPath(curr.url, future.url);
+
+    case 'pathParamsOrQueryParamsChange':
+      return !equalPath(curr.url, future.url) || !shallowEqual(curr.queryParams, future.queryParams);
+
+    case 'always':
+      return true;
+
+    case 'paramsOrQueryParamsChange':
+      return !equalParamsAndUrlSegments(curr, future) || !shallowEqual(curr.queryParams, future.queryParams);
+
+    case 'paramsChange':
+    default:
+      return !equalParamsAndUrlSegments(curr, future);
+  }
+}
+
+function deactivateRouteAndItsChildren(route, context, checks) {
+  const children = nodeChildrenAsMap(route);
+  const r = route.value;
+  forEach(children, (node, childName) => {
+    if (!r.component) {
+      deactivateRouteAndItsChildren(node, context, checks);
+    } else if (context) {
+      deactivateRouteAndItsChildren(node, context.children.getContext(childName), checks);
+    } else {
+      deactivateRouteAndItsChildren(node, null, checks);
+    }
+  });
+
+  if (!r.component) {
+    checks.canDeactivateChecks.push(new CanDeactivate(null, r));
+  } else if (context && context.outlet && context.outlet.isActivated) {
+    checks.canDeactivateChecks.push(new CanDeactivate(context.outlet.component, r));
+  } else {
+    checks.canDeactivateChecks.push(new CanDeactivate(null, r));
+  }
+}
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
 /**
  * Simple function check, but generic so type inference will flow. Example:
  *
@@ -108027,10 +108675,6 @@ function isBoolean(v) {
   return typeof v === 'boolean';
 }
 
-function isUrlTree(v) {
-  return v instanceof UrlTree;
-}
-
 function isCanLoad(guard) {
   return guard && isFunction(guard.canLoad);
 }
@@ -108046,6 +108690,18 @@ function isCanActivateChild(guard) {
 function isCanDeactivate(guard) {
   return guard && isFunction(guard.canDeactivate);
 }
+
+function isCanMatch(guard) {
+  return guard && isFunction(guard.canMatch);
+}
+
+function isRedirectingNavigationCancelingError(error) {
+  return isNavigationCancelingError(error) && isUrlTree(error.url);
+}
+
+function isNavigationCancelingError(error) {
+  return error && error[NAVIGATION_CANCELING_ERROR];
+}
 /**
  * @license
  * Copyright Google LLC All Rights Reserved.
@@ -108059,31 +108715,180 @@ const INITIAL_VALUE = Symbol('INITIAL_VALUE');
 
 function prioritizedGuardValue() {
   return (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_5__.switchMap)(obs => {
-    return (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.combineLatest)(obs.map(o => o.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_7__.take)(1), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_8__.startWith)(INITIAL_VALUE)))).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_9__.scan)((acc, list) => {
-      let isPending = false;
-      return list.reduce((innerAcc, val, i) => {
-        if (innerAcc !== INITIAL_VALUE) return innerAcc; // Toggle pending flag if any values haven't been set yet
-
-        if (val === INITIAL_VALUE) isPending = true; // Any other return values are only valid if we haven't yet hit a pending
-        // call. This guarantees that in the case of a guard at the bottom of the
-        // tree that returns a redirect, we will wait for the higher priority
-        // guard at the top to finish before performing the redirect.
-
-        if (!isPending) {
-          // Early return when we hit a `false` value as that should always
-          // cancel navigation
-          if (val === false) return val;
-
-          if (i === list.length - 1 || isUrlTree(val)) {
-            return val;
-          }
+    return (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.combineLatest)(obs.map(o => o.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_7__.take)(1), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_8__.startWith)(INITIAL_VALUE)))).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(results => {
+      for (const result of results) {
+        if (result === true) {
+          // If result is true, check the next one
+          continue;
+        } else if (result === INITIAL_VALUE) {
+          // If guard has not finished, we need to stop processing.
+          return INITIAL_VALUE;
+        } else if (result === false || result instanceof UrlTree) {
+          // Result finished and was not true. Return the result.
+          // Note that we only allow false/UrlTree. Other values are considered invalid and
+          // ignored.
+          return result;
         }
+      } // Everything resolved to true. Return true.
 
-        return innerAcc;
-      }, acc);
-    }, INITIAL_VALUE), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.filter)(item => item !== INITIAL_VALUE), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(item => isUrlTree(item) ? item : item === true), //
-    (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_7__.take)(1));
+
+      return true;
+    }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_9__.filter)(item => item !== INITIAL_VALUE), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_7__.take)(1));
   });
+}
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+
+function checkGuards(moduleInjector, forwardEvent) {
+  return (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.mergeMap)(t => {
+    const {
+      targetSnapshot,
+      currentSnapshot,
+      guards: {
+        canActivateChecks,
+        canDeactivateChecks
+      }
+    } = t;
+
+    if (canDeactivateChecks.length === 0 && canActivateChecks.length === 0) {
+      return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)({ ...t,
+        guardsResult: true
+      });
+    }
+
+    return runCanDeactivateChecks(canDeactivateChecks, targetSnapshot, currentSnapshot, moduleInjector).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.mergeMap)(canDeactivate => {
+      return canDeactivate && isBoolean(canDeactivate) ? runCanActivateChecks(targetSnapshot, canActivateChecks, moduleInjector, forwardEvent) : (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(canDeactivate);
+    }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(guardsResult => ({ ...t,
+      guardsResult
+    })));
+  });
+}
+
+function runCanDeactivateChecks(checks, futureRSS, currRSS, moduleInjector) {
+  return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(checks).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.mergeMap)(check => runCanDeactivate(check.component, check.route, currRSS, futureRSS, moduleInjector)), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_11__.first)(result => {
+    return result !== true;
+  }, true));
+}
+
+function runCanActivateChecks(futureSnapshot, checks, moduleInjector, forwardEvent) {
+  return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(checks).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.concatMap)(check => {
+    return (0,rxjs__WEBPACK_IMPORTED_MODULE_13__.concat)(fireChildActivationStart(check.route.parent, forwardEvent), fireActivationStart(check.route, forwardEvent), runCanActivateChild(futureSnapshot, check.path, moduleInjector), runCanActivate(futureSnapshot, check.route, moduleInjector));
+  }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_11__.first)(result => {
+    return result !== true;
+  }, true));
+}
+/**
+ * This should fire off `ActivationStart` events for each route being activated at this
+ * level.
+ * In other words, if you're activating `a` and `b` below, `path` will contain the
+ * `ActivatedRouteSnapshot`s for both and we will fire `ActivationStart` for both. Always
+ * return
+ * `true` so checks continue to run.
+ */
+
+
+function fireActivationStart(snapshot, forwardEvent) {
+  if (snapshot !== null && forwardEvent) {
+    forwardEvent(new ActivationStart(snapshot));
+  }
+
+  return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(true);
+}
+/**
+ * This should fire off `ChildActivationStart` events for each route being activated at this
+ * level.
+ * In other words, if you're activating `a` and `b` below, `path` will contain the
+ * `ActivatedRouteSnapshot`s for both and we will fire `ChildActivationStart` for both. Always
+ * return
+ * `true` so checks continue to run.
+ */
+
+
+function fireChildActivationStart(snapshot, forwardEvent) {
+  if (snapshot !== null && forwardEvent) {
+    forwardEvent(new ChildActivationStart(snapshot));
+  }
+
+  return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(true);
+}
+
+function runCanActivate(futureRSS, futureARS, moduleInjector) {
+  const canActivate = futureARS.routeConfig ? futureARS.routeConfig.canActivate : null;
+  if (!canActivate || canActivate.length === 0) return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(true);
+  const canActivateObservables = canActivate.map(c => {
+    return (0,rxjs__WEBPACK_IMPORTED_MODULE_14__.defer)(() => {
+      const guard = getToken(c, futureARS, moduleInjector);
+      const guardVal = isCanActivate(guard) ? guard.canActivate(futureARS, futureRSS) : guard(futureARS, futureRSS);
+      return wrapIntoObservable(guardVal).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_11__.first)());
+    });
+  });
+  return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(canActivateObservables).pipe(prioritizedGuardValue());
+}
+
+function runCanActivateChild(futureRSS, path, moduleInjector) {
+  const futureARS = path[path.length - 1];
+  const canActivateChildGuards = path.slice(0, path.length - 1).reverse().map(p => getCanActivateChild(p)).filter(_ => _ !== null);
+  const canActivateChildGuardsMapped = canActivateChildGuards.map(d => {
+    return (0,rxjs__WEBPACK_IMPORTED_MODULE_14__.defer)(() => {
+      const guardsMapped = d.guards.map(c => {
+        const guard = getToken(c, d.node, moduleInjector);
+        const guardVal = isCanActivateChild(guard) ? guard.canActivateChild(futureARS, futureRSS) : guard(futureARS, futureRSS);
+        return wrapIntoObservable(guardVal).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_11__.first)());
+      });
+      return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(guardsMapped).pipe(prioritizedGuardValue());
+    });
+  });
+  return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(canActivateChildGuardsMapped).pipe(prioritizedGuardValue());
+}
+
+function runCanDeactivate(component, currARS, currRSS, futureRSS, moduleInjector) {
+  const canDeactivate = currARS && currARS.routeConfig ? currARS.routeConfig.canDeactivate : null;
+  if (!canDeactivate || canDeactivate.length === 0) return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(true);
+  const canDeactivateObservables = canDeactivate.map(c => {
+    const guard = getToken(c, currARS, moduleInjector);
+    const guardVal = isCanDeactivate(guard) ? guard.canDeactivate(component, currARS, currRSS, futureRSS) : guard(component, currARS, currRSS, futureRSS);
+    return wrapIntoObservable(guardVal).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_11__.first)());
+  });
+  return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(canDeactivateObservables).pipe(prioritizedGuardValue());
+}
+
+function runCanLoadGuards(injector, route, segments, urlSerializer) {
+  const canLoad = route.canLoad;
+
+  if (canLoad === undefined || canLoad.length === 0) {
+    return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(true);
+  }
+
+  const canLoadObservables = canLoad.map(injectionToken => {
+    const guard = injector.get(injectionToken);
+    const guardVal = isCanLoad(guard) ? guard.canLoad(route, segments) : guard(route, segments);
+    return wrapIntoObservable(guardVal);
+  });
+  return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(canLoadObservables).pipe(prioritizedGuardValue(), redirectIfUrlTree(urlSerializer));
+}
+
+function redirectIfUrlTree(urlSerializer) {
+  return (0,rxjs__WEBPACK_IMPORTED_MODULE_15__.pipe)((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_16__.tap)(result => {
+    if (!isUrlTree(result)) return;
+    throw redirectingNavigationError(urlSerializer, result);
+  }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(result => result === true));
+}
+
+function runCanMatchGuards(injector, route, segments, urlSerializer) {
+  const canMatch = route.canMatch;
+  if (!canMatch || canMatch.length === 0) return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(true);
+  const canMatchObservables = canMatch.map(injectionToken => {
+    const guard = injector.get(injectionToken);
+    const guardVal = isCanMatch(guard) ? guard.canMatch(route, segments) : guard(route, segments);
+    return wrapIntoObservable(guardVal);
+  });
+  return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(canMatchObservables).pipe(prioritizedGuardValue(), redirectIfUrlTree(urlSerializer));
 }
 /**
  * @license
@@ -108101,6 +108906,20 @@ const noMatch$1 = {
   parameters: {},
   positionalParamSegments: {}
 };
+
+function matchWithChecks(segmentGroup, route, segments, injector, urlSerializer) {
+  const result = match(segmentGroup, route, segments);
+
+  if (!result.matched) {
+    return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(result);
+  } // Only create the Route's `EnvironmentInjector` if it matches the attempted
+  // navigation
+
+
+  injector = getOrCreateRouteInjectorIfNeeded(route, injector);
+  return runCanMatchGuards(injector, route, segments, urlSerializer).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(v => v === true ? result : { ...noMatch$1
+  }));
+}
 
 function match(segmentGroup, route, segments) {
   if (route.path === '') {
@@ -108271,6 +109090,8 @@ function noLeftoversInUrl(segmentGroup, segments, outlet) {
  */
 
 
+const NG_DEV_MODE$5 = typeof ngDevMode === 'undefined' || ngDevMode;
+
 class NoMatch$1 {
   constructor(segmentGroup) {
     this.segmentGroup = segmentGroup || null;
@@ -108286,19 +109107,23 @@ class AbsoluteRedirect {
 }
 
 function noMatch(segmentGroup) {
-  return (0,rxjs__WEBPACK_IMPORTED_MODULE_11__.throwError)(new NoMatch$1(segmentGroup));
+  return (0,rxjs__WEBPACK_IMPORTED_MODULE_17__.throwError)(new NoMatch$1(segmentGroup));
 }
 
 function absoluteRedirect(newTree) {
-  return (0,rxjs__WEBPACK_IMPORTED_MODULE_11__.throwError)(new AbsoluteRedirect(newTree));
+  return (0,rxjs__WEBPACK_IMPORTED_MODULE_17__.throwError)(new AbsoluteRedirect(newTree));
 }
 
 function namedOutletsRedirect(redirectTo) {
-  return (0,rxjs__WEBPACK_IMPORTED_MODULE_11__.throwError)(new Error(`Only absolute redirects can have named outlets. redirectTo: '${redirectTo}'`));
+  return (0,rxjs__WEBPACK_IMPORTED_MODULE_17__.throwError)(new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4000
+  /* RuntimeErrorCode.NAMED_OUTLET_REDIRECT */
+  , NG_DEV_MODE$5 && `Only absolute redirects can have named outlets. redirectTo: '${redirectTo}'`));
 }
 
 function canLoadFails(route) {
-  return (0,rxjs__WEBPACK_IMPORTED_MODULE_11__.throwError)(navigationCancelingError(`Cannot load children because the guard of the route "path: '${route.path}'" returned false`));
+  return (0,rxjs__WEBPACK_IMPORTED_MODULE_17__.throwError)(navigationCancelingError(NG_DEV_MODE$5 && `Cannot load children because the guard of the route "path: '${route.path}'" returned false`, 3
+  /* NavigationCancellationCode.GuardRejected */
+  ));
 }
 /**
  * Returns the `UrlTree` with the redirection applied.
@@ -108334,7 +109159,7 @@ class ApplyRedirects {
     const urlTrees$ = expanded$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(rootSegmentGroup => {
       return this.createUrlTree(squashSegmentGroup(rootSegmentGroup), this.urlTree.queryParams, this.urlTree.fragment);
     }));
-    return urlTrees$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.catchError)(e => {
+    return urlTrees$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.catchError)(e => {
       if (e instanceof AbsoluteRedirect) {
         // After an absolute redirect we do not apply any more redirects!
         // If this implementation changes, update the documentation note in `redirectTo`.
@@ -108356,7 +109181,7 @@ class ApplyRedirects {
     const mapped$ = expanded$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(rootSegmentGroup => {
       return this.createUrlTree(squashSegmentGroup(rootSegmentGroup), tree.queryParams, tree.fragment);
     }));
-    return mapped$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.catchError)(e => {
+    return mapped$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.catchError)(e => {
       if (e instanceof NoMatch$1) {
         throw this.noMatchError(e);
       }
@@ -108366,13 +109191,13 @@ class ApplyRedirects {
   }
 
   noMatchError(e) {
-    return new Error(`Cannot match any routes. URL Segment: '${e.segmentGroup}'`);
+    return new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4002
+    /* RuntimeErrorCode.NO_MATCH */
+    , NG_DEV_MODE$5 && `Cannot match any routes. URL Segment: '${e.segmentGroup}'`);
   }
 
   createUrlTree(rootCandidate, queryParams, fragment) {
-    const root = rootCandidate.segments.length > 0 ? new UrlSegmentGroup([], {
-      [PRIMARY_OUTLET]: rootCandidate
-    }) : rootCandidate;
+    const root = createRoot(rootCandidate);
     return new UrlTree(root, queryParams, fragment);
   }
 
@@ -108398,7 +109223,7 @@ class ApplyRedirects {
       }
     }
 
-    return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(childOutlets).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_13__.concatMap)(childOutlet => {
+    return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(childOutlets).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.concatMap)(childOutlet => {
       const child = segmentGroup.children[childOutlet]; // Sort the routes so routes with outlets that match the segment appear
       // first, followed by routes for other outlets, which might match if they have an
       // empty path.
@@ -108408,24 +109233,24 @@ class ApplyRedirects {
         segment: s,
         outlet: childOutlet
       })));
-    }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_9__.scan)((children, expandedChild) => {
+    }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_19__.scan)((children, expandedChild) => {
       children[expandedChild.outlet] = expandedChild.segment;
       return children;
-    }, {}), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_14__.last)());
+    }, {}), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_20__.last)());
   }
 
   expandSegment(injector, segmentGroup, routes, segments, outlet, allowRedirects) {
-    return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(routes).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_13__.concatMap)(r => {
+    return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(routes).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.concatMap)(r => {
       const expanded$ = this.expandSegmentAgainstRoute(injector, segmentGroup, routes, r, segments, outlet, allowRedirects);
-      return expanded$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.catchError)(e => {
+      return expanded$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.catchError)(e => {
         if (e instanceof NoMatch$1) {
           return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(null);
         }
 
         throw e;
       }));
-    }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_15__.first)(s => !!s), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.catchError)((e, _) => {
-      if (e instanceof rxjs__WEBPACK_IMPORTED_MODULE_16__.EmptyError || e.name === 'EmptyError') {
+    }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_11__.first)(s => !!s), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.catchError)((e, _) => {
+      if (e instanceof rxjs__WEBPACK_IMPORTED_MODULE_21__.EmptyError || e.name === 'EmptyError') {
         if (noLeftoversInUrl(segmentGroup, segments, outlet)) {
           return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(new UrlSegmentGroup([], {}));
         }
@@ -108468,7 +109293,7 @@ class ApplyRedirects {
       return absoluteRedirect(newTree);
     }
 
-    return this.lineralizeSegments(route, newTree).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_17__.mergeMap)(newSegments => {
+    return this.lineralizeSegments(route, newTree).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.mergeMap)(newSegments => {
       const group = new UrlSegmentGroup(newSegments, {});
       return this.expandSegment(injector, group, routes, newSegments, outlet, false);
     }));
@@ -108488,7 +109313,7 @@ class ApplyRedirects {
       return absoluteRedirect(newTree);
     }
 
-    return this.lineralizeSegments(route, newTree).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_17__.mergeMap)(newSegments => {
+    return this.lineralizeSegments(route, newTree).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.mergeMap)(newSegments => {
       return this.expandSegment(injector, segmentGroup, routes, newSegments.concat(remainingSegments), outlet, false);
     }));
   }
@@ -108513,37 +109338,38 @@ class ApplyRedirects {
       return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(new UrlSegmentGroup(segments, {}));
     }
 
-    const {
+    return matchWithChecks(rawSegmentGroup, route, segments, injector, this.urlSerializer).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_5__.switchMap)(({
       matched,
       consumedSegments,
       remainingSegments
-    } = match(rawSegmentGroup, route, segments);
-    if (!matched) return noMatch(rawSegmentGroup); // Only create the Route's `EnvironmentInjector` if it matches the attempted navigation
+    }) => {
+      if (!matched) return noMatch(rawSegmentGroup); // If the route has an injector created from providers, we should start using that.
 
-    injector = getOrCreateRouteInjectorIfNeeded(route, injector);
-    const childConfig$ = this.getChildConfig(injector, route, segments);
-    return childConfig$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_17__.mergeMap)(routerConfig => {
-      const childInjector = routerConfig.injector ?? injector;
-      const childConfig = routerConfig.routes;
-      const {
-        segmentGroup: splitSegmentGroup,
-        slicedSegments
-      } = split(rawSegmentGroup, consumedSegments, remainingSegments, childConfig); // See comment on the other call to `split` about why this is necessary.
+      injector = route._injector ?? injector;
+      const childConfig$ = this.getChildConfig(injector, route, segments);
+      return childConfig$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.mergeMap)(routerConfig => {
+        const childInjector = routerConfig.injector ?? injector;
+        const childConfig = routerConfig.routes;
+        const {
+          segmentGroup: splitSegmentGroup,
+          slicedSegments
+        } = split(rawSegmentGroup, consumedSegments, remainingSegments, childConfig); // See comment on the other call to `split` about why this is necessary.
 
-      const segmentGroup = new UrlSegmentGroup(splitSegmentGroup.segments, splitSegmentGroup.children);
+        const segmentGroup = new UrlSegmentGroup(splitSegmentGroup.segments, splitSegmentGroup.children);
 
-      if (slicedSegments.length === 0 && segmentGroup.hasChildren()) {
-        const expanded$ = this.expandChildren(childInjector, childConfig, segmentGroup);
-        return expanded$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(children => new UrlSegmentGroup(consumedSegments, children)));
-      }
+        if (slicedSegments.length === 0 && segmentGroup.hasChildren()) {
+          const expanded$ = this.expandChildren(childInjector, childConfig, segmentGroup);
+          return expanded$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(children => new UrlSegmentGroup(consumedSegments, children)));
+        }
 
-      if (childConfig.length === 0 && slicedSegments.length === 0) {
-        return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(new UrlSegmentGroup(consumedSegments, {}));
-      }
+        if (childConfig.length === 0 && slicedSegments.length === 0) {
+          return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(new UrlSegmentGroup(consumedSegments, {}));
+        }
 
-      const matchedOnOutlet = getOutlet(route) === outlet;
-      const expanded$ = this.expandSegment(childInjector, segmentGroup, childConfig, slicedSegments, matchedOnOutlet ? PRIMARY_OUTLET : outlet, true);
-      return expanded$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(cs => new UrlSegmentGroup(consumedSegments.concat(cs.segments), cs.children)));
+        const matchedOnOutlet = getOutlet(route) === outlet;
+        const expanded$ = this.expandSegment(childInjector, segmentGroup, childConfig, slicedSegments, matchedOnOutlet ? PRIMARY_OUTLET : outlet, true);
+        return expanded$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(cs => new UrlSegmentGroup(consumedSegments.concat(cs.segments), cs.children)));
+      }));
     }));
   }
 
@@ -108565,9 +109391,9 @@ class ApplyRedirects {
         });
       }
 
-      return this.runCanLoadGuards(injector, route, segments).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_17__.mergeMap)(shouldLoadResult => {
+      return runCanLoadGuards(injector, route, segments, this.urlSerializer).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.mergeMap)(shouldLoadResult => {
         if (shouldLoadResult) {
-          return this.configLoader.loadChildren(injector, route).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.tap)(cfg => {
+          return this.configLoader.loadChildren(injector, route).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_16__.tap)(cfg => {
             route._loadedRoutes = cfg.routes;
             route._loadedInjector = cfg.injector;
           }));
@@ -108581,31 +109407,6 @@ class ApplyRedirects {
       routes: [],
       injector
     });
-  }
-
-  runCanLoadGuards(injector, route, segments) {
-    const canLoad = route.canLoad;
-    if (!canLoad || canLoad.length === 0) return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(true);
-    const canLoadObservables = canLoad.map(injectionToken => {
-      const guard = injector.get(injectionToken);
-      let guardVal;
-
-      if (isCanLoad(guard)) {
-        guardVal = guard.canLoad(route, segments);
-      } else if (isFunction(guard)) {
-        guardVal = guard(route, segments);
-      } else {
-        throw new Error('Invalid CanLoad guard');
-      }
-
-      return wrapIntoObservable(guardVal);
-    });
-    return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(canLoadObservables).pipe(prioritizedGuardValue(), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.tap)(result => {
-      if (!isUrlTree(result)) return;
-      const error = navigationCancelingError(`Redirecting to "${this.urlSerializer.serialize(result)}"`);
-      error.url = result;
-      throw error;
-    }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(result => result === true));
   }
 
   lineralizeSegments(route, urlTree) {
@@ -108628,10 +109429,10 @@ class ApplyRedirects {
   }
 
   applyRedirectCommands(segments, redirectTo, posParams) {
-    return this.applyRedirectCreatreUrlTree(redirectTo, this.urlSerializer.parse(redirectTo), segments, posParams);
+    return this.applyRedirectCreateUrlTree(redirectTo, this.urlSerializer.parse(redirectTo), segments, posParams);
   }
 
-  applyRedirectCreatreUrlTree(redirectTo, urlTree, segments, posParams) {
+  applyRedirectCreateUrlTree(redirectTo, urlTree, segments, posParams) {
     const newRoot = this.createSegmentGroup(redirectTo, urlTree.root, segments, posParams);
     return new UrlTree(newRoot, this.createQueryParams(urlTree.queryParams, this.urlTree.queryParams), urlTree.fragment);
   }
@@ -108666,7 +109467,9 @@ class ApplyRedirects {
 
   findPosParam(redirectTo, redirectToUrlSegment, posParams) {
     const pos = posParams[redirectToUrlSegment.path.substring(1)];
-    if (!pos) throw new Error(`Cannot redirect to '${redirectTo}'. Cannot find '${redirectToUrlSegment.path}'.`);
+    if (!pos) throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4001
+    /* RuntimeErrorCode.MISSING_REDIRECT */
+    , NG_DEV_MODE$5 && `Cannot redirect to '${redirectTo}'. Cannot find '${redirectToUrlSegment.path}'.`);
     return pos;
   }
 
@@ -108685,46 +109488,6 @@ class ApplyRedirects {
     return redirectToUrlSegment;
   }
 
-}
-/**
- * When possible, merges the primary outlet child into the parent `UrlSegmentGroup`.
- *
- * When a segment group has only one child which is a primary outlet, merges that child into the
- * parent. That is, the child segment group's segments are merged into the `s` and the child's
- * children become the children of `s`. Think of this like a 'squash', merging the child segment
- * group into the parent.
- */
-
-
-function mergeTrivialChildren(s) {
-  if (s.numberOfChildren === 1 && s.children[PRIMARY_OUTLET]) {
-    const c = s.children[PRIMARY_OUTLET];
-    return new UrlSegmentGroup(s.segments.concat(c.segments), c.children);
-  }
-
-  return s;
-}
-/**
- * Recursively merges primary segment children into their parents and also drops empty children
- * (those which have no segments and no children themselves). The latter prevents serializing a
- * group into something like `/a(aux:)`, where `aux` is an empty child segment.
- */
-
-
-function squashSegmentGroup(segmentGroup) {
-  const newChildren = {};
-
-  for (const childOutlet of Object.keys(segmentGroup.children)) {
-    const child = segmentGroup.children[childOutlet];
-    const childCandidate = squashSegmentGroup(child); // don't add empty children
-
-    if (childCandidate.segments.length > 0 || childCandidate.hasChildren()) {
-      newChildren[childOutlet] = childCandidate;
-    }
-  }
-
-  const s = new UrlSegmentGroup(segmentGroup.segments, newChildren);
-  return mergeTrivialChildren(s);
 }
 /**
  * @license
@@ -108749,357 +109512,53 @@ function applyRedirects(environmentInjector, configLoader, urlSerializer, config
  */
 
 
-class CanActivate {
-  constructor(path) {
-    this.path = path;
-    this.route = this.path[this.path.length - 1];
-  }
-
-}
-
-class CanDeactivate {
-  constructor(component, route) {
-    this.component = component;
-    this.route = route;
-  }
-
-}
-
-function getAllRouteGuards(future, curr, parentContexts) {
-  const futureRoot = future._root;
-  const currRoot = curr ? curr._root : null;
-  return getChildRouteGuards(futureRoot, currRoot, parentContexts, [futureRoot.value]);
-}
-
-function getCanActivateChild(p) {
-  const canActivateChild = p.routeConfig ? p.routeConfig.canActivateChild : null;
-  if (!canActivateChild || canActivateChild.length === 0) return null;
-  return {
-    node: p,
-    guards: canActivateChild
-  };
-}
-
-function getToken(token, snapshot, fallbackInjector) {
-  const routeInjector = getClosestRouteInjector(snapshot);
-  const injector = routeInjector ?? fallbackInjector;
-  return injector.get(token);
-}
-
-function getChildRouteGuards(futureNode, currNode, contexts, futurePath, checks = {
-  canDeactivateChecks: [],
-  canActivateChecks: []
-}) {
-  const prevChildren = nodeChildrenAsMap(currNode); // Process the children of the future route
-
-  futureNode.children.forEach(c => {
-    getRouteGuards(c, prevChildren[c.value.outlet], contexts, futurePath.concat([c.value]), checks);
-    delete prevChildren[c.value.outlet];
-  }); // Process any children left from the current route (not active for the future route)
-
-  forEach(prevChildren, (v, k) => deactivateRouteAndItsChildren(v, contexts.getContext(k), checks));
-  return checks;
-}
-
-function getRouteGuards(futureNode, currNode, parentContexts, futurePath, checks = {
-  canDeactivateChecks: [],
-  canActivateChecks: []
-}) {
-  const future = futureNode.value;
-  const curr = currNode ? currNode.value : null;
-  const context = parentContexts ? parentContexts.getContext(futureNode.value.outlet) : null; // reusing the node
-
-  if (curr && future.routeConfig === curr.routeConfig) {
-    const shouldRun = shouldRunGuardsAndResolvers(curr, future, future.routeConfig.runGuardsAndResolvers);
-
-    if (shouldRun) {
-      checks.canActivateChecks.push(new CanActivate(futurePath));
-    } else {
-      // we need to set the data
-      future.data = curr.data;
-      future._resolvedData = curr._resolvedData;
-    } // If we have a component, we need to go through an outlet.
-
-
-    if (future.component) {
-      getChildRouteGuards(futureNode, currNode, context ? context.children : null, futurePath, checks); // if we have a componentless route, we recurse but keep the same outlet map.
-    } else {
-      getChildRouteGuards(futureNode, currNode, parentContexts, futurePath, checks);
-    }
-
-    if (shouldRun && context && context.outlet && context.outlet.isActivated) {
-      checks.canDeactivateChecks.push(new CanDeactivate(context.outlet.component, curr));
-    }
-  } else {
-    if (curr) {
-      deactivateRouteAndItsChildren(currNode, context, checks);
-    }
-
-    checks.canActivateChecks.push(new CanActivate(futurePath)); // If we have a component, we need to go through an outlet.
-
-    if (future.component) {
-      getChildRouteGuards(futureNode, null, context ? context.children : null, futurePath, checks); // if we have a componentless route, we recurse but keep the same outlet map.
-    } else {
-      getChildRouteGuards(futureNode, null, parentContexts, futurePath, checks);
-    }
-  }
-
-  return checks;
-}
-
-function shouldRunGuardsAndResolvers(curr, future, mode) {
-  if (typeof mode === 'function') {
-    return mode(curr, future);
-  }
-
-  switch (mode) {
-    case 'pathParamsChange':
-      return !equalPath(curr.url, future.url);
-
-    case 'pathParamsOrQueryParamsChange':
-      return !equalPath(curr.url, future.url) || !shallowEqual(curr.queryParams, future.queryParams);
-
-    case 'always':
-      return true;
-
-    case 'paramsOrQueryParamsChange':
-      return !equalParamsAndUrlSegments(curr, future) || !shallowEqual(curr.queryParams, future.queryParams);
-
-    case 'paramsChange':
-    default:
-      return !equalParamsAndUrlSegments(curr, future);
-  }
-}
-
-function deactivateRouteAndItsChildren(route, context, checks) {
-  const children = nodeChildrenAsMap(route);
-  const r = route.value;
-  forEach(children, (node, childName) => {
-    if (!r.component) {
-      deactivateRouteAndItsChildren(node, context, checks);
-    } else if (context) {
-      deactivateRouteAndItsChildren(node, context.children.getContext(childName), checks);
-    } else {
-      deactivateRouteAndItsChildren(node, null, checks);
-    }
-  });
-
-  if (!r.component) {
-    checks.canDeactivateChecks.push(new CanDeactivate(null, r));
-  } else if (context && context.outlet && context.outlet.isActivated) {
-    checks.canDeactivateChecks.push(new CanDeactivate(context.outlet.component, r));
-  } else {
-    checks.canDeactivateChecks.push(new CanDeactivate(null, r));
-  }
-}
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-
-function checkGuards(moduleInjector, forwardEvent) {
-  return (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_17__.mergeMap)(t => {
-    const {
-      targetSnapshot,
-      currentSnapshot,
-      guards: {
-        canActivateChecks,
-        canDeactivateChecks
-      }
-    } = t;
-
-    if (canDeactivateChecks.length === 0 && canActivateChecks.length === 0) {
-      return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)({ ...t,
-        guardsResult: true
-      });
-    }
-
-    return runCanDeactivateChecks(canDeactivateChecks, targetSnapshot, currentSnapshot, moduleInjector).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_17__.mergeMap)(canDeactivate => {
-      return canDeactivate && isBoolean(canDeactivate) ? runCanActivateChecks(targetSnapshot, canActivateChecks, moduleInjector, forwardEvent) : (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(canDeactivate);
-    }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(guardsResult => ({ ...t,
-      guardsResult
-    })));
-  });
-}
-
-function runCanDeactivateChecks(checks, futureRSS, currRSS, moduleInjector) {
-  return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(checks).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_17__.mergeMap)(check => runCanDeactivate(check.component, check.route, currRSS, futureRSS, moduleInjector)), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_15__.first)(result => {
-    return result !== true;
-  }, true));
-}
-
-function runCanActivateChecks(futureSnapshot, checks, moduleInjector, forwardEvent) {
-  return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(checks).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_13__.concatMap)(check => {
-    return (0,rxjs__WEBPACK_IMPORTED_MODULE_19__.concat)(fireChildActivationStart(check.route.parent, forwardEvent), fireActivationStart(check.route, forwardEvent), runCanActivateChild(futureSnapshot, check.path, moduleInjector), runCanActivate(futureSnapshot, check.route, moduleInjector));
-  }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_15__.first)(result => {
-    return result !== true;
-  }, true));
-}
-/**
- * This should fire off `ActivationStart` events for each route being activated at this
- * level.
- * In other words, if you're activating `a` and `b` below, `path` will contain the
- * `ActivatedRouteSnapshot`s for both and we will fire `ActivationStart` for both. Always
- * return
- * `true` so checks continue to run.
- */
-
-
-function fireActivationStart(snapshot, forwardEvent) {
-  if (snapshot !== null && forwardEvent) {
-    forwardEvent(new ActivationStart(snapshot));
-  }
-
-  return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(true);
-}
-/**
- * This should fire off `ChildActivationStart` events for each route being activated at this
- * level.
- * In other words, if you're activating `a` and `b` below, `path` will contain the
- * `ActivatedRouteSnapshot`s for both and we will fire `ChildActivationStart` for both. Always
- * return
- * `true` so checks continue to run.
- */
-
-
-function fireChildActivationStart(snapshot, forwardEvent) {
-  if (snapshot !== null && forwardEvent) {
-    forwardEvent(new ChildActivationStart(snapshot));
-  }
-
-  return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(true);
-}
-
-function runCanActivate(futureRSS, futureARS, moduleInjector) {
-  const canActivate = futureARS.routeConfig ? futureARS.routeConfig.canActivate : null;
-  if (!canActivate || canActivate.length === 0) return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(true);
-  const canActivateObservables = canActivate.map(c => {
-    return (0,rxjs__WEBPACK_IMPORTED_MODULE_20__.defer)(() => {
-      const guard = getToken(c, futureARS, moduleInjector);
-      let observable;
-
-      if (isCanActivate(guard)) {
-        observable = wrapIntoObservable(guard.canActivate(futureARS, futureRSS));
-      } else if (isFunction(guard)) {
-        observable = wrapIntoObservable(guard(futureARS, futureRSS));
-      } else {
-        throw new Error('Invalid CanActivate guard');
-      }
-
-      return observable.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_15__.first)());
-    });
-  });
-  return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(canActivateObservables).pipe(prioritizedGuardValue());
-}
-
-function runCanActivateChild(futureRSS, path, moduleInjector) {
-  const futureARS = path[path.length - 1];
-  const canActivateChildGuards = path.slice(0, path.length - 1).reverse().map(p => getCanActivateChild(p)).filter(_ => _ !== null);
-  const canActivateChildGuardsMapped = canActivateChildGuards.map(d => {
-    return (0,rxjs__WEBPACK_IMPORTED_MODULE_20__.defer)(() => {
-      const guardsMapped = d.guards.map(c => {
-        const guard = getToken(c, d.node, moduleInjector);
-        let observable;
-
-        if (isCanActivateChild(guard)) {
-          observable = wrapIntoObservable(guard.canActivateChild(futureARS, futureRSS));
-        } else if (isFunction(guard)) {
-          observable = wrapIntoObservable(guard(futureARS, futureRSS));
-        } else {
-          throw new Error('Invalid CanActivateChild guard');
-        }
-
-        return observable.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_15__.first)());
-      });
-      return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(guardsMapped).pipe(prioritizedGuardValue());
-    });
-  });
-  return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(canActivateChildGuardsMapped).pipe(prioritizedGuardValue());
-}
-
-function runCanDeactivate(component, currARS, currRSS, futureRSS, moduleInjector) {
-  const canDeactivate = currARS && currARS.routeConfig ? currARS.routeConfig.canDeactivate : null;
-  if (!canDeactivate || canDeactivate.length === 0) return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(true);
-  const canDeactivateObservables = canDeactivate.map(c => {
-    const guard = getToken(c, currARS, moduleInjector);
-    let observable;
-
-    if (isCanDeactivate(guard)) {
-      observable = wrapIntoObservable(guard.canDeactivate(component, currARS, currRSS, futureRSS));
-    } else if (isFunction(guard)) {
-      observable = wrapIntoObservable(guard(component, currARS, currRSS, futureRSS));
-    } else {
-      throw new Error('Invalid CanDeactivate guard');
-    }
-
-    return observable.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_15__.first)());
-  });
-  return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(canDeactivateObservables).pipe(prioritizedGuardValue());
-}
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-
-const NG_DEV_MODE$3 = typeof ngDevMode === 'undefined' || !!ngDevMode;
+const NG_DEV_MODE$4 = typeof ngDevMode === 'undefined' || !!ngDevMode;
 
 class NoMatch {}
 
 function newObservableError(e) {
   // TODO(atscott): This pattern is used throughout the router code and can be `throwError` instead.
-  return new rxjs__WEBPACK_IMPORTED_MODULE_21__.Observable(obs => obs.error(e));
+  return new rxjs__WEBPACK_IMPORTED_MODULE_22__.Observable(obs => obs.error(e));
 }
 
-function recognize$1(rootComponentType, config, urlTree, url, paramsInheritanceStrategy = 'emptyOnly', relativeLinkResolution = 'legacy') {
-  try {
-    const result = new Recognizer(rootComponentType, config, urlTree, url, paramsInheritanceStrategy, relativeLinkResolution).recognize();
-
+function recognize$1(injector, rootComponentType, config, urlTree, url, urlSerializer, paramsInheritanceStrategy = 'emptyOnly', relativeLinkResolution = 'legacy') {
+  return new Recognizer(injector, rootComponentType, config, urlTree, url, paramsInheritanceStrategy, relativeLinkResolution, urlSerializer).recognize().pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_5__.switchMap)(result => {
     if (result === null) {
       return newObservableError(new NoMatch());
     } else {
       return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(result);
     }
-  } catch (e) {
-    // Catch the potential error from recognize due to duplicate outlet matches and return as an
-    // `Observable` error instead.
-    return newObservableError(e);
-  }
+  }));
 }
 
 class Recognizer {
-  constructor(rootComponentType, config, urlTree, url, paramsInheritanceStrategy, relativeLinkResolution) {
+  constructor(injector, rootComponentType, config, urlTree, url, paramsInheritanceStrategy, relativeLinkResolution, urlSerializer) {
+    this.injector = injector;
     this.rootComponentType = rootComponentType;
     this.config = config;
     this.urlTree = urlTree;
     this.url = url;
     this.paramsInheritanceStrategy = paramsInheritanceStrategy;
     this.relativeLinkResolution = relativeLinkResolution;
+    this.urlSerializer = urlSerializer;
   }
 
   recognize() {
     const rootSegmentGroup = split(this.urlTree.root, [], [], this.config.filter(c => c.redirectTo === undefined), this.relativeLinkResolution).segmentGroup;
-    const children = this.processSegmentGroup(this.config, rootSegmentGroup, PRIMARY_OUTLET);
+    return this.processSegmentGroup(this.injector, this.config, rootSegmentGroup, PRIMARY_OUTLET).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(children => {
+      if (children === null) {
+        return null;
+      } // Use Object.freeze to prevent readers of the Router state from modifying it outside of a
+      // navigation, resulting in the router being out of sync with the browser.
 
-    if (children === null) {
-      return null;
-    } // Use Object.freeze to prevent readers of the Router state from modifying it outside of a
-    // navigation, resulting in the router being out of sync with the browser.
 
-
-    const root = new ActivatedRouteSnapshot([], Object.freeze({}), Object.freeze({ ...this.urlTree.queryParams
-    }), this.urlTree.fragment, {}, PRIMARY_OUTLET, this.rootComponentType, null, this.urlTree.root, -1, {});
-    const rootNode = new TreeNode(root, children);
-    const routeState = new RouterStateSnapshot(this.url, rootNode);
-    this.inheritParamsAndData(routeState._root);
-    return routeState;
+      const root = new ActivatedRouteSnapshot([], Object.freeze({}), Object.freeze({ ...this.urlTree.queryParams
+      }), this.urlTree.fragment, {}, PRIMARY_OUTLET, this.rootComponentType, null, this.urlTree.root, -1, {});
+      const rootNode = new TreeNode(root, children);
+      const routeState = new RouterStateSnapshot(this.url, rootNode);
+      this.inheritParamsAndData(routeState._root);
+      return routeState;
+    }));
   }
 
   inheritParamsAndData(routeNode) {
@@ -109110,12 +109569,12 @@ class Recognizer {
     routeNode.children.forEach(n => this.inheritParamsAndData(n));
   }
 
-  processSegmentGroup(config, segmentGroup, outlet) {
+  processSegmentGroup(injector, config, segmentGroup, outlet) {
     if (segmentGroup.segments.length === 0 && segmentGroup.hasChildren()) {
-      return this.processChildren(config, segmentGroup);
+      return this.processChildren(injector, config, segmentGroup);
     }
 
-    return this.processSegment(config, segmentGroup, segmentGroup.segments, outlet);
+    return this.processSegment(injector, config, segmentGroup, segmentGroup.segments, outlet);
   }
   /**
    * Matches every child outlet in the `segmentGroup` to a `Route` in the config. Returns `null` if
@@ -109127,123 +109586,144 @@ class Recognizer {
    */
 
 
-  processChildren(config, segmentGroup) {
-    const children = [];
-
-    for (const childOutlet of Object.keys(segmentGroup.children)) {
-      const child = segmentGroup.children[childOutlet]; // Sort the config so that routes with outlets that match the one being activated appear
-      // first, followed by routes for other outlets, which might match if they have an empty path.
+  processChildren(injector, config, segmentGroup) {
+    return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(Object.keys(segmentGroup.children)).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.concatMap)(childOutlet => {
+      const child = segmentGroup.children[childOutlet]; // Sort the config so that routes with outlets that match the one being activated
+      // appear first, followed by routes for other outlets, which might match if they have
+      // an empty path.
 
       const sortedConfig = sortByMatchingOutlets(config, childOutlet);
-      const outletChildren = this.processSegmentGroup(sortedConfig, child, childOutlet);
-
-      if (outletChildren === null) {
-        // Configs must match all segment children so because we did not find a match for this
-        // outlet, return `null`.
-        return null;
-      }
-
+      return this.processSegmentGroup(injector, sortedConfig, child, childOutlet);
+    }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_19__.scan)((children, outletChildren) => {
+      if (!children || !outletChildren) return null;
       children.push(...outletChildren);
-    } // Because we may have matched two outlets to the same empty path segment, we can have multiple
-    // activated results for the same outlet. We should merge the children of these results so the
-    // final return value is only one `TreeNode` per outlet.
+      return children;
+    }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_23__.takeWhile)(children => children !== null), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_24__.defaultIfEmpty)(null), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_20__.last)(), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(children => {
+      if (children === null) return null; // Because we may have matched two outlets to the same empty path segment, we can have
+      // multiple activated results for the same outlet. We should merge the children of
+      // these results so the final return value is only one `TreeNode` per outlet.
 
+      const mergedChildren = mergeEmptyPathMatches(children);
 
-    const mergedChildren = mergeEmptyPathMatches(children);
-
-    if (typeof ngDevMode === 'undefined' || ngDevMode) {
-      // This should really never happen - we are only taking the first match for each outlet and
-      // merge the empty path matches.
-      checkOutletNameUniqueness(mergedChildren);
-    }
-
-    sortActivatedRouteSnapshots(mergedChildren);
-    return mergedChildren;
-  }
-
-  processSegment(config, segmentGroup, segments, outlet) {
-    for (const r of config) {
-      const children = this.processSegmentAgainstRoute(r, segmentGroup, segments, outlet);
-
-      if (children !== null) {
-        return children;
+      if (NG_DEV_MODE$4) {
+        // This should really never happen - we are only taking the first match for each
+        // outlet and merge the empty path matches.
+        checkOutletNameUniqueness(mergedChildren);
       }
-    }
 
-    if (noLeftoversInUrl(segmentGroup, segments, outlet)) {
-      return [];
-    }
-
-    return null;
+      sortActivatedRouteSnapshots(mergedChildren);
+      return mergedChildren;
+    }));
   }
 
-  processSegmentAgainstRoute(route, rawSegment, segments, outlet) {
-    if (route.redirectTo || !isImmediateMatch(route, rawSegment, segments, outlet)) return null;
-    let snapshot;
-    let consumedSegments = [];
-    let remainingSegments = [];
+  processSegment(injector, routes, segmentGroup, segments, outlet) {
+    return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(routes).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.concatMap)(r => {
+      return this.processSegmentAgainstRoute(r._injector ?? injector, r, segmentGroup, segments, outlet);
+    }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_11__.first)(x => !!x), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.catchError)(e => {
+      if (e instanceof rxjs__WEBPACK_IMPORTED_MODULE_21__.EmptyError) {
+        if (noLeftoversInUrl(segmentGroup, segments, outlet)) {
+          return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)([]);
+        }
+
+        return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(null);
+      }
+
+      throw e;
+    }));
+  }
+
+  processSegmentAgainstRoute(injector, route, rawSegment, segments, outlet) {
+    if (route.redirectTo || !isImmediateMatch(route, rawSegment, segments, outlet)) return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(null);
+    let matchResult;
 
     if (route.path === '**') {
       const params = segments.length > 0 ? last(segments).parameters : {};
       const pathIndexShift = getPathIndexShift(rawSegment) + segments.length;
-      snapshot = new ActivatedRouteSnapshot(segments, params, Object.freeze({ ...this.urlTree.queryParams
+      const snapshot = new ActivatedRouteSnapshot(segments, params, Object.freeze({ ...this.urlTree.queryParams
       }), this.urlTree.fragment, getData(route), getOutlet(route), route.component ?? route._loadedComponent ?? null, route, getSourceSegmentGroup(rawSegment), pathIndexShift, getResolve(route), // NG_DEV_MODE is used to prevent the getCorrectedPathIndexShift function from affecting
       // production bundle size. This value is intended only to surface a warning to users
       // depending on `relativeLinkResolution: 'legacy'` in dev mode.
-      NG_DEV_MODE$3 ? getCorrectedPathIndexShift(rawSegment) + segments.length : pathIndexShift);
+      NG_DEV_MODE$4 ? getCorrectedPathIndexShift(rawSegment) + segments.length : pathIndexShift);
+      matchResult = (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)({
+        snapshot,
+        consumedSegments: [],
+        remainingSegments: []
+      });
     } else {
-      const result = match(rawSegment, route, segments);
+      matchResult = matchWithChecks(rawSegment, route, segments, injector, this.urlSerializer).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(({
+        matched,
+        consumedSegments,
+        remainingSegments,
+        parameters
+      }) => {
+        if (!matched) {
+          return null;
+        }
 
-      if (!result.matched) {
-        return null;
+        const pathIndexShift = getPathIndexShift(rawSegment) + consumedSegments.length;
+        const snapshot = new ActivatedRouteSnapshot(consumedSegments, parameters, Object.freeze({ ...this.urlTree.queryParams
+        }), this.urlTree.fragment, getData(route), getOutlet(route), route.component ?? route._loadedComponent ?? null, route, getSourceSegmentGroup(rawSegment), pathIndexShift, getResolve(route), NG_DEV_MODE$4 ? getCorrectedPathIndexShift(rawSegment) + consumedSegments.length : pathIndexShift);
+        return {
+          snapshot,
+          consumedSegments,
+          remainingSegments
+        };
+      }));
+    }
+
+    return matchResult.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_5__.switchMap)(result => {
+      if (result === null) {
+        return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(null);
       }
 
-      consumedSegments = result.consumedSegments;
-      remainingSegments = result.remainingSegments;
-      const pathIndexShift = getPathIndexShift(rawSegment) + consumedSegments.length;
-      snapshot = new ActivatedRouteSnapshot(consumedSegments, result.parameters, Object.freeze({ ...this.urlTree.queryParams
-      }), this.urlTree.fragment, getData(route), getOutlet(route), route.component ?? route._loadedComponent ?? null, route, getSourceSegmentGroup(rawSegment), pathIndexShift, getResolve(route), NG_DEV_MODE$3 ? getCorrectedPathIndexShift(rawSegment) + consumedSegments.length : pathIndexShift);
-    }
+      const {
+        snapshot,
+        consumedSegments,
+        remainingSegments
+      } = result; // If the route has an injector created from providers, we should start using that.
 
-    const childConfig = getChildConfig(route);
-    const {
-      segmentGroup,
-      slicedSegments
-    } = split(rawSegment, consumedSegments, remainingSegments, // Filter out routes with redirectTo because we are trying to create activated route
-    // snapshots and don't handle redirects here. That should have been done in
-    // `applyRedirects`.
-    childConfig.filter(c => c.redirectTo === undefined), this.relativeLinkResolution);
+      injector = route._injector ?? injector;
+      const childInjector = route._loadedInjector ?? injector;
+      const childConfig = getChildConfig(route);
+      const {
+        segmentGroup,
+        slicedSegments
+      } = split(rawSegment, consumedSegments, remainingSegments, // Filter out routes with redirectTo because we are trying to create activated route
+      // snapshots and don't handle redirects here. That should have been done in
+      // `applyRedirects`.
+      childConfig.filter(c => c.redirectTo === undefined), this.relativeLinkResolution);
 
-    if (slicedSegments.length === 0 && segmentGroup.hasChildren()) {
-      const children = this.processChildren(childConfig, segmentGroup);
+      if (slicedSegments.length === 0 && segmentGroup.hasChildren()) {
+        return this.processChildren(childInjector, childConfig, segmentGroup).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(children => {
+          if (children === null) {
+            return null;
+          }
 
-      if (children === null) {
-        return null;
+          return [new TreeNode(snapshot, children)];
+        }));
       }
 
-      return [new TreeNode(snapshot, children)];
-    }
+      if (childConfig.length === 0 && slicedSegments.length === 0) {
+        return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)([new TreeNode(snapshot, [])]);
+      }
 
-    if (childConfig.length === 0 && slicedSegments.length === 0) {
-      return [new TreeNode(snapshot, [])];
-    }
+      const matchedOnOutlet = getOutlet(route) === outlet; // If we matched a config due to empty path match on a different outlet, we need to
+      // continue passing the current outlet for the segment rather than switch to PRIMARY.
+      // Note that we switch to primary when we have a match because outlet configs look like
+      // this: {path: 'a', outlet: 'a', children: [
+      //  {path: 'b', component: B},
+      //  {path: 'c', component: C},
+      // ]}
+      // Notice that the children of the named outlet are configured with the primary outlet
 
-    const matchedOnOutlet = getOutlet(route) === outlet; // If we matched a config due to empty path match on a different outlet, we need to continue
-    // passing the current outlet for the segment rather than switch to PRIMARY.
-    // Note that we switch to primary when we have a match because outlet configs look like this:
-    // {path: 'a', outlet: 'a', children: [
-    //  {path: 'b', component: B},
-    //  {path: 'c', component: C},
-    // ]}
-    // Notice that the children of the named outlet are configured with the primary outlet
+      return this.processSegment(childInjector, childConfig, segmentGroup, slicedSegments, matchedOnOutlet ? PRIMARY_OUTLET : outlet).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(children => {
+        if (children === null) {
+          return null;
+        }
 
-    const children = this.processSegment(childConfig, segmentGroup, slicedSegments, matchedOnOutlet ? PRIMARY_OUTLET : outlet);
-
-    if (children === null) {
-      return null;
-    }
-
-    return [new TreeNode(snapshot, children)];
+        return [new TreeNode(snapshot, children)];
+      }));
+    }));
   }
 
 }
@@ -109273,9 +109753,9 @@ function hasEmptyPathConfig(node) {
   return config && config.path === '' && config.redirectTo === undefined;
 }
 /**
- * Finds `TreeNode`s with matching empty path route configs and merges them into `TreeNode` with the
- * children from each duplicate. This is necessary because different outlets can match a single
- * empty path route config and the results need to then be merged.
+ * Finds `TreeNode`s with matching empty path route configs and merges them into `TreeNode` with
+ * the children from each duplicate. This is necessary because different outlets can match a
+ * single empty path route config and the results need to then be merged.
  */
 
 
@@ -109299,9 +109779,9 @@ function mergeEmptyPathMatches(nodes) {
       result.push(node);
     }
   } // For each node which has children from multiple sources, we need to recompute a new `TreeNode`
-  // by also merging those children. This is necessary when there are multiple empty path configs in
-  // a row. Put another way: whenever we combine children of two nodes, we need to also check if any
-  // of those children can be combined into a single node as well.
+  // by also merging those children. This is necessary when there are multiple empty path configs
+  // in a row. Put another way: whenever we combine children of two nodes, we need to also check
+  // if any of those children can be combined into a single node as well.
 
 
   for (const mergedNode of mergedNodes) {
@@ -109320,7 +109800,9 @@ function checkOutletNameUniqueness(nodes) {
     if (routeWithSameOutletName) {
       const p = routeWithSameOutletName.url.map(s => s.toString()).join('/');
       const c = n.value.url.map(s => s.toString()).join('/');
-      throw new Error(`Two segments cannot have the same outlet name: '${p}' and '${c}'.`);
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4006
+      /* RuntimeErrorCode.TWO_SEGMENTS_WITH_SAME_OUTLET */
+      , NG_DEV_MODE$4 && `Two segments cannot have the same outlet name: '${p}' and '${c}'.`);
     }
 
     names[n.value.outlet] = n.value;
@@ -109377,8 +109859,8 @@ function getResolve(route) {
  */
 
 
-function recognize(rootComponentType, config, serializer, paramsInheritanceStrategy, relativeLinkResolution) {
-  return (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_17__.mergeMap)(t => recognize$1(rootComponentType, config, t.urlAfterRedirects, serializer(t.urlAfterRedirects), paramsInheritanceStrategy, relativeLinkResolution).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(targetSnapshot => ({ ...t,
+function recognize(injector, rootComponentType, config, serializer, paramsInheritanceStrategy, relativeLinkResolution) {
+  return (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.mergeMap)(t => recognize$1(injector, rootComponentType, config, t.urlAfterRedirects, serializer.serialize(t.urlAfterRedirects), serializer, paramsInheritanceStrategy, relativeLinkResolution).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(targetSnapshot => ({ ...t,
     targetSnapshot
   }))));
 }
@@ -109400,7 +109882,7 @@ function recognize(rootComponentType, config, serializer, paramsInheritanceStrat
 const RouteTitle = Symbol('RouteTitle');
 
 function resolveData(paramsInheritanceStrategy, moduleInjector) {
-  return (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_17__.mergeMap)(t => {
+  return (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.mergeMap)(t => {
     const {
       targetSnapshot,
       guards: {
@@ -109413,7 +109895,7 @@ function resolveData(paramsInheritanceStrategy, moduleInjector) {
     }
 
     let canActivateChecksResolved = 0;
-    return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(canActivateChecks).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_13__.concatMap)(check => runResolve(check.route, targetSnapshot, paramsInheritanceStrategy, moduleInjector)), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.tap)(() => canActivateChecksResolved++), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_22__.takeLast)(1), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_17__.mergeMap)(_ => canActivateChecksResolved === canActivateChecks.length ? (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(t) : rxjs__WEBPACK_IMPORTED_MODULE_23__.EMPTY));
+    return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(canActivateChecks).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.concatMap)(check => runResolve(check.route, targetSnapshot, paramsInheritanceStrategy, moduleInjector)), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_16__.tap)(() => canActivateChecksResolved++), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_25__.takeLast)(1), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.mergeMap)(_ => canActivateChecksResolved === canActivateChecks.length ? (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(t) : rxjs__WEBPACK_IMPORTED_MODULE_26__.EMPTY));
   });
 }
 
@@ -109445,9 +109927,9 @@ function resolveNode(resolve, futureARS, futureRSS, moduleInjector) {
   }
 
   const data = {};
-  return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(keys).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_17__.mergeMap)(key => getResolver(resolve[key], futureARS, futureRSS, moduleInjector).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_15__.first)(), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.tap)(value => {
+  return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(keys).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.mergeMap)(key => getResolver(resolve[key], futureARS, futureRSS, moduleInjector).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_11__.first)(), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_16__.tap)(value => {
     data[key] = value;
-  }))), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_22__.takeLast)(1), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_24__.mapTo)(data), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.catchError)(e => e instanceof rxjs__WEBPACK_IMPORTED_MODULE_16__.EmptyError ? rxjs__WEBPACK_IMPORTED_MODULE_23__.EMPTY : (0,rxjs__WEBPACK_IMPORTED_MODULE_11__.throwError)(e)));
+  }))), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_25__.takeLast)(1), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_27__.mapTo)(data), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.catchError)(e => e instanceof rxjs__WEBPACK_IMPORTED_MODULE_21__.EmptyError ? rxjs__WEBPACK_IMPORTED_MODULE_26__.EMPTY : (0,rxjs__WEBPACK_IMPORTED_MODULE_17__.throwError)(e)));
 }
 
 function getDataKeys(obj) {
@@ -109489,6 +109971,136 @@ function switchTap(next) {
     return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(v);
   });
 }
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * Provides a strategy for setting the page title after a router navigation.
+ *
+ * The built-in implementation traverses the router state snapshot and finds the deepest primary
+ * outlet with `title` property. Given the `Routes` below, navigating to
+ * `/base/child(popup:aux)` would result in the document title being set to "child".
+ * ```
+ * [
+ *   {path: 'base', title: 'base', children: [
+ *     {path: 'child', title: 'child'},
+ *   ],
+ *   {path: 'aux', outlet: 'popup', title: 'popupTitle'}
+ * ]
+ * ```
+ *
+ * This class can be used as a base class for custom title strategies. That is, you can create your
+ * own class that extends the `TitleStrategy`. Note that in the above example, the `title`
+ * from the named outlet is never used. However, a custom strategy might be implemented to
+ * incorporate titles in named outlets.
+ *
+ * @publicApi
+ * @see [Page title guide](guide/router#setting-the-page-title)
+ */
+
+
+class TitleStrategy {
+  /**
+   * @returns The `title` of the deepest primary route.
+   */
+  buildTitle(snapshot) {
+    let pageTitle;
+    let route = snapshot.root;
+
+    while (route !== undefined) {
+      pageTitle = this.getResolvedTitleForRoute(route) ?? pageTitle;
+      route = route.children.find(child => child.outlet === PRIMARY_OUTLET);
+    }
+
+    return pageTitle;
+  }
+  /**
+   * Given an `ActivatedRouteSnapshot`, returns the final value of the
+   * `Route.title` property, which can either be a static string or a resolved value.
+   */
+
+
+  getResolvedTitleForRoute(snapshot) {
+    return snapshot.data[RouteTitle];
+  }
+
+}
+
+TitleStrategy.ɵfac = function TitleStrategy_Factory(t) {
+  return new (t || TitleStrategy)();
+};
+
+TitleStrategy.ɵprov = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+  token: TitleStrategy,
+  factory: function () {
+    return (() => (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(DefaultTitleStrategy))();
+  },
+  providedIn: 'root'
+});
+
+(function () {
+  (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TitleStrategy, [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Injectable,
+    args: [{
+      providedIn: 'root',
+      useFactory: () => (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(DefaultTitleStrategy)
+    }]
+  }], null, null);
+})();
+/**
+ * The default `TitleStrategy` used by the router that updates the title using the `Title` service.
+ */
+
+
+class DefaultTitleStrategy extends TitleStrategy {
+  constructor(title) {
+    super();
+    this.title = title;
+  }
+  /**
+   * Sets the title of the browser to the given value.
+   *
+   * @param title The `pageTitle` from the deepest primary route.
+   */
+
+
+  updateTitle(snapshot) {
+    const title = this.buildTitle(snapshot);
+
+    if (title !== undefined) {
+      this.title.setTitle(title);
+    }
+  }
+
+}
+
+DefaultTitleStrategy.ɵfac = function DefaultTitleStrategy_Factory(t) {
+  return new (t || DefaultTitleStrategy)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_28__.Title));
+};
+
+DefaultTitleStrategy.ɵprov = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+  token: DefaultTitleStrategy,
+  factory: DefaultTitleStrategy.ɵfac,
+  providedIn: 'root'
+});
+
+(function () {
+  (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](DefaultTitleStrategy, [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Injectable,
+    args: [{
+      providedIn: 'root'
+    }]
+  }], function () {
+    return [{
+      type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_28__.Title
+    }];
+  }, null);
+})();
 /**
  * @license
  * Copyright Google LLC All Rights Reserved.
@@ -109575,6 +110187,25 @@ class DefaultRouteReuseStrategy extends BaseRouteReuseStrategy {}
  */
 
 
+const NG_DEV_MODE$3 = typeof ngDevMode === 'undefined' || !!ngDevMode;
+/**
+ * A [DI token](guide/glossary/#di-token) for the router service.
+ *
+ * @publicApi
+ */
+
+const ROUTER_CONFIGURATION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectionToken(NG_DEV_MODE$3 ? 'router config' : '', {
+  providedIn: 'root',
+  factory: () => ({})
+});
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
 const NG_DEV_MODE$2 = typeof ngDevMode === 'undefined' || !!ngDevMode;
 /**
  * The [DI token](guide/glossary/#di-token) for a router configuration.
@@ -109608,18 +110239,18 @@ class RouterConfigLoader {
       this.onLoadStartListener(route);
     }
 
-    const loadRunner = wrapIntoObservable(route.loadComponent()).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.tap)(component => {
+    const loadRunner = wrapIntoObservable(route.loadComponent()).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_16__.tap)(component => {
       if (this.onLoadEndListener) {
         this.onLoadEndListener(route);
       }
 
       NG_DEV_MODE$2 && assertStandalone(route.path ?? '', component);
       route._loadedComponent = component;
-    }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_25__.finalize)(() => {
+    }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_29__.finalize)(() => {
       this.componentLoaders.delete(route);
     })); // Use custom ConnectableObservable as share in runners pipe increasing the bundle size too much
 
-    const loader = new rxjs__WEBPACK_IMPORTED_MODULE_26__.ConnectableObservable(loadRunner, () => new rxjs__WEBPACK_IMPORTED_MODULE_27__.Subject()).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_28__.refCount)());
+    const loader = new rxjs__WEBPACK_IMPORTED_MODULE_30__.ConnectableObservable(loadRunner, () => new rxjs__WEBPACK_IMPORTED_MODULE_31__.Subject()).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_32__.refCount)());
     this.componentLoaders.set(route, loader);
     return loader;
   }
@@ -109668,17 +110299,17 @@ class RouterConfigLoader {
         routes,
         injector
       };
-    }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_25__.finalize)(() => {
+    }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_29__.finalize)(() => {
       this.childrenLoaders.delete(route);
     })); // Use custom ConnectableObservable as share in runners pipe increasing the bundle size too much
 
-    const loader = new rxjs__WEBPACK_IMPORTED_MODULE_26__.ConnectableObservable(loadRunner, () => new rxjs__WEBPACK_IMPORTED_MODULE_27__.Subject()).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_28__.refCount)());
+    const loader = new rxjs__WEBPACK_IMPORTED_MODULE_30__.ConnectableObservable(loadRunner, () => new rxjs__WEBPACK_IMPORTED_MODULE_31__.Subject()).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_32__.refCount)());
     this.childrenLoaders.set(route, loader);
     return loader;
   }
 
   loadModuleFactoryOrRoutes(loadChildren) {
-    return wrapIntoObservable(loadChildren()).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_17__.mergeMap)(t => {
+    return wrapIntoObservable(loadChildren()).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.mergeMap)(t => {
       if (t instanceof _angular_core__WEBPACK_IMPORTED_MODULE_0__.NgModuleFactory || Array.isArray(t)) {
         return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(t);
       } else {
@@ -109787,6 +110418,73 @@ const subsetMatchOptions = {
   matrixParams: 'ignored',
   queryParams: 'subset'
 };
+
+function assignExtraOptionsToRouter(opts, router) {
+  if (opts.errorHandler) {
+    router.errorHandler = opts.errorHandler;
+  }
+
+  if (opts.malformedUriErrorHandler) {
+    router.malformedUriErrorHandler = opts.malformedUriErrorHandler;
+  }
+
+  if (opts.onSameUrlNavigation) {
+    router.onSameUrlNavigation = opts.onSameUrlNavigation;
+  }
+
+  if (opts.paramsInheritanceStrategy) {
+    router.paramsInheritanceStrategy = opts.paramsInheritanceStrategy;
+  }
+
+  if (opts.relativeLinkResolution) {
+    router.relativeLinkResolution = opts.relativeLinkResolution;
+  }
+
+  if (opts.urlUpdateStrategy) {
+    router.urlUpdateStrategy = opts.urlUpdateStrategy;
+  }
+
+  if (opts.canceledNavigationResolution) {
+    router.canceledNavigationResolution = opts.canceledNavigationResolution;
+  }
+}
+
+function setupRouter() {
+  const urlSerializer = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(UrlSerializer);
+  const contexts = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(ChildrenOutletContexts);
+  const location = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(_angular_common__WEBPACK_IMPORTED_MODULE_33__.Location);
+  const injector = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(_angular_core__WEBPACK_IMPORTED_MODULE_0__.Injector);
+  const compiler = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(_angular_core__WEBPACK_IMPORTED_MODULE_0__.Compiler);
+  const config = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(ROUTES, {
+    optional: true
+  }) ?? [];
+  const opts = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(ROUTER_CONFIGURATION, {
+    optional: true
+  }) ?? {};
+  const defaultTitleStrategy = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(DefaultTitleStrategy);
+  const titleStrategy = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(TitleStrategy, {
+    optional: true
+  });
+  const urlHandlingStrategy = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(UrlHandlingStrategy, {
+    optional: true
+  });
+  const routeReuseStrategy = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(RouteReuseStrategy, {
+    optional: true
+  });
+  const router = new Router(null, urlSerializer, contexts, location, injector, compiler, flatten(config));
+
+  if (urlHandlingStrategy) {
+    router.urlHandlingStrategy = urlHandlingStrategy;
+  }
+
+  if (routeReuseStrategy) {
+    router.routeReuseStrategy = routeReuseStrategy;
+  }
+
+  router.titleStrategy = titleStrategy ?? defaultTitleStrategy;
+  assignExtraOptionsToRouter(opts, router);
+  return router;
+}
 /**
  * @description
  *
@@ -109799,6 +110497,7 @@ const subsetMatchOptions = {
  *
  * @publicApi
  */
+
 
 class Router {
   /**
@@ -109830,7 +110529,7 @@ class Router {
      * An event stream for routing events in this NgModule.
      */
 
-    this.events = new rxjs__WEBPACK_IMPORTED_MODULE_27__.Subject();
+    this.events = new rxjs__WEBPACK_IMPORTED_MODULE_31__.Subject();
     /**
      * A handler for navigation errors in this NgModule.
      */
@@ -109995,15 +110694,15 @@ class Router {
 
   setupNavigations(transitions) {
     const eventsSubject = this.events;
-    return transitions.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.filter)(t => t.id !== 0), // Extract URL
+    return transitions.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_9__.filter)(t => t.id !== 0), // Extract URL
     (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(t => ({ ...t,
       extractedUrl: this.urlHandlingStrategy.extract(t.rawUrl)
     })), // Using switchMap so we cancel executing navigations when a new one comes in
-    (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_5__.switchMap)(t => {
+    (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_5__.switchMap)(overallTransitionState => {
       let completed = false;
       let errored = false;
-      return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(t).pipe( // Store the Navigation object
-      (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.tap)(t => {
+      return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(overallTransitionState).pipe( // Store the Navigation object
+      (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_16__.tap)(t => {
         this.currentNavigation = {
           id: t.id,
           initialUrl: t.rawUrl,
@@ -110018,8 +110717,8 @@ class Router {
         const browserUrlTree = this.browserUrlTree.toString();
         const urlTransition = !this.navigated || t.extractedUrl.toString() !== browserUrlTree || // Navigations which succeed or ones which fail and are cleaned up
         // correctly should result in `browserUrlTree` and `currentUrlTree`
-        // matching. If this is not the case, assume something went wrong and try
-        // processing the URL again.
+        // matching. If this is not the case, assume something went wrong and
+        // try processing the URL again.
         browserUrlTree !== this.currentUrlTree.toString();
         const processCurrentUrl = (this.onSameUrlNavigation === 'reload' ? true : urlTransition) && this.urlHandlingStrategy.shouldProcessUrl(t.rawUrl);
 
@@ -110036,7 +110735,7 @@ class Router {
             eventsSubject.next(new NavigationStart(t.id, this.serializeUrl(t.extractedUrl), t.source, t.restoredState));
 
             if (transition !== this.transitions.getValue()) {
-              return rxjs__WEBPACK_IMPORTED_MODULE_23__.EMPTY;
+              return rxjs__WEBPACK_IMPORTED_MODULE_26__.EMPTY;
             } // This delay is required to match old behavior that forced
             // navigation to always be async
 
@@ -110045,13 +110744,16 @@ class Router {
           }), // ApplyRedirects
           applyRedirects(this.ngModule.injector, this.configLoader, this.urlSerializer, this.config), // Update the currentNavigation
           // `urlAfterRedirects` is guaranteed to be set after this point
-          (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.tap)(t => {
+          (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_16__.tap)(t => {
             this.currentNavigation = { ...this.currentNavigation,
               finalUrl: t.urlAfterRedirects
             };
+            overallTransitionState.urlAfterRedirects = t.urlAfterRedirects;
           }), // Recognize
-          recognize(this.rootComponentType, this.config, url => this.serializeUrl(url), this.paramsInheritanceStrategy, this.relativeLinkResolution), // Update URL if in `eager` update mode
-          (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.tap)(t => {
+          recognize(this.ngModule.injector, this.rootComponentType, this.config, this.urlSerializer, this.paramsInheritanceStrategy, this.relativeLinkResolution), // Update URL if in `eager` update mode
+          (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_16__.tap)(t => {
+            overallTransitionState.targetSnapshot = t.targetSnapshot;
+
             if (this.urlUpdateStrategy === 'eager') {
               if (!t.extras.skipLocationChange) {
                 const rawUrl = this.urlHandlingStrategy.merge(t.urlAfterRedirects, t.rawUrl);
@@ -110067,9 +110769,9 @@ class Router {
           }));
         } else {
           const processPreviousUrl = urlTransition && this.rawUrlTree && this.urlHandlingStrategy.shouldProcessUrl(this.rawUrlTree);
-          /* When the current URL shouldn't be processed, but the previous one was,
-           * we handle this "error condition" by navigating to the previously
-           * successful URL, but leaving the URL intact.*/
+          /* When the current URL shouldn't be processed, but the previous one
+           * was, we handle this "error condition" by navigating to the
+           * previously successful URL, but leaving the URL intact.*/
 
           if (processPreviousUrl) {
             const {
@@ -110082,44 +110784,50 @@ class Router {
             const navStart = new NavigationStart(id, this.serializeUrl(extractedUrl), source, restoredState);
             eventsSubject.next(navStart);
             const targetSnapshot = createEmptyState(extractedUrl, this.rootComponentType).snapshot;
-            return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)({ ...t,
+            overallTransitionState = { ...t,
               targetSnapshot,
               urlAfterRedirects: extractedUrl,
               extras: { ...extras,
                 skipLocationChange: false,
                 replaceUrl: false
               }
-            });
+            };
+            return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(overallTransitionState);
           } else {
-            /* When neither the current or previous URL can be processed, do nothing
-             * other than update router's internal reference to the current "settled"
-             * URL. This way the next navigation will be coming from the current URL
-             * in the browser.
+            /* When neither the current or previous URL can be processed, do
+             * nothing other than update router's internal reference to the
+             * current "settled" URL. This way the next navigation will be coming
+             * from the current URL in the browser.
              */
             this.rawUrlTree = t.rawUrl;
             t.resolve(null);
-            return rxjs__WEBPACK_IMPORTED_MODULE_23__.EMPTY;
+            return rxjs__WEBPACK_IMPORTED_MODULE_26__.EMPTY;
           }
         }
       }), // --- GUARDS ---
-      (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.tap)(t => {
+      (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_16__.tap)(t => {
         const guardsStart = new GuardsCheckStart(t.id, this.serializeUrl(t.extractedUrl), this.serializeUrl(t.urlAfterRedirects), t.targetSnapshot);
         this.triggerEvent(guardsStart);
-      }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(t => ({ ...t,
-        guards: getAllRouteGuards(t.targetSnapshot, t.currentSnapshot, this.rootContexts)
-      })), checkGuards(this.ngModule.injector, evt => this.triggerEvent(evt)), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.tap)(t => {
+      }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(t => {
+        overallTransitionState = { ...t,
+          guards: getAllRouteGuards(t.targetSnapshot, t.currentSnapshot, this.rootContexts)
+        };
+        return overallTransitionState;
+      }), checkGuards(this.ngModule.injector, evt => this.triggerEvent(evt)), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_16__.tap)(t => {
+        overallTransitionState.guardsResult = t.guardsResult;
+
         if (isUrlTree(t.guardsResult)) {
-          const error = navigationCancelingError(`Redirecting to "${this.serializeUrl(t.guardsResult)}"`);
-          error.url = t.guardsResult;
-          throw error;
+          throw redirectingNavigationError(this.urlSerializer, t.guardsResult);
         }
 
         const guardsEnd = new GuardsCheckEnd(t.id, this.serializeUrl(t.extractedUrl), this.serializeUrl(t.urlAfterRedirects), t.targetSnapshot, !!t.guardsResult);
         this.triggerEvent(guardsEnd);
-      }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.filter)(t => {
+      }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_9__.filter)(t => {
         if (!t.guardsResult) {
           this.restoreHistory(t);
-          this.cancelNavigationTransition(t, '');
+          this.cancelNavigationTransition(t, '', 3
+          /* NavigationCancellationCode.GuardRejected */
+          );
           return false;
         }
 
@@ -110127,34 +110835,36 @@ class Router {
       }), // --- RESOLVE ---
       switchTap(t => {
         if (t.guards.canActivateChecks.length) {
-          return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(t).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.tap)(t => {
+          return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(t).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_16__.tap)(t => {
             const resolveStart = new ResolveStart(t.id, this.serializeUrl(t.extractedUrl), this.serializeUrl(t.urlAfterRedirects), t.targetSnapshot);
             this.triggerEvent(resolveStart);
           }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_5__.switchMap)(t => {
             let dataResolved = false;
-            return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(t).pipe(resolveData(this.paramsInheritanceStrategy, this.ngModule.injector), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.tap)({
+            return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(t).pipe(resolveData(this.paramsInheritanceStrategy, this.ngModule.injector), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_16__.tap)({
               next: () => dataResolved = true,
               complete: () => {
                 if (!dataResolved) {
                   this.restoreHistory(t);
-                  this.cancelNavigationTransition(t, `At least one route resolver didn't emit any value.`);
+                  this.cancelNavigationTransition(t, NG_DEV_MODE$1 ? `At least one route resolver didn't emit any value.` : '', 2
+                  /* NavigationCancellationCode.NoDataFromResolver */
+                  );
                 }
               }
             }));
-          }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.tap)(t => {
+          }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_16__.tap)(t => {
             const resolveEnd = new ResolveEnd(t.id, this.serializeUrl(t.extractedUrl), this.serializeUrl(t.urlAfterRedirects), t.targetSnapshot);
             this.triggerEvent(resolveEnd);
           }));
         }
 
         return undefined;
-      }), switchTap(() => this.afterPreactivation()), // --- LOAD COMPONENTS ---
+      }), // --- LOAD COMPONENTS ---
       switchTap(t => {
         const loadComponents = route => {
           const loaders = [];
 
           if (route.routeConfig?.loadComponent && !route.routeConfig._loadedComponent) {
-            loaders.push(this.configLoader.loadComponent(route.routeConfig).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.tap)(loadedComponent => {
+            loaders.push(this.configLoader.loadComponent(route.routeConfig).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_16__.tap)(loadedComponent => {
               route.component = loadedComponent;
             }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(() => void 0)));
           }
@@ -110166,19 +110876,20 @@ class Router {
           return loaders;
         };
 
-        return (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.combineLatest)(loadComponents(t.targetSnapshot.root)).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_29__.defaultIfEmpty)(), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_7__.take)(1));
-      }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(t => {
+        return (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.combineLatest)(loadComponents(t.targetSnapshot.root)).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_24__.defaultIfEmpty)(), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_7__.take)(1));
+      }), switchTap(() => this.afterPreactivation()), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(t => {
         const targetRouterState = createRouterState(this.routeReuseStrategy, t.targetSnapshot, t.currentRouterState);
-        return { ...t,
+        overallTransitionState = { ...t,
           targetRouterState
         };
+        return overallTransitionState;
       }),
-      /* Once here, we are about to activate syncronously. The assumption is this
-         will succeed, and user code may read from the Router service. Therefore
-         before activation, we need to update router properties storing the current
-         URL and the RouterState, as well as updated the browser URL. All this should
-         happen *before* activating. */
-      (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.tap)(t => {
+      /* Once here, we are about to activate synchronously. The assumption is
+         this will succeed, and user code may read from the Router service.
+         Therefore before activation, we need to update router properties storing
+         the current URL and the RouterState, as well as updated the browser URL.
+         All this should happen *before* activating. */
+      (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_16__.tap)(t => {
         this.currentUrlTree = t.urlAfterRedirects;
         this.rawUrlTree = this.urlHandlingStrategy.merge(t.urlAfterRedirects, t.rawUrl);
         this.routerState = t.targetRouterState;
@@ -110190,7 +110901,7 @@ class Router {
 
           this.browserUrlTree = t.urlAfterRedirects;
         }
-      }), activateRoutes(this.rootContexts, this.routeReuseStrategy, evt => this.triggerEvent(evt)), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.tap)({
+      }), activateRoutes(this.rootContexts, this.routeReuseStrategy, evt => this.triggerEvent(evt)), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_16__.tap)({
         next() {
           completed = true;
         },
@@ -110199,91 +110910,80 @@ class Router {
           completed = true;
         }
 
-      }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_25__.finalize)(() => {
-        /* When the navigation stream finishes either through error or success, we
-         * set the `completed` or `errored` flag. However, there are some situations
-         * where we could get here without either of those being set. For instance, a
-         * redirect during NavigationStart. Therefore, this is a catch-all to make
-         * sure the NavigationCancel
-         * event is fired when a navigation gets cancelled but not caught by other
-         * means. */
+      }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_29__.finalize)(() => {
+        /* When the navigation stream finishes either through error or success,
+         * we set the `completed` or `errored` flag. However, there are some
+         * situations where we could get here without either of those being set.
+         * For instance, a redirect during NavigationStart. Therefore, this is a
+         * catch-all to make sure the NavigationCancel event is fired when a
+         * navigation gets cancelled but not caught by other means. */
         if (!completed && !errored) {
-          const cancelationReason = `Navigation ID ${t.id} is not equal to the current navigation id ${this.navigationId}`;
-          this.cancelNavigationTransition(t, cancelationReason);
+          const cancelationReason = NG_DEV_MODE$1 ? `Navigation ID ${overallTransitionState.id} is not equal to the current navigation id ${this.navigationId}` : '';
+          this.cancelNavigationTransition(overallTransitionState, cancelationReason, 1
+          /* NavigationCancellationCode.SupersededByNewNavigation */
+          );
         } // Only clear current navigation if it is still set to the one that
         // finalized.
 
 
-        if (this.currentNavigation?.id === t.id) {
+        if (this.currentNavigation?.id === overallTransitionState.id) {
           this.currentNavigation = null;
         }
-      }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.catchError)(e => {
-        // TODO(atscott): The NavigationTransition `t` used here does not accurately
-        // reflect the current state of the whole transition because some operations
-        // return a new object rather than modifying the one in the outermost
-        // `switchMap`.
-        //  The fix can likely be to:
-        //  1. Rename the outer `t` variable so it's not shadowed all the time and
-        //  confusing
-        //  2. Keep reassigning to the outer variable after each stage to ensure it
-        //  gets updated. Or change the implementations to not return a copy.
-        // Not changed yet because it affects existing code and would need to be
-        // tested more thoroughly.
+      }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.catchError)(e => {
         errored = true;
         /* This error type is issued during Redirect, and is handled as a
          * cancellation rather than an error. */
 
-        if (isNavigationCancelingError(e)) {
-          const redirecting = isUrlTree(e.url);
-
-          if (!redirecting) {
-            // Set property only if we're not redirecting. If we landed on a page and
-            // redirect to `/` route, the new navigation is going to see the `/`
-            // isn't a change from the default currentUrlTree and won't navigate.
-            // This is only applicable with initial navigation, so setting
-            // `navigated` only when not redirecting resolves this scenario.
+        if (isNavigationCancelingError$1(e)) {
+          if (!isRedirectingNavigationCancelingError$1(e)) {
+            // Set property only if we're not redirecting. If we landed on a page
+            // and redirect to `/` route, the new navigation is going to see the
+            // `/` isn't a change from the default currentUrlTree and won't
+            // navigate. This is only applicable with initial navigation, so
+            // setting `navigated` only when not redirecting resolves this
+            // scenario.
             this.navigated = true;
-            this.restoreHistory(t, true);
+            this.restoreHistory(overallTransitionState, true);
           }
 
-          const navCancel = new NavigationCancel(t.id, this.serializeUrl(t.extractedUrl), e.message);
+          const navCancel = new NavigationCancel(overallTransitionState.id, this.serializeUrl(overallTransitionState.extractedUrl), e.message, e.cancellationCode);
           eventsSubject.next(navCancel); // When redirecting, we need to delay resolving the navigation
           // promise and push it to the redirect navigation
 
-          if (!redirecting) {
-            t.resolve(false);
+          if (!isRedirectingNavigationCancelingError$1(e)) {
+            overallTransitionState.resolve(false);
           } else {
             const mergedTree = this.urlHandlingStrategy.merge(e.url, this.rawUrlTree);
             const extras = {
-              skipLocationChange: t.extras.skipLocationChange,
+              skipLocationChange: overallTransitionState.extras.skipLocationChange,
               // The URL is already updated at this point if we have 'eager' URL
               // updates or if the navigation was triggered by the browser (back
-              // button, URL bar, etc). We want to replace that item in history if
-              // the navigation is rejected.
-              replaceUrl: this.urlUpdateStrategy === 'eager' || isBrowserTriggeredNavigation(t.source)
+              // button, URL bar, etc). We want to replace that item in history
+              // if the navigation is rejected.
+              replaceUrl: this.urlUpdateStrategy === 'eager' || isBrowserTriggeredNavigation(overallTransitionState.source)
             };
             this.scheduleNavigation(mergedTree, 'imperative', null, extras, {
-              resolve: t.resolve,
-              reject: t.reject,
-              promise: t.promise
+              resolve: overallTransitionState.resolve,
+              reject: overallTransitionState.reject,
+              promise: overallTransitionState.promise
             });
           }
-          /* All other errors should reset to the router's internal URL reference to
-           * the pre-error state. */
+          /* All other errors should reset to the router's internal URL reference
+           * to the pre-error state. */
 
         } else {
-          this.restoreHistory(t, true);
-          const navError = new NavigationError(t.id, this.serializeUrl(t.extractedUrl), e);
+          this.restoreHistory(overallTransitionState, true);
+          const navError = new NavigationError(overallTransitionState.id, this.serializeUrl(overallTransitionState.extractedUrl), e, overallTransitionState.targetSnapshot ?? undefined);
           eventsSubject.next(navError);
 
           try {
-            t.resolve(this.errorHandler(e));
+            overallTransitionState.resolve(this.errorHandler(e));
           } catch (ee) {
-            t.reject(ee);
+            overallTransitionState.reject(ee);
           }
         }
 
-        return rxjs__WEBPACK_IMPORTED_MODULE_23__.EMPTY;
+        return rxjs__WEBPACK_IMPORTED_MODULE_26__.EMPTY;
       })); // TODO(jasonaden): remove cast once g3 is on updated TypeScript
     }));
   }
@@ -110747,7 +111447,7 @@ class Router {
       const targetPagePosition = this.currentPageId - t.targetPageId; // The navigator change the location before triggered the browser event,
       // so we need to go back to the current url if the navigation is canceled.
       // Also, when navigation gets cancelled while using url update strategy eager, then we need to
-      // go back. Because, when `urlUpdateSrategy` is `eager`; `setBrowserUrl` method is called
+      // go back. Because, when `urlUpdateStrategy` is `eager`; `setBrowserUrl` method is called
       // before any verification.
 
       const browserUrlUpdateOccurred = t.source === 'popstate' || this.urlUpdateStrategy === 'eager' || this.currentUrlTree === this.currentNavigation?.finalUrl;
@@ -110794,8 +111494,8 @@ class Router {
     this.location.replaceState(this.urlSerializer.serialize(this.rawUrlTree), '', this.generateNgRouterState(this.lastSuccessfulId, this.currentPageId));
   }
 
-  cancelNavigationTransition(t, reason) {
-    const navCancel = new NavigationCancel(t.id, this.serializeUrl(t.extractedUrl), reason);
+  cancelNavigationTransition(t, reason, code) {
+    const navCancel = new NavigationCancel(t.id, this.serializeUrl(t.extractedUrl), reason, code);
     this.triggerEvent(navCancel);
     t.resolve(false);
   }
@@ -110821,12 +111521,19 @@ Router.ɵfac = function Router_Factory(t) {
 
 Router.ɵprov = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
   token: Router,
-  factory: Router.ɵfac
+  factory: function () {
+    return setupRouter();
+  },
+  providedIn: 'root'
 });
 
 (function () {
   (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](Router, [{
-    type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Injectable
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Injectable,
+    args: [{
+      providedIn: 'root',
+      useFactory: setupRouter
+    }]
   }], function () {
     return [{
       type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Type
@@ -110835,7 +111542,7 @@ Router.ɵprov = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵd
     }, {
       type: ChildrenOutletContexts
     }, {
-      type: _angular_common__WEBPACK_IMPORTED_MODULE_30__.Location
+      type: _angular_common__WEBPACK_IMPORTED_MODULE_33__.Location
     }, {
       type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Injector
     }, {
@@ -110851,7 +111558,9 @@ function validateCommands(commands) {
     const cmd = commands[i];
 
     if (cmd == null) {
-      throw new Error(`The requested path contains ${cmd} segment at index ${i}`);
+      throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4008
+      /* RuntimeErrorCode.NULLISH_COMMAND */
+      , NG_DEV_MODE$1 && `The requested path contains ${cmd} segment at index ${i}`);
     }
   }
 }
@@ -110976,7 +111685,7 @@ class RouterLink {
     this.commands = null;
     /** @internal */
 
-    this.onChanges = new rxjs__WEBPACK_IMPORTED_MODULE_27__.Subject();
+    this.onChanges = new rxjs__WEBPACK_IMPORTED_MODULE_31__.Subject();
     this.setTabIndexIfNotOnNativeEl('0');
   }
   /**
@@ -111171,7 +111880,7 @@ class RouterLinkWithHref {
     this.href = null;
     /** @internal */
 
-    this.onChanges = new rxjs__WEBPACK_IMPORTED_MODULE_27__.Subject();
+    this.onChanges = new rxjs__WEBPACK_IMPORTED_MODULE_31__.Subject();
     this.subscription = router.events.subscribe(s => {
       if (s instanceof NavigationEnd) {
         this.updateTargetUrlAndHref();
@@ -111251,7 +111960,7 @@ class RouterLinkWithHref {
 }
 
 RouterLinkWithHref.ɵfac = function RouterLinkWithHref_Factory(t) {
-  return new (t || RouterLinkWithHref)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](Router), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ActivatedRoute), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_30__.LocationStrategy));
+  return new (t || RouterLinkWithHref)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](Router), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ActivatedRoute), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_33__.LocationStrategy));
 };
 
 RouterLinkWithHref.ɵdir = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({
@@ -111296,7 +112005,7 @@ RouterLinkWithHref.ɵdir = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE
     }, {
       type: ActivatedRoute
     }, {
-      type: _angular_common__WEBPACK_IMPORTED_MODULE_30__.LocationStrategy
+      type: _angular_common__WEBPACK_IMPORTED_MODULE_33__.LocationStrategy
     }];
   }, {
     target: [{
@@ -111471,7 +112180,7 @@ class RouterLinkActive {
 
   ngAfterContentInit() {
     // `of(null)` is used to force subscribe body to execute once immediately (like `startWith`).
-    (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(this.links.changes, this.linksWithHrefs.changes, (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(null)).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_31__.mergeAll)()).subscribe(_ => {
+    (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(this.links.changes, this.linksWithHrefs.changes, (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(null)).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_34__.mergeAll)()).subscribe(_ => {
       this.update();
       this.subscribeToEachLinkOnChanges();
     });
@@ -111480,7 +112189,7 @@ class RouterLinkActive {
   subscribeToEachLinkOnChanges() {
     this.linkInputChangesSubscription?.unsubscribe();
     const allLinkChanges = [...this.links.toArray(), ...this.linksWithHrefs.toArray(), this.link, this.linkWithHref].filter(link => !!link).map(link => link.onChanges);
-    this.linkInputChangesSubscription = (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(allLinkChanges).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_31__.mergeAll)()).subscribe(link => {
+    this.linkInputChangesSubscription = (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(allLinkChanges).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_34__.mergeAll)()).subscribe(link => {
       if (this.isActive !== this.isLinkActive(this.router)(link)) {
         this.update();
       }
@@ -111649,114 +112358,6 @@ function isActiveMatchOptions(options) {
  */
 
 /**
- * Provides a strategy for setting the page title after a router navigation.
- *
- * The built-in implementation traverses the router state snapshot and finds the deepest primary
- * outlet with `title` property. Given the `Routes` below, navigating to
- * `/base/child(popup:aux)` would result in the document title being set to "child".
- * ```
- * [
- *   {path: 'base', title: 'base', children: [
- *     {path: 'child', title: 'child'},
- *   ],
- *   {path: 'aux', outlet: 'popup', title: 'popupTitle'}
- * ]
- * ```
- *
- * This class can be used as a base class for custom title strategies. That is, you can create your
- * own class that extends the `TitleStrategy`. Note that in the above example, the `title`
- * from the named outlet is never used. However, a custom strategy might be implemented to
- * incorporate titles in named outlets.
- *
- * @publicApi
- * @see [Page title guide](guide/router#setting-the-page-title)
- */
-
-
-class TitleStrategy {
-  /**
-   * @returns The `title` of the deepest primary route.
-   */
-  buildTitle(snapshot) {
-    let pageTitle;
-    let route = snapshot.root;
-
-    while (route !== undefined) {
-      pageTitle = this.getResolvedTitleForRoute(route) ?? pageTitle;
-      route = route.children.find(child => child.outlet === PRIMARY_OUTLET);
-    }
-
-    return pageTitle;
-  }
-  /**
-   * Given an `ActivatedRouteSnapshot`, returns the final value of the
-   * `Route.title` property, which can either be a static string or a resolved value.
-   */
-
-
-  getResolvedTitleForRoute(snapshot) {
-    return snapshot.data[RouteTitle];
-  }
-
-}
-/**
- * The default `TitleStrategy` used by the router that updates the title using the `Title` service.
- */
-
-
-class DefaultTitleStrategy extends TitleStrategy {
-  constructor(title) {
-    super();
-    this.title = title;
-  }
-  /**
-   * Sets the title of the browser to the given value.
-   *
-   * @param title The `pageTitle` from the deepest primary route.
-   */
-
-
-  updateTitle(snapshot) {
-    const title = this.buildTitle(snapshot);
-
-    if (title !== undefined) {
-      this.title.setTitle(title);
-    }
-  }
-
-}
-
-DefaultTitleStrategy.ɵfac = function DefaultTitleStrategy_Factory(t) {
-  return new (t || DefaultTitleStrategy)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_32__.Title));
-};
-
-DefaultTitleStrategy.ɵprov = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
-  token: DefaultTitleStrategy,
-  factory: DefaultTitleStrategy.ɵfac,
-  providedIn: 'root'
-});
-
-(function () {
-  (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](DefaultTitleStrategy, [{
-    type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Injectable,
-    args: [{
-      providedIn: 'root'
-    }]
-  }], function () {
-    return [{
-      type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_32__.Title
-    }];
-  }, null);
-})();
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-/**
  * @description
  *
  * Provides a preloading strategy.
@@ -111781,7 +112382,7 @@ class PreloadingStrategy {}
 
 class PreloadAllModules {
   preload(route, fn) {
-    return fn().pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.catchError)(() => (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(null)));
+    return fn().pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_18__.catchError)(() => (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(null)));
   }
 
 }
@@ -111863,7 +112464,7 @@ class RouterPreloader {
   }
 
   setUpPreloading() {
-    this.subscription = this.router.events.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.filter)(e => e instanceof NavigationEnd), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_13__.concatMap)(() => this.preload())).subscribe(() => {});
+    this.subscription = this.router.events.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_9__.filter)(e => e instanceof NavigationEnd), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.concatMap)(() => this.preload())).subscribe(() => {});
   }
 
   preload() {
@@ -111887,16 +112488,23 @@ class RouterPreloader {
       }
 
       const injectorForCurrentRoute = route._injector ?? injector;
-      const injectorForChildren = route._loadedInjector ?? injectorForCurrentRoute;
+      const injectorForChildren = route._loadedInjector ?? injectorForCurrentRoute; // Note that `canLoad` is only checked as a condition that prevents `loadChildren` and not
+      // `loadComponent`. `canLoad` guards only block loading of child routes by design. This
+      // happens as a consequence of needing to descend into children for route matching immediately
+      // while component loading is deferred until route activation. Because `canLoad` guards can
+      // have side effects, we cannot execute them here so we instead skip preloading altogether
+      // when present. Lastly, it remains to be decided whether `canLoad` should behave this way
+      // at all. Code splitting and lazy loading is separate from client-side authorization checks
+      // and should not be used as a security measure to prevent loading of code.
 
-      if (route.loadChildren && !route._loadedRoutes || route.loadComponent && !route._loadedComponent) {
+      if (route.loadChildren && !route._loadedRoutes && route.canLoad === undefined || route.loadComponent && !route._loadedComponent) {
         res.push(this.preloadConfig(injectorForCurrentRoute, route));
       } else if (route.children || route._loadedRoutes) {
         res.push(this.processRoutes(injectorForChildren, route.children ?? route._loadedRoutes));
       }
     }
 
-    return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(res).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_31__.mergeAll)());
+    return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(res).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_34__.mergeAll)());
   }
 
   preloadConfig(injector, route) {
@@ -111909,7 +112517,7 @@ class RouterPreloader {
         loadedChildren$ = (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(null);
       }
 
-      const recursiveLoadChildren$ = loadedChildren$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_17__.mergeMap)(config => {
+      const recursiveLoadChildren$ = loadedChildren$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.mergeMap)(config => {
         if (config === null) {
           return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(void 0);
         }
@@ -111923,7 +112531,7 @@ class RouterPreloader {
 
       if (route.loadComponent && !route._loadedComponent) {
         const loadComponent$ = this.loader.loadComponent(route);
-        return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)([recursiveLoadChildren$, loadComponent$]).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_31__.mergeAll)());
+        return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)([recursiveLoadChildren$, loadComponent$]).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_34__.mergeAll)());
       } else {
         return recursiveLoadChildren$;
       }
@@ -112066,7 +112674,7 @@ RouterScroller.ɵprov = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0_
     return [{
       type: Router
     }, {
-      type: _angular_common__WEBPACK_IMPORTED_MODULE_30__.ViewportScroller
+      type: _angular_common__WEBPACK_IMPORTED_MODULE_33__.ViewportScroller
     }, {
       type: undefined
     }];
@@ -112088,33 +112696,30 @@ const NG_DEV_MODE = typeof ngDevMode === 'undefined' || ngDevMode;
 
 const ROUTER_DIRECTIVES = [RouterOutlet, RouterLink, RouterLinkWithHref, RouterLinkActive, ɵEmptyOutletComponent];
 /**
- * A [DI token](guide/glossary/#di-token) for the router service.
- *
- * @publicApi
- */
-
-const ROUTER_CONFIGURATION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectionToken(NG_DEV_MODE ? 'router config' : 'ROUTER_CONFIGURATION', {
-  providedIn: 'root',
-  factory: () => ({})
-});
-/**
  * @docsNotRequired
  */
 
 const ROUTER_FORROOT_GUARD = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectionToken(NG_DEV_MODE ? 'router duplicate forRoot guard' : 'ROUTER_FORROOT_GUARD');
-const ROUTER_PRELOADER = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectionToken(NG_DEV_MODE ? 'router preloader' : '');
-const ROUTER_PROVIDERS = [_angular_common__WEBPACK_IMPORTED_MODULE_30__.Location, {
+const ROUTER_PRELOADER = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectionToken(NG_DEV_MODE ? 'router preloader' : ''); // TODO(atscott): All of these except `ActivatedRoute` are `providedIn: 'root'`. They are only kept
+// here to avoid a breaking change whereby the provider order matters based on where the
+// `RouterModule`/`RouterTestingModule` is imported. These can/should be removed as a "breaking"
+// change in a major version.
+
+const ROUTER_PROVIDERS = [_angular_common__WEBPACK_IMPORTED_MODULE_33__.Location, {
   provide: UrlSerializer,
   useClass: DefaultUrlSerializer
 }, {
   provide: Router,
-  useFactory: setupRouter,
-  deps: [UrlSerializer, ChildrenOutletContexts, _angular_common__WEBPACK_IMPORTED_MODULE_30__.Location, _angular_core__WEBPACK_IMPORTED_MODULE_0__.Injector, _angular_core__WEBPACK_IMPORTED_MODULE_0__.Compiler, ROUTES, ROUTER_CONFIGURATION, DefaultTitleStrategy, [TitleStrategy, new _angular_core__WEBPACK_IMPORTED_MODULE_0__.Optional()], [UrlHandlingStrategy, new _angular_core__WEBPACK_IMPORTED_MODULE_0__.Optional()], [RouteReuseStrategy, new _angular_core__WEBPACK_IMPORTED_MODULE_0__.Optional()]]
+  useFactory: setupRouter
 }, ChildrenOutletContexts, {
   provide: ActivatedRoute,
   useFactory: rootRoute,
   deps: [Router]
 }, RouterConfigLoader];
+
+function rootRoute(router) {
+  return router.routerState.root;
+}
 
 function routerNgProbeToken() {
   return new _angular_core__WEBPACK_IMPORTED_MODULE_0__.NgProbeToken('Router', Router);
@@ -112143,8 +112748,7 @@ function routerNgProbeToken() {
 
 
 class RouterModule {
-  // Note: We are injecting the Router so it gets created eagerly...
-  constructor(guard, router) {}
+  constructor(guard) {}
   /**
    * Creates and configures a module with all the router providers and directives.
    * Optionally sets up an application listener to perform an initial navigation.
@@ -112210,7 +112814,7 @@ class RouterModule {
 }
 
 RouterModule.ɵfac = function RouterModule_Factory(t) {
-  return new (t || RouterModule)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](ROUTER_FORROOT_GUARD, 8), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](Router, 8));
+  return new (t || RouterModule)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](ROUTER_FORROOT_GUARD, 8));
 };
 
 RouterModule.ɵmod = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
@@ -112236,11 +112840,6 @@ RouterModule.ɵinj = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Inject,
         args: [ROUTER_FORROOT_GUARD]
       }]
-    }, {
-      type: Router,
-      decorators: [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Optional
-      }]
     }];
   }, null);
 })();
@@ -112250,7 +112849,7 @@ function provideRouterScroller() {
     provide: ROUTER_SCROLLER,
     useFactory: () => {
       const router = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(Router);
-      const viewportScroller = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(_angular_common__WEBPACK_IMPORTED_MODULE_30__.ViewportScroller);
+      const viewportScroller = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(_angular_common__WEBPACK_IMPORTED_MODULE_33__.ViewportScroller);
       const config = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(ROUTER_CONFIGURATION);
 
       if (config.scrollOffset) {
@@ -112264,21 +112863,23 @@ function provideRouterScroller() {
 
 function provideHashLocationStrategy() {
   return {
-    provide: _angular_common__WEBPACK_IMPORTED_MODULE_30__.LocationStrategy,
-    useClass: _angular_common__WEBPACK_IMPORTED_MODULE_30__.HashLocationStrategy
+    provide: _angular_common__WEBPACK_IMPORTED_MODULE_33__.LocationStrategy,
+    useClass: _angular_common__WEBPACK_IMPORTED_MODULE_33__.HashLocationStrategy
   };
 }
 
 function providePathLocationStrategy() {
   return {
-    provide: _angular_common__WEBPACK_IMPORTED_MODULE_30__.LocationStrategy,
-    useClass: _angular_common__WEBPACK_IMPORTED_MODULE_30__.PathLocationStrategy
+    provide: _angular_common__WEBPACK_IMPORTED_MODULE_33__.LocationStrategy,
+    useClass: _angular_common__WEBPACK_IMPORTED_MODULE_33__.PathLocationStrategy
   };
 }
 
 function provideForRootGuard(router) {
   if (NG_DEV_MODE && router) {
-    throw new Error(`RouterModule.forRoot() called twice. Lazy loaded modules should use RouterModule.forChild() instead.`);
+    throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](4007
+    /* RuntimeErrorCode.FOR_ROOT_CALLED_TWICE */
+    , `RouterModule.forRoot() called twice. Lazy loaded modules should use RouterModule.forChild() instead.`);
   }
 
   return 'guarded';
@@ -112303,64 +112904,10 @@ function provideForRootGuard(router) {
 
 function provideRoutes(routes) {
   return [{
-    provide: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ANALYZE_FOR_ENTRY_COMPONENTS,
-    multi: true,
-    useValue: routes
-  }, {
     provide: ROUTES,
     multi: true,
     useValue: routes
   }];
-}
-
-function setupRouter(urlSerializer, contexts, location, injector, compiler, config, opts = {}, defaultTitleStrategy, titleStrategy, urlHandlingStrategy, routeReuseStrategy) {
-  const router = new Router(null, urlSerializer, contexts, location, injector, compiler, flatten(config));
-
-  if (urlHandlingStrategy) {
-    router.urlHandlingStrategy = urlHandlingStrategy;
-  }
-
-  if (routeReuseStrategy) {
-    router.routeReuseStrategy = routeReuseStrategy;
-  }
-
-  router.titleStrategy = titleStrategy ?? defaultTitleStrategy;
-  assignExtraOptionsToRouter(opts, router);
-  return router;
-}
-
-function assignExtraOptionsToRouter(opts, router) {
-  if (opts.errorHandler) {
-    router.errorHandler = opts.errorHandler;
-  }
-
-  if (opts.malformedUriErrorHandler) {
-    router.malformedUriErrorHandler = opts.malformedUriErrorHandler;
-  }
-
-  if (opts.onSameUrlNavigation) {
-    router.onSameUrlNavigation = opts.onSameUrlNavigation;
-  }
-
-  if (opts.paramsInheritanceStrategy) {
-    router.paramsInheritanceStrategy = opts.paramsInheritanceStrategy;
-  }
-
-  if (opts.relativeLinkResolution) {
-    router.relativeLinkResolution = opts.relativeLinkResolution;
-  }
-
-  if (opts.urlUpdateStrategy) {
-    router.urlUpdateStrategy = opts.urlUpdateStrategy;
-  }
-
-  if (opts.canceledNavigationResolution) {
-    router.canceledNavigationResolution = opts.canceledNavigationResolution;
-  }
-}
-
-function rootRoute(router) {
-  return router.routerState.root;
 }
 
 function getBootstrapListener() {
@@ -112373,9 +112920,11 @@ function getBootstrapListener() {
     }
 
     const router = injector.get(Router);
-    const bootstrapDone = injector.get(BOOTSTRAP_DONE); // Default case
+    const bootstrapDone = injector.get(BOOTSTRAP_DONE);
 
-    if (injector.get(INITIAL_NAVIGATION, null, _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectFlags.Optional) === null) {
+    if (injector.get(INITIAL_NAVIGATION) === 1
+    /* InitialNavigation.EnabledNonBlocking */
+    ) {
       router.initialNavigation();
     }
 
@@ -112422,33 +112971,69 @@ function provideRouterInitializer() {
 
 const BOOTSTRAP_DONE = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectionToken(NG_DEV_MODE ? 'bootstrap done indicator' : '', {
   factory: () => {
-    return new rxjs__WEBPACK_IMPORTED_MODULE_27__.Subject();
+    return new rxjs__WEBPACK_IMPORTED_MODULE_31__.Subject();
   }
 });
 
 function provideEnabledBlockingInitialNavigation() {
   return [{
     provide: INITIAL_NAVIGATION,
-    useValue: 'enabledBlocking'
+    useValue: 0
+    /* InitialNavigation.EnabledBlocking */
+
   }, {
     provide: _angular_core__WEBPACK_IMPORTED_MODULE_0__.APP_INITIALIZER,
     multi: true,
     deps: [_angular_core__WEBPACK_IMPORTED_MODULE_0__.Injector],
     useFactory: injector => {
-      const locationInitialized = injector.get(_angular_common__WEBPACK_IMPORTED_MODULE_30__.LOCATION_INITIALIZED, Promise.resolve(null));
+      const locationInitialized = injector.get(_angular_common__WEBPACK_IMPORTED_MODULE_33__.LOCATION_INITIALIZED, Promise.resolve(null));
       let initNavigation = false;
+      /**
+       * Performs the given action once the router finishes its next/current navigation.
+       *
+       * If the navigation is canceled or errors without a redirect, the navigation is considered
+       * complete. If the `NavigationEnd` event emits, the navigation is also considered complete.
+       */
+
+      function afterNextNavigation(action) {
+        const router = injector.get(Router);
+        router.events.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_9__.filter)(e => e instanceof NavigationEnd || e instanceof NavigationCancel || e instanceof NavigationError), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(e => {
+          if (e instanceof NavigationEnd) {
+            // Navigation assumed to succeed if we get `ActivationStart`
+            return true;
+          }
+
+          const redirecting = e instanceof NavigationCancel ? e.code === 0
+          /* NavigationCancellationCode.Redirect */
+          || e.code === 1
+          /* NavigationCancellationCode.SupersededByNewNavigation */
+          : false;
+          return redirecting ? null : false;
+        }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_9__.filter)(result => result !== null), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_7__.take)(1)).subscribe(() => {
+          action();
+        });
+      }
+
       return () => {
         return locationInitialized.then(() => {
           return new Promise(resolve => {
             const router = injector.get(Router);
             const bootstrapDone = injector.get(BOOTSTRAP_DONE);
+            afterNextNavigation(() => {
+              // Unblock APP_INITIALIZER in case the initial navigation was canceled or errored
+              // without a redirect.
+              resolve(true);
+              initNavigation = true;
+            });
 
             router.afterPreactivation = () => {
-              // only the initial navigation should be delayed
+              // Unblock APP_INITIALIZER once we get to `afterPreactivation`. At this point, we
+              // assume activation will complete successfully (even though this is not
+              // guaranteed).
+              resolve(true); // only the initial navigation should be delayed until bootstrapping is done.
+
               if (!initNavigation) {
-                initNavigation = true;
-                resolve(true);
-                return bootstrapDone; // subsequent navigations should not be delayed
+                return bootstrapDone.closed ? (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(void 0) : bootstrapDone; // subsequent navigations should not be delayed
               } else {
                 return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(void 0);
               }
@@ -112462,7 +113047,12 @@ function provideEnabledBlockingInitialNavigation() {
   }];
 }
 
-const INITIAL_NAVIGATION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectionToken(NG_DEV_MODE ? 'initial navigation' : '');
+const INITIAL_NAVIGATION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectionToken(NG_DEV_MODE ? 'initial navigation' : '', {
+  providedIn: 'root',
+  factory: () => 1
+  /* InitialNavigation.EnabledNonBlocking */
+
+});
 
 function provideDisabledInitialNavigation() {
   return [{
@@ -112476,7 +113066,9 @@ function provideDisabledInitialNavigation() {
     }
   }, {
     provide: INITIAL_NAVIGATION,
-    useValue: 'disabled'
+    useValue: 2
+    /* InitialNavigation.Disabled */
+
   }];
 }
 
@@ -112523,7 +113115,7 @@ function providePreloading(preloadingStrategy) {
  */
 
 
-const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.Version('14.0.4');
+const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.Version('14.1.1');
 /**
  * @license
  * Copyright Google LLC All Rights Reserved.

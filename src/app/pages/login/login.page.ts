@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ReportsService } from 'src/app/services/reports.service';
 
 @Component({
   selector: 'app-login',
@@ -7,11 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
   name : string
+  items2: any;
+  constructor(private rs: ReportsService) { 
 
-  constructor() { }
+  }
 
   ngOnInit() {
+   this.rs.tests.subscribe(data => { this.items2 = data ; console.log(this.items2)})
+ 
   }
+
 
   login(){
 
