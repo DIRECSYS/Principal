@@ -12,20 +12,20 @@ const routes: Routes = [
     children: [
       {
         path: 'history',
-        loadChildren : () => import("src/app/pages/history/history.module").then(m=> m.HistoryPageModule)
+        loadChildren : () => import('src/app/pages/history/history.module').then(m=> m.HistoryPageModule)
       },
       {
         path: 'settings',
-        loadChildren : () => import("src/app/pages/settings-user/settings-user.module").then(m=> m.SettingsUserPageModule)
+        loadChildren : () => import('src/app/pages/settings-user/settings-user.module').then(m=> m.SettingsUserPageModule)
       },
       {
         path: 'dashboard',
-        loadChildren : () => import("src/app/pages/dashboard-user/dashboard-user.module").then(m=> m.DashboardUserPageModule)
+        loadChildren : () => import('src/app/pages/dashboard-user/dashboard-user.module').then(m=> m.DashboardUserPageModule)
       },
       {
         path: '',
 
-        loadChildren : () => import("src/app/pages//dashboard-user/dashboard-user.module").then(m=> m.DashboardUserPageModule)
+        loadChildren : () => import('src/app/pages//dashboard-user/dashboard-user.module').then(m=> m.DashboardUserPageModule)
       }
     ]
   },

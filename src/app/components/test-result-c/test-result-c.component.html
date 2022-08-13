@@ -1,14 +1,21 @@
 <ion-card class="ion-text-center">
   <ion-card-header>
-    Resultado : Paso
-  </ion-card-header>
+    Resultado : {{this.actualtest.EDP}}
+ </ion-card-header>
   <ion-card-subtitle>
-    Fecha : 02/08/2022
+    Fecha : {{this.temperatura}}
   </ion-card-subtitle>
   <ion-card-content>
-    <img class="test-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/2048px-Eo_circle_green_checkmark.svg.png">
+    <ng-template *ngIf="(this.actualtest.EDP === 'approved'); then thenBlock" ></ng-template>
+    <ng-template *ngIf="(this.actualtest.EDP === 'failed'); then elseBlock"></ng-template>
+    <ng-template #thenBlock>
+      <img alt="Passed" class="test-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/2048px-Eo_circle_green_checkmark.svg.png">
+    </ng-template>
+    <ng-template #elseBlock>
+      <img alt="Not-passed" class="test-img" src="https://coor.es/imgs/close-icon-png-19.png">
+    </ng-template>
     <div class="bg">
-      <ion-button (click) ='loadDetails()' > Detalles</ion-button>
+      <ion-button (click) ='loadDetails(this.actualtest)' > Detalles</ion-button>
     </div>
   </ion-card-content>
 </ion-card>
