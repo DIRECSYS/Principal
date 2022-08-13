@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { AuthService } from 'src/app/services/auth.service';
 import { ReportsService } from 'src/app/services/reports.service';
 
 @Component({
@@ -8,27 +9,48 @@ import { ReportsService } from 'src/app/services/reports.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  name : string
+  public sesionIniciada: boolean;
+  public usuario: any;
+
   items2: any;
-  constructor(private rs: ReportsService) { 
+
+
+  constructor(private rs: ReportsService, private _authService: AuthService) { 
 
   }
 
-  ngOnInit() {
-   this.rs.tests.subscribe(data => { this.items2 = data ; console.log(this.items2)})
- 
+  ngOnInit(): void {
+    this.rs.tests.subscribe(data => { this.items2 = data ; console.log(this.items2)})
+    this.usuarioLoggeado()
   }
 
+  usuarioLoggeado(){
+    this._authService.getInfoUsuarioLoggeado().subscribe(userData=>{
+      if(userData != null){
+        this.sesionIniciada = true;
+        this.usuario = userData;
+      }
+      else{
+        this.sesionIniciada = false;
+      }
+    })
+  }
 
   login(){
 
-    let a = this.name;
+    let usuario = this.usuario;
      
-    if (a == "admin"){
+    if (usuario == "admin"){
         location.href = "/admin-tabs";
       }
-      else if ( a == "user"){
+      else if ( usuario == "user"){
         location.href = "/tabs"
       }
+  }
+
+  logOut(): void{
+    this._authService.logOut().then(userData => {
+      this.sesionIniciada = false;
+    })
   }
 }
