@@ -270,11 +270,23 @@ ion-checkbox.checks{
   --background-checked:	#000000;
 }
 
+ion-button.test{
+  --background: #ff5100;
+  --background-activated: white;
+  --background-activated-opacity: 0.3;
+  --border-color: white;
+  --color-activated: black;
+  --border-radius: 50%;
+}
 
-
-
-
-
+ion-button.enviar{
+  --background: #ff5100;
+  --background-activated: white;
+  --background-activated-opacity: 0.3;
+  --border-color: white;
+  --color-activated: black;
+  --border-radius: 15px;
+}
 
 ion-alert.custom-alert{
   .alert-head{
@@ -294,6 +306,7 @@ ion-alert.custom-alert{
   --background:rgb(237, 237, 237);
   --backdrop-opacity: .6;
   --border-top: 0.55pxs;
+
 }
 
 
@@ -332,3 +345,4 @@ ion-datetime{
 ion-button.buttons2{
   --background: #ffa500;
 }
+
