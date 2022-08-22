@@ -1,0 +1,137 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Generar reporte</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  class="ion-text-center">
+  <ion-card class="filters-card" >
+    <ion-card-header>
+      <ion-label> Seleccionar tipo de prueba: </ion-label>
+    </ion-card-header>
+    <ion-list class="selection-1">
+      <ion-item >
+        <ion-select interface="action-sheet" placeholder="Seleccionar prueba">
+          <ion-select-option value="1">Pruebas aprovadas</ion-select-option>
+          <ion-select-option value="2">Pruebas fallidas</ion-select-option>
+          <ion-select-option value="3">Todas las pruebas</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card class="filters-card" >
+    <ion-label>Desde</ion-label>
+      <ion-input
+        value="{{ date | date: 'dd.MM.yyyy' }}"
+        id="date"
+        class="date-button" 
+        placeholder="Seleccionar fecha"
+      > </ion-input>
+      <ion-popover trigger="date" size="auto" side="start">
+        <ng-template>
+          <ion-datetime class="date"
+            presentation="date"
+            [(ngModel)]="date"
+            locale="es-ES"
+          ></ion-datetime>
+        </ng-template>
+      </ion-popover>
+    
+    <ion-label>Hasta</ion-label>
+      <ion-input
+        value="{{ date2 | date: 'dd.MM.yyyy' }}"
+        id="date2"
+        class="ion-text-center"
+        placeholder="Seleccionar fecha"
+      ></ion-input>
+      <ion-popover trigger="date2" side="left" size="auto" >
+        <ng-template>
+          <ion-datetime class="date2"
+            presentation="date"
+            [(ngModel)]="date2"
+            locale="es-ES"
+          ></ion-datetime>
+        </ng-template>
+      </ion-popover>
+  </ion-card>
+
+  <ion-card  class="filters-card" >
+    <ion-grid class="filters">
+    
+      <ion-row>
+        <ion-col class="ion-align-self-start">
+          
+          <ion-label> Filtro 1 </ion-label>
+          <ion-checkbox class="check"></ion-checkbox>
+        </ion-col>
+        <ion-col class="ion-align-self-center">
+          <ion-label> Filtro 2 </ion-label>
+          <ion-checkbox class="check"></ion-checkbox>
+        </ion-col>
+        <ion-col class="ion-align-self-end">
+          <ion-label> Filtro 3 </ion-label>
+          <ion-checkbox class="check"></ion-checkbox>
+        </ion-col>
+      </ion-row>
+    
+   
+      <ion-row>
+        <ion-col class="ion-align-self-start">
+          <ion-label> Filtro 4 </ion-label>
+          <ion-checkbox class="check"></ion-checkbox>
+          
+        </ion-col>
+        <ion-col class="ion-align-self-center">
+          <ion-label> Filtro 5 </ion-label>
+          <ion-checkbox class="check"></ion-checkbox>
+        </ion-col>
+        <ion-col class="ion-align-self-end">
+          <ion-label> Filtro 6 </ion-label>
+          <ion-checkbox class="check"></ion-checkbox>
+        </ion-col>
+      </ion-row>
+    
+     
+    </ion-grid>
+  </ion-card>
+
+  <ion-card class="filters-card">
+    <ion-card-header>
+      <ion-label> Filtro 7: </ion-label>
+    </ion-card-header>
+    <ion-list >
+      <ion-item  class="popup">
+        <ion-select interface="popover" placeholder="Seleccionar" >
+          <ion-select-option value="1" >Opcion 1</ion-select-option>
+          <ion-select-option value="2">Opcion 2</ion-select-option>
+          <ion-select-option value="3">Opcion 3</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card class="filters-card">
+    <ion-card-header>
+      <ion-label> Filtro 8: </ion-label>
+    </ion-card-header>
+    <ion-list>
+      <ion-item class="popup" >
+        <ion-select interface="popover" placeholder="Seleccionar">
+          <ion-select-option value="1">Opcion 1</ion-select-option>
+          <ion-select-option value="2">Opcion 2</ion-select-option>
+          <ion-select-option value="3">Opcion 3</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card  class="buttons-filters">
+    <ion-card-content class="ion-text-center">
+      <ion-button class="buttons2">
+        <ion-icon name="trash"> </ion-icon>
+      </ion-button>
+      <ion-button  class="buttons2"> Generar </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

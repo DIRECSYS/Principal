@@ -4,7 +4,7 @@
 
     <div class="elems">
 
-      <ion-input placeholder="Matricula" class="inputs" inputmode="text" mode="ios"></ion-input>
+      <ion-input  [(ngModel)]="name" placeholder="Matricula" class="inputs" inputmode="text" mode="ios"></ion-input>
       <ion-input placeholder="Contraseña" class="inputs"></ion-input>
     
 
@@ -17,10 +17,8 @@
 
 <div class="footer">
 
-  <ion-button class="button" color="medium" onclick="location.href='/tabs'">
+  <ion-button class="button" color="medium" (click)="login()">
 
     <ion-label> Iniciar Sesion</ion-label>
   </ion-button>
-
-  <ion-button > Goto Dash</ion-button>
 </div>
