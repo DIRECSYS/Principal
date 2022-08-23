@@ -214,7 +214,7 @@
   }
 
   .ios ion-modal {
-    --ion-background-color: #ffff;
+    --ion-background-color: #121212;
     --ion-toolbar-background: #182;
     --ion-toolbar-border-color: var(--ion-color-step-250);
   }
@@ -331,4 +331,9 @@ ion-datetime{
 
 ion-button.buttons2{
   --background: #ffa500;
+}
+
+ion-modal.report-modal{
+  --color: #121212;
+  --background-color: #121212;
 }

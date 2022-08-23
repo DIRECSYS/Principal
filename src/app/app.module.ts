@@ -11,21 +11,26 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
+import {File} from '@ionic-native/file/ngx';
+import {FileOpener} from '@ionic-native/file-opener/ngx';
 
 import { AuthService } from './services/auth.service';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [AppComponent,],
   imports:[
-    BrowserModule, 
-    IonicModule.forRoot(), 
+    BrowserModule,
+    IonicModule.forRoot(),
     AppRoutingModule, AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, AuthService],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, AuthService, File,FileOpener],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

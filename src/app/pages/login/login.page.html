@@ -1,12 +1,14 @@
 
-<ion-content>
+<ion-content scrollY="false">
   <div class="bg">
 
     <div class="elems">
+      <form [formGroup]="ngForm">
 
-      <ion-input  [(ngModel)]="usuario" placeholder="Matricula" class="inputs" inputmode="text" mode="ios"></ion-input>
-      <ion-input placeholder="Contraseña" class="inputs"></ion-input>
-    
+        <ion-input [(ngModel)]="usuario" placeholder="Matricula" class="inputs" inputmode="text" mode="ios"  formControlName="user" type="text"></ion-input>
+        <ion-input placeholder="Contraseña" class="inputs"></ion-input>
+      
+      </form>
 
     </div>
 

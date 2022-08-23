@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 import { ReportsService } from 'src/app/services/reports.service';
+import { Validators, FormBuilder,FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -13,13 +14,20 @@ export class LoginPage implements OnInit {
   public usuario: any;
 
   items2: any;
+  ngForm : FormGroup;
 
-
-  constructor(private rs: ReportsService, private _authService: AuthService) {
+  
+  constructor(private rs: ReportsService, private _authService: AuthService ,public formBuilder: FormBuilder) {
 
   }
 
   ngOnInit(): void {
+
+    this.ngForm = this.formBuilder.group({
+      user: ['', [Validators.required, Validators.minLength(2)]],
+   })
+
+    
     this.usuarioLoggeado()
   }
 
