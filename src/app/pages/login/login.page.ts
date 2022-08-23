@@ -15,12 +15,11 @@ export class LoginPage implements OnInit {
   items2: any;
 
 
-  constructor(private rs: ReportsService, private _authService: AuthService) { 
+  constructor(private rs: ReportsService, private _authService: AuthService) {
 
   }
 
   ngOnInit(): void {
-    this.rs.tests.subscribe(data => { this.items2 = data ; console.log(this.items2)})
     this.usuarioLoggeado()
   }
 
@@ -39,7 +38,7 @@ export class LoginPage implements OnInit {
   login(){
 
     let usuario = this.usuario;
-     
+
     if (usuario == "admin"){
         location.href = "/admin-tabs";
       }
