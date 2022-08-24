@@ -35,9 +35,9 @@
   
     <div class="bg-oscuro">
       <div class="form-fields">
-        <form [formGroup]="ngForm">
-          <ion-input placeholder="Matricula" class="inputs" ></ion-input>
-          <ion-input placeholder="Contraseña" class="inputs"></ion-input>  
+        <form >
+          <ion-input placeholder="Matricula" class="inputs" [(ngModel)]="correo" name="usuario"></ion-input>
+          <ion-input placeholder="Contraseña" class="inputs" ></ion-input>  
         </form>
       </div>
     </div>
