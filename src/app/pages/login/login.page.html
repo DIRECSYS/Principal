@@ -36,8 +36,20 @@
     <div class="bg-oscuro">
       <div class="form-fields">
         <form >
-          <ion-input placeholder="Matricula" class="inputs" [(ngModel)]="correo" name="usuario"></ion-input>
-          <ion-input placeholder="Contraseña" class="inputs" ></ion-input>  
+          <div class="form-header">
+            <h1>¡Bienvenido!</h1>
+            <p>Inicia sesión en tu cuenta</p>
+          </div>
+          <div class="form-inputs">
+            <ion-input placeholder="Correo" class="inputs" [(ngModel)]="correo" name="usuario"></ion-input>
+            <ion-input placeholder="Contraseña" class="inputs" type="password"></ion-input>  
+            <ion-label class="forgot-pass"><a href="" class="hyper">¿Olvidaste tu contraseña?</a></ion-label>
+          </div>
+          <div class="form-buttons">
+            <ion-button class="buttons" (click)="login()">
+              <ion-label>Iniciar sesión</ion-label>
+            </ion-button>
+          </div>
         </form>
       </div>
     </div>
@@ -45,7 +57,7 @@
 
   
     <div class="footer">
-      <ion-button class="buttons" color="light" (click)="login()">
+      <!-- <ion-button class="buttons" color="light" (click)="login()">
         <ion-label>Iniciar sesión</ion-label>
       </ion-button>
       <ion-button class="buttons" color="light">
@@ -53,7 +65,8 @@
       </ion-button>
       <ion-button class="buttons" id="help" color="warning">
         <ion-label>?</ion-label>
-      </ion-button>
+      </ion-button> -->
+      <p class="register-text">No tienes una cuenta <a href="/register" class="hyper">Regístrate</a></p>
     </div>
   </div>
 
