@@ -5,6 +5,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
@@ -16,7 +17,11 @@ import {FileOpener} from '@ionic-native/file-opener/ngx';
 
 import { AuthService } from './services/auth.service';
 import { ReactiveFormsModule } from '@angular/forms';
+
+
 import { FormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [AppComponent,],
   imports:[
