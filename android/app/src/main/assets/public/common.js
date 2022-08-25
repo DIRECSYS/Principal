@@ -536,9 +536,9 @@ const hapticImpact = options => {
 
 /***/ }),
 
-/***/ 1314:
+/***/ 7288:
 /*!*************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/index-8bf9b0cd.js ***!
+  !*** ./node_modules/@ionic/core/dist/esm/index-3413f7be.js ***!
   \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -558,7 +558,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Users_arturo_Documents_Servicio_Social_Proyecto_DIRECSYS_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 1670);
 /* harmony import */ var _helpers_4d272360_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers-4d272360.js */ 9158);
-/* harmony import */ var _index_9ac92660_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index-9ac92660.js */ 2141);
+/* harmony import */ var _index_c4b11676_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index-c4b11676.js */ 9273);
 
 
 /*!
@@ -677,7 +677,7 @@ const scrollByPoint = (el, x, y, durationMs) => {
 
 
 const printIonContentErrorMsg = el => {
-  return (0,_index_9ac92660_js__WEBPACK_IMPORTED_MODULE_2__.a)(el, ION_CONTENT_ELEMENT_SELECTOR);
+  return (0,_index_c4b11676_js__WEBPACK_IMPORTED_MODULE_2__.a)(el, ION_CONTENT_ELEMENT_SELECTOR);
 };
 /**
  * Several components in Ionic need to prevent scrolling
@@ -718,63 +718,9 @@ const resetContentScrollY = (contentEl, initialScrollY) => {
 
 /***/ }),
 
-/***/ 2141:
+/***/ 2312:
 /*!*************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/index-9ac92660.js ***!
-  \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "a": () => (/* binding */ printRequiredElementError),
-/* harmony export */   "b": () => (/* binding */ printIonError),
-/* harmony export */   "p": () => (/* binding */ printIonWarning)
-/* harmony export */ });
-/*!
- * (C) Ionic http://ionicframework.com - MIT License
- */
-
-/**
- * Logs a warning to the console with an Ionic prefix
- * to indicate the library that is warning the developer.
- *
- * @param message - The string message to be logged to the console.
- */
-const printIonWarning = message => {
-  return console.warn(`[Ionic Warning]: ${message}`);
-};
-/*
- * Logs an error to the console with an Ionic prefix
- * to indicate the library that is warning the developer.
- *
- * @param message - The string message to be logged to the console.
- * @param params - Additional arguments to supply to the console.error.
- */
-
-
-const printIonError = (message, ...params) => {
-  return console.error(`[Ionic Error]: ${message}`, ...params);
-};
-/**
- * Prints an error informing developers that an implementation requires an element to be used
- * within a specific selector.
- *
- * @param el The web component element this is requiring the element.
- * @param targetSelectors The selector or selectors that were not found.
- */
-
-
-const printRequiredElementError = (el, ...targetSelectors) => {
-  return console.error(`<${el.tagName.toLowerCase()}> must be used inside ${targetSelectors.join(' or ')}.`);
-};
-
-
-
-/***/ }),
-
-/***/ 3814:
-/*!*************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/index-d74f4afc.js ***!
+  !*** ./node_modules/@ionic/core/dist/esm/index-45ecc7ca.js ***!
   \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -785,20 +731,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "c": () => (/* binding */ chevronBack),
 /* harmony export */   "d": () => (/* binding */ closeSharp),
 /* harmony export */   "e": () => (/* binding */ searchSharp),
-/* harmony export */   "f": () => (/* binding */ caretBackSharp),
-/* harmony export */   "g": () => (/* binding */ arrowDown),
-/* harmony export */   "h": () => (/* binding */ reorderTwoSharp),
-/* harmony export */   "i": () => (/* binding */ chevronDown),
-/* harmony export */   "j": () => (/* binding */ chevronForwardOutline),
-/* harmony export */   "k": () => (/* binding */ ellipsisHorizontal),
-/* harmony export */   "l": () => (/* binding */ chevronForward),
-/* harmony export */   "m": () => (/* binding */ caretUpSharp),
-/* harmony export */   "n": () => (/* binding */ caretDownSharp),
-/* harmony export */   "o": () => (/* binding */ close),
-/* harmony export */   "p": () => (/* binding */ menuOutline),
-/* harmony export */   "q": () => (/* binding */ menuSharp),
-/* harmony export */   "r": () => (/* binding */ reorderThreeOutline),
-/* harmony export */   "s": () => (/* binding */ searchOutline)
+/* harmony export */   "f": () => (/* binding */ checkmarkOutline),
+/* harmony export */   "g": () => (/* binding */ ellipseOutline),
+/* harmony export */   "h": () => (/* binding */ caretBackSharp),
+/* harmony export */   "i": () => (/* binding */ arrowDown),
+/* harmony export */   "j": () => (/* binding */ reorderThreeOutline),
+/* harmony export */   "k": () => (/* binding */ reorderTwoSharp),
+/* harmony export */   "l": () => (/* binding */ chevronDown),
+/* harmony export */   "m": () => (/* binding */ chevronForwardOutline),
+/* harmony export */   "n": () => (/* binding */ ellipsisHorizontal),
+/* harmony export */   "o": () => (/* binding */ chevronForward),
+/* harmony export */   "p": () => (/* binding */ caretUpSharp),
+/* harmony export */   "q": () => (/* binding */ caretDownSharp),
+/* harmony export */   "r": () => (/* binding */ removeOutline),
+/* harmony export */   "s": () => (/* binding */ searchOutline),
+/* harmony export */   "t": () => (/* binding */ close),
+/* harmony export */   "u": () => (/* binding */ menuOutline),
+/* harmony export */   "v": () => (/* binding */ menuSharp)
 /* harmony export */ });
 /*!
  * (C) Ionic http://ionicframework.com - MIT License
@@ -810,6 +759,7 @@ const arrowDown = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/sv
 const caretBackSharp = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Caret Back</title><path d='M368 64L144 256l224 192V64z'/></svg>";
 const caretDownSharp = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Caret Down</title><path d='M64 144l192 224 192-224H64z'/></svg>";
 const caretUpSharp = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Caret Up</title><path d='M448 368L256 144 64 368h384z'/></svg>";
+const checkmarkOutline = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Checkmark</title><path stroke-linecap='round' stroke-linejoin='round' d='M416 128L192 384l-96-96' class='ionicon-fill-none ionicon-stroke-width'/></svg>";
 const chevronBack = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Chevron Back</title><path stroke-linecap='round' stroke-linejoin='round' stroke-width='48' d='M328 112L184 256l144 144' class='ionicon-fill-none'/></svg>";
 const chevronDown = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Chevron Down</title><path stroke-linecap='round' stroke-linejoin='round' stroke-width='48' d='M112 184l144 144 144-144' class='ionicon-fill-none'/></svg>";
 const chevronForward = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Chevron Forward</title><path stroke-linecap='round' stroke-linejoin='round' stroke-width='48' d='M184 112l144 144-144 144' class='ionicon-fill-none'/></svg>";
@@ -817,9 +767,11 @@ const chevronForwardOutline = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3
 const close = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Close</title><path d='M289.94 256l95-95A24 24 0 00351 127l-95 95-95-95a24 24 0 00-34 34l95 95-95 95a24 24 0 1034 34l95-95 95 95a24 24 0 0034-34z'/></svg>";
 const closeCircle = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Close Circle</title><path d='M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm75.31 260.69a16 16 0 11-22.62 22.62L256 278.63l-52.69 52.68a16 16 0 01-22.62-22.62L233.37 256l-52.68-52.69a16 16 0 0122.62-22.62L256 233.37l52.69-52.68a16 16 0 0122.62 22.62L278.63 256z'/></svg>";
 const closeSharp = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Close</title><path d='M400 145.49L366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49z'/></svg>";
+const ellipseOutline = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Ellipse</title><circle cx='256' cy='256' r='192' stroke-linecap='round' stroke-linejoin='round' class='ionicon-fill-none ionicon-stroke-width'/></svg>";
 const ellipsisHorizontal = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Ellipsis Horizontal</title><circle cx='256' cy='256' r='48'/><circle cx='416' cy='256' r='48'/><circle cx='96' cy='256' r='48'/></svg>";
 const menuOutline = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Menu</title><path stroke-linecap='round' stroke-miterlimit='10' d='M80 160h352M80 256h352M80 352h352' class='ionicon-fill-none ionicon-stroke-width'/></svg>";
 const menuSharp = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Menu</title><path d='M64 384h384v-42.67H64zm0-106.67h384v-42.66H64zM64 128v42.67h384V128z'/></svg>";
+const removeOutline = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Remove</title><path stroke-linecap='round' stroke-linejoin='round' d='M400 256H112' class='ionicon-fill-none ionicon-stroke-width'/></svg>";
 const reorderThreeOutline = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Reorder Three</title><path stroke-linecap='round' stroke-linejoin='round' d='M96 256h320M96 176h320M96 336h320' class='ionicon-fill-none ionicon-stroke-width'/></svg>";
 const reorderTwoSharp = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Reorder Two</title><path stroke-linecap='square' stroke-linejoin='round' stroke-width='44' d='M118 304h276M118 208h276' class='ionicon-fill-none'/></svg>";
 const searchOutline = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Search</title><path d='M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z' stroke-miterlimit='10' class='ionicon-fill-none ionicon-stroke-width'/><path stroke-linecap='round' stroke-miterlimit='10' d='M338.29 338.29L448 448' class='ionicon-fill-none ionicon-stroke-width'/></svg>";
@@ -1259,83 +1211,6 @@ const createSwipeBackGesture = (el, canStartHandler, onStartHandler, onMoveHandl
     onEnd
   });
 };
-
-
-
-/***/ }),
-
-/***/ 320:
-/*!*************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/theme-7670341c.js ***!
-  \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "c": () => (/* binding */ createColorClasses),
-/* harmony export */   "g": () => (/* binding */ getClassMap),
-/* harmony export */   "h": () => (/* binding */ hostContext),
-/* harmony export */   "o": () => (/* binding */ openURL)
-/* harmony export */ });
-/* harmony import */ var _Users_arturo_Documents_Servicio_Social_Proyecto_DIRECSYS_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 1670);
-
-
-/*!
- * (C) Ionic http://ionicframework.com - MIT License
- */
-const hostContext = (selector, el) => {
-  return el.closest(selector) !== null;
-};
-/**
- * Create the mode and color classes for the component based on the classes passed in
- */
-
-
-const createColorClasses = (color, cssClassMap) => {
-  return typeof color === 'string' && color.length > 0 ? Object.assign({
-    'ion-color': true,
-    [`ion-color-${color}`]: true
-  }, cssClassMap) : cssClassMap;
-};
-
-const getClassList = classes => {
-  if (classes !== undefined) {
-    const array = Array.isArray(classes) ? classes : classes.split(' ');
-    return array.filter(c => c != null).map(c => c.trim()).filter(c => c !== '');
-  }
-
-  return [];
-};
-
-const getClassMap = classes => {
-  const map = {};
-  getClassList(classes).forEach(c => map[c] = true);
-  return map;
-};
-
-const SCHEME = /^[a-z][a-z0-9+\-.]*:/;
-
-const openURL = /*#__PURE__*/function () {
-  var _ref = (0,_Users_arturo_Documents_Servicio_Social_Proyecto_DIRECSYS_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (url, ev, direction, animation) {
-    if (url != null && url[0] !== '#' && !SCHEME.test(url)) {
-      const router = document.querySelector('ion-router');
-
-      if (router) {
-        if (ev != null) {
-          ev.preventDefault();
-        }
-
-        return router.push(url, direction, animation);
-      }
-    }
-
-    return false;
-  });
-
-  return function openURL(_x, _x2, _x3, _x4) {
-    return _ref.apply(this, arguments);
-  };
-}();
 
 
 

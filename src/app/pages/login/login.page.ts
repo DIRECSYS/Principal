@@ -6,21 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  name : string
 
-  constructor() { }
+  public correo: any;
 
-  ngOnInit() {
+  
+  constructor() {
+
+  }
+
+  ngOnInit(): void {
+
   }
 
   login(){
 
-    let a = this.name;
-     
-    if (a == "admin"){
+    let correo = this.correo;
+
+    if (correo == "admin"){
         location.href = "/admin-tabs";
       }
-      else if ( a == "user"){
+      else if ( correo == "user"){
         location.href = "/tabs"
       }
   }

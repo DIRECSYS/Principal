@@ -44,7 +44,7 @@ ion-card.filters-card{
 
 ion-input.date-button {
     //background-color: #1e1e1e;
-
+    
     border-radius: 10px;
     border-color: #1e1e1e;
     
@@ -60,4 +60,24 @@ ion-icon.date-icon{
 ion-item.popup{
     --border-style: none;
     border-style: none;
+}
+
+.reports-modal-icon{
+    margin-left: 10px;
+    margin-top: 10px;
+   
+}
+
+.modal-item{
+    margin: 0px;
+    margin-bottom: 1px;
+    border-style: none;
+}
+
+.reports-card{
+  
+   
+    width: 100%;
+    justify-content: center;
+
 }

@@ -1,39 +1,31 @@
 
 <ion-toolbar>
   <ion-title>Historial de Pruebas</ion-title>
+  <ion-badge slot="end"  class="badge"> {{badge}}</ion-badge>
 </ion-toolbar>
-
 <ion-content >
-  <ion-list class="bg-transparent">
-    <ion-card >
-      <ion-item detail="false" (click)="presentAlert('1')" color="danger" >
-        <ion-icon name="close-circle"></ion-icon>
-        <ion-label class="id">
-          Folio 1
-        </ion-label>
-      </ion-item>
+  <ion-list class="bg-transparent">    
+    <ion-card *ngFor="let item of testsf" >
+      <ng-template *ngIf="(item.EDP === 'approved'); then thenBlock else elseBlock" >
+      </ng-template>
+      <ng-template #thenBlock>
+           <ion-item detail="false" (click)="presentAlert(item.IDT, item.FDP,item.PEE, item.PHS, item.PRA, item.PRD, item.PRO)" color="success">
+             <ion-icon name="checkmark-done-circle"> </ion-icon>
+             <ion-label class="id">
+                Folio: {{item.IDT}}
+             </ion-label>
+           </ion-item>
+
+         </ng-template>
+      <ng-template #elseBlock>
+        <ion-item detail="false" (click)="presentAlert(item.IDT, item.FDP,item.PEE, item.PHS, item.PRA, item.PRD, item.PRO)" color="danger">
+          <ion-icon name="close-circle"> </ion-icon>
+          <ion-label class="id">
+             Folio: {{item.IDT}}
+          </ion-label>
+        </ion-item>
+      </ng-template> 
     </ion-card>
-
-    <ion-card>
-
-      <ion-item detail="false" (click)="presentAlert('2')" color="danger">
-        <ion-icon name="close-circle"> </ion-icon>
-        <ion-label class="id">
-          Folio 2
-        </ion-label>
-      </ion-item>
-      
-    </ion-card>
-
-    <ion-card>
-      <ion-item detail="false" (click)="presentAlert('3')" color="success">
-        <ion-icon name="checkmark-done-circle"> </ion-icon>
-        <ion-label class="id">
-          Folio 3
-        </ion-label>
-      </ion-item>
-    </ion-card>
-
   </ion-list>
 </ion-content>
 

@@ -27,13 +27,13 @@ const routes = [
         loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_components_tabs_tabs_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./components/tabs/tabs.module */ 1802)).then(m => m.TabsPageModule)
     },
     {
-        path: 'dashboard-user',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_dashboard-user_dashboard-user_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/dashboard-user/dashboard-user.module */ 8604)).then(m => m.DashboardUserPageModule)
+        path: '',
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_components_admin-tabs_admin-tabs_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./components/admin-tabs/admin-tabs.module */ 6286)).then(m => m.AdminTabsPageModule)
     },
     {
-        path: 'settings-user',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_settings-user_settings-user_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/settings-user/settings-user.module */ 84)).then(m => m.SettingsUserPageModule)
-    },
+        path: 'register',
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_register_register_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/register/register.module */ 207)).then(m => m.RegisterPageModule)
+    }
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -114,7 +114,7 @@ let AppModule = class AppModule {
 };
 AppModule = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.NgModule)({
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent,],
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__.BrowserModule, _ionic_angular__WEBPACK_IMPORTED_MODULE_5__.IonicModule.forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_1__.AppRoutingModule],
         providers: [{ provide: _angular_router__WEBPACK_IMPORTED_MODULE_6__.RouteReuseStrategy, useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__.IonicRouteStrategy }],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent],
@@ -208,7 +208,6 @@ var map = {
 	],
 	"./ion-avatar_3.entry.js": [
 		6655,
-		"common",
 		"node_modules_ionic_core_dist_esm_ion-avatar_3_entry_js"
 	],
 	"./ion-back-button.entry.js": [
@@ -227,30 +226,32 @@ var map = {
 	],
 	"./ion-button_2.entry.js": [
 		8308,
-		"common",
 		"node_modules_ionic_core_dist_esm_ion-button_2_entry_js"
 	],
 	"./ion-card_5.entry.js": [
 		4690,
-		"common",
 		"node_modules_ionic_core_dist_esm_ion-card_5_entry_js"
 	],
 	"./ion-checkbox.entry.js": [
 		4090,
-		"common",
 		"node_modules_ionic_core_dist_esm_ion-checkbox_entry_js"
 	],
 	"./ion-chip.entry.js": [
 		6214,
-		"common",
 		"node_modules_ionic_core_dist_esm_ion-chip_entry_js"
 	],
 	"./ion-col_3.entry.js": [
 		9447,
 		"node_modules_ionic_core_dist_esm_ion-col_3_entry_js"
 	],
+	"./ion-datetime-button.entry.js": [
+		7950,
+		"default-node_modules_ionic_core_dist_esm_parse-46e842f3_js-node_modules_ionic_core_dist_esm_t-5e0416",
+		"node_modules_ionic_core_dist_esm_ion-datetime-button_entry_js"
+	],
 	"./ion-datetime_3.entry.js": [
 		9689,
+		"default-node_modules_ionic_core_dist_esm_parse-46e842f3_js-node_modules_ionic_core_dist_esm_t-5e0416",
 		"common",
 		"node_modules_ionic_core_dist_esm_ion-datetime_3_entry_js"
 	],
@@ -270,7 +271,6 @@ var map = {
 	],
 	"./ion-input.entry.js": [
 		3288,
-		"common",
 		"node_modules_ionic_core_dist_esm_ion-input_entry_js"
 	],
 	"./ion-item-option_3.entry.js": [
@@ -285,7 +285,6 @@ var map = {
 	],
 	"./ion-loading.entry.js": [
 		2855,
-		"common",
 		"node_modules_ionic_core_dist_esm_ion-loading_entry_js"
 	],
 	"./ion-menu_3.entry.js": [
@@ -319,12 +318,10 @@ var map = {
 	],
 	"./ion-progress-bar.entry.js": [
 		8994,
-		"common",
 		"node_modules_ionic_core_dist_esm_ion-progress-bar_entry_js"
 	],
 	"./ion-radio_2.entry.js": [
 		3592,
-		"common",
 		"node_modules_ionic_core_dist_esm_ion-radio_2_entry_js"
 	],
 	"./ion-range.entry.js": [
@@ -348,7 +345,6 @@ var map = {
 	],
 	"./ion-route_4.entry.js": [
 		5534,
-		"common",
 		"node_modules_ionic_core_dist_esm_ion-route_4_entry_js"
 	],
 	"./ion-searchbar.entry.js": [
@@ -363,7 +359,6 @@ var map = {
 	],
 	"./ion-select_3.entry.js": [
 		8179,
-		"common",
 		"node_modules_ionic_core_dist_esm_ion-select_3_entry_js"
 	],
 	"./ion-slide_2.entry.js": [
@@ -381,7 +376,6 @@ var map = {
 	],
 	"./ion-tab-bar_2.entry.js": [
 		8902,
-		"common",
 		"node_modules_ionic_core_dist_esm_ion-tab-bar_2_entry_js"
 	],
 	"./ion-tab_2.entry.js": [
@@ -391,17 +385,14 @@ var map = {
 	],
 	"./ion-text.entry.js": [
 		8395,
-		"common",
 		"node_modules_ionic_core_dist_esm_ion-text_entry_js"
 	],
 	"./ion-textarea.entry.js": [
 		6357,
-		"common",
 		"node_modules_ionic_core_dist_esm_ion-textarea_entry_js"
 	],
 	"./ion-toast.entry.js": [
 		8268,
-		"common",
 		"node_modules_ionic_core_dist_esm_ion-toast_entry_js"
 	],
 	"./ion-toggle.entry.js": [

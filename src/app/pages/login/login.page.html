@@ -1,24 +1,60 @@
 
-<ion-content>
+<!-- <ion-content scrollY="false">
+  
+  <div class="logo">
+    <img src="../../../assets/direcsys.svg" alt="" srcset="" height="100px">
+  </div>
+  
   <div class="bg">
-
     <div class="elems">
-
-      <ion-input  [(ngModel)]="name" placeholder="Matricula" class="inputs" inputmode="text" mode="ios"></ion-input>
-      <ion-input placeholder="Contraseña" class="inputs"></ion-input>
-    
-
+      <div class="form-fields">
+        <form [formGroup]="ngForm">
+          <ion-input placeholder="Matricula" class="inputs" ></ion-input>
+          <ion-input placeholder="Contraseña" class="inputs"></ion-input>  
+        </form>
+      </div>
     </div>
-
   </div>
 
- 
+
+  <div class="footer">
+    <ion-button class="button" color="medium" (click)="login()">
+      <ion-label> Iniciar Sesion</ion-label>
+    </ion-button>
+  </div>
+  
+</ion-content> -->
+
+<ion-content scrollY="false">
+  <div class="bg-imagen">
+
+    <div class="header">
+      <img src="../../../assets/direcsys.svg" alt="" srcset="" id="logo">
+    </div>
+
+  
+    <div class="bg-oscuro">
+      <div class="form-fields">
+        <form >
+          <ion-input placeholder="Matricula" class="inputs" [(ngModel)]="correo" name="usuario"></ion-input>
+          <ion-input placeholder="Contraseña" class="inputs" ></ion-input>  
+        </form>
+      </div>
+    </div>
+  
+
+  
+    <div class="footer">
+      <ion-button class="buttons" color="light" (click)="login()">
+        <ion-label>Iniciar sesión</ion-label>
+      </ion-button>
+      <ion-button class="buttons" color="light">
+        <ion-label>Registrarme</ion-label>
+      </ion-button>
+      <ion-button class="buttons" id="help" color="warning">
+        <ion-label>?</ion-label>
+      </ion-button>
+    </div>
+  </div>
+
 </ion-content>
-
-<div class="footer">
-
-  <ion-button class="button" color="medium" (click)="login()">
-
-    <ion-label> Iniciar Sesion</ion-label>
-  </ion-button>
-</div>

@@ -1,41 +1,107 @@
-.bg{
-    background-image:url("https://media.istockphoto.com/photos/the-truck-runs-on-the-highway-with-speed-picture-id1249888857?k=20&m=1249888857&s=612x612&w=0&h=41-mwmzvm81zQbPjL9sSsMzyS6z700gUIbG9PUUXdNI=");
+// .bg{
+//     background-image:url("https://media.istockphoto.com/photos/the-truck-runs-on-the-highway-with-speed-picture-id1249888857?k=20&m=1249888857&s=612x612&w=0&h=41-mwmzvm81zQbPjL9sSsMzyS6z700gUIbG9PUUXdNI=");
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-size: cover;
+//     width: 100%;
+//     height: 100%;
+//     justify-items: center;
+//     position: absolute;
+// }
+// .elems{
+//     background-color: rgba($color: #000000, $alpha: 0.6);
+// }
+
+// .form-fields{
+//     background-color: rgba($color: #000000, $alpha: 0.6);
+//     width: 100% ;
+//     height: 100%;
+//     flex:content;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     position: absolute;
+//     align-items: center;
+//     justify-content: center;
+//     text-align: center;
+
+// }
+// .logo{
+//     background-color: rgba($color: orange, $alpha: 1);
+//     text-align: center;
+//     position: absolute;
+//     top: 0px
+// }
+
+// .footer {
+//     background-color: rgba($color: orange, $alpha: 1);
+//     text-align: center;
+//     position: absolute;
+//     width: 100%;
+//     height: 50px;
+//     bottom: 0px;
+// }
+
+// .button{
+    
+   
+// }
+
+.bg-imagen{
+    background-image:url("../../../assets/bg-img4.jpg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
     width: 100%;
     height: 100%;
-    justify-items: center;
-}
-
-.elems{
-    background-color: rgba($color: #000000, $alpha: 0.6);
-    width: 100% ;
-    height: 100%;
-    flex:content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     position: absolute;
-    align-items: center;
-    justify-content: center;
-
 }
 
-
-.footer {
+.bg-oscuro{
+    background-color: rgba($color: #000000, $alpha: 0.4);
     width: 100%;
-    height: 100px;
-    background-color: orange;
-
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.button{
-    position: relative;
-    align-self: center;
+.header, .footer{
+    width: 100%;
+    height: 75px;
     display: flex;
-    margin-top: 30px;
-    padding-left: 30%;
-    padding-right: 30%;
-   
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+#logo{
+    height: 100%;
+}
+
+.header{
+    position: absolute;
+    top: 0px;
+    height: 275px;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0px;
+    background-color: #ff6600;
+}
+
+.buttons{
+    font-size: 12px;
+}
+
+ion-button#help{
+    --border-radius: 50%;
+}
+
+ion-label{
+    padding: 0;
 }

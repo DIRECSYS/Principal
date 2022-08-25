@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content  class="ion-text-center">
+<ion-content  class="ion-text-center" scrollY="false">
   <ion-card class="filters-card" >
     <ion-card-header>
       <ion-label> Seleccionar tipo de prueba: </ion-label>
@@ -12,7 +12,7 @@
     <ion-list class="selection-1">
       <ion-item >
         <ion-select interface="action-sheet" placeholder="Seleccionar prueba">
-          <ion-select-option value="1">Pruebas aprovadas</ion-select-option>
+          <ion-select-option value="1">Pruebas aprobadas</ion-select-option>
           <ion-select-option value="2">Pruebas fallidas</ion-select-option>
           <ion-select-option value="3">Todas las pruebas</ion-select-option>
         </ion-select>
@@ -25,7 +25,7 @@
       <ion-input
         value="{{ date | date: 'dd.MM.yyyy' }}"
         id="date"
-        class="date-button" 
+        class="date-button"
         placeholder="Seleccionar fecha"
       > </ion-input>
       <ion-popover trigger="date" size="auto" side="start">
@@ -37,7 +37,7 @@
           ></ion-datetime>
         </ng-template>
       </ion-popover>
-    
+
     <ion-label>Hasta</ion-label>
       <ion-input
         value="{{ date2 | date: 'dd.MM.yyyy' }}"
@@ -58,10 +58,10 @@
 
   <ion-card  class="filters-card" >
     <ion-grid class="filters">
-    
+
       <ion-row>
         <ion-col class="ion-align-self-start">
-          
+
           <ion-label> Filtro 1 </ion-label>
           <ion-checkbox class="check"></ion-checkbox>
         </ion-col>
@@ -74,13 +74,13 @@
           <ion-checkbox class="check"></ion-checkbox>
         </ion-col>
       </ion-row>
-    
-   
+
+
       <ion-row>
         <ion-col class="ion-align-self-start">
           <ion-label> Filtro 4 </ion-label>
           <ion-checkbox class="check"></ion-checkbox>
-          
+
         </ion-col>
         <ion-col class="ion-align-self-center">
           <ion-label> Filtro 5 </ion-label>
@@ -91,8 +91,8 @@
           <ion-checkbox class="check"></ion-checkbox>
         </ion-col>
       </ion-row>
-    
-     
+
+
     </ion-grid>
   </ion-card>
 
@@ -128,10 +128,44 @@
 
   <ion-card  class="buttons-filters">
     <ion-card-content class="ion-text-center">
-      <ion-button class="buttons2">
-        <ion-icon name="trash"> </ion-icon>
+      <ion-button class="buttons2" (click)="generateReport()">
+        <ion-icon name="print-outline" > </ion-icon>
       </ion-button>
-      <ion-button  class="buttons2"> Generar </ion-button>
+      <ion-button  class="buttons2" id="open-modal"> Ver </ion-button>
     </ion-card-content>
   </ion-card>
+
+
+
+
+  <ion-modal #modal trigger="open-modal" [initialBreakpoint]="0.60" [breakpoints]="[0, 0.25, 0.5, 0.9]">
+    <ng-template>
+      <ion-content class="modal-content">
+        <ion-list class="reports-modal">
+          <ion-item *ngFor="let item of reports" class="modal-item">
+            <ng-template *ngIf="(item.EDP === 'approved'); then thenBlock else elseBlock" >
+            </ng-template>
+            <ng-template #thenBlock>
+              <ion-card class="reports-card" color="success">
+                <ion-card-title> 
+                  <ion-icon name="chevron-up-circle-outline" class="reports-modal-icon"></ion-icon>
+                </ion-card-title>
+                <ion-card-header> Folio: {{item.IDT}}</ion-card-header>
+                <ion-card-subtitle class="ion-text-center"> {{item.EDP}}</ion-card-subtitle>
+              </ion-card>
+            </ng-template>
+            <ng-template #elseBlock>
+              <ion-card class="reports-card" color="danger">
+                <ion-card-title> 
+                  <ion-icon name="chevron-down-circle-outline" class="reports-modal-icon"></ion-icon>
+                </ion-card-title>
+                <ion-card-header> Folio: {{item.IDT}}</ion-card-header>
+                <ion-card-subtitle class="ion-text-center"> {{item.EDP}}</ion-card-subtitle>
+              </ion-card>
+            </ng-template>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
 </ion-content>
