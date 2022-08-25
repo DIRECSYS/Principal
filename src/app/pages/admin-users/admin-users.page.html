@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar></ion-searchbar>
+<ion-accordion-group>
+  <ion-accordion  *ngFor="let user of users" class="accordion">
+    <ion-item slot="header" class="header-item">
+      <img src={{user.IMA}} class = "user-image" alt="No image">
+      <ion-label class="user-name">
+        {{user.NOM}}
+      </ion-label>
+    </ion-item>
+    <ion-item slot="content" class="content-item">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            NO. {{user.NDE}}
+          </ion-col>
+          <ion-col>
+             ID. {{user.IDU}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            Telefono: {{user.TEL}}
+          </ion-col>
+          <ion-col>
+            Correo: {{user.COR}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-button class="edit-button"> <ion-icon name="pencil-outline"></ion-icon></ion-button>
+    </ion-item>
+  </ion-accordion>
+</ion-accordion-group>
+</ion-content>

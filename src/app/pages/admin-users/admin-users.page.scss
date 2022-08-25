@@ -1,0 +1,39 @@
+.user-image{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 80px;
+    height: 80px;
+}
+
+.user-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+
+
+.header-item{
+    --background: rgb(26, 25, 25);
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 5px;
+    --padding-top : 5px;
+    --padding-bottom: 5px;
+}
+
+.accordion{
+    background: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.content-item{
+    --background:rgb(53, 53, 53);
+    margin-left: 3%;
+    margin-right: 3%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    
+}

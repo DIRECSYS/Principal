@@ -16,10 +16,10 @@ const routes: Routes = [
         path: 'admin',
         loadChildren : () => import("src/app/pages/admin/admin.module").then(m=> m.AdminPageModule)
       },
-      //{
-       // path: 'admin-users',
-       // loadChildren : () => import("src/app/pages/dashboard-user/dashboard-user.module").then(m=> m.DashboardUserPageModule)
-      //},
+      {
+        path: 'admin-users',
+        loadChildren : () => import("src/app/pages/admin-users/admin-users.module").then(m=> m.AdminUsersPageModule)
+      },
       {
         path: '',
 
