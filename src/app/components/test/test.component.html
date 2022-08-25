@@ -21,33 +21,34 @@
               </ion-toolbar>
             </ion-header>
             <ion-content class="ion-padding">
-              <p>
-                <ion-list>
+                  <form>
+                  <ion-list>
                   <ion-item>
                     <ion-label>¿Cómo te sientes el día de hoy?</ion-label>
-                    <ion-select placeholder="Seleccionar" okText="Seleccionar" cancelText="Cancelar">
-                      <ion-select-option value="mal">Mal</ion-select-option>
-                      <ion-select-option value="cansado">Cansado</ion-select-option>
-                      <ion-select-option value="regular">Regular</ion-select-option>
-                      <ion-select-option value="bien">Bien</ion-select-option>
-                      <ion-select-option value="excelente">Excelente</ion-select-option>
+                    <ion-select (ionChange)="recoverAlertValue($event)" placeholder="Seleccionar" okText="Seleccionar" cancelText="Cancelar" required>
+                      <ion-select-option value="1">Mal</ion-select-option>
+                      <ion-select-option value="2">Cansado</ion-select-option>
+                      <ion-select-option value="3">Regular</ion-select-option>
+                      <ion-select-option value="4">Bien</ion-select-option>
+                      <ion-select-option value="5">Excelente</ion-select-option>
                     </ion-select>
                   </ion-item>
+  
                   <ion-item>
                     <ion-label>¿Cuántas horas dormiste?</ion-label>
-                    <ion-select placeholder="Seleccionar" okText="Seleccionar" cancelText="Cancelar">
-                      <ion-select-option value="dos">0-2 horas</ion-select-option>
-                      <ion-select-option value="cuatro">2-4 horas</ion-select-option>
-                      <ion-select-option value="seis">4-6 horas</ion-select-option>
-                      <ion-select-option value="ocho">6-8 horas</ion-select-option>
-                      <ion-select-option value="diez">Más de 8 horas</ion-select-option>
+                    <ion-select (ionChange)="recoverAlertValue($event)" placeholder="Seleccionar" okText="Seleccionar" cancelText="Cancelar" required>
+                      <ion-select-option value="1">0-2 horas</ion-select-option>
+                      <ion-select-option value="2">2-4 horas</ion-select-option>
+                      <ion-select-option value="3">4-6 horas</ion-select-option>
+                      <ion-select-option value="4">6-8 horas</ion-select-option>
+                      <ion-select-option value="5">Más de 8 horas</ion-select-option>
                     </ion-select>
                   </ion-item>
                 </ion-list>
-              </p>
+              </form>
                 <br><br>
                 <div class="enviar">
-                <ion-button class="enviar">Enviar</ion-button>
+                <ion-button class="enviar" type="submit" >Enviar</ion-button>
                 </div>
             </ion-content>
           </ng-template>
