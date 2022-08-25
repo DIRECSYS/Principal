@@ -10,6 +10,9 @@ import { DashboardUserPage } from './dashboard-user.page';
 
 import { TestResultCComponent } from 'src/app/components/test-result-c/test-result-c.component';
 
+import { TestComponent } from 'src/app/components/test/test.component';
+
+import { TestLoadingComponent } from 'src/app/components/test-loading/test-loading.component';
 
 @NgModule({
   imports: [
@@ -18,6 +21,6 @@ import { TestResultCComponent } from 'src/app/components/test-result-c/test-resu
     IonicModule,
     DashboardUserPageRoutingModule
   ],
-  declarations: [DashboardUserPage, TestResultCComponent]
+  declarations: [DashboardUserPage, TestResultCComponent, TestComponent, TestLoadingComponent]
 })
 export class DashboardUserPageModule {}
