@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-test',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 
 export class TestComponent implements OnInit {
 
+  optionSelected:string;
+ 
   constructor() { }
 
   ngOnInit() {}
@@ -17,8 +20,15 @@ export class TestComponent implements OnInit {
   setOpen(isOpen: boolean) {
     this.isModalOpen = isOpen;
   }  
-}
 
+  recoverAlertValue(event: any) {
+  this.optionSelected = event.detail.value;
+  console.log(this.optionSelected);
+  console.log(event.detail);
+  
+  }
+
+}
 
 
 
