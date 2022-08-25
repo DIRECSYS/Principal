@@ -108,7 +108,7 @@ var __spreadArray = this && this.__spreadArray || function (to, from, pack) {
   return to.concat(ar || Array.prototype.slice.call(from));
 };
 /**
- * @license Angular v14.1.0-next.0
+ * @license Angular v14.2.0-next.0
  * (c) 2010-2022 Google LLC. https://angular.io/
  * License: MIT
  */
@@ -1086,7 +1086,7 @@ var __spreadArray = this && this.__spreadArray || function (to, from, pack) {
     var result;
 
     if (isBrowser && target === internalWindow && event.type === 'error') {
-      // window.onerror have different signiture
+      // window.onerror have different signature
       // https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onerror#window.onerror
       // and onerror callback will prevent default when callback return true
       var errorEvent = event;
@@ -2523,7 +2523,7 @@ var __spreadArray = this && this.__spreadArray || function (to, from, pack) {
           var options = buildEventListenerOptions(arguments[2], passive);
 
           if (unpatchedEvents) {
-            // check upatched list
+            // check unpatched list
             for (var i = 0; i < unpatchedEvents.length; i++) {
               if (eventName === unpatchedEvents[i]) {
                 if (passive) {
@@ -3135,9 +3135,9 @@ var __spreadArray = this && this.__spreadArray || function (to, from, pack) {
       for (var _i = 0, _b = Object.getOwnPropertySymbols(props); _i < _b.length; _i++) {
         var sym = _b[_i];
         var desc = Object.getOwnPropertyDescriptor(props, sym); // Since `Object.getOwnPropertySymbols` returns *all* symbols,
-        // including non-enumberable ones, retrieve property descriptor and check
+        // including non-enumerable ones, retrieve property descriptor and check
         // enumerability there. Proceed with the rewrite only when a property is
-        // enumberable to make the logic consistent with the way regular
+        // enumerable to make the logic consistent with the way regular
         // properties are retrieved (via `Object.keys`, which respects
         // `enumerable: false` flag). More information:
         // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties#retrieval

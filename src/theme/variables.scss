@@ -82,6 +82,24 @@
   
   /** App colors **/
   --test-result-pass: #009160 ;
+  
+  //color gris
+  --ion-color-new: #575757;
+	--ion-color-new-rgb: 87,87,87;
+	--ion-color-new-contrast: #ffffff;
+	--ion-color-new-contrast-rgb: 255,255,255;
+	--ion-color-new-shade: #4d4d4d;
+	--ion-color-new-tint: #686868;
+
+
+.ion-color-new {
+	--ion-color-base: var(--ion-color-new);
+	--ion-color-base-rgb: var(--ion-color-new-rgb);
+	--ion-color-contrast: var(--ion-color-new-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-new-contrast-rgb);
+	--ion-color-shade: var(--ion-color-new-shade);
+	--ion-color-tint: var(--ion-color-new-tint);
+}
 }
 
 @media (prefers-color-scheme: dark) {
@@ -170,7 +188,7 @@
     --ion-color-step-50: #0d0d0d;
     --ion-color-step-100: #ffffff;
     --ion-color-step-200: #fea50b;
-    --ion-color-step-250: #ff0000;
+    --ion-color-step-250: #0000;
     --ion-color-step-300: #4d4d4d;
     --ion-color-step-350: #595959;
     --ion-color-step-400: #666666;
@@ -196,7 +214,7 @@
   }
 
   .ios ion-modal {
-    --ion-background-color: #ffff;
+    --ion-background-color: #121212;
     --ion-toolbar-background: #182;
     --ion-toolbar-border-color: var(--ion-color-step-250);
   }
@@ -216,7 +234,7 @@
 
     --ion-border-color: #222222;
 
-    --ion-color-step-50: #1e1e1e;
+    --ion-color-step-50: #121212;
     --ion-color-step-100: #2a2a2a;
     --ion-color-step-150: #363636;
     --ion-color-step-200: #414141;
@@ -242,7 +260,7 @@
 
     --ion-tab-bar-background: #ff5100;
 
-    --ion-card-background: #1e1e1e;
+    --ion-card-background: #121212;
   }
 }
 
@@ -288,4 +306,53 @@ ion-alert.custom-alert{
   --background:rgb(237, 237, 237);
   --backdrop-opacity: .6;
   --border-top: 0.55pxs;
+
 }
+
+
+ion-alert.alert{
+  --background: rgb(49, 49, 49) !important;
+  --min-width: 80%;
+ }
+
+ ion-alert.alert input{
+  border: none !important;
+ }
+ ion-alert.alert button{
+  text-transform: capitalize !important;
+  color: rgb(255, 255, 255) !important;
+  border:none !important;
+ }
+
+ ion-popover {
+  --width: auto;
+  --border-color: green;
+
+  label{
+    --border-style:none;
+  }
+}
+
+ion-select-option{
+  --border-style:none;
+}
+
+ion-datetime{
+  position: relative;
+}
+
+
+ion-button.buttons2{
+  --background: #ffa500;
+}
+
+
+ion-modal.report-modal{
+  --color: #121212;
+  --background-color: #121212;
+}
+
+ion-button.buttons{
+  --background: #ff6600;
+}
+

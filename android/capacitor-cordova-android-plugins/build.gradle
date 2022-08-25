@@ -46,7 +46,8 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
     implementation "org.apache.cordova:framework:$cordovaAndroidVersion"
     // SUB-PROJECT DEPENDENCIES START
-
+    implementation "platform('com.google.firebase:firebase-bom:30.3.1')"
+    implementation "com.google.firebase:firebase-auth"
     // SUB-PROJECT DEPENDENCIES END
 }
 

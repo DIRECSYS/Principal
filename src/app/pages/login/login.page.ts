@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+  public correo: any;
 
-  ngOnInit() {
+  
+  constructor() {
+
   }
 
+  ngOnInit(): void {
+
+  }
+
+  login(){
+
+    let correo = this.correo;
+
+    if (correo == "admin"){
+        location.href = "/admin-tabs";
+      }
+      else if ( correo == "user"){
+        location.href = "/tabs"
+      }
+  }
 }
