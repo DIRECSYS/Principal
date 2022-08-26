@@ -24,7 +24,7 @@
 17        android:allowBackup="true"
 17-->/Users/arturo/Documents/Servicio-Social/Proyecto/DIRECSYS/android/app/src/main/AndroidManifest.xml:6:9-35
 18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-18-->[androidx.core:core:1.3.2] /Users/arturo/.gradle/caches/transforms-3/2affdb6e6a1314389bbf6c67f425b6c6/transformed/core-1.3.2/AndroidManifest.xml:24:18-86
+18-->[androidx.core:core:1.3.2] /Users/arturo/.gradle/caches/transforms-3/e48cfc29bc00c71b7eb4bfec05d2c833/transformed/core-1.3.2/AndroidManifest.xml:24:18-86
 19        android:debuggable="true"
 20        android:icon="@mipmap/ic_launcher"
 20-->/Users/arturo/Documents/Servicio-Social/Proyecto/DIRECSYS/android/app/src/main/AndroidManifest.xml:7:9-43

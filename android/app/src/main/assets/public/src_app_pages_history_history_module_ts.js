@@ -91,11 +91,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "HistoryPage": () => (/* binding */ HistoryPage)
 /* harmony export */ });
 /* harmony import */ var _Users_arturo_Documents_Servicio_Social_Proyecto_DIRECSYS_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 1670);
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 4929);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! tslib */ 4929);
 /* harmony import */ var _history_page_html_ngResource__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./history.page.html?ngResource */ 6351);
 /* harmony import */ var _history_page_scss_ngResource__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./history.page.scss?ngResource */ 6496);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 2560);
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ 3819);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 2560);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ 3819);
+/* harmony import */ var src_app_services_reports_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/reports.service */ 1291);
+
 
 
 
@@ -103,23 +105,31 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let HistoryPage = class HistoryPage {
-  constructor(alertController) {
+  constructor(alertController, rs) {
     this.alertController = alertController;
+    this.rs = rs;
   }
 
-  presentAlert(a) {
+  presentAlert(id, fdp, pee, phs, pra, prd, pro) {
     var _this = this;
 
     return (0,_Users_arturo_Documents_Servicio_Social_Proyecto_DIRECSYS_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+      const a = new Date(fdp * 1000); // eslint-disable-next-line max-len
+
+      const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+      const year = a.getFullYear() - 1969;
+      const month = months[a.getMonth()];
+      const date = a.getDate();
+      const time = date + ' ' + month + ' ' + year + ' ';
       const alert = yield _this.alertController.create({
-        header: `Folio : ${a}`,
-        subHeader: 'Fecha : 12/08/2022',
-        message: `<ul> 
-      <li>Prueba 1   = Paso</li>
-      <li>Prueba 2   = No Paso</li>
-      <li>Prueba 3   = No Paso</li>
-      <li>Prueba 4   = Paso</li>
-      
+        header: `Folio : ${id}`,
+        subHeader: `Fecha : ${time}`,
+        message: `<ul>
+      <li>Estado Emocional   = ${pee}</li>
+      <li>Horas de sueño     = ${phs}</li>
+      <li>Alcoholimetro      = ${pra}</li>
+      <li>PPrueba de Drogas  = ${prd}</li>
+      <li>Prueba de ojos     = ${pro}</li>
       </ul>`,
         buttons: ['Regresar'],
         cssClass: 'custom-alert'
@@ -128,15 +138,22 @@ let HistoryPage = class HistoryPage {
     })();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.rs.tests.subscribe(data => {
+      this.testsf = data;
+      this.badge = data.length;
+    });
+  }
 
 };
 
 HistoryPage.ctorParameters = () => [{
-  type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__.AlertController
+  type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__.AlertController
+}, {
+  type: src_app_services_reports_service__WEBPACK_IMPORTED_MODULE_3__.ReportsService
 }];
 
-HistoryPage = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([(0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.Component)({
+HistoryPage = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([(0,_angular_core__WEBPACK_IMPORTED_MODULE_6__.Component)({
   selector: 'app-history',
   template: _history_page_html_ngResource__WEBPACK_IMPORTED_MODULE_1__,
   styles: [_history_page_scss_ngResource__WEBPACK_IMPORTED_MODULE_2__]
@@ -151,7 +168,7 @@ HistoryPage = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([(0,_angular_cor
   \************************************************************/
 /***/ ((module) => {
 
-module.exports = ".id {\n  margin-left: 10px;\n}\n\nul {\n  list-style: none;\n}\n\nion-content {\n  --background: url(\"https://s29755.pcdn.co/wp-content/uploads/2019/08/2019_Top_Five_Class_5-Mack.jpg.optimal.jpg\") center/cover no-repeat ;\n}\n\n.bg-transparent {\n  background: transparent;\n}\n\nion-alert.custom-alert {\n  color: black;\n}\n\nli {\n  color: black;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhpc3RvcnkucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksaUJBQUE7QUFDSjs7QUFHQTtFQUNJLGdCQUFBO0FBQUo7O0FBSUE7RUFDSSx5SUFBQTtBQURKOztBQU1BO0VBQ0csdUJBQUE7QUFISDs7QUFNQTtFQUVJLFlBQUE7QUFKSjs7QUFPQTtFQUNJLFlBQUE7QUFKSiIsImZpbGUiOiJoaXN0b3J5LnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5pZHtcbiAgICBtYXJnaW4tbGVmdDogMTBweDtcbn1cblxuXG51bHtcbiAgICBsaXN0LXN0eWxlOiBub25lO1xufVxuXG5cbmlvbi1jb250ZW50e1xuICAgIC0tYmFja2dyb3VuZDogdXJsKFwiaHR0cHM6Ly9zMjk3NTUucGNkbi5jby93cC1jb250ZW50L3VwbG9hZHMvMjAxOS8wOC8yMDE5X1RvcF9GaXZlX0NsYXNzXzUtTWFjay5qcGcub3B0aW1hbC5qcGdcIikgY2VudGVyL2NvdmVyIG5vLXJlcGVhdCAgO1xuICAgIFxuXG59XG5cbi5iZy10cmFuc3BhcmVudHtcbiAgIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xufVxuXG5pb24tYWxlcnQuY3VzdG9tLWFsZXJ0e1xuICAgIC8vYmFja2dyb3VuZDogIHJnYigxMzksIDEzOSwgMTM5KTtcbiAgICBjb2xvcjogYmxhY2s7XG59XG5cbmxpe1xuICAgIGNvbG9yOiBibGFjaztcbn0iXX0= */";
+module.exports = ".id {\n  margin-left: 10px;\n}\n\nul {\n  list-style: none;\n}\n\nion-content {\n  --background: url(\"https://s29755.pcdn.co/wp-content/uploads/2019/08/2019_Top_Five_Class_5-Mack.jpg.optimal.jpg\") center/cover no-repeat ;\n}\n\n.bg-transparent {\n  background: transparent;\n}\n\nion-alert.custom-alert {\n  color: black;\n}\n\nli {\n  color: black;\n}\n\nion-badge.badge {\n  margin-top: 3px;\n  --background: #1e1e1e;\n  margin-right: 20%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhpc3RvcnkucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksaUJBQUE7QUFDSjs7QUFHQTtFQUNJLGdCQUFBO0FBQUo7O0FBSUE7RUFDSSx5SUFBQTtBQURKOztBQU1BO0VBQ0csdUJBQUE7QUFISDs7QUFNQTtFQUVJLFlBQUE7QUFKSjs7QUFPQTtFQUNJLFlBQUE7QUFKSjs7QUFPQTtFQUNJLGVBQUE7RUFDQSxxQkFBQTtFQUNBLGlCQUFBO0FBSkoiLCJmaWxlIjoiaGlzdG9yeS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaWR7XG4gICAgbWFyZ2luLWxlZnQ6IDEwcHg7XG59XG5cblxudWx7XG4gICAgbGlzdC1zdHlsZTogbm9uZTtcbn1cblxuXG5pb24tY29udGVudHtcbiAgICAtLWJhY2tncm91bmQ6IHVybChcImh0dHBzOi8vczI5NzU1LnBjZG4uY28vd3AtY29udGVudC91cGxvYWRzLzIwMTkvMDgvMjAxOV9Ub3BfRml2ZV9DbGFzc181LU1hY2suanBnLm9wdGltYWwuanBnXCIpIGNlbnRlci9jb3ZlciBuby1yZXBlYXQgIDtcbiAgICBcblxufVxuXG4uYmctdHJhbnNwYXJlbnR7XG4gICBiYWNrZ3JvdW5kOiB0cmFuc3BhcmVudDtcbn1cblxuaW9uLWFsZXJ0LmN1c3RvbS1hbGVydHtcbiAgICAvL2JhY2tncm91bmQ6ICByZ2IoMTM5LCAxMzksIDEzOSk7XG4gICAgY29sb3I6IGJsYWNrO1xufVxuXG5saXtcbiAgICBjb2xvcjogYmxhY2s7XG59XG5cbmlvbi1iYWRnZS5iYWRnZXtcbiAgICBtYXJnaW4tdG9wOiAzcHg7XG4gICAgLS1iYWNrZ3JvdW5kIDogIzFlMWUxZTtcbiAgICBtYXJnaW4tcmlnaHQgOiAyMCU7XG59Il19 */";
 
 /***/ }),
 
@@ -161,7 +178,7 @@ module.exports = ".id {\n  margin-left: 10px;\n}\n\nul {\n  list-style: none;\n}
   \************************************************************/
 /***/ ((module) => {
 
-module.exports = "\n<ion-toolbar>\n  <ion-title>Historial de Pruebas</ion-title>\n</ion-toolbar>\n\n<ion-content >\n  <ion-list class=\"bg-transparent\">\n    <ion-card >\n      <ion-item detail=\"false\" (click)=\"presentAlert('1')\" color=\"danger\" >\n        <ion-icon name=\"close-circle\"></ion-icon>\n        <ion-label class=\"id\">\n          Folio 1\n        </ion-label>\n      </ion-item>\n    </ion-card>\n\n    <ion-card>\n\n      <ion-item detail=\"false\" (click)=\"presentAlert('2')\" color=\"danger\">\n        <ion-icon name=\"close-circle\"> </ion-icon>\n        <ion-label class=\"id\">\n          Folio 2\n        </ion-label>\n      </ion-item>\n      \n    </ion-card>\n\n    <ion-card>\n      <ion-item detail=\"false\" (click)=\"presentAlert('3')\" color=\"success\">\n        <ion-icon name=\"checkmark-done-circle\"> </ion-icon>\n        <ion-label class=\"id\">\n          Folio 3\n        </ion-label>\n      </ion-item>\n    </ion-card>\n\n  </ion-list>\n</ion-content>\n\n\n\n\n\n\n";
+module.exports = "\n<ion-toolbar>\n  <ion-title>Historial de Pruebas</ion-title>\n  <ion-badge slot=\"end\"  class=\"badge\"> {{badge}}</ion-badge>\n</ion-toolbar>\n<ion-content >\n  <ion-list class=\"bg-transparent\">    \n    <ion-card *ngFor=\"let item of testsf\" >\n      <ng-template *ngIf=\"(item.EDP === 'approved'); then thenBlock else elseBlock\" >\n      </ng-template>\n      <ng-template #thenBlock>\n           <ion-item detail=\"false\" (click)=\"presentAlert(item.IDT, item.FDP,item.PEE, item.PHS, item.PRA, item.PRD, item.PRO)\" color=\"success\">\n             <ion-icon name=\"checkmark-done-circle\"> </ion-icon>\n             <ion-label class=\"id\">\n                Folio: {{item.IDT}}\n             </ion-label>\n           </ion-item>\n\n         </ng-template>\n      <ng-template #elseBlock>\n        <ion-item detail=\"false\" (click)=\"presentAlert(item.IDT, item.FDP,item.PEE, item.PHS, item.PRA, item.PRD, item.PRO)\" color=\"danger\">\n          <ion-icon name=\"close-circle\"> </ion-icon>\n          <ion-label class=\"id\">\n             Folio: {{item.IDT}}\n          </ion-label>\n        </ion-item>\n      </ng-template> \n    </ion-card>\n  </ion-list>\n</ion-content>\n\n\n\n\n\n\n";
 
 /***/ })
 

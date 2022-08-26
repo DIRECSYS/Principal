@@ -26,7 +26,7 @@ const routes = [
         children: [
             {
                 path: 'history',
-                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_history_history_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! src/app/pages/history/history.module */ 608)).then(m => m.HistoryPageModule)
+                loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_history_history_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! src/app/pages/history/history.module */ 608)).then(m => m.HistoryPageModule)
             },
             {
                 path: 'settings',
@@ -34,11 +34,11 @@ const routes = [
             },
             {
                 path: 'dashboard',
-                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_dashboard-user_dashboard-user_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! src/app/pages/dashboard-user/dashboard-user.module */ 8604)).then(m => m.DashboardUserPageModule)
+                loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_dashboard-user_dashboard-user_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! src/app/pages/dashboard-user/dashboard-user.module */ 8604)).then(m => m.DashboardUserPageModule)
             },
             {
                 path: '',
-                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_dashboard-user_dashboard-user_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! src/app/pages//dashboard-user/dashboard-user.module */ 8604)).then(m => m.DashboardUserPageModule)
+                loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_dashboard-user_dashboard-user_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! src/app/pages//dashboard-user/dashboard-user.module */ 8604)).then(m => m.DashboardUserPageModule)
             }
         ]
     },
@@ -113,28 +113,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "TabsPage": () => (/* binding */ TabsPage)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 4929);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 4929);
 /* harmony import */ var _tabs_page_html_ngResource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tabs.page.html?ngResource */ 9365);
 /* harmony import */ var _tabs_page_scss_ngResource__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tabs.page.scss?ngResource */ 3963);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 2560);
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ 3819);
-
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 2560);
 
 
 
 
 let TabsPage = class TabsPage {
-    constructor(toastController) {
-        this.toastController = toastController;
-    }
+    constructor() { }
     ngOnInit() {
     }
 };
-TabsPage.ctorParameters = () => [
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__.ToastController }
-];
-TabsPage = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
-    (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.Component)({
+TabsPage.ctorParameters = () => [];
+TabsPage = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.Component)({
         selector: 'app-tabs',
         template: _tabs_page_html_ngResource__WEBPACK_IMPORTED_MODULE_0__,
         styles: [_tabs_page_scss_ngResource__WEBPACK_IMPORTED_MODULE_1__]
