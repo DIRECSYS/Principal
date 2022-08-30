@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "direcsys-uanl": {
+      "hosting": {
+        "app": [
+          "direcsys-uanl"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "direcsys-uanl"
+  }
+}

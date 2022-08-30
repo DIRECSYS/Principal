@@ -37,7 +37,7 @@
     "cordova-plugin-firebase-authentication": "^7.0.0",
     "date-fns": "^2.29.1",
     "dom-to-image": "^2.6.0",
-    "firebase": "^9.9.2",
+    "firebase": "^9.9.3",
     "jspdf": "^2.5.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
