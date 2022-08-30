@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -8,9 +10,10 @@ import { Component, OnInit } from '@angular/core';
 export class LoginPage implements OnInit {
 
   public correo: any;
+  public contrasena: any;
 
   
-  constructor() {
+  constructor(private _auth: AuthService, private _router:Router) {
 
   }
 
@@ -18,15 +21,15 @@ export class LoginPage implements OnInit {
 
   }
 
-  login(){
-
-    let correo = this.correo;
-
-    if (correo == "admin"){
-        location.href = "/admin-tabs";
-      }
-      else if ( correo == "user"){
-        location.href = "/tabs"
-      }
+  logIn(){
+try {
+  let correo = this.correo;
+    let contrasena = this.contrasena;
+    this._auth.logIn(correo, contrasena);
+} catch (error) {
+  console.log(error);
+  
+}
+    
   }
 }

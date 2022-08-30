@@ -41,12 +41,12 @@
             <p>Inicia sesión en tu cuenta</p>
           </div>
           <div class="form-inputs">
-            <ion-input placeholder="Correo" class="inputs" [(ngModel)]="correo" name="usuario"></ion-input>
-            <ion-input placeholder="Contraseña" class="inputs" type="password"></ion-input>  
+            <ion-input placeholder="Correo" class="inputs" [(ngModel)]="correo" name="correo"></ion-input>
+            <ion-input placeholder="Contraseña" class="inputs" type="password" [(ngModel)]="contrasena" name="contrasena"></ion-input>  
             <ion-label class="forgot-pass"><a href="" class="hyper">¿Olvidaste tu contraseña?</a></ion-label>
           </div>
           <div class="form-buttons">
-            <ion-button class="buttons" (click)="login()">
+            <ion-button class="buttons" (click)="logIn()">
               <ion-label>Iniciar sesión</ion-label>
             </ion-button>
           </div>
