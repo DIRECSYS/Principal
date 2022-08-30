@@ -35,21 +35,42 @@
   
     <div class="bg-oscuro">
       <div class="form-fields">
-        <form >
+        <form [formGroup]="validations_form" (ngSubmit)="logIn(validations_form.value)">
           <div class="form-header">
             <h1>¡Bienvenido!</h1>
             <p>Inicia sesión en tu cuenta</p>
           </div>
           <div class="form-inputs">
-            <ion-input placeholder="Correo" class="inputs" [(ngModel)]="correo" name="correo"></ion-input>
-            <ion-input placeholder="Contraseña" class="inputs" type="password" [(ngModel)]="contrasena" name="contrasena"></ion-input>  
+            <ion-input placeholder="Correo" class="inputs" formControlName="email" required=""></ion-input>
+
+            <div class="validation-errors">
+              <ng-container *ngFor="let validation of validation_messages.email">
+                <div class="error-message"
+                  *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+                  {{ validation.message }}
+                </div>
+              </ng-container>
+            </div>
+
+            <ion-input placeholder="Contraseña" class="inputs" type="password" formControlName="password" required></ion-input>  
+            <div class="validation-errors">
+              <ng-container *ngFor="let validation of validation_messages.password">
+                <div class="error-message"
+                  *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+                  {{ validation.message }}
+                </div>
+              </ng-container>
+            </div>
+        
             <ion-label class="forgot-pass"><a href="" class="hyper">¿Olvidaste tu contraseña?</a></ion-label>
           </div>
+
           <div class="form-buttons">
-            <ion-button class="buttons" (click)="logIn()">
+            <ion-button class="buttons"  type="submit" [disabled]="!validations_form.valid">
               <ion-label>Iniciar sesión</ion-label>
             </ion-button>
           </div>
+          <label class="error-message">{{errorMsg}}</label>
         </form>
       </div>
     </div>
