@@ -1,7 +1,7 @@
 "use strict";
 (self["webpackChunkapp"] = self["webpackChunkapp"] || []).push([["src_app_components_tabs_tabs_module_ts"],{
 
-/***/ 3738:
+/***/ 83738:
 /*!********************************************************!*\
   !*** ./src/app/components/tabs/tabs-routing.module.ts ***!
   \********************************************************/
@@ -11,10 +11,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "TabsPageRoutingModule": () => (/* binding */ TabsPageRoutingModule)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ 4929);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2560);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 124);
-/* harmony import */ var _tabs_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tabs.page */ 7330);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ 34929);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 22560);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 60124);
+/* harmony import */ var _tabs_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tabs.page */ 57330);
 
 
 
@@ -26,19 +26,19 @@ const routes = [
         children: [
             {
                 path: 'history',
-                loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_history_history_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! src/app/pages/history/history.module */ 608)).then(m => m.HistoryPageModule)
+                loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_history_history_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! src/app/pages/history/history.module */ 10608)).then(m => m.HistoryPageModule)
             },
             {
                 path: 'settings',
-                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_settings-user_settings-user_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! src/app/pages/settings-user/settings-user.module */ 84)).then(m => m.SettingsUserPageModule)
+                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_settings-user_settings-user_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! src/app/pages/settings-user/settings-user.module */ 30084)).then(m => m.SettingsUserPageModule)
             },
             {
                 path: 'dashboard',
-                loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_dashboard-user_dashboard-user_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! src/app/pages/dashboard-user/dashboard-user.module */ 8604)).then(m => m.DashboardUserPageModule)
+                loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_dashboard-user_dashboard-user_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! src/app/pages/dashboard-user/dashboard-user.module */ 78604)).then(m => m.DashboardUserPageModule)
             },
             {
                 path: '',
-                loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_dashboard-user_dashboard-user_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! src/app/pages//dashboard-user/dashboard-user.module */ 8604)).then(m => m.DashboardUserPageModule)
+                loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_dashboard-user_dashboard-user_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! src/app/pages//dashboard-user/dashboard-user.module */ 78604)).then(m => m.DashboardUserPageModule)
             }
         ]
     },
@@ -61,7 +61,7 @@ TabsPageRoutingModule = (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__decorate)([
 
 /***/ }),
 
-/***/ 1802:
+/***/ 51802:
 /*!************************************************!*\
   !*** ./src/app/components/tabs/tabs.module.ts ***!
   \************************************************/
@@ -71,13 +71,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "TabsPageModule": () => (/* binding */ TabsPageModule)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 4929);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 2560);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ 4666);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 34929);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 22560);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ 94666);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ 2508);
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic/angular */ 3819);
-/* harmony import */ var _tabs_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tabs-routing.module */ 3738);
-/* harmony import */ var _tabs_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tabs.page */ 7330);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic/angular */ 93819);
+/* harmony import */ var _tabs_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tabs-routing.module */ 83738);
+/* harmony import */ var _tabs_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tabs.page */ 57330);
 
 
 
@@ -103,7 +103,7 @@ TabsPageModule = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
 
 /***/ }),
 
-/***/ 7330:
+/***/ 57330:
 /*!**********************************************!*\
   !*** ./src/app/components/tabs/tabs.page.ts ***!
   \**********************************************/
@@ -113,10 +113,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "TabsPage": () => (/* binding */ TabsPage)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 4929);
-/* harmony import */ var _tabs_page_html_ngResource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tabs.page.html?ngResource */ 9365);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 34929);
+/* harmony import */ var _tabs_page_html_ngResource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tabs.page.html?ngResource */ 89365);
 /* harmony import */ var _tabs_page_scss_ngResource__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tabs.page.scss?ngResource */ 3963);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 2560);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 22560);
 
 
 
@@ -149,7 +149,7 @@ module.exports = ".tab-selected {\n  background: #d64400;\n  color: white !impor
 
 /***/ }),
 
-/***/ 9365:
+/***/ 89365:
 /*!***********************************************************!*\
   !*** ./src/app/components/tabs/tabs.page.html?ngResource ***!
   \***********************************************************/

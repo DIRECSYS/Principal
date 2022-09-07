@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -7,14 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  public correo: any;
+  public correo: string;
+  public password: string;
 
   
-  constructor() {
+  constructor(private auth: AuthService) {
 
   }
 
   ngOnInit(): void {
+  
 
   }
 
@@ -28,5 +30,12 @@ export class LoginPage implements OnInit {
       else if ( correo == "user"){
         location.href = "/tabs"
       }
+  }
+
+  loginFirebase(){
+    let email = this.correo;
+    let password = this.password;
+    console.log(email, password);
+    this.auth.login(email,password);
   }
 }

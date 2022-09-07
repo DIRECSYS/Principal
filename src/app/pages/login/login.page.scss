@@ -155,14 +155,14 @@
 }
 
 #logo{
-    height: 75%;
+    height: 40%;
+    object-fit: cover;
 }
 
 .header{
     position: absolute;
     top: -75px;
     height: 50%;
-    max-height: 50%;
 }
 
 .footer{

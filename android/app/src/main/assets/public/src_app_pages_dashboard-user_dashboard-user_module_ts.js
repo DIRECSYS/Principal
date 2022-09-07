@@ -1,7 +1,7 @@
 "use strict";
 (self["webpackChunkapp"] = self["webpackChunkapp"] || []).push([["src_app_pages_dashboard-user_dashboard-user_module_ts"],{
 
-/***/ 4904:
+/***/ 22358:
 /*!*******************************************************************!*\
   !*** ./src/app/components/test-loading/test-loading.component.ts ***!
   \*******************************************************************/
@@ -11,10 +11,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "TestLoadingComponent": () => (/* binding */ TestLoadingComponent)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 4929);
-/* harmony import */ var _test_loading_component_html_ngResource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test-loading.component.html?ngResource */ 6282);
-/* harmony import */ var _test_loading_component_scss_ngResource__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./test-loading.component.scss?ngResource */ 2804);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 2560);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 34929);
+/* harmony import */ var _test_loading_component_html_ngResource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test-loading.component.html?ngResource */ 16282);
+/* harmony import */ var _test_loading_component_scss_ngResource__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./test-loading.component.scss?ngResource */ 82804);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 22560);
 
 
 
@@ -36,7 +36,7 @@ TestLoadingComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
 
 /***/ }),
 
-/***/ 1817:
+/***/ 81817:
 /*!*********************************************************************!*\
   !*** ./src/app/components/test-result-c/test-result-c.component.ts ***!
   \*********************************************************************/
@@ -46,13 +46,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "TestResultCComponent": () => (/* binding */ TestResultCComponent)
 /* harmony export */ });
-/* harmony import */ var _Users_arturo_Documents_Servicio_Social_Proyecto_DIRECSYS_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 1670);
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! tslib */ 4929);
-/* harmony import */ var _test_result_c_component_html_ngResource__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./test-result-c.component.html?ngResource */ 7674);
-/* harmony import */ var _test_result_c_component_scss_ngResource__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./test-result-c.component.scss?ngResource */ 723);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 2560);
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ 3819);
-/* harmony import */ var _services_reports_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/reports.service */ 1291);
+/* harmony import */ var _Users_arturo_Documents_Servicio_Social_Proyecto_DIRECSYS_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 71670);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! tslib */ 34929);
+/* harmony import */ var _test_result_c_component_html_ngResource__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./test-result-c.component.html?ngResource */ 87674);
+/* harmony import */ var _test_result_c_component_scss_ngResource__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./test-result-c.component.scss?ngResource */ 30723);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 22560);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ 93819);
+/* harmony import */ var _services_reports_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/reports.service */ 91291);
 
 
 
@@ -120,7 +120,7 @@ TestResultCComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([(0,_an
 
 /***/ }),
 
-/***/ 1926:
+/***/ 41926:
 /*!***************************************************!*\
   !*** ./src/app/components/test/test.component.ts ***!
   \***************************************************/
@@ -130,10 +130,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "TestComponent": () => (/* binding */ TestComponent)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 4929);
-/* harmony import */ var _test_component_html_ngResource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test.component.html?ngResource */ 8590);
-/* harmony import */ var _test_component_scss_ngResource__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./test.component.scss?ngResource */ 223);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 2560);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 34929);
+/* harmony import */ var _test_component_html_ngResource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test.component.html?ngResource */ 98590);
+/* harmony import */ var _test_component_scss_ngResource__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./test.component.scss?ngResource */ 80223);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 22560);
 
 
 
@@ -160,7 +160,7 @@ TestComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
 
 /***/ }),
 
-/***/ 1112:
+/***/ 21112:
 /*!***********************************************************************!*\
   !*** ./src/app/pages/dashboard-user/dashboard-user-routing.module.ts ***!
   \***********************************************************************/
@@ -170,10 +170,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "DashboardUserPageRoutingModule": () => (/* binding */ DashboardUserPageRoutingModule)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ 4929);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2560);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 124);
-/* harmony import */ var _dashboard_user_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dashboard-user.page */ 4067);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ 34929);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 22560);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 60124);
+/* harmony import */ var _dashboard_user_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dashboard-user.page */ 24067);
 
 
 
@@ -197,7 +197,7 @@ DashboardUserPageRoutingModule = (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__decorat
 
 /***/ }),
 
-/***/ 8604:
+/***/ 78604:
 /*!***************************************************************!*\
   !*** ./src/app/pages/dashboard-user/dashboard-user.module.ts ***!
   \***************************************************************/
@@ -207,16 +207,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "DashboardUserPageModule": () => (/* binding */ DashboardUserPageModule)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! tslib */ 4929);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 2560);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common */ 4666);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! tslib */ 34929);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 22560);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common */ 94666);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/forms */ 2508);
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ionic/angular */ 3819);
-/* harmony import */ var _dashboard_user_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dashboard-user-routing.module */ 1112);
-/* harmony import */ var _dashboard_user_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dashboard-user.page */ 4067);
-/* harmony import */ var src_app_components_test_result_c_test_result_c_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/components/test-result-c/test-result-c.component */ 1817);
-/* harmony import */ var src_app_components_test_test_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/components/test/test.component */ 1926);
-/* harmony import */ var src_app_components_test_loading_test_loading_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/components/test-loading/test-loading.component */ 4904);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ionic/angular */ 93819);
+/* harmony import */ var _dashboard_user_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dashboard-user-routing.module */ 21112);
+/* harmony import */ var _dashboard_user_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dashboard-user.page */ 24067);
+/* harmony import */ var src_app_components_test_result_c_test_result_c_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/components/test-result-c/test-result-c.component */ 81817);
+/* harmony import */ var src_app_components_test_test_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/components/test/test.component */ 41926);
+/* harmony import */ var src_app_components_test_loading_test_loading_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/components/test-loading/test-loading.component */ 22358);
 
 
 
@@ -245,7 +245,7 @@ DashboardUserPageModule = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([
 
 /***/ }),
 
-/***/ 4067:
+/***/ 24067:
 /*!*************************************************************!*\
   !*** ./src/app/pages/dashboard-user/dashboard-user.page.ts ***!
   \*************************************************************/
@@ -255,10 +255,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "DashboardUserPage": () => (/* binding */ DashboardUserPage)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 4929);
-/* harmony import */ var _dashboard_user_page_html_ngResource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dashboard-user.page.html?ngResource */ 2684);
-/* harmony import */ var _dashboard_user_page_scss_ngResource__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dashboard-user.page.scss?ngResource */ 9866);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 2560);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 34929);
+/* harmony import */ var _dashboard_user_page_html_ngResource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dashboard-user.page.html?ngResource */ 92684);
+/* harmony import */ var _dashboard_user_page_scss_ngResource__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dashboard-user.page.scss?ngResource */ 69866);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 22560);
 
 
 
@@ -281,7 +281,7 @@ DashboardUserPage = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
 
 /***/ }),
 
-/***/ 2804:
+/***/ 82804:
 /*!********************************************************************************!*\
   !*** ./src/app/components/test-loading/test-loading.component.scss?ngResource ***!
   \********************************************************************************/
@@ -291,7 +291,7 @@ module.exports = ".cargando {\n  margin-top: 270px;\n  align-items: center;\n  j
 
 /***/ }),
 
-/***/ 723:
+/***/ 30723:
 /*!**********************************************************************************!*\
   !*** ./src/app/components/test-result-c/test-result-c.component.scss?ngResource ***!
   \**********************************************************************************/
@@ -301,7 +301,7 @@ module.exports = ".bg {\n  width: 100%;\n  height: 100%;\n  align-items: center;
 
 /***/ }),
 
-/***/ 223:
+/***/ 80223:
 /*!****************************************************************!*\
   !*** ./src/app/components/test/test.component.scss?ngResource ***!
   \****************************************************************/
@@ -311,7 +311,7 @@ module.exports = ".conexion {\n  border-radius: 15px;\n  margin: 20px 50px;\n  b
 
 /***/ }),
 
-/***/ 9866:
+/***/ 69866:
 /*!**************************************************************************!*\
   !*** ./src/app/pages/dashboard-user/dashboard-user.page.scss?ngResource ***!
   \**************************************************************************/
@@ -321,7 +321,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 
 /***/ }),
 
-/***/ 6282:
+/***/ 16282:
 /*!********************************************************************************!*\
   !*** ./src/app/components/test-loading/test-loading.component.html?ngResource ***!
   \********************************************************************************/
@@ -331,7 +331,7 @@ module.exports = "<ion-content>\n  <div class=\"cargando\">\n    <ion-spinner ic
 
 /***/ }),
 
-/***/ 7674:
+/***/ 87674:
 /*!**********************************************************************************!*\
   !*** ./src/app/components/test-result-c/test-result-c.component.html?ngResource ***!
   \**********************************************************************************/
@@ -341,7 +341,7 @@ module.exports = "<ion-card class=\"ion-text-center\">\n  <ion-card-header>\n   
 
 /***/ }),
 
-/***/ 8590:
+/***/ 98590:
 /*!****************************************************************!*\
   !*** ./src/app/components/test/test.component.html?ngResource ***!
   \****************************************************************/
@@ -351,7 +351,7 @@ module.exports = "<ion-content class=\"contenido\">\n    <div class=\"conexion\"
 
 /***/ }),
 
-/***/ 2684:
+/***/ 92684:
 /*!**************************************************************************!*\
   !*** ./src/app/pages/dashboard-user/dashboard-user.page.html?ngResource ***!
   \**************************************************************************/

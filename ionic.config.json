@@ -1,7 +1,8 @@
 {
   "name": "DIRECSYS",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

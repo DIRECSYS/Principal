@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { LoginPageRoutingModule } from './login-routing.module';
-
+import { SplashScreenComponent } from 'src/app/components/splash-screen/splash-screen.component';
 import { LoginPage } from './login.page';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -18,6 +18,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginPageRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [LoginPage]
+  declarations: [LoginPage, SplashScreenComponent]
 })
 export class LoginPageModule {}
