@@ -22,12 +22,13 @@ export class LoginPage implements OnInit {
 
   login(){
 
+
     let correo = this.correo;
 
-    if (correo == "admin"){
+    if (correo == "admin" || this.auth.userType == 1){
         location.href = "/admin-tabs";
       }
-      else if ( correo == "user"){
+      else if ( correo == "user" || this.auth.userType == 0){
         location.href = "/tabs"
       }
   }
@@ -35,7 +36,17 @@ export class LoginPage implements OnInit {
   loginFirebase(){
     let email = this.correo;
     let password = this.password;
-    console.log(email, password);
     this.auth.login(email,password);
+
+    
+    let correo = this.correo;
+
+    if (correo == "ad"){
+        location.href = "/admin-tabs";
+      }
+      else if ( correo == "us"){
+        location.href = "/tabs"
+      }
   }
+
 }

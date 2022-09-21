@@ -4,17 +4,17 @@ import { AlertController } from '@ionic/angular';
 
 import { ReportsService } from 'src/app/services/reports.service';
 
-
+import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-history',
   templateUrl: './history.page.html',
   styleUrls: ['./history.page.scss'],
 })
 export class HistoryPage implements OnInit {
-  testsf: any;
+  testsf = [];
   badge: number;
 
-  constructor( private alertController: AlertController, private rs: ReportsService) { }
+  constructor( private alertController: AlertController, private rs: ReportsService, private auth: AuthService) { }
 
   async presentAlert(id: string, fdp: any, pee: any,phs: number,pra: number,prd: number,pro: number){
     const a = new Date(fdp * 1000);
@@ -44,7 +44,16 @@ export class HistoryPage implements OnInit {
 
 
   ngOnInit() {
-    this.rs.tests.subscribe(data => { this.testsf = data ;  this.badge = data.length;});
+    this.rs.tests.subscribe(data => { 
+      data.forEach( x => {
+        console.log('UID reporte = '+x.IDU + ' UID usuario = ' + this.auth.userData.uid);
+        if (x.IDU == this.auth.userData.uid){
+          this.testsf.push(x);
+          console.log(this.testsf);
+        }
+      })
+     this.badge = this.testsf.length;
+    });
   }
 
 }

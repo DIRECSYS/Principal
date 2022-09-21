@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { AuthService } from 'src/app/services/auth.service';
+import { UsersService } from 'src/app/services/users.service';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-settings-user',
@@ -8,7 +11,9 @@ import { AlertController } from '@ionic/angular';
 })
 export class SettingsUserPage implements OnInit {
 
-   constructor(private alertController: AlertController) {}
+  user:any;
+  
+   constructor(private alertController: AlertController, private auth: AuthService, private uS: UsersService) {}
 
   async editUserAlert() {
     const alert = await this.alertController.create({
@@ -40,6 +45,11 @@ export class SettingsUserPage implements OnInit {
   }
 
   ngOnInit() {
+
+    this.uS.users.pipe(take(1)).subscribe( x =>{
+      this.user = x.find ( (y:any) => y.uid == this.auth.userData.uid);
+      console.log(this.user);
+    })
   }
 
 }
