@@ -46,11 +46,14 @@ export class LoginPage implements OnInit {
 
   logIn(value){
     try{
+      console.log("AUTENTICADO CORRECTAMENTE");
     this._auth.logIn(value)
     .then(res=>{
       console.log(res);
       this.errorMsg = "";
       //agregar routeo aqui
+      //momentaneo
+      location.href = "/tabs";
     },
     err=>{
       this.errorMsg=err.message;

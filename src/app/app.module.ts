@@ -14,8 +14,8 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
-import {File} from '@ionic-native/file/ngx';
-import {FileOpener} from '@ionic-native/file-opener/ngx';
+import {File} from '@awesome-cordova-plugins/file/ngx';
+import {FileOpener} from '@awesome-cordova-plugins/file-opener/ngx';
 
 import { AuthService } from './services/auth.service';
 import { ReactiveFormsModule } from '@angular/forms';
