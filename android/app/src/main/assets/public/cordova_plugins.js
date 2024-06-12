@@ -13,7 +13,8 @@
     module.exports.metadata =
     // TOP OF METADATA
     {
-      "cordova-plugin-firebase-authentication": "7.0.0"
+      "cordova-plugin-firebase-authentication": "7.0.1",
+      "cordova-support-android-plugin": "2.0.4"
     };
     // BOTTOM OF METADATA
     });

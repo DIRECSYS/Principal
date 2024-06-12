@@ -1,7 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
+
+  namespace 'io.ionic.starter'
+  compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "io.ionic.starter"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -21,12 +23,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-}
-
-repositories {
-    flatDir{
-        dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
+  sourceSets {
+    main {
+      jniLibs.srcDirs = ['libs']
     }
+  }
 }
 
 dependencies {
@@ -37,6 +38,8 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
     implementation project(':capacitor-cordova-android-plugins')
+    implementation 'androidx.core:core:latest_version'
+
 }
 
 apply from: 'capacitor.build.gradle'

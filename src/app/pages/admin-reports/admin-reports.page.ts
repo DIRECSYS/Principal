@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import JSPDF from 'jspdf';
 import domtoimage from 'dom-to-image';
-import {FileOpener} from '@ionic-native/file-opener/ngx';
-import {File, IWriteOptions} from '@ionic-native/file/ngx';
+import {File} from '@awesome-cordova-plugins/file/ngx';
+import {FileOpener} from '@awesome-cordova-plugins/file-opener/ngx';
 import { ReportsService } from 'src/app/services/reports.service';
 
 @Component({
